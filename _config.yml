@@ -46,7 +46,7 @@ social:
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
+  google: google-site-verification=7FP8Os8WaBxBlmt_qGWdAlvRYvgv93U3trXCZQY0TO8
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
@@ -95,10 +95,10 @@ theme_mode: # [light | dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn:
+cdn: # string, e.g. 'https://cdn.com'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://raw.githubusercontent.com/AATHILDUCKY/ethical-hacking-short-notes/refs/heads/main/aathilducky.jpeg
+avatar: https://raw.githubusercontent.com/AATHILDUCKY/aathilducky.github.io/refs/heads/main/assets/images/profile.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
