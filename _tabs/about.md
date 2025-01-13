@@ -7,69 +7,157 @@ redirect_from:
   - /about/
   - /about.html
 ---
-## Hello, I’m Aathil Ducky!
+---
 
-A passionate **Cybersecurity Specialist**, **Ethical Hacker**, and **Python Developer**. Currently, I'm in my final year of studying **Computer Science** at the **Trincomalee Campus, Eastern University of Sri Lanka**. My expertise lies in identifying and mitigating security risks, developing innovative tools, and staying ahead of the curve in the ever-evolving field of **cybersecurity**.
+# 🌐 **About Me: Aathil Ducky**
 
-I am deeply committed to creating a safer digital environment. I specialize in **penetration testing**, **network security**, and **threat intelligence**, while leveraging my skills in **Python programming** to build custom tools that solve real-world security challenges.
+## 👨‍💻 **Cybersecurity Enthusiast | Ethical Hacker | Python Developer**
+
+Welcome to my page! I’m **Aathil Ducky**, a **Cybersecurity Specialist**, **Ethical Hacker**, and **Python Developer** dedicated to safeguarding the digital space. I’m currently pursuing my **Bachelor of Computer Science** at **Trincomalee Campus, Eastern University of Sri Lanka (2020–2024)**, driven by curiosity and passion for tackling cybersecurity challenges.
 
 ---
 
-## About Me
+## 🔍 **Who Am I?**
 
-My name is Aathil Ducky. I am super curious to learn Ethical Hacking (Cyber Security). As a final-year Computer Science student at Trincomalee Campus, Eastern University of Sri Lanka, my journey in tech is driven by curiosity and passion.
+I am a **self-taught cybersecurity researcher** with a knack for solving real-world problems through technology. My expertise spans **penetration testing**, **threat intelligence**, and **secure coding**. I thrive on challenges like **Capture The Flag (CTF)** competitions and building innovative tools to address today’s cybersecurity threats.
 
-### Skills and Expertise:
+### 🚀 **Mission**
 
-- **Penetration Testing**
-- **Python Programming**
-- **WordPress Development**
-- **Front-end Development with React.js**
-- **Linux Proficiency**
-- **Social Engineering**
-- **Networking & Network Security**
-- **Bash Scripting**
-- **Git & GitHub**
-- **Arduino Programming**
-- **C Programming**
-- **SQL and Databases**
-- **Cryptography**
-- **Problem Solving**
-
-### Hobbies:
-
-Playing Capture The Flag (CTF) is my hobby. I love diving into tech challenges and finding innovative solutions. My goal is to provide value to people using my knowledge and skills.
+To create innovative, secure solutions that empower individuals and organizations in building a safer digital environment.
 
 ---
 
-## My Work
+## 🛠️ **What I Do**
 
-Here's a glimpse of my projects:
+### **Cybersecurity Skills**
 
-- **Sensitive Information Finder**: A Django-based web application for scanning and detecting sensitive information leaks in websites and GitHub repositories.
-- **Audio Secret Finder**: A Python tool designed to uncover hidden messages in audio files using spectrogram analysis.
-- **StegBrute**: A Bash script for brute-force password attacks on Steghide-secured files.
-- **Cybersecurity Cheat Sheet WebApp**: A web platform to organize and filter cybersecurity notes using a keyword search.
+- 🔐 **Penetration Testing**: Uncovering vulnerabilities before attackers do.
+- 🌐 **Network Security**: Ensuring robust defenses for network infrastructures.
+- 📊 **Threat Intelligence**: Identifying and mitigating risks effectively.
+- 🛡️ **Risk Assessment**: Proactively addressing security flaws.
+- 🔍 **SOC Monitoring**: Real-time threat detection and response.
 
-### Certifications:
+### **Programming & Development**
 
-- **Applied ChatGPT for Cybersecurity** – Infosec (Coursera)
-- **Advanced Python – Reconnaissance** – Infosec (Coursera)
+- 🐍 **Python Expert**: From automation scripts to full-stack web applications.
+- 🌍 **Web Development**: Building secure websites with **WordPress** and **Django**.
+- 🖥️ **Front-end Development**: Leveraging **React.js** for dynamic interfaces.
+- ⚙️ **Bash Scripting**: Automation for efficiency and precision.
+
+### **Certifications**
+
+- ✅ **Applied ChatGPT for Cybersecurity** (2024)
+- ✅ **Advanced Python Reconnaissance** (2024)
+- ✅ **Linux System Administration** (2023)
 
 ---
 
-## Contact Me
+## 📂 **My Projects**
 
-Let’s collaborate and make the digital world a safer place!
+### 🔎 **Sensitive Information Finder**
+
+- A web app to detect sensitive information leaks.
+- 🚀 **Highlights**: Reduced false positives by 30%, user-friendly GUI, SQLite integration.
+
+### 🎵 **Audio Secret Finder**
+
+- Python-based tool for hidden audio message detection using **spectrogram analysis**.
+- 🚀 **Highlights**: Achieved 75% detection accuracy with libraries like `numpy`, `scipy`, and `librosa`.
+
+### 📋 **Cybersecurity Cheat Sheet WebApp**
+
+- A platform for organizing and filtering cybersecurity notes.
+- 🚀 **Highlights**: Improved search performance by 20%, SOC-relevant logging.
+
+---
+
+## 🎯 **Additional Features**
+
+### 🏆 **Achievements**
+
+- Ranked in the **Top 10% on TryHackMe** challenges.
+- Authored **100+ viewed articles** on **Medium** about Python and cybersecurity.
+- Participated in numerous CTFs and solved complex tech challenges.
+
+### 📖 **Learning Journey**
+
+Currently expanding my knowledge by:
+
+- Reading "The Web Application Hacker’s Handbook" for advanced web security techniques.
+- Exploring **AI integration in cybersecurity** for future applications.
+
+---
+
+## 💼 **Professional Experience**
+
+### 🔧 **Web Developer** | CBS Solution Pvt Ltd (2022–2024)
+
+- 🌟 Developed secure websites using **Django** and **WordPress**.
+- 🔒 Reduced vulnerabilities by **20%**, enhancing overall security.
+- 🛠️ Built custom plugins to extend functionality.
+
+### ✍️ **Cybersecurity Writer** | Medium (2024–Present)
+
+- 📖 Authored articles on **threat modeling**, **SIEM tools**, and **forensics**.
+- 🌐 **Impact**: Average **100+ views** per article.
+
+---
+
+## 🧰 **Tools & Technologies**
+
+### **Cybersecurity Tools**
+
+- Metasploit, Burp Suite, Nmap, OWASP ZAP
+- SQLmap, Wireshark, Hashcat, Nessus
+- SIEM: Splunk, QRadar
+
+### **Programming & Frameworks**
+
+- Python, Django, JavaScript, React.js, Bash, C
+- SQL, OpenSSL, Tailwind CSS
+
+---
+
+## 🌟 **Fun Facts About Me**
+
+- 🏁 **Hobbies**: CTFs, tool development, and cryptography.
+- 💡 **Passion Projects**: I love transforming complex problems into simple, impactful solutions.
+- 📚 **Favorite Quote**: "Security is not a product, but a process."
+
+---
+
+## 📊 **SEO-Friendly Highlights**
+
+### **Keywords**:
+
+- Cybersecurity Specialist
+- Ethical Hacker
+- Python Developer
+- Penetration Testing
+- Network Security
+- SOC Monitoring
+- Secure Web Development
+
+---
+
+## 🔗 **Connect With Me**
+
+### 📧 **Contact**
 
 - **Email**: [aathilducky@gmail.com](mailto:aathilducky@gmail.com)
-- **LinkedIn**: [Aathil Ducky](https://www.linkedin.com/in/aathil-ducky-95b12a218/)
+- **Phone**: [+94 75 454 5398](tel:+94754545398)
+
+### 🌍 **Find Me Online**
+
+- **Portfolio**: [aathilducky.com/about](https://aathilducky.com/about/)
+- **GitHub**: [github.com/AATHILDUCKY](https://github.com/AATHILDUCKY)
+- **LinkedIn**: [linkedin.com/in/aathilducky](https://linkedin.com/in/aathilducky)
 
 ---
 
-By focusing on my skills in **cybersecurity**, **Python development**, and innovative solutions, I aim to leave a lasting impact in the tech world. Let’s connect!
+## 🚀 **Let’s Build a Safer Digital Future Together!**
 
----
+I’m passionate about collaboration, innovation, and growth. Let’s work together to solve the challenges of tomorrow and secure the systems of today.
 
 ```plaintext
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

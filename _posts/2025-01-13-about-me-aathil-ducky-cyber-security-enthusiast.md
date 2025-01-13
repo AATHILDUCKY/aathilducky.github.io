@@ -1,3 +1,8 @@
+---
+title: "About me: aathil ducky | Cybersecurity Enthusiast"
+categories: aboutme
+tags: ['aboutme','aathilducky']
+---
 # 🌐 About Me: Aathil Ducky
 
 ## 👨‍💻 **Cybersecurity Enthusiast | Ethical Hacker | Python Developer**
