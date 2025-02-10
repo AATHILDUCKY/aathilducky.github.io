@@ -59,6 +59,10 @@ webmaster_verifications:
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
+# add google addsense verification
+adsense:
+  client: "ca-pub-6405478732026557"
+
 # Web Analytics Settings
 analytics:
   google:
