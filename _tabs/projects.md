@@ -4,8 +4,8 @@ icon: fas fa-user
 title: "Projects"
 author_profile: true
 redirect_from: 
-  - /about/
-  - /about.html
+  - /projects/
+  - /projects.html
 ---
 ## 📂 **My Projects**
 

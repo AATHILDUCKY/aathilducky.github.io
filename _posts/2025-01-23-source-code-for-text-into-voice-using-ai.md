@@ -13,13 +13,12 @@ For those facing computational constraints on their local devices, Google Colab 
 DevOps is a collaborative approach that integrates development (Dev) and operations (Ops) teams to improve software development and delivery. It emphasizes automation, continuous integration/continuous delivery (CI/CD), and monitoring to streamline workflows and enhance efficiency. The goal is to deliver high-quality software faster, with greater reliability and agility.
 ```
 
-`output audio`: 
+`output audio`:
 
 <audio controls>
   <source src="https://raw.githubusercontent.com/AATHILDUCKY/text-to-speach-using-ai/main/text_to_speach.wav" type="audio/wav">
   Your browser does not support the audio element.
 </audio>
-
 
 ## Initial Setup on Google Colab
 
