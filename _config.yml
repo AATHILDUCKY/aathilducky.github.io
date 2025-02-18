@@ -14,19 +14,16 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 🚀 Athil Ducky – Full-Stack Developer & AI/ML Enthusiast # the main title
+title: Aathil Ducky # the main title
 
-tagline: Building Scalable Web Solutions & AI-Powered Innovations ,  # it will display as the subtitle
+tagline: Self-Taught Cyber Security Researcher # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Aathil Ducky is a Python Developer and AI/ML Enthusiast specializing in Django, Flask, React, and SEO optimization. Passionate about solving real-world problems through cutting-edge web development and AI-driven automation. Explore projects, insights, and services designed to enhance digital experiences.
+  Discover insights in cybersecurity, Python programming, and technical expertise on Aathil Ducky’s blog
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://aathilducky.com"
-
-plugins:
-  - jekyll-sitemap
+url: "https://aathilducky.github.io"
 
 github:
   username: AATHILDUCKY # change to your GitHub username
@@ -58,10 +55,6 @@ webmaster_verifications:
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
-
-# add google addsense verification
-adsense:
-  client: "ca-pub-6405478732026557"
 
 # Web Analytics Settings
 analytics:
