@@ -1,73 +1,66 @@
 ---
 order: 4
 icon: fas fa-user
-title: "Cybersecurity Enthusiast and Problem Solver – Explore My Portfolio"
+title: "Full-Stack Developer and AI/ML Enthusiast – Explore My Portfolio"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
----
 
-# 🌐 **About Me: Aathil Ducky**
+# 🌐 **About Me: Adil Ahmed**
 
-## 👨‍💻 **Cybersecurity Enthusiast | Ethical Hacker | Python Developer**
+## 👨‍💻 **Full-Stack Developer | AI & ML Enthusiast | Problem Solver**
 
-Welcome to my page! I’m **Aathil Ducky**, a **Cybersecurity Specialist**, **Ethical Hacker**, and **Python Developer** dedicated to safeguarding the digital space. I’m currently pursuing my **Bachelor of Computer Science** at **Trincomalee Campus, Eastern University of Sri Lanka (2020–2024)**, driven by curiosity and passion for tackling cybersecurity challenges.
+Welcome to my page! I’m **Adil Ahmed**, a **Full-Stack Developer** and **AI/ML Enthusiast** passionate about solving real-world problems through technology. I’m currently pursuing my **Bachelor of Computer Science**, with a strong foundation in **web development, automation, and AI/ML**.
 
 ---
 
 ## 🔍 **Who Am I?**
 
-I am a **self-taught cybersecurity researcher** with a knack for solving real-world problems through technology. My expertise spans **penetration testing**, **threat intelligence**, and **secure coding**. I thrive on challenges like **Capture The Flag (CTF)** competitions and building innovative tools to address today’s cybersecurity threats.
+I am a **self-taught developer** with expertise in **Django, Flask, and WordPress development**, along with a solid understanding of **SEO and performance optimization**. My journey has led me to explore **AI & Machine Learning**, where I aim to develop intelligent solutions that enhance user experiences and automate complex tasks.
 
 ### 🚀 **Mission**
 
-To create innovative, secure solutions that empower individuals and organizations in building a safer digital environment.
+To innovate and build scalable, secure, and intelligent solutions that solve real-world problems efficiently.
 
 ---
 
 ## 🛠️ **What I Do**
 
-### **Cybersecurity Skills**
+### **Development Skills**
 
-- 🔐 **Penetration Testing**: Uncovering vulnerabilities before attackers do.
-- 🌐 **Network Security**: Ensuring robust defenses for network infrastructures.
-- 📊 **Threat Intelligence**: Identifying and mitigating risks effectively.
-- 🛡️ **Risk Assessment**: Proactively addressing security flaws.
-- 🔍 **SOC Monitoring**: Real-time threat detection and response.
+- 🔥 **Full-Stack Development**: Building modern, scalable web applications.
+- 🎨 **Frontend Technologies**: Proficient in **HTML, CSS, JavaScript, TailwindCSS**.
+- ⚛️ **Frontend Frameworks**: Basic familiarity with **React.js and Next.js**.
+- 🌐 **Backend Development**: Expertise in **Django, Flask, and API development**.
+- 🖥️ **WordPress Development**: Custom themes, plugins, and SEO optimization.
+- 🔍 **SEO & Performance Optimization**: Enhancing web visibility and speed.
 
-### **Programming & Development**
+### **AI & Machine Learning** (Currently Learning)
 
-- 🐍 **Python Expert**: From automation scripts to full-stack web applications.
-- 🌍 **Web Development**: Building secure websites with **WordPress** and **Django**.
-- 🖥️ **Front-end Development**: Leveraging **React.js** for dynamic interfaces.
-- ⚙️ **Bash Scripting**: Automation for efficiency and precision.
-
-### **Certifications**
-
-- ✅ **Applied ChatGPT for Cybersecurity** (2024)
-- ✅ **Advanced Python Reconnaissance** (2024)
-- ✅ **Linux System Administration** (2023)
+- 🤖 Exploring **Python-based AI/ML frameworks** like **TensorFlow, PyTorch, and Scikit-learn**.
+- 📊 **Data Science**: Understanding **data preprocessing, feature engineering, and model training**.
+- 🚀 Working on AI-driven solutions to solve real-world challenges.
 
 ---
 
 ## 📂 **My Projects**
 
-### 🔎 **Sensitive Information Finder**
+### 🌍 **Dynamic SEO Analyzer**
 
-- A web app to detect sensitive information leaks.
-- 🚀 **Highlights**: Reduced false positives by 30%, user-friendly GUI, SQLite integration.
+- A tool to analyze website SEO and performance.
+- 🚀 **Highlights**: Improved on-page SEO analysis by 40%, real-time suggestions.
 
-### 🎵 **Audio Secret Finder**
+### 🔎 **AI-Powered Blog Generator**
 
-- Python-based tool for hidden audio message detection using **spectrogram analysis**.
-- 🚀 **Highlights**: Achieved 75% detection accuracy with libraries like `numpy`, `scipy`, and `librosa`.
+- A Flask-based web app that generates blog posts using **AI language models**.
+- 🚀 **Highlights**: Integrated OpenAI API for natural content creation.
 
-### 📋 **Cybersecurity Cheat Sheet WebApp**
+### 📋 **Full-Stack Task Manager**
 
-- A platform for organizing and filtering cybersecurity notes.
-- 🚀 **Highlights**: Improved search performance by 20%, SOC-relevant logging.
+- A task management web app built with **Django and React**.
+- 🚀 **Highlights**: Secure authentication, responsive UI, and role-based access control.
 
 ---
 
@@ -75,16 +68,17 @@ To create innovative, secure solutions that empower individuals and organization
 
 ### 🏆 **Achievements**
 
-- Ranked in the **Top 10% on TryHackMe** challenges.
-- Authored **100+ viewed articles** on **Medium** about Python and cybersecurity.
-- Participated in numerous CTFs and solved complex tech challenges.
+- Built multiple **client websites** with Django and WordPress.
+- Developed **SEO-optimized content strategies** for businesses.
+- Expanding my skill set with **AI-driven automation** projects.
 
 ### 📖 **Learning Journey**
 
-Currently expanding my knowledge by:
+Currently diving deeper into:
 
-- Reading "The Web Application Hacker’s Handbook" for advanced web security techniques.
-- Exploring **AI integration in cybersecurity** for future applications.
+- AI/ML applications in **cybersecurity and web development**.
+- Learning **Neural Networks, NLP, and AI-driven automation**.
+- Exploring **Next.js and advanced frontend development**.
 
 ---
 
@@ -92,37 +86,33 @@ Currently expanding my knowledge by:
 
 ### 🔧 **Web Developer** | CBS Solution Pvt Ltd (2022–2024)
 
-- 🌟 Developed secure websites using **Django** and **WordPress**.
-- 🔒 Reduced vulnerabilities by **20%**, enhancing overall security.
-- 🛠️ Built custom plugins to extend functionality.
+- Developed **secure web applications** using Django, Flask, and WordPress.
+- Implemented **SEO strategies** that improved client search rankings.
+- Created **custom plugins** for extended functionality.
 
-### ✍️ **Cybersecurity Writer** | Medium (2024–Present)
+### ✍️ **Freelance Web Developer & SEO Specialist**
 
-- 📖 Authored articles on **threat modeling**, **SIEM tools**, and **forensics**.
-- 🌐 **Impact**: Average **100+ views** per article.
+- Designed and optimized websites for businesses.
+- Improved SEO rankings through **keyword optimization** and **site performance tuning**.
 
 ---
 
 ## 🧰 **Tools & Technologies**
 
-### **Cybersecurity Tools**
+### **Development Tools**
 
-- Metasploit, Burp Suite, Nmap, OWASP ZAP
-- SQLmap, Wireshark, Hashcat, Nessus
-- SIEM: Splunk, QRadar
-
-### **Programming & Frameworks**
-
-- Python, Django, JavaScript, React.js, Bash, C
-- SQL, OpenSSL, Tailwind CSS
+- **Backend**: Django, Flask, FastAPI, SQL, REST APIs.
+- **Frontend**: HTML, CSS, JavaScript, TailwindCSS, React.js, Next.js.
+- **AI/ML**: TensorFlow, PyTorch, OpenAI API (Exploring).
+- **SEO & Analytics**: Google Search Console, Ahrefs, SEMrush.
 
 ---
 
 ## 🌟 **Fun Facts About Me**
 
-- 🏁 **Hobbies**: CTFs, tool development, and cryptography.
-- 💡 **Passion Projects**: I love transforming complex problems into simple, impactful solutions.
-- 📚 **Favorite Quote**: "Security is not a product, but a process."
+- 🏁 **Hobbies**: Building web applications, automating workflows, and AI research.
+- 💡 **Passion Projects**: AI-powered automation tools and problem-solving applications.
+- 📚 **Favorite Quote**: "Technology is best when it brings people together."
 
 ---
 
@@ -130,13 +120,13 @@ Currently expanding my knowledge by:
 
 ### **Keywords**:
 
-- Cybersecurity Specialist
-- Ethical Hacker
-- Python Developer
-- Penetration Testing
-- Network Security
-- SOC Monitoring
-- Secure Web Development
+- Full-Stack Developer
+- AI & Machine Learning Enthusiast
+- Django Developer
+- Flask & API Development
+- SEO Specialist
+- WordPress Expert
+- AI Automation
 
 ---
 
@@ -144,45 +134,17 @@ Currently expanding my knowledge by:
 
 ### 📧 **Contact**
 
-- **Email**: [aathilducky@gmail.com](mailto:aathilducky@gmail.com)
+- **Email**: [adilahmed@gmail.com](mailto:adilahmed@gmail.com)
 - **Phone**: [+94 75 454 5398](tel:+94754545398)
 
 ### 🌍 **Find Me Online**
 
-- **Portfolio**: [aathilducky.com/about](https://aathilducky.com/about/)
-- **GitHub**: [github.com/AATHILDUCKY](https://github.com/AATHILDUCKY)
-- **LinkedIn**: [linkedin.com/in/aathilducky](https://linkedin.com/in/aathilducky)
+- **Portfolio**: [adilahmed.com](https://adilahmed.com)
+- **GitHub**: [github.com/adilahmed](https://github.com/adilahmed)
+- **LinkedIn**: [linkedin.com/in/adilahmed](https://linkedin.com/in/adilahmed)
 
 ---
 
-## 🚀 **Let’s Build a Safer Digital Future Together!**
+## 🚀 **Let’s Build the Future Together!**
 
-I’m passionate about collaboration, innovation, and growth. Let’s work together to solve the challenges of tomorrow and secure the systems of today.
-
-```plaintext
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠟⠃⠀⠀⠙⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠋⠀⠀⠀⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠾⢛⠒⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣶⣄⡈⠓⢄⠠⡀⠀⠀⠀⣄⣷⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣷⠀⠈⠱⡄⠑⣌⠆⠀⠀⡜⢻⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡿⠳⡆⠐⢿⣆⠈⢿⠀⠀⡇⠘⡆⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣷⡇⠀⠀⠈⢆⠈⠆⢸⠀⠀⢣⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣧⠀⠀⠈⢂⠀⡇⠀⠀⢨⠓⣄⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣦⣤⠖⡏⡸⠀⣀⡴⠋⠀⠈⠢⡀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⠁⣹⣿⣿⣿⣷⣾⠽⠖⠊⢹⣀⠄⠀⠀⠀⠈⢣⡀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⣇⣰⢫⢻⢉⠉⠀⣿⡆⠀⠀⡸⡏⠀⠀⠀⠀⠀⠀⢇
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⡇⡇⠈⢸⢸⢸⠀⠀⡇⡇⠀⠀⠁⠻⡄⡠⠂⠀⠀⠀⠘
-⢤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠛⠓⡇⠀⠸⡆⢸⠀⢠⣿⠀⠀⠀⠀⣰⣿⣵⡆⠀⠀⠀⠀
-⠈⢻⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⣦⣀⡇⠀⢧⡇⠀⠀⢺⡟⠀⠀⠀⢰⠉⣰⠟⠊⣠⠂⠀⡸
-⠀⠀⢻⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢧⡙⠺⠿⡇⠀⠘⠇⠀⠀⢸⣧⠀⠀⢠⠃⣾⣌⠉⠩⠭⠍⣉⡇
-⠀⠀⠀⠻⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣞⣋⠀⠈⠀⡳⣧⠀⠀⠀⠀⠀⢸⡏⠀⠀⡞⢰⠉⠉⠉⠉⠉⠓⢻⠃
-⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⢀⣀⠠⠤⣤⣤⠤⠞⠓⢠⠈⡆⠀⢣⣸⣾⠆⠀⠀⠀⠀⠀⢀⣀⡼⠁⡿⠈⣉⣉⣒⡒⠢⡼⠀
-⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣎⣽⣶⣤⡶⢋⣤⠃⣠⡦⢀⡼⢦⣾⡤⠚⣟⣁⣀⣀⣀⣀⠀⣀⣈⣀⣠⣾⣅⠀⠑⠂⠤⠌⣩⡇⠀
-⠀⠀⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⣺⢁⣞⣉⡴⠟⡀⠀⠀⠀⠁⠸⡅⠀⠈⢷⠈⠏⠙⠀⢹⡛⠀⢉⠀⠀⠀⣀⣀⣼⡇⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⡟⢡⠖⣡⡴⠂⣀⣀⣀⣰⣁⣀⣀⣸⠀⠀⠀⠀⠈⠁⠀⠀⠈⠀⣠⠜⠋⣠⠁⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⡟⢿⣿⣿⣷⡟⢋⣥⣖⣉⠀⠈⢁⡀⠤⠚⠿⣷⡦⢀⣠⣀⠢⣄⣀⡠⠔⠋⠁⠀⣼⠃⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⡄⠈⠻⣿⣿⢿⣛⣩⠤⠒⠉⠁⠀⠀⠀⠀⠀⠉⠒⢤⡀⠉⠁⠀⠀⠀⠀⠀⢀⡿⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣤⣤⠴⠟⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠤⠀⠀⠀⠀⠀⢩⠇⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-```
+I’m excited to collaborate on innovative projects, solve real-world challenges, and create impactful solutions. Let’s connect and make technology work for a better tomorrow!
