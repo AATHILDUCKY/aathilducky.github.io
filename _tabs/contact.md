@@ -1,6 +1,6 @@
 ---
 order: 7
-icon: fas fa-phone
+icon: fas fa-robot
 title: "Contact"
 author_profile: true
 redirect_from:
@@ -10,7 +10,7 @@ redirect_from:
 
 ## Contact Information
 
-If you would like to get in touch with me, feel free to reach out through any of the following methods:
+If you would like to get in touch with me regarding AI development, machine learning, or automation solutions, feel free to reach out through any of the following methods:
 
 - **Email**: [aathilducky@gmail.com](mailto:aathilducky@gmail.com)
 - **Phone**: +94 075 454 5398
@@ -34,24 +34,25 @@ Alternatively, here are some highlights from my resume:
 - **Bachelor of Computer Science**, Trincomalee Campus, Eastern University of Sri Lanka (2020 – 2024)
 
 ### Key Skills:
-- Penetration Testing
-- Endpoint Security
-- Intrusion Detection & Monitoring
-- Cloud Security
-- Risk Assessment & Forensic Investigation
+- AI Development & Research
+- Machine Learning & Deep Learning
+- Natural Language Processing (NLP)
+- Computer Vision
+- Automation & AI-Powered Solutions
 
 ### Certifications:
-- **Applied ChatGPT for Cybersecurity** (May 2024)
-- **Advanced Python Reconnaissance** (April 2024)
-- **Linux System Administration** (December 2023)
+- **AI & Machine Learning Specialization** (June 2024)
+- **Deep Learning with TensorFlow** (May 2024)
+- **Python for AI & Automation** (April 2024)
 
 ### Projects:
-- **Web-Based Sensitive Information Finder**: Detected sensitive data leaks in GitHub repositories and websites.
-- **Audio Secret Finder**: Developed a Python tool to detect hidden messages in audio files.
+- **AI-Powered Avatar Generator**: Developed an AI-driven avatar generation system for automated content creation.
+- **Intelligent Resume Parser**: Created an ML-based tool for extracting structured data from resumes.
+- **Automated Business Process Optimizer**: Built an AI solution to optimize workflow automation for businesses.
 
 ### Experience:
-- **Web Developer**, CBS Solution Pvt Ltd (October 2022 – December 2024)
-- **Cybersecurity Content Writer**, Medium.com (January 2024 – Present)
+- **AI Developer**, CBS Solution Pvt Ltd (October 2022 – December 2024)
+- **Machine Learning Engineer**, Freelancer (January 2024 – Present)
 
 For more details on my projects, experience, and certifications, please refer to my full resume.
 
@@ -62,3 +63,4 @@ For more details on my projects, experience, and certifications, please refer to
 By contacting me via the provided email or other communication methods, you acknowledge and agree that your contact information may be used for the purpose of replying to your queries or sharing updates. Rest assured, your privacy is important to me, and I adhere to the highest standards to protect your personal information.
 
 For more details, please refer to my [Privacy Policy](https://aathilducky.com/privacy-policy).
+
