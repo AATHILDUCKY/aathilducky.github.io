@@ -6,7 +6,7 @@ tags: ['flask', 'python', 'url-shortener', 'web-development', 'tailwindcss']
 
 # Build a URL Shortener with Python, Flask & MySQL, Tailwindcss
 
-i start my career in cyber security but AI and machine learning ,automation these stuffs make more curious. and these i love problem solving more then cyber security things, that why swith my career in AI and machine learning , i start learn python, and practicing with small projects.
+i start my career in cyber security and now i started to learn python developement,automation these stuffs these are make more curious. and these i love problem solving, and practicing with small projects.
 
 i decited to do some project but i dont have idea,  while i watch youtube videos, one youtuber,  he had posted video about url shortener. so i choose that as my first project
 
