@@ -1,142 +1,62 @@
 ---
 order: 4
 icon: fas fa-user
-title: "Cybersecurity Enthusiast and Problem Solver – Explore My Portfolio"
+title: "AI/ML Developer, Python Enthusiast, and Problem Solver – Explore My Projects"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
----
-
-# 🌐 **About Me: Aathil Ducky**
-
-## 👨‍💻 **Cybersecurity Enthusiast | Ethical Hacker | Python Developer**
-
-Welcome to my page! I’m **Aathil Ducky**, a **Cybersecurity Specialist**, **Ethical Hacker**, and **Python Developer** dedicated to safeguarding the digital space. I’m currently pursuing my **Bachelor of Computer Science** at **Trincomalee Campus, Eastern University of Sri Lanka (2020–2024)**, driven by curiosity and passion for tackling cybersecurity challenges.
 
 ---
 
-## 🔍 **Who Am I?**
+# About Me - Aathil Ducky
 
-I am a **self-taught cybersecurity researcher** with a knack for solving real-world problems through technology. My expertise spans **penetration testing**, **threat intelligence**, and **secure coding**. I thrive on challenges like **Capture The Flag (CTF)** competitions and building innovative tools to address today’s cybersecurity threats.
+Hi there! I'm **Aathil**, a passionate **Python Developer** with a deep love for all things tech. Currently, I'm diving into the realms of **AI/ML**, web development, and building cool projects. When I'm not coding or building AI models, you can find me tinkering with Linux, customizing my **Vim** setup (because regular editors are for regular people), and probably gaming on a mechanical keyboard (yes, I have an addiction to that *clickity-clack* sound).
 
-### 🚀 **Mission**
+## 🚀 My Journey
 
-To create innovative, secure solutions that empower individuals and organizations in building a safer digital environment.
+I’m currently in my final year at **Eastern University of Sri Lanka**, pursuing a degree in **Computer Science**. Over the years, I’ve learned to embrace **smart work** rather than hard work (trust me, it’s a game changer). My focus is primarily on building **web applications** using **Python** frameworks like **Flask**, **FastAPI**, and **Django**, with a growing expertise in **AI/ML**.
 
----
+## 🎯 Final Year Project - **Sensitive Information Finder**
 
-## 🛠️ **What I Do**
+My final year project, **Sensitive Information Finder**, is a web app built with **Django** that detects sensitive information leaks (because we all love our privacy). The app uses smart algorithms to spot things like passwords, credit card numbers, and other sensitive data sneaking through places they shouldn't. One of the cool things about it? I reduced **false positives by 30%**, making it more efficient and reliable. 
 
-### **Cybersecurity Skills**
+### 🚀 Project Highlights:
+- **Tech stack**: Django, SQLite, Python
+- **Major accomplishment**: Reduced false positives by 30%
+- **Features**: Easy-to-use GUI, smooth performance
 
-- 🔐 **Penetration Testing**: Uncovering vulnerabilities before attackers do.
-- 🌐 **Network Security**: Ensuring robust defenses for network infrastructures.
-- 📊 **Threat Intelligence**: Identifying and mitigating risks effectively.
-- 🛡️ **Risk Assessment**: Proactively addressing security flaws.
-- 🔍 **SOC Monitoring**: Real-time threat detection and response.
+## 💻 Skills & Technologies
 
-### **Programming & Development**
+Here's a quick rundown of the tools and languages I work with, and yes, I’ve probably spent more time customizing my **Vim** configuration than I should admit:
 
-- 🐍 **Python Expert**: From automation scripts to full-stack web applications.
-- 🌍 **Web Development**: Building secure websites with **WordPress** and **Django**.
-- 🖥️ **Front-end Development**: Leveraging **React.js** for dynamic interfaces.
-- ⚙️ **Bash Scripting**: Automation for efficiency and precision.
+- **Web Development**: Flask, FastAPI, Django
+- **AI & ML**: TensorFlow, PyTorch, OpenCV, Scikit-learn
+- **Programming Languages**: Python, JavaScript, R
+- **Linux**: My playground (because who needs Windows?)
+- **Vim/NeoVim**: I don’t just write code, I do it with **Vim keybindings** like a true ninja.
+- **Other Tools**: Docker, Git, SQLite, and more!
 
-### **Certifications**
+## 🎮 Fun Facts
 
-- ✅ **Applied ChatGPT for Cybersecurity** (2024)
-- ✅ **Advanced Python Reconnaissance** (2024)
-- ✅ **Linux System Administration** (2023)
+When I’m not coding or building apps, I’m probably doing one of the following:
+- **Gaming** on my mechanical keyboard (I swear the *click* sound is addictive).
+- Messing with **electronic gadgets**—because why not?
+- Geeking out over **Linux** and spending hours tweaking my **Vim** setup for that perfect environment.
 
----
+## 🌱 My Long-Term Focus
 
-## 📂 **My Projects**
+My long-term goal is to solve **real-world problems** using **AI** and **ML**. I’m actively learning about **prompt engineering** (yes, it’s as cool as it sounds) and how to effectively use AI tools to make things work smarter, not harder. Whether it’s through **side projects**, **SaaS products**, or simply building something with code that makes people’s lives easier, that’s the direction I’m headed in. 
 
-### 🔎 **Sensitive Information Finder**
+## 🔗 Let's Connect!
 
-- A web app to detect sensitive information leaks.
-- 🚀 **Highlights**: Reduced false positives by 30%, user-friendly GUI, SQLite integration.
-
-### 🎵 **Audio Secret Finder**
-
-- Python-based tool for hidden audio message detection using **spectrogram analysis**.
-- 🚀 **Highlights**: Achieved 75% detection accuracy with libraries like `numpy`, `scipy`, and `librosa`.
-
-### 📋 **Cybersecurity Cheat Sheet WebApp**
-
-- A platform for organizing and filtering cybersecurity notes.
-- 🚀 **Highlights**: Improved search performance by 20%, SOC-relevant logging.
+If you’re into **AI**, **Python**, **Linux**, or just want to chat about **mechanical keyboards**, feel free to reach out. I’m always looking to connect with like-minded people and share knowledge. You can find me on **LinkedIn** or shoot me a message anytime!
 
 ---
 
-## 🎯 **Additional Features**
+*“Don’t just write code, make it smart.”* – Aathil (I might have just made that up)
 
-### 🏆 **Achievements**
-
-- Ranked in the **Top 10% on TryHackMe** challenges.
-- Authored **100+ viewed articles** on **Medium** about Python and cybersecurity.
-- Participated in numerous CTFs and solved complex tech challenges.
-
-### 📖 **Learning Journey**
-
-Currently expanding my knowledge by:
-
-- Reading "The Web Application Hacker’s Handbook" for advanced web security techniques.
-- Exploring **AI integration in cybersecurity** for future applications.
-
----
-
-## 💼 **Professional Experience**
-
-### 🔧 **Web Developer** | CBS Solution Pvt Ltd (2022–2024)
-
-- 🌟 Developed secure websites using **Django** and **WordPress**.
-- 🔒 Reduced vulnerabilities by **20%**, enhancing overall security.
-- 🛠️ Built custom plugins to extend functionality.
-
-### ✍️ **Cybersecurity Writer** | Medium (2024–Present)
-
-- 📖 Authored articles on **threat modeling**, **SIEM tools**, and **forensics**.
-- 🌐 **Impact**: Average **100+ views** per article.
-
----
-
-## 🧰 **Tools & Technologies**
-
-### **Cybersecurity Tools**
-
-- Metasploit, Burp Suite, Nmap, OWASP ZAP
-- SQLmap, Wireshark, Hashcat, Nessus
-- SIEM: Splunk, QRadar
-
-### **Programming & Frameworks**
-
-- Python, Django, JavaScript, React.js, Bash, C
-- SQL, OpenSSL, Tailwind CSS
-
----
-
-## 🌟 **Fun Facts About Me**
-
-- 🏁 **Hobbies**: CTFs, tool development, and cryptography.
-- 💡 **Passion Projects**: I love transforming complex problems into simple, impactful solutions.
-- 📚 **Favorite Quote**: "Security is not a product, but a process."
-
----
-
-## 📊 **SEO-Friendly Highlights**
-
-### **Keywords**:
-
-- Cybersecurity Specialist
-- Ethical Hacker
-- Python Developer
-- Penetration Testing
-- Network Security
-- SOC Monitoring
-- Secure Web Development
 
 ---
 
