@@ -1,123 +1,188 @@
 ---
 order: 4
-icon: fas fa-brain
-title: "AI & ML Enthusiast – Explore My Portfolio"
+icon: fas fa-user
+title: "Cybersecurity Enthusiast and Problem Solver – Explore My Portfolio"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+---
 
-# 🤖 **About Me: Aathil Ducky**
+# 🌐 **About Me: Aathil Ducky**
 
-## 🚀 **AI & ML Engineer | Automation Expert | Problem Solver**
+## 👨‍💻 **Cybersecurity Enthusiast | Ethical Hacker | Python Developer**
 
-Welcome! I’m **Aathil Ducky**, an **AI & ML Engineer** passionate about **solving real-world problems** with cutting-edge technology. I specialize in **AI development, automation, and data-driven problem-solving**, with a strong foundation in **Python** and **Machine Learning**.
-
-I am currently pursuing my **Bachelor of Computer Science** at **Trincomalee Campus, Eastern University of Sri Lanka (2020–2024)** and continuously expanding my expertise in **AI, automation, and data analytics**.
+Welcome to my page! I’m **Aathil Ducky**, a **Cybersecurity Specialist**, **Ethical Hacker**, and **Python Developer** dedicated to safeguarding the digital space. I’m currently pursuing my **Bachelor of Computer Science** at **Trincomalee Campus, Eastern University of Sri Lanka (2020–2024)**, driven by curiosity and passion for tackling cybersecurity challenges.
 
 ---
 
-## 🎯 **What I Do**
+## 🔍 **Who Am I?**
 
-- 🧠 **Artificial Intelligence** – Building smart solutions using AI & ML.
-- ⚙️ **Automation** – Automating repetitive tasks and improving efficiency.
-- 📊 **Data-Driven Solutions** – Leveraging data for better decision-making.
-- 🌐 **Web & App Development** – Creating AI-powered applications.
+I am a **self-taught cybersecurity researcher** with a knack for solving real-world problems through technology. My expertise spans **penetration testing**, **threat intelligence**, and **secure coding**. I thrive on challenges like **Capture The Flag (CTF)** competitions and building innovative tools to address today’s cybersecurity threats.
 
----
+### 🚀 **Mission**
 
-## 🛠️ **Core Skills**
-
-### 🤖 **AI & ML Development**
-- 🏆 **Machine Learning & Deep Learning** (TensorFlow, PyTorch)
-- 📊 **Data Science & Analytics** (Pandas, NumPy, Scikit-Learn)
-- 🎯 **Natural Language Processing (NLP)** (Transformers, GPT, BERT)
-- 🏗 **Computer Vision** (OpenCV, YOLO, CNNs)
-
-### ⚙️ **Automation & Web Development**
-- 🚀 **Python Automation** (Scripting, Task Automation, AI Bots)
-- 🌍 **AI-Powered Web Apps** (Flask, Django, FastAPI)
-- 📡 **API Development & Integration**
-
-### 🛡️ **Security & Ethical Hacking**
-- 🔍 **AI in Cybersecurity** – Using ML to detect threats
-- 🌐 **Web Security & Ethical Hacking**
+To create innovative, secure solutions that empower individuals and organizations in building a safer digital environment.
 
 ---
 
-## 🏆 **Projects**
+## 🛠️ **What I Do**
 
-### 🤖 **AI-Powered Resume Screener**
-- Built an **ML model** to filter job applications based on skills & experience.
-- 🚀 **Results**: Reduced manual screening time by 80%.
+### **Cybersecurity Skills**
+
+- 🔐 **Penetration Testing**: Uncovering vulnerabilities before attackers do.
+- 🌐 **Network Security**: Ensuring robust defenses for network infrastructures.
+- 📊 **Threat Intelligence**: Identifying and mitigating risks effectively.
+- 🛡️ **Risk Assessment**: Proactively addressing security flaws.
+- 🔍 **SOC Monitoring**: Real-time threat detection and response.
+
+### **Programming & Development**
+
+- 🐍 **Python Expert**: From automation scripts to full-stack web applications.
+- 🌍 **Web Development**: Building secure websites with **WordPress** and **Django**.
+- 🖥️ **Front-end Development**: Leveraging **React.js** for dynamic interfaces.
+- ⚙️ **Bash Scripting**: Automation for efficiency and precision.
+
+### **Certifications**
+
+- ✅ **Applied ChatGPT for Cybersecurity** (2024)
+- ✅ **Advanced Python Reconnaissance** (2024)
+- ✅ **Linux System Administration** (2023)
+
+---
+
+## 📂 **My Projects**
 
 ### 🔎 **Sensitive Information Finder**
-- Developed a tool to **detect sensitive data leaks**.
-- 🚀 **Results**: Increased detection accuracy by 30%.
+
+- A web app to detect sensitive information leaks.
+- 🚀 **Highlights**: Reduced false positives by 30%, user-friendly GUI, SQLite integration.
 
 ### 🎵 **Audio Secret Finder**
-- Used **AI & Signal Processing** to uncover hidden messages in audio files.
-- 🚀 **Results**: Achieved 75% detection accuracy.
+
+- Python-based tool for hidden audio message detection using **spectrogram analysis**.
+- 🚀 **Highlights**: Achieved 75% detection accuracy with libraries like `numpy`, `scipy`, and `librosa`.
 
 ### 📋 **Cybersecurity Cheat Sheet WebApp**
-- Created a **platform for organizing and searching cybersecurity notes**.
-- 🚀 **Results**: Enhanced search speed by 20%.
+
+- A platform for organizing and filtering cybersecurity notes.
+- 🚀 **Highlights**: Improved search performance by 20%, SOC-relevant logging.
 
 ---
 
-## 💼 **Work Experience**
+## 🎯 **Additional Features**
 
-### 🔧 **Web Developer | CBS Solution Pvt Ltd (2022–2024)**
-- Developed AI-powered features for web applications.
-- Automated security monitoring, reducing vulnerabilities by 20%.
+### 🏆 **Achievements**
 
-### ✍️ **Tech Writer | Medium (2024–Present)**
-- Published articles on **AI, automation, and cybersecurity**.
-- 🌟 **Impact**: 100+ views per article, helping developers & researchers.
+- Ranked in the **Top 10% on TryHackMe** challenges.
+- Authored **100+ viewed articles** on **Medium** about Python and cybersecurity.
+- Participated in numerous CTFs and solved complex tech challenges.
 
----
+### 📖 **Learning Journey**
 
-## 📜 **Certifications**
+Currently expanding my knowledge by:
 
-- ✅ **Machine Learning Specialization** – Coursera (2024)
-- ✅ **Applied AI & Deep Learning** – Udacity (2024)
-- ✅ **Python for Data Science** – Coursera (2023)
+- Reading "The Web Application Hacker’s Handbook" for advanced web security techniques.
+- Exploring **AI integration in cybersecurity** for future applications.
 
 ---
 
-## 🔗 **Let’s Connect**
+## 💼 **Professional Experience**
 
-[![Portfolio](https://img.icons8.com/ios/50/ffffff/domain.png)](https://aathilducky.com)  
-**[Portfolio](https://aathilducky.com)**
+### 🔧 **Web Developer** | CBS Solution Pvt Ltd (2022–2024)
 
-[![GitHub](https://img.icons8.com/ios/50/ffffff/github.png)](https://github.com/AATHILDUCKY)  
-**[GitHub](https://github.com/AATHILDUCKY)**
+- 🌟 Developed secure websites using **Django** and **WordPress**.
+- 🔒 Reduced vulnerabilities by **20%**, enhancing overall security.
+- 🛠️ Built custom plugins to extend functionality.
 
-[![LinkedIn](https://img.icons8.com/ios/50/ffffff/linkedin.png)](https://linkedin.com/in/aathilducky)  
-**[LinkedIn](https://linkedin.com/in/aathilducky)**
+### ✍️ **Cybersecurity Writer** | Medium (2024–Present)
 
-[![YouTube](https://img.icons8.com/ios/50/ffffff/youtube.png)](https://www.youtube.com/@aathilducky)  
-**[YouTube](https://www.youtube.com/@aathilducky)**
-
-[![Medium](https://img.icons8.com/ios/50/ffffff/medium.png)](https://medium.com/@aathilducky)  
-**[Medium](https://medium.com/@aathilducky)**
+- 📖 Authored articles on **threat modeling**, **SIEM tools**, and **forensics**.
+- 🌐 **Impact**: Average **100+ views** per article.
 
 ---
 
-🚀 **Let’s build AI-driven solutions that shape the future!**
+## 🧰 **Tools & Technologies**
+
+### **Cybersecurity Tools**
+
+- Metasploit, Burp Suite, Nmap, OWASP ZAP
+- SQLmap, Wireshark, Hashcat, Nessus
+- SIEM: Splunk, QRadar
+
+### **Programming & Frameworks**
+
+- Python, Django, JavaScript, React.js, Bash, C
+- SQL, OpenSSL, Tailwind CSS
+
+---
+
+## 🌟 **Fun Facts About Me**
+
+- 🏁 **Hobbies**: CTFs, tool development, and cryptography.
+- 💡 **Passion Projects**: I love transforming complex problems into simple, impactful solutions.
+- 📚 **Favorite Quote**: "Security is not a product, but a process."
+
+---
+
+## 📊 **SEO-Friendly Highlights**
+
+### **Keywords**:
+
+- Cybersecurity Specialist
+- Ethical Hacker
+- Python Developer
+- Penetration Testing
+- Network Security
+- SOC Monitoring
+- Secure Web Development
+
+---
+
+## 🔗 **Connect With Me**
+
+### 📧 **Contact**
+
+- **Email**: [aathilducky@gmail.com](mailto:aathilducky@gmail.com)
+- **Phone**: [+94 75 454 5398](tel:+94754545398)
+
+### 🌍 **Find Me Online**
+
+- **Portfolio**: [aathilducky.com/about](https://aathilducky.com/about/)
+- **GitHub**: [github.com/AATHILDUCKY](https://github.com/AATHILDUCKY)
+- **LinkedIn**: [linkedin.com/in/aathilducky](https://linkedin.com/in/aathilducky)
+
+---
+
+## 🚀 **Let’s Build a Safer Digital Future Together!**
+
+I’m passionate about collaboration, innovation, and growth. Let’s work together to solve the challenges of tomorrow and secure the systems of today.
 
 ```plaintext
-
-        /////\\\\\
-       ||  O O  ||
-       ||   ∆   ||  <-- AI-Powered Brain
-       ||  ---  ||
-        \______/  
-    /--|        |--\
-   |   |  AI/ML |   |
-    \--|________|--/
-       /        \
-      (__________)
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠟⠃⠀⠀⠙⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠋⠀⠀⠀⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠾⢛⠒⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣶⣄⡈⠓⢄⠠⡀⠀⠀⠀⣄⣷⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣷⠀⠈⠱⡄⠑⣌⠆⠀⠀⡜⢻⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡿⠳⡆⠐⢿⣆⠈⢿⠀⠀⡇⠘⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣷⡇⠀⠀⠈⢆⠈⠆⢸⠀⠀⢣⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣧⠀⠀⠈⢂⠀⡇⠀⠀⢨⠓⣄⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣦⣤⠖⡏⡸⠀⣀⡴⠋⠀⠈⠢⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⠁⣹⣿⣿⣿⣷⣾⠽⠖⠊⢹⣀⠄⠀⠀⠀⠈⢣⡀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⣇⣰⢫⢻⢉⠉⠀⣿⡆⠀⠀⡸⡏⠀⠀⠀⠀⠀⠀⢇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⡇⡇⠈⢸⢸⢸⠀⠀⡇⡇⠀⠀⠁⠻⡄⡠⠂⠀⠀⠀⠘
+⢤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠛⠓⡇⠀⠸⡆⢸⠀⢠⣿⠀⠀⠀⠀⣰⣿⣵⡆⠀⠀⠀⠀
+⠈⢻⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⣦⣀⡇⠀⢧⡇⠀⠀⢺⡟⠀⠀⠀⢰⠉⣰⠟⠊⣠⠂⠀⡸
+⠀⠀⢻⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢧⡙⠺⠿⡇⠀⠘⠇⠀⠀⢸⣧⠀⠀⢠⠃⣾⣌⠉⠩⠭⠍⣉⡇
+⠀⠀⠀⠻⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣞⣋⠀⠈⠀⡳⣧⠀⠀⠀⠀⠀⢸⡏⠀⠀⡞⢰⠉⠉⠉⠉⠉⠓⢻⠃
+⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⢀⣀⠠⠤⣤⣤⠤⠞⠓⢠⠈⡆⠀⢣⣸⣾⠆⠀⠀⠀⠀⠀⢀⣀⡼⠁⡿⠈⣉⣉⣒⡒⠢⡼⠀
+⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣎⣽⣶⣤⡶⢋⣤⠃⣠⡦⢀⡼⢦⣾⡤⠚⣟⣁⣀⣀⣀⣀⠀⣀⣈⣀⣠⣾⣅⠀⠑⠂⠤⠌⣩⡇⠀
+⠀⠀⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⣺⢁⣞⣉⡴⠟⡀⠀⠀⠀⠁⠸⡅⠀⠈⢷⠈⠏⠙⠀⢹⡛⠀⢉⠀⠀⠀⣀⣀⣼⡇⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⡟⢡⠖⣡⡴⠂⣀⣀⣀⣰⣁⣀⣀⣸⠀⠀⠀⠀⠈⠁⠀⠀⠈⠀⣠⠜⠋⣠⠁⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣿⡟⢿⣿⣿⣷⡟⢋⣥⣖⣉⠀⠈⢁⡀⠤⠚⠿⣷⡦⢀⣠⣀⠢⣄⣀⡠⠔⠋⠁⠀⣼⠃⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⡄⠈⠻⣿⣿⢿⣛⣩⠤⠒⠉⠁⠀⠀⠀⠀⠀⠉⠒⢤⡀⠉⠁⠀⠀⠀⠀⠀⢀⡿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣤⣤⠴⠟⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠤⠀⠀⠀⠀⠀⢩⠇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ```
