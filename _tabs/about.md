@@ -1,7 +1,7 @@
 ---
 order: 4
 icon: fas fa-user
-title: "AI/ML Developer, Python Enthusiast, and Problem Solver – Explore My Projects"
+title: "Aathil Ducky – Aspiring Security Researcher, AI Enthusiast, Python Developer"
 author_profile: true
 redirect_from: 
   - /about/
@@ -68,7 +68,6 @@ This format will allow Google to index your page properly, helping people search
 ---
 
 *“Don’t just write code, make it smart.”* – Aathil (I might have just made that up)
-
 
 ---
 
