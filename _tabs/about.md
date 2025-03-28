@@ -63,8 +63,6 @@ I’m always looking to connect with like-minded individuals! Whether you’re i
 
 ---
 
-This format will allow Google to index your page properly, helping people searching for **Aathil Ducky** or **security researcher** to find you. The tone is casual, informative, and SEO-friendly, making it more likely to rank for relevant searches.
-
 ---
 
 *“Don’t just write code, make it smart.”* – Aathil (I might have just made that up)
