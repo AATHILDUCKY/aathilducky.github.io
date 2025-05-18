@@ -1,0 +1,35 @@
+title: Aathil Ducky Notes
+description: >-
+  My personal markdown-powered notes and knowledge base.
+baseurl: ""  # Keep this empty since you're using a user/organization site
+url: "https://aathilducky.github.io"
+
+theme: jekyll-ducky-notes  # or replace with another Jekyll theme like minimal-mistakes
+
+# Optional - navigation links
+header_pages:
+  - index.md
+  - about.md
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude these from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Enable future posts (optional)
+future: true
+
+# Optional social metadata
+author:
+  name: Aathil Ducky
+  email: aathilducky@email.com
