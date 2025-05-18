@@ -1,9 +1,179 @@
-<h1 id="about-me">About Me</h1>
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aathil Ducky Notes</title>
 
-<p>Hi, I’m Adil Ahmed, also known as Aathil Ducky.<br />
-I’m a passionate computer science student and Python developer with interests in cybersecurity, web development, and AI.<br />
-I enjoy building creative projects, solving problems, and sharing knowledge through my blog and code.</p>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<p>This site hosts my personal notes, projects, and insights to help me learn and grow while sharing useful resources with the community.</p>
+  <!-- Highlight.js dark theme -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+  />
 
-<p>Thanks for visiting!</p>
+  <!-- markdown-it CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+
+  <!-- Highlight.js core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <style>
+    /* Styling your code blocks */
+    #selected-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #21262d;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+    pre {
+      position: relative;
+      background-color: #1a1e24 !important;
+      border: 1px solid #30363d;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: #1f2937;
+      color: #c9d1d9;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .obsidian-style {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.75;
+    }
+    .obsidian-style h1,
+    .obsidian-style h2,
+    .obsidian-style h3 {
+      color: #58a6ff;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .obsidian-style a {
+      color: #79c0ff;
+      text-decoration: underline;
+    }
+    .obsidian-style code {
+      background-color: #2d333b;
+      color: #d2a8ff;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .obsidian-style pre code {
+      background-color: transparent;
+      color: inherit;
+      padding: 0;
+      border-radius: 0;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #0d1117;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #30363d;
+    }
+  </style>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] font-sans">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="sticky-header">
+      <h1 class="text-2xl sm:text-3xl font-bold mb-4 text-[#58a6ff]">Aathil Ducky Notes</h1>
+      <label for="keyword-input" class="block mb-2 text-base sm:text-lg">Filter by Tags</label>
+      <input
+        type="text"
+        id="keyword-input"
+        placeholder="Enter comma-separated tags"
+        class="w-full p-3 bg-[#161b22] text-white border border-gray-700 rounded-md"
+      />
+      <div id="selected-tags" class="mt-3 flex flex-wrap gap-2"></div>
+    </header>
+
+    <div id="notes" class="space-y-6 mt-6">
+      
+    </div>
+
+    <!-- Optional: Live Markdown input demo -->
+    <!--
+    <section class="mt-12">
+      <h2 class="text-xl text-[#58a6ff] mb-4">Live Markdown Preview</h2>
+      <textarea
+        id="md-input"
+        class="w-full p-4 bg-[#161b22] text-white rounded-md font-mono"
+        rows="8"
+        placeholder="Type markdown here..."
+      ></textarea>
+      <div
+        id="md-preview"
+        class="obsidian-style prose prose-invert mt-6 p-4 bg-[#161b22] rounded-md"
+      ></div>
+    </section>
+    -->
+  </div>
+
+  <script src="/assets/js/filter.js"></script>
+
+  <script>
+    // Initialize markdown-it parser with highlight.js integration
+    const md = window.markdownit({
+      highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return '<pre><code class="hljs language-' + lang + '">' + hljs.highlight(str, { language: lang }).value + '</code></pre>';
+          } catch (__) {}
+        }
+        return '<pre><code class="hljs">' + md.utils.escapeHtml(str) + '</code></pre>';
+      },
+    });
+
+    // Apply syntax highlighting to all code blocks already rendered by Jekyll/markdown
+    hljs.highlightAll();
+
+    // Add copy buttons to all <pre><code> blocks
+    document.querySelectorAll('pre code').forEach((block) => {
+      const pre = block.parentElement;
+      if (!pre.querySelector('.copy-btn')) {
+        const button = document.createElement('button');
+        button.className = 'copy-btn';
+        button.innerText = 'Copy';
+        button.addEventListener('click', () => {
+          navigator.clipboard.writeText(block.innerText);
+          button.innerText = 'Copied!';
+          setTimeout(() => (button.innerText = 'Copy'), 1500);
+        });
+        pre.appendChild(button);
+      }
+    });
+
+    // Optional: If you want to dynamically convert markdown strings (for example in JS)
+    // Usage: const html = renderMarkdown("# Hello\n\nSome **bold** text");
+    function renderMarkdown(mdText) {
+      return md.render(mdText);
+    }
+
+    /* --- Optional Live Markdown Preview example ---
+    const mdInput = document.getElementById('md-input');
+    const mdPreview = document.getElementById('md-preview');
+    if (mdInput && mdPreview) {
+      mdInput.addEventListener('input', () => {
+        mdPreview.innerHTML = renderMarkdown(mdInput.value);
+        hljs.highlightAll();
+      });
+    }
+    */
+
+  </script>
+</body>
+</html>

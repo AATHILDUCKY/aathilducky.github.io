@@ -2,7 +2,7 @@ title: Aathil Ducky Notes
 description: >-
   My personal markdown-powered notes and knowledge base.
 baseurl: ""  # Keep this empty since you're using a user/organization site
-url: "https://aathilducky.github.io"
+#url: "https://aathilducky.github.io"
 
 theme: minima
   # or replace with another Jekyll theme like minimal-mistakes
@@ -21,7 +21,7 @@ plugins:
   - jekyll-seo-tag
 
 
-remote_theme: aathilducky/jekyll-ducky-notes
+#remote_theme: aathilducky/jekyll-ducky-notes
 
 plugins:
   - jekyll-remote-theme
