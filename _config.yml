@@ -19,6 +19,15 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+
+remote_theme: aathilducky/jekyll-ducky-notes
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+
 # Exclude these from build
 exclude:
   - Gemfile
