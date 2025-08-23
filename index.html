@@ -1,1201 +1,798 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <!-- ====== Basic SEO ====== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aathil Ducky — Cybersecurity & Developer Portfolio</title>
+  <meta name="description" content="Aathil Ahamed — Cybersecurity enthusiast & web developer from Sri Lanka. Penetration testing, SOC monitoring, cloud security, Python/Django & WordPress development. Projects, blogs & contact." />
+  <meta name="keywords" content="aathil ducky, Aathil Ahamed, cybersecurity, penetration testing, SOC, cloud security, web developer, Python, Django, WordPress, Sri Lanka, TryHackMe" />
+  <meta name="author" content="Aathil ducky" />
+  <meta name="robots" content="index,follow" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="https://aathilducky.com/" />
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!-- ====== Open Graph / Twitter ====== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aathil Ducky — Cybersecurity & Web Developer Portfolio" />
+  <meta property="og:description" content="Pen testing, vuln assessment, SOC monitoring, cloud security + Python/Django & WordPress. Explore projects, blogs & contact." />
+  <meta property="og:url" content="https://aathilducky.com/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/AATHILDUCKY%201200X630.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aathil Ahamed — Cybersecurity & Web Developer Portfolio" />
+  <meta name="twitter:description" content="Cybersecurity enthusiast & web dev from Sri Lanka." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/AATHILDUCKY%201200X630.png" />
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- ====== Favicons (replace with your own) ====== -->
+  <link rel="icon" href="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/favicon32.ico" sizes="32x32" />
+  <link rel="icon" href="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/web-app-manifest-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/apple-touch-icon.png" />
 
-  <!--
-    - google font link
-  -->
+  <!-- ====== Preconnect for performance ====== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ====== Google Fonts ====== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- ====== Tailwind CSS CDN ====== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#2563eb',
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px -12px rgb(0 0 0 / 0.15)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ====== Font Awesome ====== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ====== Devicon (tech icons) ====== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <!-- ====== AOS (Animate On Scroll) ====== -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- ====== Swiper (carousels) ====== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    /* Focus & links */
+    .focus-ring{outline:2px solid transparent; outline-offset:2px}
+    .focus-ring:focus-visible{outline-color:#2563eb}
+    .link-underline{position:relative}
+    .link-underline:after{content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px; background:currentColor; transition:width .2s ease}
+    .link-underline:hover:after{width:100%}
+
+    /* Global animated gradient background (subtle) */
+    body::before{
+      content:""; position:fixed; inset:-20%; z-index:-1;
+      background:
+        radial-gradient(40% 35% at 10% 10%, rgba(59,130,246,.15), transparent 60%),
+        radial-gradient(35% 40% at 90% 20%, rgba(147,197,253,.14), transparent 60%),
+        radial-gradient(40% 40% at 50% 90%, rgba(29,78,216,.14), transparent 60%);
+      filter: saturate(1.05);
+      animation:bgShift 24s ease-in-out infinite alternate;
+    }
+    @keyframes bgShift{
+      0% { transform: translate3d(0,0,0) scale(1); }
+      100%{ transform: translate3d(-2%, 2%, 0) scale(1.05); }
+    }
+
+    /* Glass badges floating animation */
+    @keyframes floatY {
+      0%,100% { transform: translateY(0) }
+      50% { transform: translateY(-8px) }
+    }
+    .float-slow { animation: floatY 5.5s ease-in-out infinite; }
+    .float-slower { animation: floatY 7s ease-in-out infinite; }
+
+    /* Testimonial gradient wrap */
+    .grad-wrap{
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-radius: 1.25rem;
+    }
+    .grad-wrap::before{
+      content:""; position:absolute; inset:-1px; z-index:-1; border-radius:inherit;
+      background: radial-gradient(80% 60% at 20% 10%, rgba(59,130,246,.25), transparent 70%),
+                  radial-gradient(80% 60% at 80% 20%, rgba(99,102,241,.25), transparent 70%),
+                  radial-gradient(70% 80% at 50% 90%, rgba(29,78,216,.25), transparent 70%);
+      filter: blur(18px); opacity:.8;
+    }
+    .testimonial-card{
+      background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.55));
+      border: 1px solid rgba(148,163,184,.35);
+      box-shadow: 0 18px 42px -18px rgba(2,6,23,.35);
+    }
+    .dark .testimonial-card{
+      background: linear-gradient(180deg, rgba(2,6,23,.7), rgba(2,6,23,.55));
+      border-color: rgba(51,65,85,.55);
+    }
+    .star { color: #f59e0b; } /* amber-500 */
+  </style>
+
+  <!-- ====== JSON-LD Structured Data ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aathil Ducky",
+    "alternateName": ["Aathil"],
+    "jobTitle": ["Cybersecurity Enthusiast", "Web Developer", "Python Developer","OffSec Enthusiast"],
+    "url": "https://aathilducky.com/",
+    "image": "https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/my%20new%20profile%20pic.png",
+    "description": "Cybersecurity enthusiast & web developer from Sri Lanka specializing in pen testing, SOC monitoring, cloud security, Python/Django & WordPress.",
+    "address": { "@type": "PostalAddress", "addressCountry": "LK", "addressLocality": "Sri Lanka" },
+    "sameAs": ["https://github.com/AATHILDUCKY","https://www.linkedin.com/in/aathil-ducky-95b12a218","https://tryhackme.com/p/disavowalproport"]
+  }
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "WebSite",
+    "name": "Aathil Ducky Portfolio",
+    "url": "https://aathilducky.com/",
+    "potentialAction": { "@type": "SearchAction", "target": "https://aathilducky/?q={search_term_string}", "query-input": "required name=search_term_string" } }
+  </script>
 </head>
 
-<body>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+  <!-- Skip link -->
+  <a href="#main" class="absolute left-2 top-2 z-50 px-3 py-1 bg-primary text-white rounded-md focus-ring">Skip to content</a>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
-
-          <p class="title">Web developer</p>
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-backdrop-blur:bg-white/70 bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3 group" aria-label="Go to home">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary shadow-soft">AD</span>
+          <span class="font-semibold tracking-tight group-hover:opacity-80">Aathil Ducky</span>
+        </a>
+        <nav aria-label="Primary" class="hidden md:block">
+          <ul class="flex items-center gap-6 text-sm">
+            <li><a href="#about" class="link-underline">About</a></li>
+            <li><a href="#skills" class="link-underline">Skills</a></li>
+            <li><a href="#projects" class="link-underline">Projects</a></li>
+            <li><a href="#experience" class="link-underline">Experience</a></li>
+            <li><a href="#blog" class="link-underline">Blog</a></li>
+            <li><a href="#contact" class="link-underline">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <!-- Theme toggle (kept) -->
+          <button id="themeToggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition focus-ring" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon hidden dark:inline" aria-hidden="true"></i>
+            <i class="fa-solid fa-sun dark:hidden" aria-hidden="true"></i>
+          </button>
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition focus-ring" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
-
+      <!-- Mobile menu -->
+      <nav id="mobileMenu" class="md:hidden hidden py-3" aria-label="Mobile">
+        <ul class="grid gap-2 text-sm">
+          <li><a href="#about" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">About</a></li>
+          <li><a href="#skills" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Skills</a></li>
+          <li><a href="#projects" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Projects</a></li>
+          <li><a href="#experience" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a></li>
+          <li><a href="#blog" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Blog</a></li>
+          <li><a href="#contact" class="block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a></li>
         </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
       </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
-          </p>
-
-          <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="relative overflow-clip">
+      <!-- Decorative gradients -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/20 blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
+        <div data-aos="fade-right" data-aos-delay="100">
+          <span class="inline-flex items-center gap-2 text-xs font-mono px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">Open to Internships & Collaborations</span>
+          <h1 class="mt-6 text-3xl sm:text-5xl font-bold tracking-tight">Hi, I’m <span class="text-primary">Aathil Ducky</span></h1>
+          <p class="mt-3 text-lg text-slate-600 dark:text-slate-300">Cybersecurity enthusiast & web developer from Sri Lanka.</p>
+          <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">I specialize in <strong>penetration testing</strong>, <strong>vulnerability assessment</strong>, <strong>vibe coding</strong>, and <strong>cloud security</strong>. I also build with <strong>Python/Django</strong> and <strong>WordPress</strong> — focused, creative, efficient.</p>
+
+          <div class="mt-6 text-sm text-slate-600 dark:text-slate-300">I’m <span id="typed" class="font-semibold text-primary"></span></div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-white shadow-soft hover:opacity-90 focus-ring"><i class="fa-solid fa-code" aria-hidden="true"></i> View Projects</a>
+            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 focus-ring"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact Me</a>
+            <a href="#resume" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 focus-ring"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download Résumé</a>
+          </div>
+
+          <div class="mt-6 flex items-center gap-4 text-2xl">
+            <a href="https://github.com/your-username" aria-label="GitHub" class="hover:text-primary"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/your-username" aria-label="LinkedIn" class="hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://tryhackme.com/p/your-username" aria-label="TryHackMe" class="hover:text-primary"><i class="fa-solid fa-shield-halved"></i></a>
+            <a href="mailto:your.email@example.com" aria-label="Email" class="hover:text-primary"><i class="fa-solid fa-envelope"></i></a>
+          </div>
         </div>
 
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
+        <!-- Profile + Badges (animated) -->
+        <div class="relative" data-aos="fade-left" data-aos-delay="200">
+          <div class="relative mx-auto w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden shadow-soft border border-slate-200/60 dark:border-slate-800/60">
+            <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/my%20new%20profile%20pic.png" alt="Portrait of Aathil Ahamed" class="w-full h-full object-cover" loading="eager" width="800" height="800" />
           </div>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+          <!-- Floating badge: Years Learning -->
+          <div class="hidden sm:block absolute -left-5 bottom-6 float-slower">
+            <div class="px-4 py-3 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur border border-slate-200/60 dark:border-slate-800/60 shadow-soft">
+              <div class="flex items-center gap-2 text-xs text-slate-500">
+                <i class="fa-solid fa-graduation-cap text-primary"></i> Years Learning
+              </div>
+              <div class="mt-1 font-semibold">3+ Years</div>
             </div>
-
-            <h3 class="h3">Experience</h3>
           </div>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
+          <!-- Floating badge: TryHackMe -->
+          <div class="hidden sm:block absolute -right-5 top-10 float-slow">
+            <div class="px-4 py-3 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur border border-slate-200/60 dark:border-slate-800/60 shadow-soft">
+              <div class="flex items-center gap-2 text-xs text-slate-500">
+                <i class="fa-solid fa-shield-halved text-primary"></i> TryHackMe Rank
               </div>
+              <div class="mt-1 font-semibold">Top 6%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+    <!-- About -->
+    <section id="about" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-10 items-start">
+          <div class="lg:col-span-2" data-aos="fade-up">
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">About Me</h2>
+            <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">I’m a passionate cybersecurity enthusiast and web developer from Sri Lanka. I specialize in <strong>penetration testing</strong>, <strong>vulnerability assessment</strong>, <strong>SOC monitoring</strong>, and <strong>cloud security</strong>. With hands-on experience in <strong>Metasploit</strong>, <strong>Burp Suite</strong>, <strong>Wireshark</strong>, and <strong>SIEM</strong>, I enjoy uncovering risks and building resilient systems.</p>
+            <p class="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">Alongside cybersecurity, I build with <strong>Python</strong>, <strong>Django</strong> and <strong>WordPress</strong> — including custom plugins. I also write practical guides on security & Python.</p>
+          </div>
+          <aside class="space-y-4" data-aos="fade-left">
+            <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+              <h3 class="font-semibold">Quick Info</h3>
+              <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                <li><i class="fa-solid fa-location-dot w-5" aria-hidden="true"></i> Sri Lanka</li>
+                <li><i class="fa-solid fa-briefcase w-5" aria-hidden="true"></i> Cyber Security Intern , Python Developer </li>
+                <li><i class="fa-solid fa-envelope w-5" aria-hidden="true"></i> <a href="mailto:your.email@example.com" class="link-underline">aathilducky@gmail.com</a></li>
+              </ul>
+              <div class="mt-4 flex gap-3">
+                <a href="#contact" class="px-3 py-2 rounded-lg bg-primary text-white text-sm">Hire Me</a>
+                <button id="copyEmail" class="px-3 py-2 rounded-lg border text-sm hover:bg-slate-100 dark:hover:bg-slate-800">Copy Email</button>
               </div>
+            </div>
+            <div class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
+              <h3 class="font-semibold">Focus Areas</h3>
+              <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">IAM & IAG</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">Pentesting</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">Django</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">FastAPI</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">ReactJs</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">Vibe code problem solving</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">WordPress</li>
+                <li class="px-2.5 py-1 rounded-full bg-primary/10 text-primary">SEO</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-            </li>
+    <!-- Skills -->
+    <section id="skills" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Skills & Tools</h2>
+          <div class="text-sm text-slate-500">*Hover to see details</div>
+        </div>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cybersecurity -->
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950" data-aos="fade-up">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-shield-halved text-primary text-xl" aria-hidden="true"></i>
+              <h3 class="font-semibold">Cybersecurity</h3>
+            </div>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <li>Pen Testing</li><li>Vuln Assessment</li>
+              <li>SOC Monitoring</li><li>Cloud Security</li>
+              <li>OSINT</li><li>IR</li>
             </ul>
-
+            <div class="mt-4 flex flex-wrap gap-3 text-3xl" aria-label="Tools">
+              <i title="Metasploit"> <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/icons8-metasploit-48.png" alt="Metasploit" width="25"></i>
+              <i title="Burp Suite"> <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/burp.png" alt="Burp Suite" width="25"></i>
+              <i title="Wireshark"> <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/icons8-wireshark-64.png" alt="Wireshark" width="25"></i>
+              <i class="" title="Linux"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" width="25"></i>
+              <i class="devicon-docker-plain colored" title="Docker"></i>
+            </div>
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+          <!-- Development -->
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-code text-primary text-xl" aria-hidden="true"></i>
+              <h3 class="font-semibold">Development</h3>
             </div>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <li>Python</li><li>Django</li>
+              <li>JavaScript</li><li>Tailwind CSS</li>
+              <li>WordPress</li><li>REST APIs</li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-3 text-3xl">
+              <i class="devicon-python-plain " title="Python"></i>
+              <i class="devicon-django-plain colored" title="Django"></i>
+              <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+              <i class="devicon-tailwindcss-plain colored" title="Tailwind"></i>
+              <i class="devicon-wordpress-plain colored" title="WordPress"></i>
+              <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+            </div>
+          </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <!-- DevOps & Cloud -->
+          <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center gap-3">
+              <i class="fa-solid fa-infinity text-primary text-xl" aria-hidden="true"></i>
+              <h3 class="font-semibold">DevOps & Cloud</h3>
+            </div>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <li>AWS</li><li>Git & GitHub</li>
+              <li>GitHub Actions</li><li>Linux</li>
+              <li>NGINX</li><li>CI/CD</li>
+            </ul>
+            <div class="mt-4 flex flex-wrap gap-3 text-3xl">
+              <i class="devicon-amazonwebservices-plain colored" title="AWS"></i>
+              <i class="devicon-git-plain colored" title="Git"></i>
+              <i class="devicon-github-plain colored" title="GitHub"></i>
+              <i class="devicon-nginx-plain colored" title="NGINX"></i>
+              <i class="devicon-bash-plain colored" title="Bash"></i>
+              <i class="devicon-ubuntu-plain colored" title="ubuntu"></i>
+              <i class="devicon-redhat-plain colored" title="redhat"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+    <!-- Projects -->
+    <section id="projects" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Featured Projects</h2>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">Security tools & web apps I built or contributed to.</p>
+          </div>
+          <div class="flex gap-2" role="group" aria-label="Project filters">
+            <button class="filter-btn px-3 py-1.5 rounded-lg text-sm border border-slate-300 dark:border-slate-700" data-filter="all">All</button>
+            <button class="filter-btn px-3 py-1.5 rounded-lg text-sm border border-slate-300 dark:border-slate-700" data-filter="security">Security</button>
+            <button class="filter-btn px-3 py-1.5 rounded-lg text-sm border border-slate-300 dark:border-slate-700" data-filter="web">Web</button>
+            <button class="filter-btn px-3 py-1.5 rounded-lg text-sm border border-slate-300 dark:border-slate-700" data-filter="tools">Tools</button>
+          </div>
+        </div>
 
-          </form>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Project Card -->
+          <article class="project-card group" data-category="security tools">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft" data-aos="zoom-in">
+              <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/pexels-myburgh-4816921.jpg" alt="Screenshot of GitHub Sensitive Information Finder tool" loading="lazy" width="640" height="360" class="w-full h-44 object-cover group-hover:scale-105 transition" />
+              <div class="p-5">
+                <h3 class="font-semibold">GitHub Sensitive Information Finder</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Scans public repos for secrets & exposed credentials using pattern/rule-based detection.</p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Python</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Security</span></div>
+                <div class="mt-4 flex gap-3">
+                  <a href="https://github.com/AATHILDUCKY/duck-duck-leaks" class="text-primary text-sm link-underline" aria-label="View source on GitHub">Source <i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="text-slate-500 text-sm link-underline" aria-label="Live demo">Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-        </section>
+          <article class="project-card group" data-category="security tools">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft" data-aos="zoom-in" data-aos-delay="100">
+              <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/pexels-myburgh-4816921.jpg" alt="Screenshot of Audio Steganography Detector" loading="lazy" width="640" height="360" class="w-full h-44 object-cover group-hover:scale-105 transition" />
+              <div class="p-5">
+                <h3 class="font-semibold">Audio Steganography Detector</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Detects hidden messages in audio using spectral analysis & heuristics.</p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Python</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Signal Processing</span></div>
+                <div class="mt-4 flex gap-3">
+                  <a href="https://github.com/AATHILDUCKY/audio-secret-finder" class="text-primary text-sm link-underline">Source <i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="text-slate-500 text-sm link-underline">Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      </article>
+          <article class="project-card group" data-category="web tools">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft" data-aos="zoom-in" data-aos-delay="200">
+              <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/pexels-myburgh-4816921.jpg" alt="Screenshot of cybersecurity cheat sheet web app" loading="lazy" width="640" height="360" class="w-full h-44 object-cover group-hover:scale-105 transition" />
+              <div class="p-5">
+                <h3 class="font-semibold">Cybersecurity Cheat Sheet Web App</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Quick reference for commands, payloads, and incident-handling snippets with offline mode.</p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">PWA</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Django</span></div>
+                <div class="mt-4 flex gap-3">
+                  <a href="https://github.com/AATHILDUCKY/ethical-hacking-short-notes" class="text-primary text-sm link-underline">Source <i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="text-slate-500 text-sm link-underline">Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <article class="project-card group" data-category="web">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft" data-aos="zoom-in">
+              <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/pexels-myburgh-4816921.jpg" alt="Screenshot of Django SaaS starter" loading="lazy" width="640" height="360" class="w-full h-44 object-cover group-hover:scale-105 transition" />
+              <div class="p-5">
+                <h3 class="font-semibold">Django SaaS Starter</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Authentication, Stripe billing, and teams with clean architecture and security hardening.</p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Django</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">Stripe</span></div>
+                <div class="mt-4 flex gap-3">
+                  <a href="https://github.com/AATHILDUCKY/Django-template" class="text-primary text-sm link-underline">Source <i class="fa-brands fa-github"></i></a>
+                  <a href="#" class="text-slate-500 text-sm link-underline">Demo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card group" data-category="security">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft" data-aos="zoom-in" data-aos-delay="100">
+              <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/pexels-myburgh-4816921.jpg" alt="Screenshot of SOC playbooks" loading="lazy" width="640" height="360" class="w-full h-44 object-cover group-hover:scale-105 transition" />
+              <div class="p-5">
+                <h3 class="font-semibold">SOC Monitoring Playbooks</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Collection of detection rules & IR workflows for SIEM platforms (Splunk/ELK).</p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">SIEM</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">DFIR</span></div>
+                <div class="mt-4 flex gap-3">
+                  <a href="https://github.com/your-username/soc-playbooks" class="text-primary text-sm link-underline">Source <i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card group" data-category="tools">
+            <div class="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft" data-aos="zoom-in" data-aos-delay="200">
+              <img src="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/pexels-myburgh-4816921.jpg" alt="Screenshot of WordPress security plugins" loading="lazy" width="640" height="360" class="w-full h-44 object-cover group-hover:scale-105 transition" />
+              <div class="p-5">
+                <h3 class="font-semibold">WordPress Security Plugins</h3>
+                <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Custom plugins to enforce best-practice hardening & audit logging.</p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500"><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">PHP</span><span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800">WordPress</span></div>
+                <div class="mt-4 flex gap-3">
+                  <a href="https://github.com/your-username/wp-sec-plugins" class="text-primary text-sm link-underline">Source <i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Education -->
+    <section id="experience" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Experience & Education</h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <!-- Experience -->
+          <div class="space-y-6" data-aos="fade-up">
+            <h3 class="font-semibold text-slate-500">Experience</h3>
+            <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Cybersecurity Intern</h4>
+                <span class="text-xs text-slate-500">2024 — Present</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Assisting with SOC monitoring, vulnerability assessments, and security automation. Building Python tools for log parsing and triage.</p>
+              <ul class="mt-2 text-sm list-disc list-inside text-slate-600 dark:text-slate-300">
+                <li>Wrote SIEM detections & dashboards (Splunk/ELK)</li>
+                <li>Threat intel enrichment for alerts</li>
+                <li>Nmap/Burp automation for attack surface scans</li>
+              </ul>
+            </article>
+            <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">Freelance Web Developer</h4>
+                <span class="text-xs text-slate-500">2022 — Present</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Secure websites/apps using Django, Tailwind, and WordPress. Security-first best practices from day one.</p>
+            </article>
+          </div>
+          <!-- Education -->
+          <div class="space-y-6" data-aos="fade-up" data-aos-delay="150">
+            <h3 class="font-semibold text-slate-500">Education & Certifications</h3>
+            <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">BSc (Hons) — Information Security (in progress)</h4>
+                <span class="text-xs text-slate-500">—</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Networks, DFIR, Secure Dev, Cloud, Cryptography.</p>
+            </article>
+            <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold">TryHackMe — Top 10%</h4>
+                <span class="text-xs text-slate-500">Current</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Active in CTFs & labs: web exploitation, privilege escalation, and blue‑team challenges.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (Upgraded) -->
+    <!-- Testimonials (Upgraded, no nav buttons) -->
+<section class="py-16 sm:py-24" aria-label="Testimonials">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grad-wrap">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">What Clients Say</h2>
+        <p class="mt-1 text-slate-600 dark:text-slate-300">Security + speed + polish.</p>
+      </div>
     </div>
 
+    <div class="mt-8 swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <blockquote class="testimonial-card p-6 rounded-2xl">
+            <div class="flex items-center gap-3">
+              <img class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700" src="https://placehold.co/96x96/png" alt="Client avatar"/>
+              <div class="min-w-0">
+                <div class="font-semibold">Client — Web App Project</div>
+                <div class="text-xs text-slate-500">Django • Security Hardening</div>
+              </div>
+              <div class="ml-auto">
+                <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-700 dark:text-slate-300">“Aathil delivered a secure Django app on time. Great communication and a security-first mindset.”</p>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote class="testimonial-card p-6 rounded-2xl">
+            <div class="flex items-center gap-3">
+              <img class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700" src="https://placehold.co/96x96/png" alt="SOC Team Lead avatar"/>
+              <div class="min-w-0">
+                <div class="font-semibold">SOC Team Lead</div>
+                <div class="text-xs text-slate-500">SIEM • Detections</div>
+              </div>
+              <div class="ml-auto">
+                <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-700 dark:text-slate-300">“Helped us set up dashboards and write detections. Alert quality improved noticeably.”</p>
+          </blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote class="testimonial-card p-6 rounded-2xl">
+            <div class="flex items-center gap-3">
+              <img class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-700" src="https://placehold.co/96x96/png" alt="Business owner avatar"/>
+              <div class="min-w-0">
+                <div class="font-semibold">Small Business Owner</div>
+                <div class="text-xs text-slate-500">WordPress • Plugin</div>
+              </div>
+              <div class="ml-auto">
+                <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-700 dark:text-slate-300">“Professional, modern, and responsive website with a custom security plugin.”</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Only dots/pagination -->
+      <div class="mt-6 flex justify-center">
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Blog -->
+    <section id="blog" class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-900/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-end justify-between flex-wrap gap-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Latest Writing</h2>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">Insights on cybersecurity and Python programming.</p>
+          </div>
+          <a href="https://medium.com/@aathilducky" class="text-sm link-underline">All posts →</a>
+        </div>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950" data-aos="fade-up">
+            <img src="https://placehold.co/640x360/png?text=Web+Pentesting+101" alt="Cover for Web Pentesting 101" loading="lazy" width="640" height="360" class="w-full h-40 object-cover rounded-xl" />
+            <h3 class="mt-4 font-semibold">Web Pentesting 101: From Recon to Report</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">A beginner-friendly walkthrough of a typical web app engagement.</p>
+            <a href="#" class="mt-3 inline-block text-sm text-primary link-underline">Read</a>
+          </article>
+          <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://placehold.co/640x360/png?text=Py+Logging+for+Sec" alt="Cover for Python logging for security" loading="lazy" width="640" height="360" class="w-full h-40 object-cover rounded-xl" />
+            <h3 class="mt-4 font-semibold">Python Logging for Security Engineers</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Effective log enrichment & structured logging patterns.</p>
+            <a href="#" class="mt-3 inline-block text-sm text-primary link-underline">Read</a>
+          </article>
+          <article class="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://placehold.co/640x360/png?text=CTF+Notes" alt="Cover for CTF notes" loading="lazy" width="640" height="360" class="w-full h-40 object-cover rounded-xl" />
+            <h3 class="mt-4 font-semibold">My CTF Notes: Web & Linux</h3>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Selected tactics, tools, and commands from recent challenges.</p>
+            <a href="#" class="mt-3 inline-block text-sm text-primary link-underline">Read</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div data-aos="fade-right">
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Let’s work together</h2>
+            <p class="mt-3 text-slate-600 dark:text-slate-300">Have a security challenge or need a modern, secure web app? I’d love to help.</p>
+            <ul class="mt-5 space-y-3 text-sm text-slate-700 dark:text-slate-300">
+              <li><i class="fa-solid fa-envelope w-5" aria-hidden="true"></i> <a href="mailto:aathilducky@gmail.com" class="link-underline">aathilduck@gmail.com</a></li>
+              <li><i class="fa-brands fa-github w-5" aria-hidden="true"></i> <a href="https://github.com/AATHILDUCKY" class="link-underline">github.com/aathilducky</a></li>
+              <li><i class="fa-brands fa-linkedin w-5" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/aathilducky" class="link-underline">linkedin.com/in/aathilducky</a></li>
+              <li><i class="fa-solid fa-shield-halved w-5" aria-hidden="true"></i> <a href="https://tryhackme.com/p/disavowalproport" class="link-underline">tryhackme.com/p/disavowalproport</a></li>
+            </ul>
+          </div>
+          <form data-aos="fade-left" action="https://formspree.io/f/your-form-id" method="POST" class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-soft">
+            <div class="grid grid-cols-1 gap-4">
+              <label class="text-sm">Name
+                <input type="text" name="name" required class="mt-1 w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent focus-ring" placeholder="Your name" />
+              </label>
+              <label class="text-sm">Email
+                <input type="email" name="email" required class="mt-1 w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent focus-ring" placeholder="name@example.com" />
+              </label>
+              <label class="text-sm">Message
+                <textarea name="message" rows="5" required class="mt-1 w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent focus-ring" placeholder="Tell me about your project"></textarea>
+              </label>
+              <input type="text" name="_gotcha" class="hidden" />
+              <button class="mt-2 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-primary text-white hover:opacity-90 focus-ring" type="submit">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+            </div>
+            <p class="mt-3 text-xs text-slate-500">This form uses Formspree. Replace <code>your-form-id</code> with your own.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Need a printable résumé?</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">Download a clean PDF version.</p>
+        <div class="mt-4 flex justify-center gap-3">
+          <a href="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/aathil%20ahamed%20resume%20cybersecurity.pdf" class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 focus-ring">Download PDF</a>
+          <button class="px-4 py-2 rounded-xl border hover:bg-slate-100 dark:hover:bg-slate-800 focus-ring" onclick="window.print()">Print</button>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-500">© <span id="year"></span> Aathil Ahamed. Built with ❤️, Tailwind, and vibe coding.</p>
+        <div class="flex items-center gap-4 text-lg">
+          <a href="#home" class="hover:text-primary" aria-label="Back to top"><i class="fa-solid fa-circle-arrow-up"></i></a>
+          <a href="/sitemap.xml" class="hover:text-primary text-sm">Sitemap</a>
+          <a href="/privacy" class="hover:text-primary text-sm">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Back-to-top -->
+  <button id="toTop" class="fixed bottom-6 right-6 p-3 rounded-full bg-primary text-white shadow-soft hidden" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
+  <!-- ====== Scripts ====== -->
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <script>
+    // Theme
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+    }
+    themeToggle?.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
 
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+    // Typed.js
+    window.addEventListener('load', () => {
+      if (window.Typed) {
+        new Typed('#typed', {
+          strings: [
+            'an OffSec enthusiast',
+            'a cyber sec intern',
+            'a Python developer',
+            'a vibe coder who solves problems'
+          ],
+          typeSpeed: 45, backSpeed: 25, backDelay: 1400, loop: true
+        });
+      }
+    });
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    // AOS
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.AOS) AOS.init({ once: true, duration: 700, offset: 60 });
+    });
 
+    // Swiper (testimonials)
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.Swiper) new Swiper('.swiper', {
+        loop: true,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        autoplay: { delay: 2600, disableOnInteraction: false },
+        speed: 700
+      });
+    });
+
+    // Filter buttons
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+    filterBtns.forEach(btn => btn.addEventListener('click', () => {
+      const cat = btn.dataset.filter;
+      filterBtns.forEach(b => b.classList.remove('bg-primary', 'text-white'));
+      btn.classList.add('bg-primary', 'text-white');
+      cards.forEach(card => {
+        const inCat = card.dataset.category?.includes(cat) || cat === 'all';
+        card.style.display = inCat ? '' : 'none';
+      });
+    }));
+
+    // Copy email
+    const copyEmailBtn = document.getElementById('copyEmail');
+    copyEmailBtn?.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText('your.email@example.com'); copyEmailBtn.textContent = 'Copied!'; setTimeout(()=> copyEmailBtn.textContent='Copy Email', 1500); } catch(e){ alert('Copy failed'); }
+    });
+
+    // Year & Back-to-top
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toTop = document.getElementById('toTop');
+    const toggleTopBtn = () => { window.scrollY > 300 ? toTop.classList.remove('hidden') : toTop.classList.add('hidden'); };
+    window.addEventListener('scroll', toggleTopBtn);
+    toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
 </body>
-
 </html>
