@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Aathil Ducky | Cyber Security & Ethical Hacking Enthusiast</title>
+
+    <meta
+      name="description"
+      content="I’m Aathil Ahamed (aka Aathil Ducky) — a cybersecurity & ethical hacking enthusiast from Sri Lanka. Final-year Computer Science student, Python & Django developer, content creator, and founder of PwnTrends."
+    />
+    <meta
+      name="keywords"
+      content="Aathil Ducky, Aathil Ahamed, aathilducky, cyber security, ethical hacking, offensive security, red team, penetration testing, PwnTrends, Python developer, Sri Lanka"
+    />
+    <meta name="author" content="Aathil Ahamed (Aathil Ducky)" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.aathilducky.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Aathil Ducky | Cyber Security & Ethical Hacking Enthusiast"
+    />
+    <meta
+      property="og:description"
+      content="Cybersecurity & offensive security enthusiast, final-year Computer Science student, Python & Django developer, and content creator behind PwnTrends."
+    />
+    <meta property="og:url" content="https://www.aathilducky.com/" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/aathil-banner.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@AathilDucky" />
+    <meta
+      name="twitter:title"
+      content="Aathil Ducky | Cyber Security & Ethical Hacking Enthusiast"
+    />
+    <meta
+      name="twitter:description"
+      content="Offensive security, penetration testing, Python automation, and cybersecurity content creator."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/aathil-banner.png"
+    />
+
+    <!-- Favicon (replace with your own if you like) -->
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/ducky-icon.png"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', "system-ui", "sans-serif"],
+            },
+            colors: {
+              night: "#020617",
+              navy: "#0B132B",
+              neonBlue: "#1C8EF9",
+              cyberPurple: "#7C3AED",
+              cyberTeal: "#06B6D4",
+            },
+            boxShadow: {
+              "soft-glow":
+                "0 0 40px rgba(37, 99, 235, 0.45), 0 0 80px rgba(56, 189, 248, 0.25)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Animate.css for subtle animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+      }
+      /* Smoother custom scroll bar (optional) */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #1c8ef9, #7c3aed);
+        border-radius: 999px;
+      }
+    </style>
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aathil Ahamed",
+        "alternateName": "Aathil Ducky",
+        "url": "https://www.aathilducky.com/",
+        "image": "https://raw.githubusercontent.com/AATHILDUCKY/my-assets/refs/heads/main/aathil-banner.png",
+        "jobTitle": "Cyber Security Enthusiast | Ethical Hacker | Content Creator",
+        "sameAs": [
+          "https://github.com/AATHILDUCKY",
+          "https://www.youtube.com/@aathilducky",
+          "https://medium.com/@aathilducky",
+          "https://www.facebook.com/aathil.ducky/",
+          "https://duckyspot.tumblr.com/",
+          "https://dev.to/aathilducky",
+          "https://pwntrends.com/",
+          "https://www.instagram.com/aathilducky/",
+          "https://twitter.com/AathilDucky",
+          "https://www.quora.com/profile/Duckyspot"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Sri Lanka"
+        },
+        "description": "Cybersecurity and offensive security enthusiast, final-year Computer Science student, Python & Django developer, blogger, YouTuber, and founder of PwnTrends."
+      }
+    </script>
+  </head>
+
+  <body
+    class="font-sans text-slate-100 bg-night bg-gradient-to-br from-night via-navy to-black relative overflow-x-hidden"
+  >
+    <!-- Background glows -->
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 opacity-60"
+      aria-hidden="true"
+    >
+      <div
+        class="absolute -top-40 -left-32 h-80 w-80 rounded-full bg-cyan-500/30 blur-3xl"
+      ></div>
+      <div
+        class="absolute top-40 -right-20 h-96 w-96 rounded-full bg-purple-600/25 blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-600/20 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 z-40 border-b border-slate-700/40 bg-night/80 backdrop-blur-xl"
+    >
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6"
+      >
+        <!-- Logo / Name -->
+        <a
+          href="#home"
+          class="flex items-center gap-2 text-lg font-semibold tracking-tight"
+        >
+          <div
+            class="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-neonBlue via-cyberTeal to-cyberPurple shadow-soft-glow"
+          >
+            <span class="text-xl font-bold text-slate-50">D</span>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-sm uppercase tracking-[0.2em] text-slate-400"
+              >AATHIL</span
+            >
+            <span class="text-base font-semibold text-slate-50">DUCKY</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <a href="#home" class="hover:text-slate-50">Home</a>
+          <a href="#about" class="hover:text-slate-50">About</a>
+          <a href="#skills" class="hover:text-slate-50">Skills</a>
+          <a href="#projects" class="hover:text-slate-50">Projects & Blogs</a>
+          <a href="#content" class="hover:text-slate-50">Content</a>
+          <a href="#contact" class="hover:text-slate-50">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:flex">
+          <a
+            href="https://pwntrends.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow hover:brightness-110"
+          >
+            Visit PwnTrends
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobile-menu-btn"
+          class="inline-flex items-center rounded-lg border border-slate-700/70 bg-slate-900/70 p-2 text-slate-200 md:hidden"
+          aria-label="Open navigation"
+        >
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <nav
+        id="mobile-menu"
+        class="hidden border-t border-slate-800/80 bg-night/95 px-4 pb-4 md:hidden"
+      >
+        <div class="flex flex-col gap-3 text-sm text-slate-200">
+          <a href="#home" class="hover:text-slate-50">Home</a>
+          <a href="#about" class="hover:text-slate-50">About</a>
+          <a href="#skills" class="hover:text-slate-50">Skills</a>
+          <a href="#projects" class="hover:text-slate-50">Projects & Blogs</a>
+          <a href="#content" class="hover:text-slate-50">Content</a>
+          <a href="#contact" class="hover:text-slate-50">Contact</a>
+          <a
+            href="https://pwntrends.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow"
+          >
+            Visit PwnTrends
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 pt-10 pb-20 md:px-6" id="home">
+      <!-- HERO -->
+      <section
+        class="grid gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:items-center"
+      >
+        <!-- Left: Intro -->
+        <div
+          class="space-y-6"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-offset="100"
+        >
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-slate-950/70 px-3 py-1 text-xs text-emerald-300/90 shadow-soft-glow/40"
+          >
+            <span
+              class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"
+            ></span>
+            <span>Offensive Security & Ethical Hacking Enthusiast</span>
+          </div>
+
+          <h1
+            class="text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl"
+          >
+            Breaking things, understanding them,<br />
+            <span
+              class="bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple bg-clip-text text-transparent"
+              >and securing the internet.</span
+            >
+          </h1>
+
+          <p class="max-w-xl text-sm leading-relaxed text-slate-300/90">
+            I’m <span class="font-semibold text-slate-50">Aathil Ahamed</span>,
+            known online as
+            <span class="font-semibold text-slate-50">“Aathil Ducky”</span> — a
+            final-year <span class="font-medium">Computer Science student</span>
+            from Sri Lanka, passionate about
+            <span class="font-medium">cybersecurity, offensive security</span>,
+            and <span class="font-medium">red teaming</span>.
+            I love web application hacking, CTFs, Python automation and turning
+            security research into <span class="font-medium">real content</span>.
+          </p>
+
+          <p class="max-w-xl text-sm text-slate-400">
+            I build and break things: from
+            <span class="font-medium text-slate-100">web apps & tools</span> to
+            <span class="font-medium text-slate-100"
+              >GitHub leak scanners, XSS labs, and education content</span
+            >
+            across YouTube, Medium, Dev.to, and my own platform
+            <span class="font-medium text-slate-100">PwnTrends</span>.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="https://github.com/AATHILDUCKY"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow hover:brightness-110"
+            >
+              <i class="fa-brands fa-github text-sm"></i>
+              <span>View GitHub</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@aathilducky"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/70 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-200 hover:border-slate-500"
+            >
+              <i class="fa-brands fa-youtube text-sm text-red-400"></i>
+              <span>Watch Tutorials</span>
+            </a>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 text-xs font-medium text-slate-300 hover:text-slate-50"
+            >
+              <span>Let’s collaborate</span>
+              <i class="fa-solid fa-arrow-right-long text-[11px]"></i>
+            </a>
+          </div>
+
+          <!-- Quick Info -->
+          <dl
+            class="grid max-w-lg grid-cols-2 gap-3 text-xs text-slate-300/90"
+          >
+            <div class="rounded-2xl bg-slate-900/60 p-3 border border-slate-700/60">
+              <dt class="text-[11px] uppercase tracking-wide text-slate-400">
+                Based in
+              </dt>
+              <dd class="mt-1 font-medium text-slate-50">
+                Sri Lanka · Trincomalee
+              </dd>
+            </div>
+            <div class="rounded-2xl bg-slate-900/60 p-3 border border-slate-700/60">
+              <dt class="text-[11px] uppercase tracking-wide text-slate-400">
+                Focus Areas
+              </dt>
+              <dd class="mt-1">
+                Web App Security, Red Teaming, Python, Django
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Right: Cyber Card -->
+        <div
+          class="relative"
+          data-aos="fade-left"
+          data-aos-duration="900"
+          data-aos-offset="120"
+        >
+          <div
+            class="relative h-80 w-full max-w-md mx-auto rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-950/80 shadow-[0_35px_80px_rgba(15,23,42,0.8)] backdrop-blur-xl overflow-hidden"
+          >
+            <!-- glow line -->
+            <div
+              class="pointer-events-none absolute -top-1 left-1/4 h-[2px] w-1/2 bg-gradient-to-r from-cyan-400/10 via-cyan-300/80 to-purple-500/40"
+            ></div>
+
+            <!-- "terminal" header -->
+            <div
+              class="flex items-center justify-between border-b border-slate-700/60 px-4 py-3 text-xs text-slate-300/90"
+            >
+              <div class="flex items-center gap-1.5">
+                <span
+                  class="h-2 w-2 rounded-full bg-red-400/80 shadow-[0_0_8px_rgba(248,113,113,0.7)]"
+                ></span>
+                <span
+                  class="h-2 w-2 rounded-full bg-amber-300/80 shadow-[0_0_8px_rgba(252,211,77,0.7)]"
+                ></span>
+                <span
+                  class="h-2 w-2 rounded-full bg-emerald-400/80 shadow-[0_0_8px_rgba(52,211,153,0.7)]"
+                ></span>
+                <span class="ml-2 text-[11px] text-slate-400"
+                  >duck@pwntrends: ~</span
+                >
+              </div>
+              <span class="text-[11px] text-slate-500 hidden sm:inline"
+                >live: threat_simulation.py</span
+              >
+            </div>
+
+            <!-- terminal body -->
+            <div
+              class="flex h-full flex-col justify-between px-4 pb-4 pt-3 text-[11px] leading-relaxed"
+            >
+              <div class="space-y-1.5 text-[11px]">
+                <p class="font-mono text-emerald-300">
+                  &gt; whoami
+                  <span class="text-slate-400 ml-1"># identity</span>
+                </p>
+                <p class="font-mono text-slate-200">
+                  aathil_ducky — cyber security &amp; offensive security
+                  enthusiast
+                </p>
+
+                <p class="mt-2 font-mono text-emerald-300">
+                  &gt; interests
+                  <span class="text-slate-400 ml-1"># core</span>
+                </p>
+                <p class="font-mono text-slate-200">
+                  web app hacking, red teaming, CTFs, SOC monitoring, python
+                  automation
+                </p>
+
+                <p class="mt-2 font-mono text-emerald-300">
+                  &gt; projects
+                  <span class="text-slate-400 ml-1"># a few</span>
+                </p>
+                <p class="font-mono text-slate-200">
+                  duck-duck-leaks, XSS notes, google dorks notes, ethical
+                  hacking short notes, WebP tools, more...
+                </p>
+
+                <p class="mt-2 font-mono text-emerald-300">
+                  &gt; mission
+                  <span class="text-slate-400 ml-1"># why</span>
+                </p>
+                <p class="font-mono text-slate-200">
+                  share practical cyber security knowledge and help the next
+                  wave of hackers build &amp; defend.
+                </p>
+              </div>
+
+              <!-- mini stats -->
+              <div
+                class="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-slate-700/60 bg-slate-950/60 px-3 py-2"
+              >
+                <div class="text-[10px]">
+                  <p class="text-slate-400 uppercase tracking-wide">
+                    YouTube
+                  </p>
+                  <p class="font-semibold text-slate-50">3K+ subs</p>
+                </div>
+                <div class="text-[10px]">
+                  <p class="text-slate-400 uppercase tracking-wide">
+                    GitHub Repos
+                  </p>
+                  <p class="font-semibold text-slate-50">50+ projects</p>
+                </div>
+                <div class="text-[10px]">
+                  <p class="text-slate-400 uppercase tracking-wide">Platforms</p>
+                  <p class="font-semibold text-slate-50">
+                    PwnTrends, Medium, Dev.to
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- floating badge -->
+          <div
+            class="absolute -right-2 top-4 flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-1 text-[10px] text-slate-300 border border-slate-700/70 backdrop-blur-xl"
+          >
+            <span
+              class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"
+            ></span>
+            <span>Red-team minded · Always learning</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="mt-20 space-y-6"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-100">
+              About <span class="text-neonBlue">Me</span>
+            </h2>
+            <p class="mt-1 text-sm text-slate-400">
+              A bit more context about who I am and what I’m building.
+            </p>
+          </div>
+          <span
+            class="hidden rounded-full border border-slate-700/70 bg-slate-900/70 px-3 py-1 text-[11px] text-slate-300 md:inline-flex"
+          >
+            Final-year BSc Computer Science · Trincomalee Campus, EUSL
+          </span>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-[1.4fr_minmax(0,1fr)]">
+          <article
+            class="rounded-3xl border border-slate-700/60 bg-slate-950/70 p-5 text-sm text-slate-300/95 backdrop-blur-xl"
+          >
+            <p class="mb-3">
+              I’m <span class="font-semibold text-slate-50">Aathil Ahamed</span>,
+              but most people in the community know me as
+              <span class="font-semibold text-slate-50">“Aathil Ducky”</span>.
+              I’m a
+              <span class="font-medium"
+                >cybersecurity enthusiast &amp; ethical hacking learner</span
+              >
+              with a strong focus on
+              <span class="font-medium text-slate-50"
+                >offensive security, penetration testing, and web
+                vulnerabilities</span
+              >.
+            </p>
+
+            <p class="mb-3">
+              Over time, I’ve worked with tools like
+              <span class="font-medium text-slate-50"
+                >Burp Suite, Nmap, Metasploit, SQLmap, Suricata, Wireshark</span
+              >
+              and frameworks like <span class="font-medium">Python &amp; Django</span>,
+              building my own security tools, automation scripts and learning
+              resources.
+            </p>
+
+            <p>
+              I also enjoy <span class="font-medium text-slate-50"
+                >teaching and sharing</span
+              >
+              what I learn: from <span class="font-medium">YouTube tutorials</span>,
+              to <span class="font-medium">Medium &amp; Dev.to blogs</span>, to
+              running my own cybersecurity blog
+              <span class="font-medium text-slate-50">PwnTrends</span> focused on
+              real-world attacks, walkthroughs and cheat sheets.
+            </p>
+          </article>
+
+          <aside class="space-y-3">
+            <div
+              class="rounded-3xl border border-slate-700/60 bg-slate-950/70 p-4 text-xs text-slate-200"
+            >
+              <h3 class="text-[13px] font-semibold mb-2">
+                Snapshot · Aathil Ducky
+              </h3>
+              <ul class="space-y-1.5">
+                <li>
+                  <span class="text-slate-400">Role:</span>
+                  Cyber Security Enthusiast, Ethical Hacking Learner
+                </li>
+                <li>
+                  <span class="text-slate-400">Student:</span>
+                  Final-year BSc Computer Science @ Trincomalee Campus, EUSL
+                </li>
+                <li>
+                  <span class="text-slate-400">Core Stack:</span>
+                  Python, Django, Web Dev, Automation
+                </li>
+                <li>
+                  <span class="text-slate-400">Security Focus:</span>
+                  Web app security, XSS, injection, misconfigurations, GitHub
+                  leaks
+                </li>
+                <li>
+                  <span class="text-slate-400">Creator of:</span>
+                  PwnTrends, Ethical Hacking Short Notes, multiple security
+                  tools
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="rounded-3xl border border-slate-700/60 bg-slate-950/70 p-4 text-xs text-slate-200"
+            >
+              <h3 class="text-[13px] font-semibold mb-2">
+                Platforms I publish on
+              </h3>
+              <ul class="space-y-1.5">
+                <li>🎥 YouTube · <span class="text-slate-300">@aathilducky</span></li>
+                <li>✍️ Medium · security write-ups &amp; walkthroughs</li>
+                <li>🧠 Dev.to · dev tools, guides &amp; project ideas</li>
+                <li>🕳️ PwnTrends · my own cybersecurity blog &amp; lab</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="mt-20"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-100">
+              Offensive <span class="text-neonBlue">Cyber Skills</span>
+            </h2>
+            <p class="mt-1 text-sm text-slate-400">
+              A high-level view of what I enjoy working with.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4 text-xs text-slate-200"
+        >
+          <div
+            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4"
+          >
+            <h3 class="mb-2 text-[13px] font-semibold">
+              Offensive Security · Red Team
+            </h3>
+            <ul class="space-y-1.5">
+              <li>• Web App Hacking (XSS, SQLi, auth flaws)</li>
+              <li>• Recon &amp; enumeration</li>
+              <li>• CTF practice &amp; labs (TryHackMe etc.)</li>
+              <li>• Payload crafting &amp; bypass attempts</li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4"
+          >
+            <h3 class="mb-2 text-[13px] font-semibold">
+              Blue Team &amp; Monitoring
+            </h3>
+            <ul class="space-y-1.5">
+              <li>• Log analysis &amp; alert triage</li>
+              <li>• Understanding common attack patterns</li>
+              <li>• Thinking like attacker + defender</li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4"
+          >
+            <h3 class="mb-2 text-[13px] font-semibold">
+              Development &amp; Automation
+            </h3>
+            <ul class="space-y-1.5">
+              <li>• Python, Django, Flask</li>
+              <li>• CLI tools &amp; web apps</li>
+              <li>• Automation &amp; small utilities</li>
+              <li>• GitHub-based security tools</li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4"
+          >
+            <h3 class="mb-2 text-[13px] font-semibold">
+              Content &amp; Community
+            </h3>
+            <ul class="space-y-1.5">
+              <li>• YouTube security tutorials</li>
+              <li>• Blogs on Medium &amp; Dev.to</li>
+              <li>• PwnTrends write-ups &amp; cheatsheets</li>
+              <li>• Sharing beginner-friendly resources</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS / BLOGS -->
+      <section
+        id="projects"
+        class="mt-20"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-100">
+              Projects &amp; <span class="text-neonBlue">Security Blogs</span>
+            </h2>
+            <p class="mt-1 text-sm text-slate-400">
+              A few places where my work and ideas live.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 grid gap-4 md:grid-cols-3 text-xs text-slate-200"
+        >
+          <a
+            href="https://pwntrends.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4 hover:border-neonBlue/70 hover:shadow-soft-glow transition"
+          >
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-[13px] font-semibold">PwnTrends</h3>
+              <span
+                class="rounded-full bg-slate-900/80 px-2 py-0.5 text-[10px] text-cyberTeal"
+                >Blog</span
+              >
+            </div>
+            <p class="mb-3 text-slate-300">
+              My own cybersecurity blog focused on trending exploits,
+              walkthroughs, practical case studies, and tools for learners.
+            </p>
+            <p
+              class="inline-flex items-center gap-1 text-[11px] text-neonBlue group-hover:gap-2"
+            >
+              Visit PwnTrends
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </p>
+          </a>
+
+          <a
+            href="https://dev.to/aathilducky/final-year-cybersecurity-project-ideas-with-source-code-11o8"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4 hover:border-cyberPurple/70 hover:shadow-soft-glow transition"
+          >
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-[13px] font-semibold">
+                Final Year Cybersecurity Project Ideas
+              </h3>
+              <span
+                class="rounded-full bg-slate-900/80 px-2 py-0.5 text-[10px] text-cyberPurple"
+                >Dev.to</span
+              >
+            </div>
+            <p class="mb-3 text-slate-300">
+              A curated list of cybersecurity projects with source code ideas
+              for students and beginners looking to build real tools.
+            </p>
+            <p
+              class="inline-flex items-center gap-1 text-[11px] text-cyberPurple group-hover:gap-2"
+            >
+              Read on Dev.to
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </p>
+          </a>
+
+          <a
+            href="https://medium.com/@aathilducky"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4 hover:border-cyberTeal/70 hover:shadow-soft-glow transition"
+          >
+            <div class="mb-2 flex items-center justify-between">
+              <h3 class="text-[13px] font-semibold">
+                Medium · Security Write-ups
+              </h3>
+              <span
+                class="rounded-full bg-slate-900/80 px-2 py-0.5 text-[10px] text-emerald-300"
+                >Medium</span
+              >
+            </div>
+            <p class="mb-3 text-slate-300">
+              Walkthroughs and research notes on topics like TryHackMe,
+              vulnerability research, PHP command execution and more.
+            </p>
+            <p
+              class="inline-flex items-center gap-1 text-[11px] text-cyberTeal group-hover:gap-2"
+            >
+              View Medium Profile
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- CONTENT CREATOR / SOCIALS -->
+      <section
+        id="content"
+        class="mt-20"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold text-slate-100">
+              Content Creator · <span class="text-neonBlue">DUCKY MODE</span>
+            </h2>
+            <p class="mt-1 text-sm text-slate-400">
+              All the places where you can follow my cybersecurity journey.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mt-6 grid gap-4 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]"
+        >
+          <!-- Social grid -->
+          <div
+            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4 text-xs text-slate-200"
+          >
+            <h3 class="mb-3 text-[13px] font-semibold">
+              Official Links · Follow the signal
+            </h3>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <a
+                href="https://github.com/AATHILDUCKY"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-slate-950/90"
+                >
+                  <i class="fa-brands fa-github text-base"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">GitHub</p>
+                  <p class="text-[11px] text-slate-400">@AATHILDUCKY</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@aathilducky"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/20"
+                >
+                  <i class="fa-brands fa-youtube text-base text-red-400"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">YouTube</p>
+                  <p class="text-[11px] text-slate-400">Tutorials &amp; labs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://medium.com/@aathilducky"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-slate-950/90"
+                >
+                  <i class="fa-brands fa-medium text-base"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">Medium</p>
+                  <p class="text-[11px] text-slate-400">Security write-ups</p>
+                </div>
+              </a>
+
+              <a
+                href="https://dev.to/aathilducky"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-slate-950/90"
+                >
+                  <i class="fa-brands fa-dev text-base"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">Dev.to</p>
+                  <p class="text-[11px] text-slate-400">Developer blogs</p>
+                </div>
+              </a>
+
+              <a
+                href="https://pwntrends.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-cyan-500/20"
+                >
+                  <i class="fa-solid fa-bullseye text-xs text-cyan-300"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">PwnTrends</p>
+                  <p class="text-[11px] text-slate-400">
+                    My cybersecurity blog
+                  </p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.instagram.com/aathilducky/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500/40 via-red-500/40 to-yellow-400/40"
+                >
+                  <i class="fa-brands fa-instagram text-[13px]"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">Instagram</p>
+                  <p class="text-[11px] text-slate-400">@aathilducky</p>
+                </div>
+              </a>
+
+              <a
+                href="https://twitter.com/AathilDucky"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-slate-950/90"
+                >
+                  <i class="fa-brands fa-x-twitter text-[13px]"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">X (Twitter)</p>
+                  <p class="text-[11px] text-slate-400">@AathilDucky</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.facebook.com/aathil.ducky/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-blue-600/25"
+                >
+                  <i class="fa-brands fa-facebook-f text-sm text-blue-400"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">Facebook</p>
+                  <p class="text-[11px] text-slate-400">Personal profile</p>
+                </div>
+              </a>
+
+              <a
+                href="https://duckyspot.tumblr.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-slate-950/90"
+                >
+                  <i class="fa-brands fa-tumblr text-base"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">Tumblr</p>
+                  <p class="text-[11px] text-slate-400">Duckyspot</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.quora.com/profile/Duckyspot"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-3 py-2 hover:bg-slate-800/80"
+              >
+                <span
+                  class="flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/20"
+                >
+                  <i class="fa-brands fa-quora text-sm text-red-400"></i>
+                </span>
+                <div>
+                  <p class="text-[12px] font-semibold">Quora</p>
+                  <p class="text-[11px] text-slate-400">Duckyspot</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mini bio -->
+          <div
+            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-4 text-xs text-slate-200"
+          >
+            <h3 class="mb-2 text-[13px] font-semibold">
+              “My goal is simple...”
+            </h3>
+            <p class="mb-2 text-slate-300">
+              Make cybersecurity and offensive security less scary for beginners
+              by showing <span class="font-medium">real examples</span>,
+              practical labs and honest journeys — not just theory slides.
+            </p>
+            <p class="text-slate-400">
+              If you’re curious about hacking, want to build security projects,
+              or love learning in public, you’re already part of the squad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="mt-20"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+        <div
+          class="rounded-3xl border border-slate-700/70 bg-slate-950/80 px-4 py-5 text-sm text-slate-200 md:px-6"
+        >
+          <div class="flex flex-col gap-4 md:flex-row md:items-center">
+            <div class="flex-1">
+              <h2 class="text-lg font-semibold text-slate-100">
+                Let’s <span class="text-neonBlue">Build &amp; Break</span>
+                Security Together
+              </h2>
+              <p class="mt-1 text-sm text-slate-400">
+                Open to collaborations, content ideas, tool building, and
+                community projects in cybersecurity, offensive security and
+                Python automation.
+              </p>
+            </div>
+            <div class="flex flex-col gap-2 text-xs text-slate-200">
+              <a
+                href="mailto:aathilducky@gmail.com"
+                class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow"
+              >
+                <i class="fa-solid fa-envelope text-[11px]"></i>
+                <span>Email Me</span>
+              </a>
+              <span class="text-[11px] text-slate-400">
+                Prefer DMs? Reach out on
+                <span class="text-slate-200">Instagram</span> or
+                <span class="text-slate-200">X</span>.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800/80 bg-night/90">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-[11px] text-slate-400 md:flex-row md:items-center md:justify-between md:px-6"
+      >
+        <p>
+          © <span id="year"></span> Aathil Ahamed · “Aathil Ducky”.
+          All rights reserved.
+        </p>
+        <p>
+          Built with
+          <span class="text-pink-400">♥</span> using Tailwind CSS &amp; a dark
+          cyber aesthetic.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true
+      });
+
+      // Year
+      document.getElementById("year").textContent =
+        new Date().getFullYear().toString();
+
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
