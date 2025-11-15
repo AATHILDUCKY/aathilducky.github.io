@@ -178,183 +178,279 @@
     </div>
 
     <!-- NAVBAR -->
-    <header
-      class="sticky top-0 z-40 border-b border-slate-700/40 bg-night/80 backdrop-blur-xl"
+<header
+  class="sticky top-0 z-40 border-b border-slate-800/60 bg-night/80/90 backdrop-blur-xl supports-backdrop-blur:bg-night/70 transition-all duration-300"
+>
+  <div
+    class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8"
+  >
+    <!-- Logo / Name -->
+    <a
+      href="#home"
+      class="group flex items-center gap-3 text-xl font-semibold tracking-tight"
     >
       <div
-        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8"
+        class="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-neonBlue via-cyberTeal to-cyberPurple shadow-soft-glow transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-105"
       >
-        <!-- Logo / Name -->
+        <span class="text-2xl font-bold text-slate-50">D</span>
+        <!-- subtle inner glow -->
+        <span
+          class="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-tr from-white/10 via-transparent to-cyan-200/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        ></span>
+      </div>
+      <div class="flex flex-col leading-tight">
+        <span
+          class="text-[0.7rem] uppercase tracking-[0.28em] text-slate-400/90 transition-colors duration-300 group-hover:text-slate-200"
+          >AATHIL</span
+        >
+        <span class="text-lg font-semibold text-slate-50">DUCKY</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav
+      class="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex"
+    >
+      <a
+        href="#home"
+        class="relative py-1 text-slate-300 transition-all duration-200 hover:text-slate-50
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+               after:bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple
+               after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Home
+      </a>
+      <a
+        href="#about"
+        class="relative py-1 text-slate-300 transition-all duration-200 hover:text-slate-50
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+               after:bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple
+               after:transition-all after:duration-300 hover:after:w-full"
+      >
+        About
+      </a>
+      <a
+        href="#skills"
+        class="relative py-1 text-slate-300 transition-all duration-200 hover:text-slate-50
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+               after:bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple
+               after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Skills
+      </a>
+      <a
+        href="#projects"
+        class="relative py-1 text-slate-300 transition-all duration-200 hover:text-slate-50
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+               after:bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple
+               after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Projects &amp; Blogs
+      </a>
+      <a
+        href="#content"
+        class="relative py-1 text-slate-300 transition-all duration-200 hover:text-slate-50
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+               after:bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple
+               after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Content
+      </a>
+      <a
+        href="#contact"
+        class="relative py-1 text-slate-300 transition-all duration-200 hover:text-slate-50
+               after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0
+               after:bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple
+               after:transition-all after:duration-300 hover:after:w-full"
+      >
+        Contact
+      </a>
+    </nav>
+
+    <!-- Right: Social icons + CTA (desktop) -->
+    <div class="hidden items-center gap-5 md:flex">
+      <!-- Top social icons -->
+      <div class="hidden items-center gap-3 text-slate-300 sm:flex">
         <a
-          href="#home"
-          class="flex items-center gap-3 text-xl font-semibold tracking-tight"
+          href="https://github.com/AATHILDUCKY"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-all duration-200 hover:-translate-y-0.5 hover:scale-110 hover:text-slate-50"
+          aria-label="GitHub"
         >
-          <div
-            class="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-neonBlue via-cyberTeal to-cyberPurple shadow-soft-glow"
-          >
-            <span class="text-2xl font-bold text-slate-50">D</span>
-          </div>
-          <div class="flex flex-col leading-tight">
-            <span class="text-xs uppercase tracking-[0.22em] text-slate-400"
-              >AATHIL</span
-            >
-            <span class="text-lg font-semibold text-slate-50">DUCKY</span>
-          </div>
+          <i class="fa-brands fa-github text-xl"></i>
         </a>
-
-        <!-- Desktop Nav -->
-        <nav class="hidden items-center gap-8 text-sm text-slate-300 lg:flex">
-          <a href="#home" class="hover:text-slate-50">Home</a>
-          <a href="#about" class="hover:text-slate-50">About</a>
-          <a href="#skills" class="hover:text-slate-50">Skills</a>
-          <a href="#projects" class="hover:text-slate-50">Projects & Blogs</a>
-          <a href="#content" class="hover:text-slate-50">Content</a>
-          <a href="#contact" class="hover:text-slate-50">Contact</a>
-        </nav>
-
-        <!-- Right: Social icons + CTA (desktop) -->
-        <div class="hidden items-center gap-5 md:flex">
-          <!-- Top social icons -->
-          <div class="hidden items-center gap-3 text-slate-300 sm:flex">
-            <a
-              href="https://github.com/AATHILDUCKY"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-slate-50"
-              aria-label="GitHub"
-            >
-              <i class="fa-brands fa-github text-xl"></i>
-            </a>
-            <a
-              href="https://lk.linkedin.com/in/aathilducky"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-slate-50"
-              aria-label="LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin text-xl"></i>
-            </a>
-            <a
-              href="https://www.youtube.com/@aathilducky"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-slate-50"
-              aria-label="YouTube"
-            >
-              <i class="fa-brands fa-youtube text-xl"></i>
-            </a>
-            <a
-              href="https://medium.com/@aathilducky"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="hover:text-slate-50"
-              aria-label="Medium"
-            >
-              <i class="fa-brands fa-medium text-xl"></i>
-            </a>
-          </div>
-
-          <!-- CTA -->
-          <a
-            href="https://pwntrends.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow hover:brightness-110"
-          >
-            Visit PwnTrends
-          </a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button
-          id="mobile-menu-btn"
-          class="inline-flex items-center rounded-lg border border-slate-700/70 bg-slate-900/70 p-2 text-slate-200 md:hidden"
-          aria-label="Open navigation"
+        <a
+          href="https://lk.linkedin.com/in/aathilducky"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-all duration-200 hover:-translate-y-0.5 hover:scale-110 hover:text-slate-50"
+          aria-label="LinkedIn"
         >
-          <i class="fa-solid fa-bars text-xl"></i>
-        </button>
+          <i class="fa-brands fa-linkedin text-xl"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@aathilducky"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-all duration-200 hover:-translate-y-0.5 hover:scale-110 hover:text-slate-50"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube text-xl"></i>
+        </a>
+        <a
+          href="https://medium.com/@aathilducky"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition-all duration-200 hover:-translate-y-0.5 hover:scale-110 hover:text-slate-50"
+          aria-label="Medium"
+        >
+          <i class="fa-brands fa-medium text-xl"></i>
+        </a>
       </div>
 
-      <!-- Mobile Nav -->
-      <nav
-        id="mobile-menu"
-        class="hidden border-t border-slate-800/80 bg-night/95 px-4 pb-4 md:hidden"
+      <!-- CTA -->
+      <a
+        href="https://pwntrends.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow transition-all duration-300 hover:brightness-110 hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(56,189,248,0.6)]"
       >
-        <div class="flex flex-col gap-3 text-sm text-slate-200">
-          <a href="#home" class="hover:text-slate-50">Home</a>
-          <a href="#about" class="hover:text-slate-50">About</a>
-          <a href="#skills" class="hover:text-slate-50">Skills</a>
-          <a href="#projects" class="hover:text-slate-50">Projects & Blogs</a>
-          <a href="#content" class="hover:text-slate-50">Content</a>
-          <a href="#contact" class="hover:text-slate-50">Contact</a>
+        Visit PwnTrends
+      </a>
+    </div>
 
-          <!-- Mobile social icons -->
-          <div class="mt-2 flex items-center gap-4 text-lg text-slate-300">
-            <a
-              href="https://github.com/AATHILDUCKY"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="https://lk.linkedin.com/in/aathilducky"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a
-              href="https://www.youtube.com/@aathilducky"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
-            <a
-              href="https://medium.com/@aathilducky"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Medium"
-              ><i class="fa-brands fa-medium"></i
-            ></a>
-          </div>
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="inline-flex items-center rounded-lg border border-slate-700/70 bg-slate-900/70 p-2 text-slate-200 md:hidden transition-colors duration-200 hover:border-slate-500 hover:text-slate-50"
+      aria-label="Open navigation"
+    >
+      <i class="fa-solid fa-bars text-xl"></i>
+    </button>
+  </div>
 
-          <a
-            href="https://pwntrends.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-3 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow"
-          >
-            Visit PwnTrends
-          </a>
-        </div>
-      </nav>
-    </header>
+  <!-- Mobile Nav -->
+  <nav
+    id="mobile-menu"
+    class="hidden border-t border-slate-800/80 bg-night/95 px-4 pb-4 md:hidden"
+  >
+    <div class="flex flex-col gap-3 text-sm text-slate-200 pt-2">
+      <a
+        href="#home"
+        class="rounded-md px-2 py-1.5 hover:bg-slate-800/70 hover:text-slate-50 transition-colors duration-200"
+        >Home</a
+      >
+      <a
+        href="#about"
+        class="rounded-md px-2 py-1.5 hover:bg-slate-800/70 hover:text-slate-50 transition-colors duration-200"
+        >About</a
+      >
+      <a
+        href="#skills"
+        class="rounded-md px-2 py-1.5 hover:bg-slate-800/70 hover:text-slate-50 transition-colors duration-200"
+        >Skills</a
+      >
+      <a
+        href="#projects"
+        class="rounded-md px-2 py-1.5 hover:bg-slate-800/70 hover:text-slate-50 transition-colors duration-200"
+        >Projects &amp; Blogs</a
+      >
+      <a
+        href="#content"
+        class="rounded-md px-2 py-1.5 hover:bg-slate-800/70 hover:text-slate-50 transition-colors duration-200"
+        >Content</a
+      >
+      <a
+        href="#contact"
+        class="rounded-md px-2 py-1.5 hover:bg-slate-800/70 hover:text-slate-50 transition-colors duration-200"
+        >Contact</a
+      >
+
+      <!-- Mobile social icons -->
+      <div class="mt-3 flex items-center gap-4 text-lg text-slate-300">
+        <a
+          href="https://github.com/AATHILDUCKY"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="transition-transform duration-200 hover:-translate-y-0.5 hover:scale-110"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://lk.linkedin.com/in/aathilducky"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="transition-transform duration-200 hover:-translate-y-0.5 hover:scale-110"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@aathilducky"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          class="transition-transform duration-200 hover:-translate-y-0.5 hover:scale-110"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a
+          href="https://medium.com/@aathilducky"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Medium"
+          class="transition-transform duration-200 hover:-translate-y-0.5 hover:scale-110"
+        >
+          <i class="fa-brands fa-medium"></i>
+        </a>
+      </div>
+
+      <a
+        href="https://pwntrends.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow transition-all duration-300 hover:brightness-110"
+      >
+        Visit PwnTrends
+      </a>
+    </div>
+  </nav>
+
+  <!-- Animated gradient bar under navbar (desktop only) -->
+  <div class="hidden h-[2px] w-full bg-slate-900/0 lg:block">
+    <div
+      class="mx-auto h-[2px] max-w-7xl bg-gradient-to-r from-transparent via-neonBlue/70 to-transparent opacity-80"
+    ></div>
+  </div>
+</header>
 
     <main class="mx-auto max-w-7xl px-4 pt-10 pb-20 md:px-8" id="home">
-      <!-- HERO -->
+           <!-- HERO -->
       <section
-        class="grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-center"
+        id="hero"
+        aria-label="Introduction section for Aathil Ducky"
+        class="grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:items-center"
       >
         <!-- Left: Intro -->
         <div
-          class="space-y-7"
+          class="space-y-8"
           data-aos="fade-right"
           data-aos-duration="800"
           data-aos-offset="100"
         >
           <div
-            class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-slate-950/70 px-4 py-1.5 text-sm text-emerald-300/90 shadow-soft-glow/40"
+            class="inline-flex items-center gap-2 rounded-full border border-emerald-400/40 bg-slate-950/80 px-5 py-1.5 text-sm sm:text-base text-emerald-300/90 shadow-soft-glow/40"
           >
             <span
-              class="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"
+              class="inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse"
             ></span>
             <span>Offensive Security &amp; Ethical Hacking Enthusiast</span>
           </div>
 
           <h1
-            class="text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl"
+            class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-slate-50 leading-tight"
           >
             Breaking things, understanding them,<br />
             <span
@@ -363,7 +459,9 @@
             >
           </h1>
 
-          <p class="max-w-2xl text-base leading-relaxed text-slate-300/90">
+          <p
+            class="max-w-2xl text-base sm:text-lg leading-relaxed text-slate-300/95"
+          >
             I’m <span class="font-semibold text-slate-50">Aathil Ahamed</span>,
             known online as
             <span class="font-semibold text-slate-50">“Aathil Ducky”</span> — a
@@ -375,7 +473,7 @@
             security research into <span class="font-medium">real content</span>.
           </p>
 
-          <p class="max-w-2xl text-base text-slate-300/90">
+          <p class="max-w-2xl text-base sm:text-lg text-slate-300/95">
             I build and break things: from
             <span class="font-medium text-slate-100">web apps &amp; tools</span>
             to
@@ -392,9 +490,9 @@
               href="https://github.com/AATHILDUCKY"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow hover:brightness-110"
+              class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-6 py-3 text-sm sm:text-base font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5"
             >
-              <i class="fa-brands fa-github text-lg"></i>
+              <i class="fa-brands fa-github text-lg sm:text-xl"></i>
               <span>View GitHub</span>
             </a>
 
@@ -402,15 +500,15 @@
               href="https://www.youtube.com/@aathilducky"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-900/70 px-5 py-2.5 text-sm font-semibold uppercase tracking-wide text-slate-200 hover:border-slate-500"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/80 px-6 py-3 text-sm sm:text-base font-semibold uppercase tracking-wide text-slate-200 transition-all duration-200 hover:border-slate-400 hover:bg-slate-800/90 hover:-translate-y-0.5"
             >
-              <i class="fa-brands fa-youtube text-lg text-red-400"></i>
+              <i class="fa-brands fa-youtube text-lg sm:text-xl text-red-400"></i>
               <span>Watch Tutorials</span>
             </a>
 
             <a
               href="#contact"
-              class="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-slate-50"
+              class="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-slate-300 hover:text-slate-50 transition-colors duration-200"
             >
               <span>Let’s collaborate</span>
               <i class="fa-solid fa-arrow-right-long text-sm"></i>
@@ -419,10 +517,10 @@
 
           <!-- Quick Info -->
           <dl
-            class="grid max-w-xl grid-cols-2 gap-4 text-sm text-slate-300/90"
+            class="grid max-w-xl grid-cols-2 gap-4 text-sm sm:text-base text-slate-300/90"
           >
             <div
-              class="rounded-2xl bg-slate-900/60 p-4 border border-slate-700/60"
+              class="rounded-2xl bg-slate-900/70 p-4 border border-slate-700/70"
             >
               <dt class="text-xs uppercase tracking-wide text-slate-400">
                 Based in
@@ -432,7 +530,7 @@
               </dd>
             </div>
             <div
-              class="rounded-2xl bg-slate-900/60 p-4 border border-slate-700/60"
+              class="rounded-2xl bg-slate-900/70 p-4 border border-slate-700/70"
             >
               <dt class="text-xs uppercase tracking-wide text-slate-400">
                 Focus Areas
@@ -452,30 +550,35 @@
           data-aos-offset="120"
         >
           <div
-            class="relative h-80 w-full max-w-md mx-auto rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/80 via-slate-900/60 to-slate-950/80 shadow-[0_35px_80px_rgba(15,23,42,0.8)] backdrop-blur-xl overflow-hidden"
+            class="relative h-80 md:h-96 w-full max-w-md mx-auto rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-900/85 via-slate-900/70 to-slate-950/85 shadow-[0_35px_80px_rgba(15,23,42,0.9)] backdrop-blur-xl overflow-hidden"
           >
             <!-- glow line -->
             <div
-              class="pointer-events-none absolute -top-1 left-1/4 h-[2px] w-1/2 bg-gradient-to-r from-cyan-400/10 via-cyan-300/80 to-purple-500/40"
+              class="pointer-events-none absolute -top-1 left-1/4 h-[2px] w-1/2 bg-gradient-to-r from-cyan-400/10 via-cyan-300/80 to-purple-500/40 animate-pulse"
+            ></div>
+
+            <!-- subtle moving gradient overlay -->
+            <div
+              class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.14),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(168,85,247,0.12),_transparent_55%)] mix-blend-screen opacity-70"
             ></div>
 
             <!-- "terminal" header -->
             <div
-              class="flex items-center justify-between border-b border-slate-700/60 px-4 py-3 text-sm text-slate-300/90"
+              class="relative flex items-center justify-between border-b border-slate-700/70 px-4 py-3 text-sm text-slate-300/90 bg-slate-950/70"
             >
               <div class="flex items-center gap-1.5">
                 <span
-                  class="h-2 w-2 rounded-full bg-red-400/80 shadow-[0_0_8px_rgba(248,113,113,0.7)]"
+                  class="h-2.5 w-2.5 rounded-full bg-red-400/80 shadow-[0_0_8px_rgba(248,113,113,0.7)]"
                 ></span>
                 <span
-                  class="h-2 w-2 rounded-full bg-amber-300/80 shadow-[0_0_8px_rgba(252,211,77,0.7)]"
+                  class="h-2.5 w-2.5 rounded-full bg-amber-300/80 shadow-[0_0_8px_rgba(252,211,77,0.7)]"
                 ></span>
                 <span
-                  class="h-2 w-2 rounded-full bg-emerald-400/80 shadow-[0_0_8px_rgba(52,211,153,0.7)]"
+                  class="h-2.5 w-2.5 rounded-full bg-emerald-400/80 shadow-[0_0_8px_rgba(52,211,153,0.7)]"
                 ></span>
-                <span class="ml-2 text-xs text-slate-400"
-                  >duck@pwntrends: ~</span
-                >
+                <span class="ml-3 text-xs text-slate-400">
+                  duck@pwntrends: ~
+                </span>
               </div>
               <span class="hidden text-xs text-slate-500 sm:inline"
                 >live: threat_simulation.py</span
@@ -484,9 +587,9 @@
 
             <!-- terminal body -->
             <div
-              class="flex h-full flex-col justify-between px-4 pb-4 pt-3 text-[13px] leading-relaxed"
+              class="relative flex h-full flex-col justify-between px-4 pb-4 pt-3 text-sm leading-relaxed"
             >
-              <div class="space-y-2">
+              <div class="space-y-2.5">
                 <p class="font-mono text-emerald-300">
                   &gt; whoami
                   <span class="ml-1 text-slate-400"># identity</span>
@@ -526,21 +629,21 @@
 
               <!-- mini stats -->
               <div
-                class="mt-4 grid grid-cols-3 gap-2 rounded-2xl border border-slate-700/60 bg-slate-950/60 px-3 py-2"
+                class="mt-4 grid grid-cols-3 gap-3 rounded-2xl border border-slate-700/70 bg-slate-950/75 px-3 py-2.5"
               >
-                <div class="text-xs">
+                <div class="text-xs sm:text-[13px]">
                   <p class="text-[11px] text-slate-400 uppercase tracking-wide">
                     YouTube
                   </p>
                   <p class="font-semibold text-slate-50">3K+ subs</p>
                 </div>
-                <div class="text-xs">
+                <div class="text-xs sm:text-[13px]">
                   <p class="text-[11px] text-slate-400 uppercase tracking-wide">
                     GitHub Repos
                   </p>
                   <p class="font-semibold text-slate-50">50+ projects</p>
                 </div>
-                <div class="text-xs">
+                <div class="text-xs sm:text-[13px]">
                   <p class="text-[11px] text-slate-400 uppercase tracking-wide">
                     Platforms
                   </p>
@@ -554,7 +657,7 @@
 
           <!-- floating badge -->
           <div
-            class="absolute -right-2 top-4 flex items-center gap-2 rounded-full bg-slate-950/80 px-4 py-1.5 text-xs text-slate-300 border border-slate-700/70 backdrop-blur-xl"
+            class="absolute -right-2 top-4 flex items-center gap-2 rounded-full bg-slate-950/85 px-4 py-1.5 text-xs sm:text-[13px] text-slate-300 border border-slate-700/70 backdrop-blur-xl shadow-lg"
           >
             <span
               class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"
@@ -564,563 +667,995 @@
         </div>
       </section>
 
+
+           <!-- ABOUT -->
       <!-- ABOUT -->
-      <section
-        id="about"
-        class="mt-20 space-y-6"
-        data-aos="fade-up"
-        data-aos-duration="900"
-      >
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h2 class="text-2xl font-semibold text-slate-100">
-              About <span class="text-neonBlue">Me</span>
-            </h2>
-            <p class="mt-1 text-base text-slate-400">
-              A bit more context about who I am and what I’m building.
-            </p>
-          </div>
-          <span
-            class="hidden rounded-full border border-slate-700/70 bg-slate-900/70 px-4 py-1.5 text-xs text-slate-300 md:inline-flex"
-          >
-            Final-year BSc Computer Science · Trincomalee Campus, EUSL
+<section
+  id="about"
+  class="mt-20 space-y-8"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <div>
+      <div class="relative inline-flex items-center gap-2 rounded-full border border-slate-700/70 bg-gradient-to-r from-slate-900/90 to-slate-800/70 px-4 py-1.5 text-sm font-medium text-slate-300 shadow-lg shadow-neonBlue/5 backdrop-blur-sm overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-neonBlue/10 to-cyberPurple/10"></div>
+        <div class="flex items-center gap-2 relative z-10">
+          <span class="h-2 w-2 rounded-full bg-gradient-to-r from-neonBlue to-cyberTeal animate-pulse"></span>
+          <span>Profile · Cyber Security · OffSec</span>
+        </div>
+      </div>
+      <h2 class="mt-5 text-3xl sm:text-4xl font-bold text-slate-100">
+        About <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">Me</span>
+      </h2>
+      <p class="mt-3 text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+        A self-driven cybersecurity learner focused on <span class="font-medium text-slate-100">offensive security</span>,
+        <span class="font-medium text-slate-100">Python tooling</span>, and sharing knowledge with the community.
+      </p>
+    </div>
+    <div class="hidden md:flex items-center gap-3 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 px-5 py-3 text-sm text-slate-300 border border-slate-700/60 shadow-lg backdrop-blur-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neonBlue" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+      </svg>
+      <span>Final-year BSc Computer Science · Trincomalee Campus (EUSL)</span>
+    </div>
+  </div>
+
+  <div class="grid gap-8 lg:grid-cols-[1.5fr_minmax(0,1fr)]">
+    <article class="relative rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-7 sm:p-8 text-base sm:text-lg text-slate-300/95 backdrop-blur-xl overflow-hidden group">
+      <!-- Animated gradient background -->
+      <div class="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-700">
+        <div class="absolute -inset-10 bg-gradient-to-r from-neonBlue/20 via-cyberPurple/15 to-cyberTeal/20 animate-gradient-x"></div>
+      </div>
+      
+      <!-- Grid pattern overlay -->
+      <div class="absolute inset-0 opacity-[0.03] bg-[length:50px_50px] bg-grid-pattern"></div>
+      
+      <!-- Corner accents -->
+      <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-neonBlue/20 to-transparent rounded-tr-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-cyberPurple/20 to-transparent rounded-bl-3xl"></div>
+
+      <div class="relative space-y-5">
+        <p class="leading-relaxed">
+          I'm <span class="font-semibold text-slate-50 bg-gradient-to-r from-neonBlue/20 to-cyberTeal/20 px-1 rounded">Aathil Ahamed</span>,
+          better known online as <span class="font-semibold text-slate-50">"Aathil Ducky"</span>.
+          I'm a <span class="font-medium text-slate-100">Cyber Security Analyst & OffSec Enthusiast</span> with a strong focus on
+          <span class="font-medium text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">offensive security, penetration testing, and web vulnerabilities</span>.
+        </p>
+
+        <p class="leading-relaxed">
+          I've spent time experimenting with tools like
+          <span class="inline-flex flex-wrap gap-1 mt-1">
+            <span class="px-2 py-1 bg-slate-800/60 rounded-lg text-slate-100 text-sm border border-slate-700/60">Burp Suite</span>
+            <span class="px-2 py-1 bg-slate-800/60 rounded-lg text-slate-100 text-sm border border-slate-700/60">Nmap</span>
+            <span class="px-2 py-1 bg-slate-800/60 rounded-lg text-slate-100 text-sm border border-slate-700/60">Metasploit</span>
+            <span class="px-2 py-1 bg-slate-800/60 rounded-lg text-slate-100 text-sm border border-slate-700/60">SQLmap</span>
+            <span class="px-2 py-1 bg-slate-800/60 rounded-lg text-slate-100 text-sm border border-slate-700/60">Suricata</span>
+            <span class="px-2 py-1 bg-slate-800/60 rounded-lg text-slate-100 text-sm border border-slate-700/60">Wireshark</span>
           </span>
+          and building my own utilities and labs using <span class="font-medium text-slate-100">Python & Django</span>.
+          Some of my public projects include
+          <span class="font-medium text-slate-50">duck-duck-leaks</span>,
+          <span class="font-medium text-slate-50">XSS notes</span>,
+          <span class="font-medium text-slate-50">google dorks notes</span>,
+          and <span class="font-medium text-slate-50">ethical hacking short notes</span>.
+        </p>
+
+        <p class="leading-relaxed">
+          I love converting learning into content — from
+          <span class="font-medium text-slate-100">YouTube walkthroughs</span>, to
+          <span class="font-medium text-slate-100">Medium & Dev.to posts</span>, to
+          my own platform <span class="font-medium text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">PwnTrends</span>, where I
+          write about real-world attacks, CTF-style workflows, and practical
+          cheat sheets for beginners and students.
+        </p>
+      </div>
+    </article>
+
+    <aside class="space-y-6">
+      <div class="relative rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 text-sm sm:text-base text-slate-200 backdrop-blur-sm overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-neonBlue/5 to-cyberPurple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative">
+          <h3 class="mb-4 text-lg font-bold flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neonBlue" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+            </svg>
+            Snapshot · Aathil Ducky
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-slate-400 min-w-20">Role:</span>
+              <span>Cyber Security Analyst · OffSec Enthusiast</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-slate-400 min-w-20">Student:</span>
+              <span>Computer Science @ Trincomalee Campus (TCEUSL)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-slate-400 min-w-20">Core Stack:</span>
+              <span>Python, Django, Flask, Web Dev, Automation</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-slate-400 min-w-20">Security Focus:</span>
+              <span>Web app security, XSS, injection, misconfigurations, GitHub leaks, CTFs</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-slate-400 min-w-20">Creator of:</span>
+              <span>PwnTrends, ethical-hacking-short-notes, duck-duck-leaks and more.</span>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="grid gap-5 md:grid-cols-[1.4fr_minmax(0,1fr)]">
-          <article
-            class="rounded-3xl border border-slate-700/60 bg-slate-950/70 p-6 text-base text-slate-300/95 backdrop-blur-xl"
-          >
-            <p class="mb-4">
-              I’m <span class="font-semibold text-slate-50">Aathil Ahamed</span>,
-              but most people in the community know me as
-              <span class="font-semibold text-slate-50">“Aathil Ducky”</span>.
-              I’m a
-              <span class="font-medium"
-                >cybersecurity enthusiast &amp; ethical hacking learner</span
-              >
-              with a strong focus on
-              <span class="font-medium text-slate-50"
-                >offensive security, penetration testing, and web
-                vulnerabilities</span
-              >.
-            </p>
-
-            <p class="mb-4">
-              Over time, I’ve worked with tools like
-              <span class="font-medium text-slate-50"
-                >Burp Suite, Nmap, Metasploit, SQLmap, Suricata, Wireshark</span
-              >
-              and frameworks like
-              <span class="font-medium">Python &amp; Django</span>, building my
-              own security tools, automation scripts and learning resources.
-            </p>
-
-            <p>
-              I also enjoy <span class="font-medium text-slate-50"
-                >teaching and sharing</span
-              >
-              what I learn: from
-              <span class="font-medium">YouTube tutorials</span>, to
-              <span class="font-medium">Medium &amp; Dev.to blogs</span>, to
-              running my own cybersecurity blog
-              <span class="font-medium text-slate-50">PwnTrends</span> focused
-              on real-world attacks, walkthroughs and cheat sheets.
-            </p>
-          </article>
-
-          <aside class="space-y-3">
-            <div
-              class="rounded-3xl border border-slate-700/60 bg-slate-950/70 p-5 text-sm text-slate-200"
-            >
-              <h3 class="mb-2 text-sm font-semibold">
-                Snapshot · Aathil Ducky
-              </h3>
-              <ul class="space-y-2">
-                <li>
-                  <span class="text-slate-400">Role:</span>
-                  Cyber Security Enthusiast, Ethical Hacking Learner
-                </li>
-                <li>
-                  <span class="text-slate-400">Student:</span>
-                  Final-year BSc Computer Science @ Trincomalee Campus, EUSL
-                </li>
-                <li>
-                  <span class="text-slate-400">Core Stack:</span>
-                  Python, Django, Web Dev, Automation
-                </li>
-                <li>
-                  <span class="text-slate-400">Security Focus:</span>
-                  Web app security, XSS, injection, misconfigurations, GitHub
-                  leaks
-                </li>
-                <li>
-                  <span class="text-slate-400">Creator of:</span>
-                  PwnTrends, Ethical Hacking Short Notes, multiple security
-                  tools
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="rounded-3xl border border-slate-700/60 bg-slate-950/70 p-5 text-sm text-slate-200"
-            >
-              <h3 class="mb-2 text-sm font-semibold">
-                Platforms I publish on
-              </h3>
-              <ul class="space-y-2">
-                <li>🎥 YouTube · <span class="text-slate-300">@aathilducky</span></li>
-                <li>✍️ Medium · security write-ups &amp; walkthroughs</li>
-                <li>🧠 Dev.to · dev tools, guides &amp; project ideas</li>
-                <li>🕳️ PwnTrends · my own cybersecurity blog &amp; lab</li>
-              </ul>
-            </div>
-          </aside>
+      <div class="relative rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 text-sm sm:text-base text-slate-200 backdrop-blur-sm overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-cyberTeal/5 to-neonBlue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative">
+          <h3 class="mb-4 text-lg font-bold flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyberTeal" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+            </svg>
+            Platforms I publish on
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-slate-100">YouTube</span>
+                <div class="text-slate-400 text-sm">@aathilducky</div>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-slate-100">Medium</span>
+                <div class="text-slate-400 text-sm">security write-ups & walkthroughs</div>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-slate-100">Dev.to</span>
+                <div class="text-slate-400 text-sm">dev tools, guides & project ideas</div>
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <span class="font-medium text-slate-100">PwnTrends</span>
+                <div class="text-slate-400 text-sm">personal cybersecurity blog & lab</div>
+              </div>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </aside>
+  </div>
+</section>
 
-      <!-- SKILLS -->
-      <section
-        id="skills"
-        class="mt-20"
-        data-aos="fade-up"
-        data-aos-duration="900"
-      >
-        <div class="flex items-center justify-between gap-4">
+<!-- SKILLS -->
+<section
+  id="skills"
+  class="mt-20"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">
+        Offensive <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">Cyber Skills</span>
+      </h2>
+      <p class="mt-3 text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+        The blend of hacking, analysis, and building that I use to explore
+        and secure systems.
+      </p>
+    </div>
+  </div>
+
+  <!-- Skill tags row -->
+  <div class="mt-6 flex flex-wrap gap-3 text-sm">
+    <span class="rounded-full bg-gradient-to-r from-neonBlue/90 via-cyberTeal/90 to-cyberPurple/90 px-4 py-2 text-slate-50 shadow-lg shadow-neonBlue/20 font-medium">
+      XSS · SQL Injection · Auth Bypass
+    </span>
+    <span class="rounded-full border border-slate-700/80 bg-gradient-to-br from-slate-900/80 to-slate-800/60 px-4 py-2 text-slate-200 backdrop-blur-sm hover:border-neonBlue/40 transition-colors duration-300">
+      Python & Django Automation
+    </span>
+    <span class="rounded-full border border-slate-700/80 bg-gradient-to-br from-slate-900/80 to-slate-800/60 px-4 py-2 text-slate-200 backdrop-blur-sm hover:border-cyberTeal/40 transition-colors duration-300">
+      GitHub Leak Detection (duck-duck-leaks)
+    </span>
+    <span class="rounded-full border border-slate-700/80 bg-gradient-to-br from-slate-900/80 to-slate-800/60 px-4 py-2 text-slate-200 backdrop-blur-sm hover:border-cyberPurple/40 transition-colors duration-300">
+      CTF Player · TryHackMe & Labs
+    </span>
+    <span class="rounded-full border border-slate-700/80 bg-gradient-to-br from-slate-900/80 to-slate-800/60 px-4 py-2 text-slate-200 backdrop-blur-sm hover:border-neonBlue/40 transition-colors duration-300">
+      Content Creation · Blogs · Videos
+    </span>
+  </div>
+
+  <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4 text-sm sm:text-base text-slate-200">
+    <div class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 backdrop-blur-sm transition-all duration-300 hover:border-neonBlue/50 hover:shadow-lg hover:shadow-neonBlue/10">
+      <div class="absolute inset-0 bg-gradient-to-br from-neonBlue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neonBlue/10 blur-xl group-hover:bg-neonBlue/20 transition-all duration-700"></div>
+      <div class="relative">
+        <div class="mb-4 flex items-center gap-3">
+          <div class="rounded-xl bg-gradient-to-br from-neonBlue/20 to-cyberTeal/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neonBlue" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold">Offensive Security · Red Team</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-neonBlue mt-1">•</span>
+            <span>Web app hacking (XSS, SQLi, auth flaws)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-neonBlue mt-1">•</span>
+            <span>Recon, enumeration & surface mapping</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-neonBlue mt-1">•</span>
+            <span>CTF practice & practical labs (TryHackMe, etc.)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-neonBlue mt-1">•</span>
+            <span>Payload crafting & defence evasion attempts</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 backdrop-blur-sm transition-all duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10">
+      <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-cyan-400/10 blur-xl group-hover:bg-cyan-400/20 transition-all duration-700"></div>
+      <div class="relative">
+        <div class="mb-4 flex items-center gap-3">
+          <div class="rounded-xl bg-gradient-to-br from-cyan-400/20 to-emerald-400/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold">Blue Team & Monitoring</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">•</span>
+            <span>Log analysis & alert triage</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">•</span>
+            <span>Understanding common attack chains</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">•</span>
+            <span>Thinking like attacker + defender</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cyan-400 mt-1">•</span>
+            <span>Mapping findings to real-world risk</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 backdrop-blur-sm transition-all duration-300 hover:border-purple-400/50 hover:shadow-lg hover:shadow-purple-400/10">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-purple-500/10 blur-xl group-hover:bg-purple-500/20 transition-all duration-700"></div>
+      <div class="relative">
+        <div class="mb-4 flex items-center gap-3">
+          <div class="rounded-xl bg-gradient-to-br from-purple-500/20 to-indigo-500/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold">Development & Automation</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-purple-400 mt-1">•</span>
+            <span>Python, Django, Flask web apps</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-purple-400 mt-1">•</span>
+            <span>CLI tools & micro utilities</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-purple-400 mt-1">•</span>
+            <span>GitHub-based security tools & scripts</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-purple-400 mt-1">•</span>
+            <span>Automation for recon & analysis workflows</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 backdrop-blur-sm transition-all duration-300 hover:border-pink-400/50 hover:shadow-lg hover:shadow-pink-400/10">
+      <div class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-pink-500/10 blur-xl group-hover:bg-pink-500/20 transition-all duration-700"></div>
+      <div class="relative">
+        <div class="mb-4 flex items-center gap-3">
+          <div class="rounded-xl bg-gradient-to-br from-pink-500/20 to-rose-500/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-400" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold">Content & Community</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <span class="text-pink-400 mt-1">•</span>
+            <span>YouTube security tutorials & breakdowns</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-pink-400 mt-1">•</span>
+            <span>Blogs on Medium & Dev.to</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-pink-400 mt-1">•</span>
+            <span>PwnTrends write-ups & cheat sheets</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-pink-400 mt-1">•</span>
+            <span>Beginner-friendly explanations & notes</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS / BLOGS -->
+<section
+  id="projects"
+  class="mt-20"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">
+        Projects & <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">Security Blogs</span>
+      </h2>
+      <p class="mt-3 text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+        A few places where my tools, notes, and ideas live on the internet.
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-8 grid gap-6 md:grid-cols-3 text-sm sm:text-base text-slate-200">
+    <!-- PwnTrends -->
+    <a
+      href="https://pwntrends.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 transition-all duration-500 hover:border-neonBlue/70 hover:shadow-xl hover:shadow-neonBlue/20 backdrop-blur-sm"
+    >
+      <div class="absolute inset-0 bg-gradient-to-br from-neonBlue/10 to-cyberTeal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neonBlue/20 blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+      
+      <div class="relative mb-4 flex items-center justify-between">
+        <h3 class="text-lg font-bold">PwnTrends</h3>
+        <span class="rounded-full bg-gradient-to-r from-neonBlue/20 to-cyberTeal/20 px-3 py-1 text-xs font-medium text-cyberTeal border border-cyan-400/40 backdrop-blur-sm">
+          Featured Blog
+        </span>
+      </div>
+      <p class="relative mb-5 text-slate-300 leading-relaxed">
+        My cybersecurity hub covering trending exploits, walkthroughs,
+        practical case studies, and tools for learners exploring offensive
+        security.
+      </p>
+      <div class="relative flex items-center justify-between">
+        <span class="inline-flex items-center gap-2 text-sm font-medium text-neonBlue group-hover:gap-3 transition-all duration-300">
+          Visit PwnTrends
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </span>
+        <div class="rounded-full bg-gradient-to-r from-neonBlue to-cyberTeal p-2 group-hover:scale-110 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- Dev.to article -->
+    <a
+      href="https://dev.to/aathilducky/final-year-cybersecurity-project-ideas-with-source-code-11o8"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 transition-all duration-500 hover:border-purple-400/70 hover:shadow-xl hover:shadow-purple-400/20 backdrop-blur-sm"
+    >
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-purple-500/20 blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+      
+      <div class="relative mb-4 flex items-center justify-between">
+        <h3 class="text-lg font-bold">Final Year Cybersecurity Project Ideas</h3>
+        <span class="rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 px-3 py-1 text-xs font-medium text-purple-300 border border-purple-400/40 backdrop-blur-sm">
+          Dev.to
+        </span>
+      </div>
+      <p class="relative mb-5 text-slate-300 leading-relaxed">
+        A curated list of practical cybersecurity project ideas with source
+        code, helping students and beginners build real-world tools and
+        security projects.
+      </p>
+      <div class="relative flex items-center justify-between">
+        <span class="inline-flex items-center gap-2 text-sm font-medium text-purple-300 group-hover:gap-3 transition-all duration-300">
+          Read on Dev.to
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </span>
+        <div class="rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 p-2 group-hover:scale-110 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+          </svg>
+        </div>
+      </div>
+    </a>
+
+    <!-- Medium profile -->
+    <a
+      href="https://medium.com/@aathilducky"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative overflow-hidden rounded-3xl border border-slate-700/70 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 transition-all duration-500 hover:border-amber-500/70 hover:shadow-xl hover:shadow-amber-500/20 backdrop-blur-sm"
+    >
+      <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div class="absolute -right-10 -top-10 h-20 w-20 rounded-full bg-amber-500/20 blur-xl group-hover:scale-150 transition-transform duration-700"></div>
+      
+      <div class="relative mb-4 flex items-center justify-between">
+        <h3 class="text-lg font-bold">Medium · Security Write-ups</h3>
+        <span class="rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 px-3 py-1 text-xs font-medium text-amber-300 border border-amber-400/40 backdrop-blur-sm">
+          Medium
+        </span>
+      </div>
+      <p class="relative mb-5 text-slate-300 leading-relaxed">
+        Short, focused articles on topics like TryHackMe rooms, vulnerability
+        research, Linux basics, and practical exploitation techniques you can
+        try yourself.
+      </p>
+      <div class="relative flex items-center justify-between">
+        <span class="inline-flex items-center gap-2 text-sm font-medium text-amber-300 group-hover:gap-3 transition-all duration-300">
+          View Medium Profile
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </span>
+        <div class="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 p-2 group-hover:scale-110 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+          </svg>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<style>
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 15s ease infinite;
+  }
+  
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  }
+</style>
+
+      <!-- CONTENT CREATOR / SOCIALS -->
+      <!-- CONTENT CREATOR / SOCIALS -->
+<section
+  id="content"
+  class="mt-20"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
+    <div class="flex-1">
+      <div class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue/15 to-cyberPurple/15 px-4 py-1.5 text-sm font-medium text-slate-300 border border-neonBlue/20 mb-4">
+        <div class="h-2 w-2 rounded-full bg-gradient-to-r from-neonBlue to-cyberTeal animate-pulse"></div>
+        <span>Connect & Collaborate</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">
+        Content Creator · <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">DUCKY MODE</span>
+      </h2>
+      <p class="mt-3 text-lg text-slate-300 max-w-2xl leading-relaxed">
+        All the places where you can follow my cybersecurity journey, learn together, and join the community.
+      </p>
+    </div>
+    
+    <!-- Stats counter -->
+    <div class="flex gap-6">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-neonBlue">10+</div>
+        <div class="text-xs text-slate-400">Platforms</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-cyberTeal">1000+</div>
+        <div class="text-xs text-slate-400">Followers</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-cyberPurple">50+</div>
+        <div class="text-xs text-slate-400">Projects</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid gap-8 lg:grid-cols-[1.3fr,1fr]">
+    <!-- Social grid -->
+    <div class="relative rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 sm:p-7 text-slate-200 backdrop-blur-xl overflow-hidden">
+      <!-- Background elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-neonBlue/5 to-cyberPurple/5 opacity-60"></div>
+      <div class="absolute inset-0 opacity-[0.03] bg-[length:40px_40px] bg-grid-pattern"></div>
+      <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-neonBlue/15 to-transparent rounded-tr-3xl"></div>
+      
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="rounded-xl bg-gradient-to-r from-neonBlue/20 to-cyberTeal/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-neonBlue" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+            </svg>
+          </div>
           <div>
-            <h2 class="text-2xl font-semibold text-slate-100">
-              Offensive <span class="text-neonBlue">Cyber Skills</span>
-            </h2>
-            <p class="mt-1 text-base text-slate-400">
-              A high-level view of what I enjoy working with.
-            </p>
+            <h3 class="text-lg font-bold text-slate-100">Official Links · Follow the Signal</h3>
+            <p class="text-sm text-slate-400">Connect across platforms</p>
           </div>
         </div>
 
-        <div
-          class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4 text-sm text-slate-200"
-        >
-          <div
-            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5"
-          >
-            <h3 class="mb-2 text-sm font-semibold">
-              Offensive Security · Red Team
-            </h3>
-            <ul class="space-y-2">
-              <li>• Web App Hacking (XSS, SQLi, auth flaws)</li>
-              <li>• Recon &amp; enumeration</li>
-              <li>• CTF practice &amp; labs (TryHackMe etc.)</li>
-              <li>• Payload crafting &amp; bypass attempts</li>
-            </ul>
-          </div>
-
-          <div
-            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5"
-          >
-            <h3 class="mb-2 text-sm font-semibold">
-              Blue Team &amp; Monitoring
-            </h3>
-            <ul class="space-y-2">
-              <li>• Log analysis &amp; alert triage</li>
-              <li>• Understanding common attack patterns</li>
-              <li>• Thinking like attacker + defender</li>
-            </ul>
-          </div>
-
-          <div
-            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5"
-          >
-            <h3 class="mb-2 text-sm font-semibold">
-              Development &amp; Automation
-            </h3>
-            <ul class="space-y-2">
-              <li>• Python, Django, Flask</li>
-              <li>• CLI tools &amp; web apps</li>
-              <li>• Automation &amp; small utilities</li>
-              <li>• GitHub-based security tools</li>
-            </ul>
-          </div>
-
-          <div
-            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5"
-          >
-            <h3 class="mb-2 text-sm font-semibold">
-              Content &amp; Community
-            </h3>
-            <ul class="space-y-2">
-              <li>• YouTube security tutorials</li>
-              <li>• Blogs on Medium &amp; Dev.to</li>
-              <li>• PwnTrends write-ups &amp; cheatsheets</li>
-              <li>• Sharing beginner-friendly resources</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS / BLOGS -->
-      <section
-        id="projects"
-        class="mt-20"
-        data-aos="fade-up"
-        data-aos-duration="900"
-      >
-        <div class="flex items-center justify-between gap-4">
-          <div>
-            <h2 class="text-2xl font-semibold text-slate-100">
-              Projects &amp; <span class="text-neonBlue">Security Blogs</span>
-            </h2>
-            <p class="mt-1 text-base text-slate-400">
-              A few places where my work and ideas live.
-            </p>
-          </div>
-        </div>
-
-        <div
-          class="mt-6 grid gap-5 md:grid-cols-3 text-sm text-slate-200"
-        >
+        <div class="grid gap-4 sm:grid-cols-2">
+          <!-- GitHub -->
           <a
-            href="https://pwntrends.com/"
+            href="https://github.com/AATHILDUCKY"
             target="_blank"
             rel="noopener noreferrer"
-            class="group rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5 hover:border-neonBlue/70 hover:shadow-soft-glow transition"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-neonBlue/50 border border-slate-700/60 hover:shadow-lg hover:shadow-neonBlue/10 backdrop-blur-sm"
+            aria-label="Visit GitHub profile AATHILDUCKY"
           >
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-sm font-semibold">PwnTrends</h3>
-              <span
-                class="rounded-full bg-slate-900/80 px-2.5 py-0.5 text-xs text-cyberTeal"
-                >Blog</span
-              >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 group-hover:from-neonBlue/20 group-hover:to-cyberTeal/20 transition-all duration-300">
+                <i class="fa-brands fa-github text-xl text-slate-300 group-hover:text-neonBlue transition-colors duration-300"></i>
+              </div>
             </div>
-            <p class="mb-3 text-slate-300">
-              My own cybersecurity blog focused on trending exploits,
-              walkthroughs, practical case studies, and tools for learners.
-            </p>
-            <p
-              class="inline-flex items-center gap-1 text-xs text-neonBlue group-hover:gap-2"
-            >
-              Visit PwnTrends
-              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </p>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">GitHub</p>
+              <p class="text-xs text-slate-400 truncate">@AATHILDUCKY</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-neonBlue" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
           </a>
 
+          <!-- YouTube -->
           <a
-            href="https://dev.to/aathilducky/final-year-cybersecurity-project-ideas-with-source-code-11o8"
+            href="https://www.youtube.com/@aathilducky"
             target="_blank"
             rel="noopener noreferrer"
-            class="group rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5 hover:border-cyberPurple/70 hover:shadow-soft-glow transition"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-red-400/50 border border-slate-700/60 hover:shadow-lg hover:shadow-red-400/10 backdrop-blur-sm"
+            aria-label="Visit YouTube channel @aathilducky"
           >
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-sm font-semibold">
-                Final Year Cybersecurity Project Ideas
-              </h3>
-              <span
-                class="rounded-full bg-slate-900/80 px-2.5 py-0.5 text-xs text-cyberPurple"
-                >Dev.to</span
-              >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/20 group-hover:from-red-500/30 group-hover:to-red-600/30 transition-all duration-300">
+                <i class="fa-brands fa-youtube text-xl text-red-400 group-hover:text-red-300 transition-colors duration-300"></i>
+              </div>
             </div>
-            <p class="mb-3 text-slate-300">
-              A curated list of cybersecurity projects with source code ideas
-              for students and beginners looking to build real tools.
-            </p>
-            <p
-              class="inline-flex items-center gap-1 text-xs text-cyberPurple group-hover:gap-2"
-            >
-              Read on Dev.to
-              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </p>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">YouTube</p>
+              <p class="text-xs text-slate-400 truncate">Tutorials & Labs</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
           </a>
 
+          <!-- Medium -->
           <a
             href="https://medium.com/@aathilducky"
             target="_blank"
             rel="noopener noreferrer"
-            class="group rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5 hover:border-cyberTeal/70 hover:shadow-soft-glow transition"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-amber-500/50 border border-slate-700/60 hover:shadow-lg hover:shadow-amber-500/10 backdrop-blur-sm"
+            aria-label="Visit Medium profile @aathilducky"
           >
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-sm font-semibold">
-                Medium · Security Write-ups
-              </h3>
-              <span
-                class="rounded-full bg-slate-900/80 px-2.5 py-0.5 text-xs text-emerald-300"
-                >Medium</span
-              >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 group-hover:from-amber-500/30 group-hover:to-orange-500/30 transition-all duration-300">
+                <i class="fa-brands fa-medium text-xl text-amber-400 group-hover:text-amber-300 transition-colors duration-300"></i>
+              </div>
             </div>
-            <p class="mb-3 text-slate-300">
-              Walkthroughs and research notes on topics like TryHackMe,
-              vulnerability research, PHP command execution and more.
-            </p>
-            <p
-              class="inline-flex items-center gap-1 text-xs text-cyberTeal group-hover:gap-2"
-            >
-              View Medium Profile
-              <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </p>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">Medium</p>
+              <p class="text-xs text-slate-400 truncate">Security Write-ups</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Dev.to -->
+          <a
+            href="https://dev.to/aathilducky"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-blue-400/50 border border-slate-700/60 hover:shadow-lg hover:shadow-blue-400/10 backdrop-blur-sm"
+            aria-label="Visit Dev.to profile aathilducky"
+          >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 group-hover:from-blue-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+                <i class="fa-brands fa-dev text-xl text-blue-400 group-hover:text-blue-300 transition-colors duration-300"></i>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">Dev.to</p>
+              <p class="text-xs text-slate-400 truncate">Developer Blogs</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- PwnTrends -->
+          <a
+            href="https://pwntrends.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-cyan-400/50 border border-slate-700/60 hover:shadow-lg hover:shadow-cyan-400/10 backdrop-blur-sm"
+            aria-label="Visit PwnTrends cybersecurity blog"
+          >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-teal-500/20 group-hover:from-cyan-500/30 group-hover:to-teal-500/30 transition-all duration-300">
+                <i class="fa-solid fa-bullseye text-lg text-cyan-300 group-hover:text-cyan-200 transition-colors duration-300"></i>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">PwnTrends</p>
+              <p class="text-xs text-slate-400 truncate">Cybersecurity Blog</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cyan-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/aathilducky/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-pink-400/50 border border-slate-700/60 hover:shadow-lg hover:shadow-pink-400/10 backdrop-blur-sm"
+            aria-label="Visit Instagram profile @aathilducky"
+          >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500/20 via-red-500/20 to-yellow-400/20 group-hover:from-pink-500/30 group-hover:via-red-500/30 group-hover:to-yellow-400/30 transition-all duration-300">
+                <i class="fa-brands fa-instagram text-lg text-pink-400 group-hover:text-pink-300 transition-colors duration-300"></i>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">Instagram</p>
+              <p class="text-xs text-slate-400 truncate">@aathilducky</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pink-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Twitter -->
+          <a
+            href="https://twitter.com/AathilDucky"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-slate-400/50 border border-slate-700/60 hover:shadow-lg hover:shadow-slate-400/10 backdrop-blur-sm"
+            aria-label="Visit X (Twitter) profile @AathilDucky"
+          >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-slate-700/20 to-slate-800/20 group-hover:from-slate-600/30 group-hover:to-slate-700/30 transition-all duration-300">
+                <i class="fa-brands fa-x-twitter text-lg text-slate-300 group-hover:text-slate-200 transition-colors duration-300"></i>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">X (Twitter)</p>
+              <p class="text-xs text-slate-400 truncate">@AathilDucky</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/aathil.ducky/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative flex items-center gap-4 rounded-2xl bg-gradient-to-br from-slate-900/80 to-slate-800/60 p-4 transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/50 border border-slate-700/60 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm"
+            aria-label="Visit Facebook profile aathil.ducky"
+          >
+            <div class="relative">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/20 to-blue-700/20 group-hover:from-blue-600/30 group-hover:to-blue-700/30 transition-all duration-300">
+                <i class="fa-brands fa-facebook-f text-lg text-blue-400 group-hover:text-blue-300 transition-colors duration-300"></i>
+              </div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="font-semibold text-slate-100 truncate">Facebook</p>
+              <p class="text-xs text-slate-400 truncate">Personal Profile</p>
+            </div>
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
           </a>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- CONTENT CREATOR / SOCIALS -->
-      <section
-        id="content"
-        class="mt-20"
-        data-aos="fade-up"
-        data-aos-duration="900"
-      >
-        <div class="flex items-center justify-between gap-4">
-          <div>
-            <h2 class="text-2xl font-semibold text-slate-100">
-              Content Creator · <span class="text-neonBlue">DUCKY MODE</span>
-            </h2>
-            <p class="mt-1 text-base text-slate-400">
-              All the places where you can follow my cybersecurity journey.
+    <!-- Mission Statement -->
+    <div class="relative rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-6 sm:p-7 text-slate-200 backdrop-blur-xl overflow-hidden group">
+      <!-- Background elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-cyberTeal/5 to-cyberPurple/5 opacity-60"></div>
+      <div class="absolute inset-0 opacity-[0.03] bg-[length:40px_40px] bg-grid-pattern"></div>
+      <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-cyberTeal/15 to-transparent rounded-bl-3xl"></div>
+      
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="rounded-xl bg-gradient-to-r from-cyberTeal/20 to-emerald-400/20 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyberTeal" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-slate-100">My Mission Statement</h3>
+        </div>
+
+        <div class="space-y-4">
+          <blockquote class="text-lg font-medium text-slate-100 leading-relaxed border-l-4 border-cyberTeal pl-4 py-1">
+            "My goal is simple..."
+          </blockquote>
+          
+          <p class="text-slate-300 leading-relaxed">
+            Make cybersecurity and offensive security less scary for beginners
+            by showing <span class="font-semibold text-cyberTeal">real examples</span>,
+            practical labs and honest journeys — not just theory slides.
+          </p>
+          
+          <div class="p-4 rounded-2xl bg-gradient-to-r from-cyberTeal/10 to-cyberPurple/10 border border-cyberTeal/20">
+            <p class="text-slate-300 text-sm leading-relaxed">
+              If you're curious about hacking, want to build security projects,
+              or love learning in public, you're already part of the squad.
             </p>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="pt-4">
+            <a 
+              href="#contact" 
+              class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-neonBlue to-cyberTeal px-5 py-3 text-sm font-semibold text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-neonBlue/25"
+            >
+              <span>Join The Community</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  }
+</style>
+
+      <!-- CONTACT -->
+      <section
+  id="contact"
+  class="mt-20"
+  data-aos="fade-up"
+  data-aos-duration="900"
+>
+  <div class="relative rounded-3xl border border-slate-700/60 bg-gradient-to-br from-slate-950/90 to-slate-900/80 p-8 md:p-10 text-slate-200 backdrop-blur-xl overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 bg-gradient-to-br from-neonBlue/10 via-cyberPurple/5 to-cyberTeal/10 opacity-60"></div>
+    <div class="absolute inset-0 opacity-[0.03] bg-[length:50px_50px] bg-grid-pattern"></div>
+    
+    <!-- Animated Orbs -->
+    <div class="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-neonBlue/20 blur-3xl animate-pulse"></div>
+    <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-cyberPurple/20 blur-3xl animate-pulse delay-1000"></div>
+    
+    <!-- Corner Accents -->
+    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-neonBlue/15 to-transparent rounded-tr-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-cyberTeal/15 to-transparent rounded-bl-3xl"></div>
+
+    <div class="relative">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+        <!-- Main Content -->
+        <div class="flex-1 space-y-6">
+          <!-- Header Badge -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue/15 to-cyberTeal/15 px-4 py-1.5 text-sm font-medium text-slate-300 border border-neonBlue/20">
+            <div class="h-2 w-2 rounded-full bg-gradient-to-r from-neonBlue to-cyberTeal animate-pulse"></div>
+            <span>Get In Touch · Collaboration Ready</span>
+          </div>
+
+          <!-- Heading -->
+          <div class="space-y-3">
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-100">
+              Let's <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonBlue to-cyberTeal">Build & Break</span> Security Together
+            </h2>
+            <p class="text-lg text-slate-300 leading-relaxed max-w-2xl">
+              Open to collaborations, content ideas, tool building, and community projects in 
+              <span class="font-semibold text-slate-100">cybersecurity</span>, 
+              <span class="font-semibold text-slate-100">offensive security</span> and 
+              <span class="font-semibold text-slate-100">Python automation</span>.
+            </p>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="flex flex-wrap gap-6 pt-4">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-neonBlue">24h</div>
+              <div class="text-xs text-slate-400">Avg. Response</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-cyberTeal">10+</div>
+              <div class="text-xs text-slate-400">Projects</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-cyberPurple">100%</div>
+              <div class="text-xs text-slate-400">Open Source</div>
+            </div>
           </div>
         </div>
 
-        <div
-          class="mt-6 grid gap-5 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]"
-        >
-          <!-- Social grid -->
-          <div
-            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5 text-sm text-slate-200"
-          >
-            <h3 class="mb-3 text-sm font-semibold">
-              Official Links · Follow the signal
-            </h3>
-            <div class="grid gap-3 sm:grid-cols-2">
-              <a
-                href="https://github.com/AATHILDUCKY"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-950/90"
-                >
-                  <i class="fa-brands fa-github text-lg"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">GitHub</p>
-                  <p class="text-xs text-slate-400">@AATHILDUCKY</p>
+        <!-- CTA Section -->
+        <div class="flex flex-col gap-6 lg:min-w-80">
+          <!-- Email Button -->
+          <div class="group relative">
+            <a
+              href="mailto:aathilducky@gmail.com"
+              class="relative inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-neonBlue to-cyberTeal px-6 py-4 text-sm font-semibold text-slate-900 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neonBlue/30 overflow-hidden"
+            >
+              <!-- Animated Background -->
+              <div class="absolute inset-0 bg-gradient-to-r from-cyberTeal to-neonBlue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <!-- Content -->
+              <div class="relative flex items-center gap-3">
+                <div class="rounded-lg bg-slate-900/20 p-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
                 </div>
-              </a>
-
-              <a
-                href="https://www.youtube.com/@aathilducky"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-red-500/20"
-                >
-                  <i class="fa-brands fa-youtube text-lg text-red-400"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">YouTube</p>
-                  <p class="text-xs text-slate-400">Tutorials &amp; labs</p>
+                <div class="text-left">
+                  <div class="font-bold tracking-wide">EMAIL ME</div>
+                  <div class="text-xs opacity-90">aathilducky@gmail.com</div>
                 </div>
-              </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </a>
+          </div>
 
-              <a
-                href="https://medium.com/@aathilducky"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-950/90"
-                >
-                  <i class="fa-brands fa-medium text-lg"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">Medium</p>
-                  <p class="text-xs text-slate-400">Security write-ups</p>
-                </div>
-              </a>
-
-              <a
-                href="https://dev.to/aathilducky"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-950/90"
-                >
-                  <i class="fa-brands fa-dev text-lg"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">Dev.to</p>
-                  <p class="text-xs text-slate-400">Developer blogs</p>
-                </div>
-              </a>
-
-              <a
-                href="https://pwntrends.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-500/20"
-                >
-                  <i class="fa-solid fa-bullseye text-sm text-cyan-300"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">PwnTrends</p>
-                  <p class="text-xs text-slate-400">
-                    My cybersecurity blog
-                  </p>
-                </div>
-              </a>
-
+          <!-- Alternative Contact Methods -->
+          <div class="space-y-4">
+            <p class="text-sm text-slate-400 text-center">
+              Prefer instant messaging?
+            </p>
+            
+            <!-- Social Quick Links -->
+            <div class="flex justify-center gap-4">
               <a
                 href="https://www.instagram.com/aathilducky/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
+                class="group flex items-center gap-2 rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/60 px-4 py-2.5 text-sm font-medium text-slate-300 transition-all duration-300 hover:scale-105 hover:bg-pink-500/20 hover:text-pink-300 border border-slate-700/60 hover:border-pink-400/50"
+                aria-label="Message on Instagram"
               >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500/40 via-red-500/40 to-yellow-400/40"
-                >
-                  <i class="fa-brands fa-instagram text-sm"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">Instagram</p>
-                  <p class="text-xs text-slate-400">@aathilducky</p>
-                </div>
+                <i class="fa-brands fa-instagram text-pink-400 group-hover:text-pink-300"></i>
+                <span>Instagram</span>
               </a>
-
+              
               <a
                 href="https://twitter.com/AathilDucky"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
+                class="group flex items-center gap-2 rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-900/60 px-4 py-2.5 text-sm font-medium text-slate-300 transition-all duration-300 hover:scale-105 hover:bg-slate-600/20 hover:text-slate-200 border border-slate-700/60 hover:border-slate-400/50"
+                aria-label="Message on X (Twitter)"
               >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-950/90"
-                >
-                  <i class="fa-brands fa-x-twitter text-sm"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">X (Twitter)</p>
-                  <p class="text-xs text-slate-400">@AathilDucky</p>
-                </div>
-              </a>
-
-              <a
-                href="https://www.facebook.com/aathil.ducky/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-blue-600/25"
-                >
-                  <i class="fa-brands fa-facebook-f text-base text-blue-400"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">Facebook</p>
-                  <p class="text-xs text-slate-400">Personal profile</p>
-                </div>
-              </a>
-
-              <a
-                href="https://duckyspot.tumblr.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-950/90"
-                >
-                  <i class="fa-brands fa-tumblr text-lg"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">Tumblr</p>
-                  <p class="text-xs text-slate-400">Duckyspot</p>
-                </div>
-              </a>
-
-              <a
-                href="https://www.quora.com/profile/Duckyspot"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-3 rounded-2xl bg-slate-900/70 px-4 py-2.5 hover:bg-slate-800/80"
-              >
-                <span
-                  class="flex h-8 w-8 items-center justify-center rounded-xl bg-red-500/20"
-                >
-                  <i class="fa-brands fa-quora text-base text-red-400"></i>
-                </span>
-                <div>
-                  <p class="text-sm font-semibold">Quora</p>
-                  <p class="text-xs text-slate-400">Duckyspot</p>
-                </div>
+                <i class="fa-brands fa-x-twitter text-slate-400 group-hover:text-slate-200"></i>
+                <span>X</span>
               </a>
             </div>
           </div>
 
-          <!-- Mini bio -->
-          <div
-            class="rounded-3xl border border-slate-700/70 bg-slate-950/70 p-5 text-sm text-slate-200"
+          <!-- Collaboration Types -->
+          <div class="rounded-2xl bg-gradient-to-br from-slate-800/30 to-slate-900/30 p-4 border border-slate-700/40">
+            <h4 class="text-xs font-semibold text-slate-300 mb-3 uppercase tracking-wider">I'm interested in:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 bg-neonBlue/10 text-neonBlue text-xs rounded-full border border-neonBlue/20">Security Research</span>
+              <span class="px-2.5 py-1 bg-cyberTeal/10 text-cyberTeal text-xs rounded-full border border-cyberTeal/20">Tool Development</span>
+              <span class="px-2.5 py-1 bg-cyberPurple/10 text-cyberPurple text-xs rounded-full border border-cyberPurple/20">Content Creation</span>
+              <span class="px-2.5 py-1 bg-amber-500/10 text-amber-400 text-xs rounded-full border border-amber-500/20">CTF Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="mt-8 pt-6 border-t border-slate-700/40">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p class="text-sm text-slate-400">
+            🚀 <span class="text-slate-300 font-medium">Ready to start a project?</span> Let's discuss your security needs.
+          </p>
+          <a
+            href="#projects"
+            class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-slate-700/50 to-slate-800/50 px-4 py-2.5 text-sm font-medium text-slate-300 transition-all duration-300 hover:scale-105 hover:text-slate-100 hover:bg-slate-700/70 border border-slate-600/40 hover:border-slate-500/60"
           >
-            <h3 class="mb-2 text-sm font-semibold">
-              “My goal is simple...”
-            </h3>
-            <p class="mb-3 text-slate-300">
-              Make cybersecurity and offensive security less scary for beginners
-              by showing <span class="font-medium">real examples</span>,
-              practical labs and honest journeys — not just theory slides.
-            </p>
-            <p class="text-slate-400">
-              If you’re curious about hacking, want to build security projects,
-              or love learning in public, you’re already part of the squad.
-            </p>
-          </div>
+            <span>View My Work</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- CONTACT -->
-      <section
-        id="contact"
-        class="mt-20"
-        data-aos="fade-up"
-        data-aos-duration="900"
-      >
-        <div
-          class="rounded-3xl border border-slate-700/70 bg-slate-950/80 px-5 py-6 text-sm text-slate-200 md:px-7"
-        >
-          <div class="flex flex-col gap-4 md:flex-row md:items-center">
-            <div class="flex-1">
-              <h2 class="text-2xl font-semibold text-slate-100">
-                Let’s <span class="text-neonBlue">Build &amp; Break</span>
-                Security Together
-              </h2>
-              <p class="mt-1 text-base text-slate-400">
-                Open to collaborations, content ideas, tool building, and
-                community projects in cybersecurity, offensive security and
-                Python automation.
-              </p>
-            </div>
-            <div class="flex flex-col gap-2 text-sm text-slate-200">
-              <a
-                href="mailto:aathilducky@gmail.com"
-                class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-neonBlue via-cyberTeal to-cyberPurple px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-slate-50 shadow-soft-glow"
-              >
-                <i class="fa-solid fa-envelope text-sm"></i>
-                <span>Email Me</span>
-              </a>
-              <span class="text-xs text-slate-400">
-                Prefer DMs? Reach out on
-                <span class="text-slate-200">Instagram</span> or
-                <span class="text-slate-200">X</span>.
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+<style>
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  }
+</style>
     </main>
 
     <!-- FOOTER -->
@@ -1245,3 +1780,4 @@
     </script>
   </body>
 </html>
+
