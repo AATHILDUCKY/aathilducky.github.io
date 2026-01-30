@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <title>Aathil Ducky | Darkweb Portfolio</title>
-  <meta name="description" content="Black & green hacker vibe portfolio — projects, tools, writeups, and contact." />
+  <meta name="theme-color" content="#f8fafc" />
+  <title>Aathil Ducky | Security Researcher &amp; Cybersecurity Enthusiast</title>
+  <meta name="description" content="Aathil Ducky — security researcher and cybersecurity enthusiast focused on vulnerability research, secure engineering, and automation. Portfolio, projects, and contact." />
+  <meta name="keywords" content="security researcher, cybersecurity enthusiast, vulnerability research, ethical hacking, penetration testing, secure engineering, Python, FastAPI, Django, OSINT, automation" />
+  <meta name="author" content="Aathil Ducky" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <link rel="canonical" href="https://aathilducky.com/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aathil Ducky | Security Researcher & Cybersecurity Enthusiast" />
+  <meta property="og:description" content="Security research, secure engineering, and automation. Explore projects, writeups, and contact." />
+  <meta property="og:url" content="https://aathilducky.com/" />
+  <meta property="og:site_name" content="Aathil Ducky" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aathil Ducky | Security Researcher" />
+  <meta name="twitter:description" content="Security research, secure engineering, and automation. Explore projects, writeups, and contact." />
 
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,44 +32,38 @@
       theme: {
         extend: {
           fontFamily: {
-            mono: ["'Share Tech Mono'", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+            sans: ["'Sora'", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+            display: ["'Space Grotesk'", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+          },
+          colors: {
+            emerald: {
+              50: "#0b1220",
+              100: "#334155",
+              200: "#0f172a",
+              300: "#0f766e",
+              400: "#0d9488",
+            },
           },
           boxShadow: {
-            neon: "0 0 0 1px rgba(34,197,94,.35), 0 0 32px rgba(34,197,94,.22)",
-            neonHard: "0 0 0 1px rgba(34,197,94,.55), 0 0 52px rgba(34,197,94,.30)",
+            neon: "0 10px 30px rgba(15, 23, 42, 0.08)",
+            neonHard: "0 20px 60px rgba(15, 23, 42, 0.12)",
           },
           keyframes: {
             flicker: {
               "0%, 100%": { opacity: "1" },
-              "6%": { opacity: ".92" },
-              "11%": { opacity: ".98" },
-              "16%": { opacity: ".80" },
-              "22%": { opacity: "1" },
-              "56%": { opacity: ".95" },
-              "67%": { opacity: ".88" },
-            },
-            scan: {
-              "0%": { transform: "translateY(-140%)", opacity: "0" },
-              "10%": { opacity: ".7" },
-              "100%": { transform: "translateY(140%)", opacity: "0" },
-            },
-            sweep: {
-              "0%": { transform: "rotate(0deg)" },
-              "100%": { transform: "rotate(360deg)" },
+              "50%": { opacity: ".92" },
             },
             floaty: {
               "0%,100%": { transform: "translateY(0px)" },
               "50%": { transform: "translateY(-10px)" },
             },
             pulseGlow: {
-              "0%,100%": { filter: "drop-shadow(0 0 10px rgba(34,197,94,.25))" },
-              "50%": { filter: "drop-shadow(0 0 22px rgba(34,197,94,.40))" },
+              "0%,100%": { filter: "drop-shadow(0 0 12px rgba(13, 148, 136, .20))" },
+              "50%": { filter: "drop-shadow(0 0 20px rgba(13, 148, 136, .28))" },
             }
           },
           animation: {
-            flicker: "flicker 5.8s linear infinite",
-            scan: "scan 6.2s linear infinite",
-            sweep: "sweep 8.5s linear infinite",
+            flicker: "flicker 6.5s ease-in-out infinite",
             floaty: "floaty 6.2s ease-in-out infinite",
             pulseGlow: "pulseGlow 2.8s ease-in-out infinite",
           },
@@ -63,7 +75,7 @@
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -71,8 +83,27 @@
   <!-- Typed.js (typing effect) -->
   <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
 
-  <!-- tsParticles (background particles) -->
-  <script defer src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aathil Ducky",
+      "url": "https://aathilducky.com/",
+      "jobTitle": "Security Researcher",
+      "knowsAbout": [
+        "Cybersecurity",
+        "Vulnerability research",
+        "Secure engineering",
+        "Penetration testing",
+        "OSINT",
+        "Automation"
+      ],
+      "sameAs": [
+        "https://github.com/AATHILDUCKY",
+        "https://www.youtube.com/@aathilducky"
+      ]
+    }
+  </script>
 
   <!-- Google Analytics (paste EXACTLY as you provided) -->
   <!-- Google tag (gtag.js) -->
@@ -85,133 +116,61 @@
   </script>
 
   <style>
-    /* CRT scanlines */
-    .scanlines::before{
-      content:"";
-      position:absolute; inset:0;
-      background: repeating-linear-gradient(
-        to bottom,
-        rgba(255,255,255,0.03),
-        rgba(255,255,255,0.03) 1px,
-        rgba(0,0,0,0) 3px,
-        rgba(0,0,0,0) 6px
-      );
-      pointer-events:none;
-      mix-blend-mode: overlay;
-      opacity: .30;
+    :root {
+      color-scheme: light;
     }
-    /* Soft noise */
-    .noise::after{
-      content:"";
-      position:absolute; inset:0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-      opacity:.10;
-      pointer-events:none;
-      mix-blend-mode: soft-light;
+    body {
+      background: #f8fafc;
     }
-    /* Glow selection */
-    ::selection { background: rgba(34,197,94,.25); color: #d1fae5; }
-
-    /* Matrix canvas */
-    #matrix {
+    h1, h2, h3 {
+      font-family: "Space Grotesk", "Sora", system-ui, sans-serif;
+      letter-spacing: -0.015em;
+    }
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(14, 165, 233, 0.18), transparent 60%),
+        radial-gradient(900px 520px at 90% 0%, rgba(13, 148, 136, 0.18), transparent 55%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+      z-index: -10;
+    }
+    .page-bg::after {
+      content: "";
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: .18;
-      mix-blend-mode: screen;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+      opacity: 0.08;
       pointer-events: none;
+      mix-blend-mode: multiply;
     }
+    ::selection { background: rgba(13, 148, 136, 0.18); color: #0f172a; }
 
     /* Hide scrollbar on some browsers (optional) */
     /* body::-webkit-scrollbar { width: 10px; } */
-    /* body::-webkit-scrollbar-thumb { background: rgba(34,197,94,.18); border-radius: 999px; } */
+    /* body::-webkit-scrollbar-thumb { background: rgba(13,148,136,.25); border-radius: 999px; } */
   </style>
 </head>
 
-<body class="bg-black text-emerald-50 font-mono overflow-x-hidden">
+<body class="bg-white text-emerald-50 font-sans antialiased overflow-x-hidden">
 
-  <!-- BACKGROUND LAYERS -->
-  <div class="fixed inset-0 -z-10 scanlines noise">
-    <!-- tsParticles canvas -->
-    <div id="tsparticles" class="absolute inset-0"></div>
-
-    <!-- Matrix rain canvas -->
-    <canvas id="matrix"></canvas>
-
-    <!-- Radar / grid SVG -->
-    <svg class="absolute inset-0 w-full h-full opacity-70" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <radialGradient id="rg" cx="50%" cy="45%" r="70%">
-          <stop offset="0%" stop-color="rgba(34,197,94,0.22)"/>
-          <stop offset="35%" stop-color="rgba(34,197,94,0.12)"/>
-          <stop offset="60%" stop-color="rgba(34,197,94,0.05)"/>
-          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
-        </radialGradient>
-
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(34,197,94,0.14)" stroke-width="1"/>
-        </pattern>
-
-        <filter id="softGlow">
-          <feGaussianBlur stdDeviation="6" result="b"/>
-          <feMerge>
-            <feMergeNode in="b"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-      </defs>
-
-      <rect width="1200" height="800" fill="url(#grid)"/>
-      <rect width="1200" height="800" fill="url(#rg)"/>
-
-      <g opacity="0.50" filter="url(#softGlow)">
-        <circle cx="600" cy="360" r="90"  fill="none" stroke="rgba(34,197,94,0.24)" stroke-width="2"/>
-        <circle cx="600" cy="360" r="180" fill="none" stroke="rgba(34,197,94,0.20)" stroke-width="2"/>
-        <circle cx="600" cy="360" r="290" fill="none" stroke="rgba(34,197,94,0.16)" stroke-width="2"/>
-        <circle cx="600" cy="360" r="410" fill="none" stroke="rgba(34,197,94,0.12)" stroke-width="2"/>
-        <line x1="600" y1="0" x2="600" y2="800" stroke="rgba(34,197,94,0.10)" stroke-width="2"/>
-        <line x1="0" y1="360" x2="1200" y2="360" stroke="rgba(34,197,94,0.10)" stroke-width="2"/>
-      </g>
-    </svg>
-
-    <!-- Sweeping radar wedge -->
-    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div class="relative w-[74vmin] h-[74vmin] max-w-[780px] max-h-[780px]">
-        <div class="absolute inset-0 rounded-full"
-             style="background: radial-gradient(circle at center, rgba(34,197,94,.14), rgba(0,0,0,0) 62%);">
-        </div>
-        <div class="absolute inset-0 rounded-full opacity-75 animate-sweep"
-             style="background: conic-gradient(from 0deg, rgba(34,197,94,0) 0deg, rgba(34,197,94,.35) 18deg, rgba(34,197,94,0) 40deg);
-                    filter: blur(.4px);">
-        </div>
-        <div class="absolute inset-0 rounded-full border border-emerald-400/20"></div>
-      </div>
-    </div>
-
-    <!-- Horizontal scan line -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute left-0 right-0 h-24 top-1/2 -translate-y-1/2 opacity-60 animate-scan"
-           style="background: linear-gradient(to right, rgba(34,197,94,0), rgba(34,197,94,.45), rgba(34,197,94,0));">
-      </div>
-    </div>
-  </div>
+  <div class="page-bg"></div>
 
   <!-- TOP NAV -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 border-b border-emerald-400/10">
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-emerald-400/10">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-3">
       <a href="#home" class="group flex items-center gap-3">
         <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-emerald-400/30 shadow-neon">
-          <i class="fa-solid fa-signal text-emerald-300 animate-flicker"></i>
+          <i class="fa-solid fa-signal text-emerald-300"></i>
         </span>
         <div class="leading-tight">
           <div class="text-sm text-emerald-200/95 tracking-wide">
             Aathil Ducky
             <span class="ml-2 text-[10px] px-2 py-0.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 text-emerald-100/70">
-              LIVE
+              AVAILABLE
             </span>
           </div>
-          <div class="text-xs text-emerald-400/80">blackops://portfolio • cyber • tools</div>
+          <div class="text-xs text-emerald-400/80">security research • engineering • tools</div>
         </div>
       </a>
 
@@ -228,11 +187,11 @@
         <a href="#contact"
            class="hidden sm:inline-flex items-center gap-2 rounded-2xl border border-emerald-400/25 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-100 hover:bg-emerald-400/15 hover:border-emerald-400/40 transition shadow-neon">
           <i class="fa-solid fa-bolt text-emerald-300"></i>
-          <span>Initiate</span>
+          <span>Contact</span>
         </a>
 
         <button id="menuBtn"
-          class="lg:hidden inline-flex items-center gap-2 rounded-2xl border border-emerald-400/25 bg-black/50 px-4 py-2 text-sm text-emerald-100 hover:border-emerald-400/45 transition">
+          class="lg:hidden inline-flex items-center gap-2 rounded-2xl border border-emerald-400/25 bg-white/70 px-4 py-2 text-sm text-emerald-100 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-bars-staggered text-emerald-300"></i>
           <span>Menu</span>
         </button>
@@ -240,7 +199,7 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu" class="lg:hidden hidden border-t border-emerald-400/10 bg-black/75 backdrop-blur">
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-emerald-400/10 bg-white/95 backdrop-blur">
       <div class="mx-auto max-w-6xl px-4 py-4 grid sm:grid-cols-2 gap-2 text-sm text-emerald-100/85">
         <a class="py-2 px-3 rounded-xl hover:bg-emerald-400/10 transition flex items-center gap-2" href="#about"><i class="fa-solid fa-user-secret text-emerald-300/80"></i>About</a>
         <a class="py-2 px-3 rounded-xl hover:bg-emerald-400/10 transition flex items-center gap-2" href="#skills"><i class="fa-solid fa-terminal text-emerald-300/80"></i>Skills</a>
@@ -263,13 +222,13 @@
         <span class="h-1.5 w-1.5 rounded-full bg-emerald-300 animate-pulse"></span>
         <span class="tracking-wide">
           <i class="fa-solid fa-radar mr-1"></i>
-          OPS MODE: <span class="text-emerald-200">BUILD • BREAK • LEARN</span>
+          RESEARCH MODE: <span class="text-emerald-200">INVESTIGATE • BUILD • SHARE</span>
         </span>
       </div>
 
       <!-- headline -->
       <h1 class="mt-5 text-3xl md:text-5xl font-semibold leading-tight">
-        <span class="text-emerald-200">I build</span> & <span class="text-emerald-200">break</span> —
+        <span class="text-emerald-200">Security research</span> & <span class="text-emerald-200">secure engineering</span> —
         <span class="block mt-2 text-emerald-100/90">
           <span class="text-emerald-300"><i class="fa-solid fa-terminal mr-2"></i></span>
           <span id="typed" class="text-emerald-300"></span>
@@ -278,16 +237,16 @@
 
       <!-- bio -->
       <p class="mt-5 text-emerald-100/70 leading-relaxed max-w-2xl">
-        I’m a <span class="text-emerald-200">Python developer</span> and <span class="text-emerald-200">Linux enthusiast</span> with a
-        deep interest in <span class="text-emerald-200">cyber security</span> and <span class="text-emerald-200">ethical hacking</span>.
-        I build fast, clean systems with <span class="text-emerald-200">FastAPI</span>, <span class="text-emerald-200">Django</span>,
-        <span class="text-emerald-200">Next.js</span>, <span class="text-emerald-200">React</span> and <span class="text-emerald-200">Node.js</span> —
-        and I’m obsessed with learning new tech.
+        I’m a <span class="text-emerald-200">security researcher</span> and <span class="text-emerald-200">full-stack engineer</span>
+        focused on <span class="text-emerald-200">vulnerability research</span>, secure-by-design systems, and automation.
+        I build reliable services with <span class="text-emerald-200">FastAPI</span>, <span class="text-emerald-200">Django</span>,
+        <span class="text-emerald-200">Next.js</span>, <span class="text-emerald-200">React</span>, and <span class="text-emerald-200">Node.js</span> —
+        then turn findings into clear writeups and tools.
       </p>
 
       <p class="mt-3 text-emerald-100/65 leading-relaxed max-w-2xl">
-        I can’t stay away from computers and the internet — curiosity is my default state.
-        I also love <span class="text-emerald-200">prompting</span> and “vibe coding” across any language when the mission needs it.
+        I enjoy labs, responsible disclosure, and continuous learning.
+        My work prioritizes measurable impact, clean documentation, and collaboration.
       </p>
 
       <!-- CTAs -->
@@ -295,41 +254,41 @@
         <a href="#projects"
            class="inline-flex items-center gap-2 rounded-2xl bg-emerald-400/15 border border-emerald-400/35 px-4 py-2.5 text-sm text-emerald-100 hover:bg-emerald-400/20 hover:border-emerald-400/50 transition shadow-neonHard">
           <i class="fa-solid fa-crosshairs text-emerald-300"></i>
-          <span>Deploy: Projects</span>
+          <span>View Projects</span>
           <i class="fa-solid fa-arrow-right text-emerald-300/90"></i>
         </a>
 
         <a href="#arsenal"
-           class="inline-flex items-center gap-2 rounded-2xl bg-black/50 border border-emerald-400/25 px-4 py-2.5 text-sm text-emerald-100/90 hover:border-emerald-400/45 hover:text-emerald-100 transition">
+           class="inline-flex items-center gap-2 rounded-2xl bg-white/70 border border-emerald-400/25 px-4 py-2.5 text-sm text-emerald-100/90 hover:border-emerald-400/45 hover:text-emerald-100 transition">
           <i class="fa-solid fa-toolbox text-emerald-300"></i>
-          <span>Open Arsenal</span>
+          <span>Security Toolkit</span>
         </a>
 
         <div class="flex items-center gap-2 text-xs text-emerald-100/55">
-          <span class="hidden sm:inline">Signal:</span>
-          <span class="inline-flex items-center gap-2 rounded-full border border-emerald-400/15 bg-black/50 px-3 py-1">
-            <span class="text-emerald-300">root@ducky</span>
+          <span class="hidden sm:inline">Status:</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-emerald-400/15 bg-white/70 px-3 py-1">
+            <span class="text-emerald-300">open@collab</span>
             <span class="opacity-60">•</span>
-            <span class="text-emerald-100/70"><i class="fa-solid fa-shield-halved mr-1"></i>ready</span>
+            <span class="text-emerald-100/70"><i class="fa-solid fa-shield-halved mr-1"></i>research</span>
           </span>
         </div>
       </div>
 
       <!-- mini cards -->
       <div class="mt-7 grid sm:grid-cols-3 gap-3">
-        <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-4 shadow-neon">
+        <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-4 shadow-neon">
           <div class="text-xs text-emerald-100/60">
             <i class="fa-solid fa-code mr-2 text-emerald-300/80"></i>Core
           </div>
           <div class="mt-1 text-sm text-emerald-100">Python • FastAPI • Django</div>
         </div>
-        <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-4 shadow-neon">
+        <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-4 shadow-neon">
           <div class="text-xs text-emerald-100/60">
             <i class="fa-solid fa-laptop-code mr-2 text-emerald-300/80"></i>Web Stack
           </div>
           <div class="mt-1 text-sm text-emerald-100">Next.js • React • Node.js</div>
         </div>
-        <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-4 shadow-neon">
+        <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-4 shadow-neon">
           <div class="text-xs text-emerald-100/60">
             <i class="fa-solid fa-user-secret mr-2 text-emerald-300/80"></i>Security
           </div>
@@ -339,23 +298,23 @@
 
       <!-- social links -->
       <div class="mt-7 flex flex-wrap gap-2">
-        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/50 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/70 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
            href="https://github.com/AATHILDUCKY" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-github text-emerald-300"></i> GitHub
         </a>
-        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/50 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/70 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
            href="https://www.youtube.com/@aathilducky" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-youtube text-emerald-300"></i> YouTube
         </a>
-        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/50 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/70 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
            href="#" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-medium text-emerald-300"></i> Medium
         </a>
-        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/50 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/70 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
            href="#" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-dev text-emerald-300"></i> Dev.to
         </a>
-        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/50 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+        <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/70 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
            href="#" target="_blank" rel="noreferrer">
           <i class="fa-brands fa-linkedin text-emerald-300"></i> LinkedIn
         </a>
@@ -364,13 +323,13 @@
 
     <!-- Right "Ops Console" card (kept same layout, refreshed copy) -->
     <div class="lg:col-span-5">
-      <div class="rounded-2xl border border-emerald-400/20 bg-black/60 backdrop-blur p-5 shadow-neonHard animate-floaty">
+      <div class="rounded-2xl border border-emerald-400/20 bg-white/80 backdrop-blur p-5 shadow-neonHard animate-floaty">
         <div class="flex items-start justify-between gap-3">
           <div>
             <div class="text-sm text-emerald-200/95 flex items-center gap-2">
-              <i class="fa-solid fa-display text-emerald-300/90"></i> Ops Console
+              <i class="fa-solid fa-display text-emerald-300/90"></i> Research Console
             </div>
-            <div class="mt-1 text-xs text-emerald-100/60">live snapshot • what I’m building + testing</div>
+            <div class="mt-1 text-xs text-emerald-100/60">snapshot • research, builds, and tests</div>
           </div>
           <span class="text-xs rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2 py-1 text-emerald-100/70">
             <i class="fa-solid fa-lock mr-1"></i> secure
@@ -378,42 +337,42 @@
         </div>
 
         <div class="mt-4 grid grid-cols-2 gap-3">
-          <div class="rounded-xl border border-emerald-400/15 bg-black/50 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/70 p-3">
             <div class="text-xs text-emerald-100/60"><i class="fa-solid fa-wave-square mr-2 text-emerald-300/80"></i>Status</div>
             <div class="mt-1 text-sm text-emerald-100">Online</div>
           </div>
-          <div class="rounded-xl border border-emerald-400/15 bg-black/50 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/70 p-3">
             <div class="text-xs text-emerald-100/60"><i class="fa-solid fa-fire mr-2 text-emerald-300/80"></i>Focus</div>
-            <div class="mt-1 text-sm text-emerald-100">Build + Security</div>
+            <div class="mt-1 text-sm text-emerald-100">Vuln Research</div>
           </div>
-          <div class="rounded-xl border border-emerald-400/15 bg-black/50 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/70 p-3">
             <div class="text-xs text-emerald-100/60"><i class="fa-solid fa-network-wired mr-2 text-emerald-300/80"></i>Ops</div>
-            <div class="mt-1 text-sm text-emerald-100">Recon / Tools</div>
+            <div class="mt-1 text-sm text-emerald-100">Threat Model</div>
           </div>
-          <div class="rounded-xl border border-emerald-400/15 bg-black/50 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/70 p-3">
             <div class="text-xs text-emerald-100/60"><i class="fa-solid fa-microchip mr-2 text-emerald-300/80"></i>Stack</div>
-            <div class="mt-1 text-sm text-emerald-100">FastAPI / Next</div>
+            <div class="mt-1 text-sm text-emerald-100">FastAPI / Next.js</div>
           </div>
         </div>
 
-        <div class="mt-4 rounded-xl border border-emerald-400/15 bg-black/55 p-4">
+        <div class="mt-4 rounded-xl border border-emerald-400/15 bg-white/75 p-4">
           <div class="text-xs text-emerald-100/60 flex items-center gap-2">
             <i class="fa-solid fa-terminal text-emerald-300/80"></i>
             <span>Terminal Log</span>
           </div>
-          <pre class="mt-2 text-xs text-emerald-100/75 whitespace-pre-wrap leading-relaxed">
+          <pre class="mt-2 text-xs text-emerald-100/75 whitespace-pre-wrap leading-relaxed font-mono">
 $ whoami
-ducky
+security-researcher
 
 $ stack --primary
 python, fastapi, django, linux
 nextjs, react, nodejs
 
 $ mission --today
-build tools • test safely • learn nonstop
+research • verify • document
 
-$ prompt --mode
-vibe-coding: ON</pre>
+$ method --mode
+research-first: ON</pre>
         </div>
 
         <div class="mt-4 text-xs text-emerald-100/55 flex items-center justify-between">
@@ -424,31 +383,6 @@ vibe-coding: ON</pre>
     </div>
   </div>
 
-  <!-- Typed strings (optional helper snippet — keep if you want) -->
-  <script>
-    // If your main page already initializes Typed.js, you can remove this block.
-    // Keep only ONE Typed initializer across the page.
-    window.addEventListener("DOMContentLoaded", () => {
-      if (window.Typed && !window.__typedHeroInit) {
-        window.__typedHeroInit = true;
-        new Typed("#typed", {
-          strings: [
-            "apps, APIs, and automation tools.",
-            "Python • FastAPI • Django — shipping fast.",
-            "Linux life. terminal first.",
-            "ethical hacking: learn, test, improve.",
-            "prompting + vibe coding across any language."
-          ],
-          typeSpeed: 42,
-          backSpeed: 18,
-          backDelay: 1200,
-          loop: true,
-          showCursor: true,
-          cursorChar: "▋"
-        });
-      }
-    });
-  </script>
 </section>
 
 
@@ -461,75 +395,74 @@ vibe-coding: ON</pre>
       </h2>
 
       <p class="mt-3 text-emerald-100/70 leading-relaxed">
-        I’m a <span class="text-emerald-200">Python developer</span> and <span class="text-emerald-200">Linux enthusiast</span>
-        who lives in the terminal. I build real products and tools — from fast APIs to clean dashboards —
-        and I’m always exploring <span class="text-emerald-200">cyber security</span> and <span class="text-emerald-200">ethical hacking</span>.
+        I’m a <span class="text-emerald-200">security researcher</span> and <span class="text-emerald-200">engineer</span> who lives in the terminal.
+        I investigate vulnerabilities, build security tooling, and translate findings into practical fixes and documentation.
       </p>
 
       <p class="mt-3 text-emerald-100/70 leading-relaxed">
-        My main stack is <span class="text-emerald-200">FastAPI</span> + <span class="text-emerald-200">Django</span> on the backend,
+        My core stack is <span class="text-emerald-200">FastAPI</span> + <span class="text-emerald-200">Django</span> on the backend,
         and <span class="text-emerald-200">Next.js</span> + <span class="text-emerald-200">React</span> + <span class="text-emerald-200">Node.js</span> on the front.
-        But honestly — I can code in <span class="text-emerald-200">any language</span> when the mission needs it.
+        I use automation to reproduce, validate, and document issues quickly and clearly.
       </p>
 
       <div class="mt-5 flex flex-wrap gap-2 text-xs">
-        <span class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/55 text-emerald-100/70">
+        <span class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/75 text-emerald-100/70">
           <i class="fa-solid fa-terminal mr-2 text-emerald-300/80"></i>Linux-first workflow
         </span>
-        <span class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/55 text-emerald-100/70">
-          <i class="fa-solid fa-bolt mr-2 text-emerald-300/80"></i>Fast shipping mindset
+        <span class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/75 text-emerald-100/70">
+          <i class="fa-solid fa-shield-halved mr-2 text-emerald-300/80"></i>Responsible disclosure
         </span>
-        <span class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/55 text-emerald-100/70">
-          <i class="fa-solid fa-brain mr-2 text-emerald-300/80"></i>Prompting + vibe coding
+        <span class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/75 text-emerald-100/70">
+          <i class="fa-solid fa-clipboard-check mr-2 text-emerald-300/80"></i>Evidence-driven reports
         </span>
       </div>
     </div>
 
     <div class="lg:col-span-7">
       <div class="grid sm:grid-cols-2 gap-4">
-        <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-5 hover:border-emerald-400/35 transition shadow-neon">
+        <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-5 hover:border-emerald-400/35 transition shadow-neon">
           <div class="text-sm text-emerald-200 flex items-center gap-2">
             <i class="fa-solid fa-code text-emerald-300/85"></i> What I build
           </div>
           <ul class="mt-3 text-sm text-emerald-100/70 space-y-2">
-            <li><i class="fa-solid fa-server text-emerald-300/80 mr-2"></i>Fast APIs with FastAPI / Django</li>
-            <li><i class="fa-solid fa-layer-group text-emerald-300/80 mr-2"></i>Full-stack apps (Next.js + React + Node)</li>
-            <li><i class="fa-solid fa-gears text-emerald-300/80 mr-2"></i>Automation scripts & developer tooling</li>
-            <li><i class="fa-solid fa-chart-simple text-emerald-300/80 mr-2"></i>Dashboards that feel like an ops console</li>
+            <li><i class="fa-solid fa-server text-emerald-300/80 mr-2"></i>Secure APIs with FastAPI / Django</li>
+            <li><i class="fa-solid fa-layer-group text-emerald-300/80 mr-2"></i>Full-stack security tooling</li>
+            <li><i class="fa-solid fa-gears text-emerald-300/80 mr-2"></i>Automation for recon, validation, and reporting</li>
+            <li><i class="fa-solid fa-chart-simple text-emerald-300/80 mr-2"></i>Dashboards for risk and remediation</li>
           </ul>
         </div>
 
-        <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-5 hover:border-emerald-400/35 transition shadow-neon">
+        <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-5 hover:border-emerald-400/35 transition shadow-neon">
           <div class="text-sm text-emerald-200 flex items-center gap-2">
             <i class="fa-solid fa-user-secret text-emerald-300/85"></i> What I explore
           </div>
           <ul class="mt-3 text-sm text-emerald-100/70 space-y-2">
-            <li><i class="fa-solid fa-shield-halved text-emerald-300/80 mr-2"></i>Web security & defensive hardening</li>
-            <li><i class="fa-solid fa-bug text-emerald-300/80 mr-2"></i>Ethical hacking labs & vulnerability learning</li>
-            <li><i class="fa-solid fa-magnifying-glass text-emerald-300/80 mr-2"></i>Recon / OSINT automation experiments</li>
-            <li><i class="fa-solid fa-book-skull text-emerald-300/80 mr-2"></i>New tech — always learning, always testing</li>
+            <li><i class="fa-solid fa-shield-halved text-emerald-300/80 mr-2"></i>Web app security & defensive hardening</li>
+            <li><i class="fa-solid fa-bug text-emerald-300/80 mr-2"></i>Vulnerability research & exploit analysis</li>
+            <li><i class="fa-solid fa-magnifying-glass text-emerald-300/80 mr-2"></i>Recon / OSINT automation</li>
+            <li><i class="fa-solid fa-book-skull text-emerald-300/80 mr-2"></i>Threat modeling and new tech</li>
           </ul>
         </div>
       </div>
 
-      <div class="mt-4 rounded-2xl border border-emerald-400/15 bg-black/55 p-5 shadow-neon">
+      <div class="mt-4 rounded-2xl border border-emerald-400/15 bg-white/75 p-5 shadow-neon">
         <div class="text-sm text-emerald-200 flex items-center gap-2">
           <i class="fa-solid fa-chart-line text-emerald-300/85"></i> Quick Stats (edit these)
         </div>
         <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div class="rounded-xl border border-emerald-400/15 bg-black/55 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/75 p-3">
             <div class="text-xs text-emerald-100/55"><i class="fa-solid fa-code mr-2 text-emerald-300/80"></i>Projects</div>
             <div class="mt-1 text-lg text-emerald-100">20+</div>
           </div>
-          <div class="rounded-xl border border-emerald-400/15 bg-black/55 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/75 p-3">
             <div class="text-xs text-emerald-100/55"><i class="fa-solid fa-terminal mr-2 text-emerald-300/80"></i>Linux Hours</div>
             <div class="mt-1 text-lg text-emerald-100">∞</div>
           </div>
-          <div class="rounded-xl border border-emerald-400/15 bg-black/55 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/75 p-3">
             <div class="text-xs text-emerald-100/55"><i class="fa-solid fa-file-lines mr-2 text-emerald-300/80"></i>Writeups</div>
             <div class="mt-1 text-lg text-emerald-100">30+</div>
           </div>
-          <div class="rounded-xl border border-emerald-400/15 bg-black/55 p-3">
+          <div class="rounded-xl border border-emerald-400/15 bg-white/75 p-3">
             <div class="text-xs text-emerald-100/55"><i class="fa-solid fa-bug mr-2 text-emerald-300/80"></i>Labs Done</div>
             <div class="mt-1 text-lg text-emerald-100">100+</div>
           </div>
@@ -555,19 +488,19 @@ vibe-coding: ON</pre>
 
     <div class="sm:flex hidden items-center gap-2 text-xs text-emerald-100/55">
       <span
-        class="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-black/50 px-3 py-1 shadow-[0_0_0_1px_rgba(34,197,94,.22),0_0_18px_rgba(34,197,94,.10)]">
+        class="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-white/70 px-3 py-1 shadow-[0_0_0_1px_rgba(13,148,136,.22),0_0_18px_rgba(13,148,136,.10)]">
         <i class="fa-solid fa-brain text-emerald-300/85"></i>
-        <span>vibe coding</span>
+        <span>research-driven</span>
         <span class="opacity-60">•</span>
         <i class="fa-solid fa-puzzle-piece text-emerald-300/85"></i>
-        <span>problem solver</span>
+        <span>clear communicator</span>
       </span>
     </div>
   </div>
 
   <div class="mt-6 grid lg:grid-cols-3 gap-4">
     <!-- DEV -->
-    <div class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon hover:border-emerald-400/40 transition">
+    <div class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon hover:border-emerald-400/40 transition">
       <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div>
           <div class="text-sm text-emerald-200 flex items-center gap-2">
@@ -581,47 +514,47 @@ vibe-coding: ON</pre>
         <!-- Responsive badge -->
         <span
           class="inline-flex w-fit items-center gap-2 text-[11px] rounded-full border border-emerald-400/25 bg-emerald-400/10 px-2.5 py-1 text-emerald-100/80
-                 shadow-[0_0_0_1px_rgba(34,197,94,.18),0_0_14px_rgba(34,197,94,.10)]">
+                 shadow-[0_0_0_1px_rgba(13,148,136,.18),0_0_14px_rgba(13,148,136,.10)]">
           <span>ship fast</span>
         </span>
       </div>
 
       <!-- Smaller tags + stronger borders -->
       <div class="mt-4 flex flex-wrap gap-2 text-[13px]">
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-python text-emerald-300/90"></i> Python
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-rocket text-emerald-300/90"></i> FastAPI
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-feather-pointed text-emerald-300/90"></i> Django
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-js text-emerald-300/90"></i> JavaScript
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-react text-emerald-300/90"></i> React
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-layer-group text-emerald-300/90"></i> Next.js
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-node-js text-emerald-300/90"></i> Node.js
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-database text-emerald-300/90"></i> PostgreSQL
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-globe text-emerald-300/90"></i> WordPress
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-wand-magic-sparkles text-emerald-300/90"></i> Prompting
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-puzzle-piece text-emerald-300/90"></i> Problem Solving
         </span>
       </div>
@@ -633,7 +566,7 @@ vibe-coding: ON</pre>
     </div>
 
     <!-- SECURITY -->
-    <div class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon hover:border-emerald-400/40 transition">
+    <div class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon hover:border-emerald-400/40 transition">
       <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div>
           <div class="text-sm text-emerald-200 flex items-center gap-2">
@@ -647,54 +580,54 @@ vibe-coding: ON</pre>
         <!-- Responsive badge -->
         <span
           class="inline-flex w-fit items-center gap-2 text-[11px] rounded-full border border-emerald-400/25 bg-emerald-400/10 px-2.5 py-1 text-emerald-100/80
-                 shadow-[0_0_0_1px_rgba(34,197,94,.18),0_0_14px_rgba(34,197,94,.10)]">
+                 shadow-[0_0_0_1px_rgba(13,148,136,.18),0_0_14px_rgba(13,148,136,.10)]">
           
           <span>ethical</span>
         </span>
       </div>
 
       <div class="mt-4 flex flex-wrap gap-2 text-[13px]">
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-triangle-exclamation text-emerald-300/90"></i> OWASP
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-bug text-emerald-300/90"></i> Burp Suite
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-diagram-project text-emerald-300/90"></i> Threat Modeling
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-network-wired text-emerald-300/90"></i> Nmap
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-satellite-dish text-emerald-300/90"></i> Recon / OSINT
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-magnifying-glass text-emerald-300/90"></i> Google Dorking
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-radar text-emerald-300/90"></i> Nuclei
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-skull-crossbones text-emerald-300/90"></i> Metasploit
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-wave-square text-emerald-300/90"></i> Wireshark
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-fire-flame-curved text-emerald-300/90"></i> Firewall Basics
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-shield-virus text-emerald-300/90"></i> Hardening
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-siren-on text-emerald-300/90"></i> Snort (IDS)
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-triangle-exclamation text-emerald-300/90"></i> Vulnerability Mgmt
         </span>
       </div>
@@ -706,7 +639,7 @@ vibe-coding: ON</pre>
     </div>
 
     <!-- OPS / CLOUD / GRC -->
-    <div class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon hover:border-emerald-400/40 transition">
+    <div class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon hover:border-emerald-400/40 transition">
       <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div>
           <div class="text-sm text-emerald-200 flex items-center gap-2">
@@ -720,58 +653,58 @@ vibe-coding: ON</pre>
         <!-- Responsive badge -->
         <span
           class="inline-flex w-fit items-center gap-2 text-[11px] rounded-full border border-emerald-400/25 bg-emerald-400/10 px-2.5 py-1 text-emerald-100/80
-                 shadow-[0_0_0_1px_rgba(34,197,94,.18),0_0_14px_rgba(34,197,94,.10)]">
+                 shadow-[0_0_0_1px_rgba(13,148,136,.18),0_0_14px_rgba(13,148,136,.10)]">
           
           <span>cloud</span>
         </span>
       </div>
 
       <div class="mt-4 flex flex-wrap gap-2 text-[13px]">
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-linux text-emerald-300/90"></i> Linux
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-git-alt text-emerald-300/90"></i> Git
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-gitlab text-emerald-300/90"></i> GitLab
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-arrows-rotate text-emerald-300/90"></i> CI/CD
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-docker text-emerald-300/90"></i> Docker
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-chart-line text-emerald-300/90"></i> Monitoring
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-microsoft text-emerald-300/90"></i> Azure
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-brands fa-aws text-emerald-300/90"></i> AWS
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-id-card-clip text-emerald-300/90"></i> IAM
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-user-shield text-emerald-300/90"></i> IAM Tools
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-diagram-project text-emerald-300/90"></i> IAG
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-scale-balanced text-emerald-300/90"></i> Governance & GRC
         </span>
 
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-shield-check text-emerald-300/90"></i> Security Controls
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 text-emerald-100/80 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-clipboard-check text-emerald-300/90"></i> Vuln Tracking
         </span>
       </div>
@@ -784,21 +717,21 @@ vibe-coding: ON</pre>
   </div>
 
   <!-- Extra strip -->
-  <div class="mt-5 rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon">
+  <div class="mt-5 rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon">
     <div class="flex flex-wrap items-center gap-2 text-[11px] text-emerald-100/60">
-      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-black/55 hover:border-emerald-400/45 transition">
+      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-white/75 hover:border-emerald-400/45 transition">
         <i class="fa-solid fa-keyboard text-emerald-300/85"></i> terminal-driven
       </span>
-      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-black/55 hover:border-emerald-400/45 transition">
+      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-white/75 hover:border-emerald-400/45 transition">
         <i class="fa-solid fa-rocket text-emerald-300/85"></i> performance focused
       </span>
-      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-black/55 hover:border-emerald-400/45 transition">
-        <i class="fa-solid fa-brain text-emerald-300/85"></i> prompt engineer mindset
+      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-white/75 hover:border-emerald-400/45 transition">
+        <i class="fa-solid fa-brain text-emerald-300/85"></i> research mindset
       </span>
-      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-black/55 hover:border-emerald-400/45 transition">
+      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-white/75 hover:border-emerald-400/45 transition">
         <i class="fa-solid fa-bug text-emerald-300/85"></i> learn → test → improve
       </span>
-      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-black/55 hover:border-emerald-400/45 transition">
+      <span class="inline-flex items-center gap-2 px-3 py-2 rounded-2xl border border-emerald-400/25 bg-white/75 hover:border-emerald-400/45 transition">
         <i class="fa-solid fa-shield-halved text-emerald-300/85"></i> secure by design
       </span>
     </div>
@@ -820,8 +753,8 @@ vibe-coding: ON</pre>
     </div>
 
     <div class="hidden sm:flex items-center gap-2 text-xs text-emerald-100/55">
-      <span class="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-black/50 px-3 py-1
-                   shadow-[0_0_0_1px_rgba(34,197,94,.18),0_0_16px_rgba(34,197,94,.10)]">
+      <span class="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-white/70 px-3 py-1
+                   shadow-[0_0_0_1px_rgba(13,148,136,.18),0_0_16px_rgba(13,148,136,.10)]">
         <i class="fa-solid fa-satellite-dish text-emerald-300/85"></i>
         <span>tooling</span>
         <span class="opacity-60">•</span>
@@ -833,7 +766,7 @@ vibe-coding: ON</pre>
 
   <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <!-- Recon / Discovery -->
-    <div class="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon transition
+    <div class="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon transition
                 hover:border-emerald-400/45 hover:shadow-neonHard hover:-translate-y-0.5">
       <!-- glow corner -->
       <div class="pointer-events-none absolute -top-24 -right-24 h-52 w-52 rounded-full bg-emerald-400/10 blur-2xl opacity-70 group-hover:opacity-100 transition"></div>
@@ -867,17 +800,17 @@ vibe-coding: ON</pre>
       </ul>
 
       <div class="mt-4 flex flex-wrap gap-2 text-[11px] text-emerald-100/60">
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-earth-asia text-emerald-300/85"></i> surface intel
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-diagram-project text-emerald-300/85"></i> mapping
         </span>
       </div>
     </div>
 
     <!-- Web Testing -->
-    <div class="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon transition
+    <div class="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon transition
                 hover:border-emerald-400/45 hover:shadow-neonHard hover:-translate-y-0.5">
       <div class="pointer-events-none absolute -top-24 -right-24 h-52 w-52 rounded-full bg-emerald-400/10 blur-2xl opacity-70 group-hover:opacity-100 transition"></div>
 
@@ -910,17 +843,17 @@ vibe-coding: ON</pre>
       </ul>
 
       <div class="mt-4 flex flex-wrap gap-2 text-[11px] text-emerald-100/60">
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-shield-halved text-emerald-300/85"></i> hardening
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-triangle-exclamation text-emerald-300/85"></i> risk-aware
         </span>
       </div>
     </div>
 
     <!-- Automation / Engineering -->
-    <div class="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-black/55 p-5 shadow-neon transition
+    <div class="group relative overflow-hidden rounded-2xl border border-emerald-400/20 bg-white/75 p-5 shadow-neon transition
                 hover:border-emerald-400/45 hover:shadow-neonHard hover:-translate-y-0.5">
       <div class="pointer-events-none absolute -top-24 -right-24 h-52 w-52 rounded-full bg-emerald-400/10 blur-2xl opacity-70 group-hover:opacity-100 transition"></div>
 
@@ -953,10 +886,10 @@ vibe-coding: ON</pre>
       </ul>
 
       <div class="mt-4 flex flex-wrap gap-2 text-[11px] text-emerald-100/60">
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-gears text-emerald-300/85"></i> repeatable
         </span>
-        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-black/55 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
+        <span class="inline-flex items-center gap-2 rounded-xl border border-emerald-400/25 bg-white/75 px-2.5 py-1.5 hover:border-emerald-400/45 transition">
           <i class="fa-solid fa-file-code text-emerald-300/85"></i> audit-friendly
         </span>
       </div>
@@ -985,7 +918,7 @@ vibe-coding: ON</pre>
 
   <div class="mt-6 grid lg:grid-cols-3 gap-4">
     <!-- pwntrends-blog -->
-    <article class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
+    <article class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
       <div class="flex items-start justify-between gap-3">
         <div class="text-sm text-emerald-200 flex items-center gap-2">
           <i class="fa-solid fa-rss text-emerald-300/90"></i> pwntrends-blog
@@ -999,9 +932,9 @@ vibe-coding: ON</pre>
         SEO optimized, clean UI, and fast pages.
       </p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs text-emerald-100/60">
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-layer-group mr-1 text-emerald-300/85"></i>Next.js</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-file-lines mr-1 text-emerald-300/85"></i>Markdown</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-magnifying-glass mr-1 text-emerald-300/85"></i>SEO</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-layer-group mr-1 text-emerald-300/85"></i>Next.js</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-file-lines mr-1 text-emerald-300/85"></i>Markdown</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-magnifying-glass mr-1 text-emerald-300/85"></i>SEO</span>
       </div>
       <div class="mt-4 flex items-center justify-between gap-3">
         <a class="text-sm text-emerald-200/85 hover:text-emerald-200 inline-flex items-center gap-2"
@@ -1013,7 +946,7 @@ vibe-coding: ON</pre>
     </article>
 
     <!-- nextjs-documentation-template -->
-    <article class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
+    <article class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
       <div class="flex items-start justify-between gap-3">
         <div class="text-sm text-emerald-200 flex items-center gap-2">
           <i class="fa-solid fa-book text-emerald-300/90"></i> nextjs-documentation-template
@@ -1026,9 +959,9 @@ vibe-coding: ON</pre>
         Next.js + Tailwind Support Portal / Knowledge Base template. Markdown docs, modern layout, and also works great for blogging.
       </p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs text-emerald-100/60">
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-layer-group mr-1 text-emerald-300/85"></i>Next.js</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-wand-magic-sparkles mr-1 text-emerald-300/85"></i>Tailwind</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-file-lines mr-1 text-emerald-300/85"></i>Docs/KB</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-layer-group mr-1 text-emerald-300/85"></i>Next.js</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-wand-magic-sparkles mr-1 text-emerald-300/85"></i>Tailwind</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-file-lines mr-1 text-emerald-300/85"></i>Docs/KB</span>
       </div>
       <div class="mt-4 flex items-center justify-between gap-3">
         <a class="text-sm text-emerald-200/85 hover:text-emerald-200 inline-flex items-center gap-2"
@@ -1040,7 +973,7 @@ vibe-coding: ON</pre>
     </article>
 
     <!-- Ducky_chat -->
-    <article class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
+    <article class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
       <div class="flex items-start justify-between gap-3">
         <div class="text-sm text-emerald-200 flex items-center gap-2">
           <i class="fa-solid fa-robot text-emerald-300/90"></i> Ducky_chat
@@ -1053,9 +986,9 @@ vibe-coding: ON</pre>
         My personal assistant tool for command suggestions and quick automation. Easy to feed data, quick to extend, and built for speed.
       </p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs text-emerald-100/60">
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-terminal mr-1 text-emerald-300/85"></i>CLI</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-gears mr-1 text-emerald-300/85"></i>Automation</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-code mr-1 text-emerald-300/85"></i>Tooling</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-terminal mr-1 text-emerald-300/85"></i>CLI</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-gears mr-1 text-emerald-300/85"></i>Automation</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-code mr-1 text-emerald-300/85"></i>Tooling</span>
       </div>
       <div class="mt-4 flex items-center justify-between gap-3">
         <a class="text-sm text-emerald-200/85 hover:text-emerald-200 inline-flex items-center gap-2"
@@ -1067,7 +1000,7 @@ vibe-coding: ON</pre>
     </article>
 
     <!-- image-to-webp-format-flask-application -->
-    <article class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
+    <article class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
       <div class="flex items-start justify-between gap-3">
         <div class="text-sm text-emerald-200 flex items-center gap-2">
           <i class="fa-solid fa-image text-emerald-300/90"></i> image-to-webp-format-flask-application
@@ -1080,9 +1013,9 @@ vibe-coding: ON</pre>
         Simple micro SaaS app to convert images into <span class="text-emerald-200">WebP</span> format. Lightweight, practical, and fast.
       </p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs text-emerald-100/60">
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-brands fa-python mr-1 text-emerald-300/85"></i>Flask</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-file-image mr-1 text-emerald-300/85"></i>WebP</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-bolt mr-1 text-emerald-300/85"></i>Fast</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-brands fa-python mr-1 text-emerald-300/85"></i>Flask</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-file-image mr-1 text-emerald-300/85"></i>WebP</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-bolt mr-1 text-emerald-300/85"></i>Fast</span>
       </div>
       <div class="mt-4 flex items-center justify-between gap-3">
         <a class="text-sm text-emerald-200/85 hover:text-emerald-200 inline-flex items-center gap-2"
@@ -1094,7 +1027,7 @@ vibe-coding: ON</pre>
     </article>
 
     <!-- welfordsystems.com -->
-    <article class="rounded-2xl border border-emerald-400/20 bg-black/55 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
+    <article class="rounded-2xl border border-emerald-400/20 bg-white/75 p-5 hover:border-emerald-400/45 transition shadow-neon hover:shadow-neonHard">
       <div class="flex items-start justify-between gap-3">
         <div class="text-sm text-emerald-200 flex items-center gap-2">
           <i class="fa-solid fa-shield-halved text-emerald-300/90"></i> welfordsystems.com
@@ -1108,9 +1041,9 @@ vibe-coding: ON</pre>
         with a clean, modern UI and fast performance.
       </p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs text-emerald-100/60">
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-brands fa-react mr-1 text-emerald-300/85"></i>React</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-bolt mr-1 text-emerald-300/85"></i>Vite</span>
-        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-black/55"><i class="fa-solid fa-lock mr-1 text-emerald-300/85"></i>Cybersecurity</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-brands fa-react mr-1 text-emerald-300/85"></i>React</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-bolt mr-1 text-emerald-300/85"></i>Vite</span>
+        <span class="px-2.5 py-1 rounded-xl border border-emerald-400/25 bg-white/75"><i class="fa-solid fa-lock mr-1 text-emerald-300/85"></i>Cybersecurity</span>
       </div>
       <div class="mt-4 flex items-center justify-between gap-3">
         <a class="text-sm text-emerald-200/85 hover:text-emerald-200 inline-flex items-center gap-2"
@@ -1132,7 +1065,7 @@ vibe-coding: ON</pre>
   <p class="mt-2 text-emerald-100/65">Best videos/articles — clean, fast, and clickable.</p>
 
   <div class="mt-6 grid md:grid-cols-2 gap-4">
-    <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-5 hover:border-emerald-400/35 transition shadow-neon">
+    <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-5 hover:border-emerald-400/35 transition shadow-neon">
       <div class="text-sm text-emerald-200 flex items-center gap-2">
         <i class="fa-brands fa-youtube text-emerald-300/90"></i> YouTube Ops
       </div>
@@ -1148,7 +1081,7 @@ vibe-coding: ON</pre>
       </a>
     </div>
 
-    <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-5 hover:border-emerald-400/35 transition shadow-neon">
+    <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-5 hover:border-emerald-400/35 transition shadow-neon">
       <div class="text-sm text-emerald-200 flex items-center gap-2">
         <i class="fa-solid fa-file-lines text-emerald-300/90"></i> Featured on PwnTrends
       </div>
@@ -1200,7 +1133,7 @@ vibe-coding: ON</pre>
 
     <!-- CONTACT -->
     <section id="contact" class="py-10 md:py-14">
-      <div class="rounded-2xl border border-emerald-400/15 bg-black/65 p-6 md:p-8 shadow-neonHard">
+      <div class="rounded-2xl border border-emerald-400/15 bg-white/85 p-6 md:p-8 shadow-neonHard">
         <div class="grid lg:grid-cols-12 gap-6 items-start">
           <div class="lg:col-span-7">
             <h2 class="text-xl md:text-2xl text-emerald-200 font-semibold flex items-center gap-2">
@@ -1212,15 +1145,15 @@ vibe-coding: ON</pre>
 
             <div class="mt-5 flex flex-wrap gap-2">
               <!-- Replace these -->
-              <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/55 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+              <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/75 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
                  href="mailto:you@example.com">
                 <i class="fa-solid fa-envelope text-emerald-300"></i> Email
               </a>
-              <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/55 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+              <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/75 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
                  href="#" target="_blank" rel="noreferrer">
                 <i class="fa-brands fa-linkedin text-emerald-300"></i> LinkedIn
               </a>
-              <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-black/55 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
+              <a class="px-3 py-2 rounded-2xl border border-emerald-400/15 bg-white/75 text-emerald-100/80 hover:border-emerald-400/45 hover:text-emerald-100 transition text-sm flex items-center gap-2"
                  href="https://github.com/AATHILDUCKY" target="_blank" rel="noreferrer">
                 <i class="fa-brands fa-github text-emerald-300"></i> GitHub
               </a>
@@ -1233,17 +1166,17 @@ vibe-coding: ON</pre>
           </div>
 
           <div class="lg:col-span-5">
-            <div class="rounded-2xl border border-emerald-400/15 bg-black/55 p-5">
+            <div class="rounded-2xl border border-emerald-400/15 bg-white/75 p-5">
               <div class="text-sm text-emerald-200 flex items-center gap-2">
                 <i class="fa-solid fa-message text-emerald-300/90"></i> Message Console
               </div>
 
               <div class="mt-4 grid gap-3">
-                <input id="name" class="w-full rounded-2xl border border-emerald-400/15 bg-black/70 px-3 py-2 text-sm text-emerald-50 placeholder:text-emerald-100/30 focus:outline-none focus:border-emerald-400/45"
+                <input id="name" class="w-full rounded-2xl border border-emerald-400/15 bg-white/90 px-3 py-2 text-sm text-emerald-50 placeholder:text-emerald-100/30 focus:outline-none focus:border-emerald-400/45"
                        placeholder="Your name" />
-                <input id="email" class="w-full rounded-2xl border border-emerald-400/15 bg-black/70 px-3 py-2 text-sm text-emerald-50 placeholder:text-emerald-100/30 focus:outline-none focus:border-emerald-400/45"
+                <input id="email" class="w-full rounded-2xl border border-emerald-400/15 bg-white/90 px-3 py-2 text-sm text-emerald-50 placeholder:text-emerald-100/30 focus:outline-none focus:border-emerald-400/45"
                        placeholder="Your email" />
-                <textarea id="msg" class="w-full h-28 resize-none rounded-2xl border border-emerald-400/15 bg-black/70 px-3 py-2 text-sm text-emerald-50 placeholder:text-emerald-100/30 focus:outline-none focus:border-emerald-400/45"
+                <textarea id="msg" class="w-full h-28 resize-none rounded-2xl border border-emerald-400/15 bg-white/90 px-3 py-2 text-sm text-emerald-50 placeholder:text-emerald-100/30 focus:outline-none focus:border-emerald-400/45"
                           placeholder="Message..."></textarea>
 
                 <!-- Changed from "Copy text" to "Send Message" -->
@@ -1269,7 +1202,7 @@ vibe-coding: ON</pre>
       <div class="mx-auto max-w-6xl px-4">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© <span id="year"></span> Aathil Ducky • All rights reserved.</span>
-          <span class="text-emerald-300/70"><i class="fa-solid fa-skull mr-2"></i>darkweb-ui://green-radar</span>
+          <span class="text-emerald-300/70"><i class="fa-solid fa-shield-halved mr-2"></i>security://minimal-gradient</span>
         </div>
       </div>
     </footer>
@@ -1303,10 +1236,10 @@ vibe-coding: ON</pre>
       if (window.Typed) {
         new Typed("#typed", {
           strings: [
-            "scanners. automation. dashboards.",
-            "recon → analyze → report.",
-            "black UI, green signal.",
-            "build fast. learn faster."
+            "vulnerability research & writeups.",
+            "threat model → verify → report.",
+            "secure engineering + automation.",
+            "clarity, impact, and reproducibility."
           ],
           typeSpeed: 42,
           backSpeed: 18,
@@ -1317,49 +1250,6 @@ vibe-coding: ON</pre>
         });
       }
     });
-
-    // tsParticles background (green hacker vibe)
-    async function initParticles() {
-      if (!window.tsParticles) return;
-
-      await tsParticles.load("tsparticles", {
-        background: { color: { value: "transparent" } },
-        fpsLimit: 60,
-        particles: {
-          number: { value: 70, density: { enable: true, area: 900 } },
-          color: { value: ["#22c55e", "#34d399", "#16a34a"] },
-          shape: { type: ["circle", "square"] },
-          opacity: { value: { min: 0.08, max: 0.26 } },
-          size: { value: { min: 1, max: 3 } },
-          move: {
-            enable: true,
-            speed: 0.7,
-            direction: "none",
-            random: true,
-            straight: false,
-            outModes: { default: "out" }
-          },
-          links: {
-            enable: true,
-            distance: 145,
-            opacity: 0.12,
-            width: 1
-          }
-        },
-        interactivity: {
-          events: {
-            onHover: { enable: true, mode: "repulse" },
-            onClick: { enable: true, mode: "push" }
-          },
-          modes: {
-            repulse: { distance: 110, duration: 0.35 },
-            push: { quantity: 2 }
-          }
-        },
-        detectRetina: true
-      });
-    }
-    initParticles();
 
     // "Send Message" -> opens email app (mailto) with filled content
     const sendBtn = document.getElementById("sendBtn");
@@ -1387,49 +1277,6 @@ ${msg || "(no message typed)"}
       setTimeout(() => sendMsg?.classList.add("hidden"), 1500);
     });
 
-    // Matrix rain (lightweight)
-    const canvas = document.getElementById("matrix");
-    const ctx = canvas.getContext("2d");
-
-    function resizeMatrix() {
-      canvas.width = window.innerWidth * devicePixelRatio;
-      canvas.height = window.innerHeight * devicePixelRatio;
-      ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-    }
-    resizeMatrix();
-    window.addEventListener("resize", resizeMatrix);
-
-    const letters = "01$#@%&*+-=<>[]{}|/\\;:.,";
-    const fontSize = 14;
-    let columns = Math.floor(window.innerWidth / fontSize);
-    let drops = Array(columns).fill(1);
-
-    function drawMatrix() {
-      // fade
-      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
-      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-
-      ctx.font = `${fontSize}px 'Share Tech Mono'`;
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        // green
-        ctx.fillStyle = "rgba(34, 197, 94, 0.55)";
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > window.innerHeight && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-      requestAnimationFrame(drawMatrix);
-    }
-    drawMatrix();
-
-    // keep columns synced after resize
-    window.addEventListener("resize", () => {
-      columns = Math.floor(window.innerWidth / fontSize);
-      drops = Array(columns).fill(1);
-    });
   </script>
 </body>
 </html>
