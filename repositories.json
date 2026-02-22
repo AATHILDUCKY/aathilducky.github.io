@@ -52,5 +52,131 @@
     "stars": 5,
     "visibility": "Public",
     "url": "https://github.com/AATHILDUCKY/duck-duck-leaks"
+  },
+  {
+    "name": "jwt-token-analyzer",
+    "description": "JWT inspection and analysis tool with demo page.",
+    "language": "JavaScript",
+    "languageColor": "#f1e05a",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/jwt-token-analyzer"
+  },
+  {
+    "name": "ducky-pwn-docs",
+    "description": "Electron-wrapped intelligence command center with local SQLite persistence.",
+    "language": "TypeScript",
+    "languageColor": "#3178c6",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/ducky-pwn-docs"
+  },
+  {
+    "name": "python-script-find-nextjs-version",
+    "description": "Python script to detect Next.js versions.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/python-script-find-nextjs-version"
+  },
+  {
+    "name": "wordpress-markdown-block-php-code",
+    "description": "WordPress markdown block for PHP code snippets.",
+    "language": "PHP",
+    "languageColor": "#4F5D95",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/wordpress-markdown-block-php-code"
+  },
+  {
+    "name": "duckysubs",
+    "description": "Subdomain and recon utilities.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/duckysubs"
+  },
+  {
+    "name": "nextjs-documentation-template",
+    "description": "Next.js documentation template.",
+    "language": "TypeScript",
+    "languageColor": "#3178c6",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/nextjs-documentation-template"
+  },
+  {
+    "name": "pwntrends-blog",
+    "description": "Security-focused blog content and site.",
+    "language": "HTML",
+    "languageColor": "#e34c26",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/pwntrends-blog"
+  },
+  {
+    "name": "love-day-counter",
+    "description": "Day counter web app.",
+    "language": "JavaScript",
+    "languageColor": "#f1e05a",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/love-day-counter"
+  },
+  {
+    "name": "duckie",
+    "description": "Personal utilities and experiments.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/duckie"
+  },
+  {
+    "name": "whatspp-auto-msg",
+    "description": "WhatsApp auto message tool.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/whatspp-auto-msg"
+  },
+  {
+    "name": "audio-secret-finder",
+    "description": "Detect hidden data or secrets in audio files.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/audio-secret-finder"
+  },
+  {
+    "name": "url-shortener-using-flask-and-mysql",
+    "description": "URL shortener built with Flask and MySQL.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/url-shortener-using-flask-and-mysql"
+  },
+  {
+    "name": "image-to-webp-format-flask-application",
+    "description": "Flask app to convert images to WebP format.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/image-to-webp-format-flask-application"
+  },
+  {
+    "name": "aathilducky.github.io",
+    "description": "Personal GitHub Pages portfolio site.",
+    "language": "HTML",
+    "languageColor": "#e34c26",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/aathilducky.github.io"
   }
 ]
