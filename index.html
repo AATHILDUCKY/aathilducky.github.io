@@ -38,7 +38,7 @@
   </head>
   <body class="bg-[var(--bg)] text-[var(--text)]">
     <header class="border-b border-[var(--border)] bg-[var(--header)] text-[var(--text)]">
-      <div class="mx-auto flex max-w-[1280px] items-center gap-4 px-4 py-3">
+      <div class="mx-auto flex max-w-[1280px] flex-wrap items-center gap-4 px-4 py-3 md:flex-nowrap">
         <div class="flex items-center gap-3">
           <i class="octicon octicon-mark-github text-2xl"></i>
           <div class="relative hidden md:block">
@@ -85,7 +85,7 @@
             Follow
           </a>
         </div>
-        <div class="mt-4 flex gap-5 text-sm">
+        <div class="mt-4 flex gap-5 overflow-x-auto whitespace-nowrap text-sm md:overflow-visible">
           <a
             id="tab-overview"
             class="border-b-2 border-[var(--accent)] pb-3 font-semibold text-[var(--text)]"
@@ -146,6 +146,8 @@
               class="w-full rounded-full"
               src="https://avatars.githubusercontent.com/u/84506416?v=4"
               alt="AATHILDUCKY avatar"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="mt-4">
@@ -760,6 +762,8 @@
           const image = el("img", "h-40 w-full object-cover");
           image.src = project.image || "https://placehold.co/800x500/0d1117/58a6ff?text=Project";
           image.alt = `${project.name || "Project"} feature image`;
+          image.loading = "lazy";
+          image.decoding = "async";
 
           const body = el("div", "flex flex-1 flex-col p-4");
           body.appendChild(el("h4", "text-base font-semibold", project.name || "Untitled project"));
