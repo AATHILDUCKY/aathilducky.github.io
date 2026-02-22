@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ducky-pwn-docs",
+    "version": "0.0.0",
+    "description": "Electron-wrapped intelligence command center built on React/Vite with local SQLite persistence for every project and finding.",
+    "repo": "https://github.com/AATHILDUCKY/ducky-pwn-docs",
+    "downloads": {
+      "deb": "https://github.com/AATHILDUCKY/ducky-pwn-docs/releases/download/ducky-pwn-docs/ducky-pwn-docs_0.0.0_amd64.deb",
+      "snap": "https://github.com/AATHILDUCKY/ducky-pwn-docs/releases/download/ducky-pwn-docs/ducky-pwn-docs_0.0.0_amd64.snap",
+      "appimage": "https://github.com/AATHILDUCKY/ducky-pwn-docs/releases/download/ducky-pwn-docs/DuckyPwnDocs-0.0.0.AppImage",
+      "exe": "https://github.com/AATHILDUCKY/ducky-pwn-docs/releases/download/ducky-pwn-docs/DuckyPwnDocs.0.0.0.exe"
+    }
+  }
+]

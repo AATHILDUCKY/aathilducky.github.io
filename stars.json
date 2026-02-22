@@ -1,0 +1,32 @@
+[
+  {
+    "owner": "AATHILDUCKY",
+    "name": "duck-duck-leaks",
+    "description": "A web-based tool for detecting sensitive data leaks in GitHub repositories and web applications.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 5,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/duck-duck-leaks"
+  },
+  {
+    "owner": "AATHILDUCKY",
+    "name": "xss",
+    "description": "XSS notes, payloads, and tools.",
+    "language": "JavaScript",
+    "languageColor": "#f1e05a",
+    "stars": 6,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/xss"
+  },
+  {
+    "owner": "AATHILDUCKY",
+    "name": "subdomain_url_status",
+    "description": "Find subdomains and check status codes fast.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 5,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/subdomain_url_status"
+  }
+]

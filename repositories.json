@@ -1,0 +1,56 @@
+[
+  {
+    "name": "google-dorks-notes",
+    "description": "google dorks notes",
+    "language": null,
+    "languageColor": null,
+    "stars": 7,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/google-dorks-notes"
+  },
+  {
+    "name": "xss",
+    "description": "XSS notes , and payloads , and tools",
+    "language": "JavaScript",
+    "languageColor": "#f1e05a",
+    "stars": 6,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/xss"
+  },
+  {
+    "name": "ethical-hacking-short-notes",
+    "description": "accessing my short notes with keywords",
+    "language": "JavaScript",
+    "languageColor": "#f1e05a",
+    "stars": 5,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/ethical-hacking-short-notes"
+  },
+  {
+    "name": "AATHILDUCKY",
+    "description": "Profile README repository",
+    "language": null,
+    "languageColor": null,
+    "stars": 5,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/AATHILDUCKY"
+  },
+  {
+    "name": "subdomain_url_status",
+    "description": "finding subdoomains status code",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 5,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/subdomain_url_status"
+  },
+  {
+    "name": "duck-duck-leaks",
+    "description": "A web-based tool for detecting sensitive data leaks in GitHub repositories and web applications, featuring advanced scanning, source gathering, and a user-friendly GUI.",
+    "language": "Python",
+    "languageColor": "#3572a5",
+    "stars": 5,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/duck-duck-leaks"
+  }
+]

@@ -1,857 +1,1072 @@
 <!doctype html>
-<html lang="en" class="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aathil Ahamed — Ethical Hacker • Security Researcher</title>
-  <meta name="description" content="Portfolio of Aathil Ahamed — Ethical Hacker, Security Researcher, and Cybersecurity Enthusiast." />
-
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Ubuntu','Cantarell','Noto Sans','Helvetica Neue','Arial','Apple Color Emoji','Segoe UI Emoji']
-          },
-          boxShadow: {
-            glow: '0 0 0 1px rgba(255,255,255,.06), 0 10px 30px rgba(0,0,0,.45)',
-          }
-        }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AATHILDUCKY · GitHub Profile (Clone)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/octicons/16.4.1/font/octicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0d1117;
+        --surface: #161b22;
+        --border: #30363d;
+        --text: #c9d1d9;
+        --muted: #8b949e;
+        --link: #58a6ff;
+        --accent: #f78166;
+        --button: #21262d;
+        --button-hover: #30363d;
+        --badge: #21262d;
+        --header: #161b22;
+        --input-bg: #0d1117;
+        --input-border: #30363d;
       }
-    }
-  </script>
-
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Subtle motion (optional) -->
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-
-  <style>
-    /* GitHub-ish dark palette helpers */
-    :root {
-      --gh-bg: #0d1117;
-      --gh-panel: #0f172a;
-      --gh-border: rgba(255,255,255,.08);
-      --gh-muted: rgba(255,255,255,.65);
-      --gh-text: rgba(255,255,255,.92);
-      --gh-green: #2ea043;
-      --gh-blue: #1f6feb;
-      --gh-purple: #a371f7;
-      --gh-orange: #f78166;
-    }
-
-    /* Animated gradient background */
-    .aurora {
-      background:
-        radial-gradient(1200px 500px at 10% 10%, rgba(31,111,235,.18), transparent 60%),
-        radial-gradient(900px 400px at 90% 30%, rgba(163,113,247,.16), transparent 60%),
-        radial-gradient(900px 500px at 40% 90%, rgba(46,160,67,.14), transparent 65%),
-        radial-gradient(800px 450px at 80% 85%, rgba(247,129,102,.10), transparent 65%),
-        linear-gradient(180deg, rgba(13,17,23,1), rgba(13,17,23,1));
-      position: relative;
-      overflow: hidden;
-    }
-    .aurora::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background:
-        conic-gradient(from 180deg at 50% 50%,
-          rgba(31,111,235,.14),
-          rgba(163,113,247,.12),
-          rgba(46,160,67,.12),
-          rgba(247,129,102,.10),
-          rgba(31,111,235,.14)
-        );
-      filter: blur(60px);
-      opacity: .55;
-      animation: spin 18s linear infinite;
-      pointer-events: none;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* Glass panel */
-    .glass {
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--gh-border);
-      backdrop-filter: blur(12px);
-    }
-
-    /* Page transition */
-    .page {
-      display: none;
-      opacity: 0;
-      transform: translateY(6px);
-      transition: opacity .25s ease, transform .25s ease;
-    }
-    .page.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Fancy underline */
-    .grad-underline {
-      background-image: linear-gradient(90deg, rgba(31,111,235,.9), rgba(46,160,67,.85), rgba(163,113,247,.85));
-      background-size: 100% 3px;
-      background-repeat: no-repeat;
-      background-position: 0 100%;
-      padding-bottom: 6px;
-    }
-
-    /* Reduce motion preference */
-    @media (prefers-reduced-motion: reduce) {
-      .aurora::before { animation: none; }
-      .page { transition: none; }
-    }
-  </style>
-</head>
-
-<body class="min-h-screen aurora text-white font-sans">
-  <!-- Top bar -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0d1117]/70 backdrop-blur">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#/" class="flex items-center gap-2 group">
-        <div class="h-9 w-9 rounded-xl glass shadow-glow grid place-items-center">
-          <i data-lucide="shield" class="h-5 w-5 text-white/90"></i>
-        </div>
-        <div class="leading-tight">
-          <div class="text-sm text-white/70">Portfolio</div>
-          <div class="font-semibold tracking-tight group-hover:text-white">Aathil Ahamed</div>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-1">
-        <a class="navlink px-3 py-2 rounded-xl text-sm text-white/75 hover:text-white hover:bg-white/5" href="#/">Home</a>
-        <a class="navlink px-3 py-2 rounded-xl text-sm text-white/75 hover:text-white hover:bg-white/5" href="#/about">About</a>
-        <a class="navlink px-3 py-2 rounded-xl text-sm text-white/75 hover:text-white hover:bg-white/5" href="#/skills">Skills</a>
-        <a class="navlink px-3 py-2 rounded-xl text-sm text-white/75 hover:text-white hover:bg-white/5" href="#/projects">Projects</a>
-        <a class="navlink px-3 py-2 rounded-xl text-sm text-white/75 hover:text-white hover:bg-white/5" href="#/tools">Online Tools</a>
-        <a class="navlink px-3 py-2 rounded-xl text-sm text-white/75 hover:text-white hover:bg-white/5" href="#/contact">Contact</a>
-      </nav>
-
-      <div class="flex items-center gap-2">
-        <button id="menuBtn" class="md:hidden h-10 w-10 rounded-xl glass grid place-items-center hover:bg-white/5" aria-label="Open menu">
-          <i data-lucide="menu" class="h-5 w-5"></i>
-        </button>
-
-        <button id="themeBtn" class="h-10 px-3 rounded-xl glass flex items-center gap-2 hover:bg-white/5" aria-label="Toggle theme">
-          <i data-lucide="moon" class="h-4 w-4"></i>
-          <span class="hidden sm:inline text-sm text-white/80">Dark</span>
-        </button>
-
-        <a href="https://github.com/AATHILDUCKY" target="_blank" rel="noreferrer"
-           class="h-10 px-3 rounded-xl glass flex items-center gap-2 hover:bg-white/5">
-          <i data-lucide="github" class="h-4 w-4"></i>
-          <span class="hidden sm:inline text-sm text-white/80">GitHub</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
-      <div class="mx-auto max-w-6xl px-4 py-3 grid gap-1">
-        <a class="px-3 py-2 rounded-xl text-sm text-white/80 hover:text-white hover:bg-white/5" href="#/">Home</a>
-        <a class="px-3 py-2 rounded-xl text-sm text-white/80 hover:text-white hover:bg-white/5" href="#/about">About</a>
-        <a class="px-3 py-2 rounded-xl text-sm text-white/80 hover:text-white hover:bg-white/5" href="#/skills">Skills</a>
-        <a class="px-3 py-2 rounded-xl text-sm text-white/80 hover:text-white hover:bg-white/5" href="#/projects">Projects</a>
-        <a class="px-3 py-2 rounded-xl text-sm text-white/80 hover:text-white hover:bg-white/5" href="#/tools">Online Tools</a>
-        <a class="px-3 py-2 rounded-xl text-sm text-white/80 hover:text-white hover:bg-white/5" href="#/contact">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main container -->
-  <main class="mx-auto max-w-6xl px-4 py-10 md:py-14">
-    <!-- HOME -->
-    <section id="page-home" class="page active">
-      <div class="grid lg:grid-cols-12 gap-6 items-start">
-        <div class="lg:col-span-7">
-          <div class="glass shadow-glow rounded-3xl p-6 md:p-8">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-white/80">
-              <span class="h-2 w-2 rounded-full bg-[var(--gh-green)] shadow-[0_0_20px_rgba(46,160,67,.6)]"></span>
-              Available for internships & security projects
-            </div>
-
-            <h1 class="mt-5 text-3xl md:text-5xl font-bold tracking-tight">
-              Ethical Hacker • Security Researcher<br />
-              <span class="grad-underline">Cybersecurity Enthusiast</span>
-            </h1>
-
-            <p class="mt-4 text-white/75 leading-relaxed">
-              Cybersecurity student skilled in penetration testing, vulnerability assessment, SOC monitoring & threat hunting,
-              and cloud/endpoint security. I build practical tools and write security content.
-            </p>
-
-            <div class="mt-6 flex flex-wrap gap-2">
-              <a href="#/tools" class="px-4 py-2 rounded-xl bg-[var(--gh-blue)]/90 hover:bg-[var(--gh-blue)] text-sm font-medium shadow-glow">
-                View Online Tools
-              </a>
-              <a href="#/projects" class="px-4 py-2 rounded-xl glass hover:bg-white/5 text-sm font-medium">
-                Projects
-              </a>
-              <a href="#/contact" class="px-4 py-2 rounded-xl glass hover:bg-white/5 text-sm font-medium">
-                Contact
-              </a>
-            </div>
-
-            <div class="mt-7 grid sm:grid-cols-3 gap-3">
-              <div class="rounded-2xl glass p-4">
-                <div class="text-xs text-white/60">TryHackMe</div>
-                <div class="mt-1 text-lg font-semibold">Top 10%</div>
-                <div class="mt-1 text-xs text-white/55">Challenge ranking</div>
-              </div>
-              <div class="rounded-2xl glass p-4">
-                <div class="text-xs text-white/60">Security Tools</div>
-                <div class="mt-1 text-lg font-semibold">Burp • Nmap</div>
-                <div class="mt-1 text-xs text-white/55">ZAP • SQLmap • Wireshark</div>
-              </div>
-              <div class="rounded-2xl glass p-4">
-                <div class="text-xs text-white/60">Focus</div>
-                <div class="mt-1 text-lg font-semibold">Web App Sec</div>
-                <div class="mt-1 text-xs text-white/55">Threats • Detection • Forensics</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-6 grid md:grid-cols-2 gap-4">
-            <div class="rounded-3xl glass p-6">
-              <div class="flex items-center gap-2">
-                <i data-lucide="sparkles" class="h-5 w-5 text-white/80"></i>
-                <h2 class="font-semibold">What I do</h2>
-              </div>
-              <ul class="mt-3 space-y-2 text-sm text-white/75">
-                <li class="flex gap-2"><span class="text-[var(--gh-green)]">▸</span> Penetration testing & vulnerability research</li>
-                <li class="flex gap-2"><span class="text-[var(--gh-green)]">▸</span> SOC monitoring, threat hunting, incident response</li>
-                <li class="flex gap-2"><span class="text-[var(--gh-green)]">▸</span> Build automation tools (Python) and security web apps</li>
-              </ul>
-            </div>
-
-            <div class="rounded-3xl glass p-6">
-              <div class="flex items-center gap-2">
-                <i data-lucide="book-open" class="h-5 w-5 text-white/80"></i>
-                <h2 class="font-semibold">Currently learning</h2>
-              </div>
-              <ul class="mt-3 space-y-2 text-sm text-white/75">
-                <li class="flex gap-2"><span class="text-[var(--gh-purple)]">▸</span> Advanced web app exploitation techniques</li>
-                <li class="flex gap-2"><span class="text-[var(--gh-purple)]">▸</span> SIEM workflows (Splunk / QRadar concepts)</li>
-                <li class="flex gap-2"><span class="text-[var(--gh-purple)]">▸</span> Deeper practice via labs & CTFs</li>
-              </ul>
-            </div>
+      body {
+        font-family: "Mona Sans", "Hubot Sans", ui-sans-serif, system-ui, -apple-system,
+          "Segoe UI", Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--bg)] text-[var(--text)]">
+    <header class="border-b border-[var(--border)] bg-[var(--header)] text-[var(--text)]">
+      <div class="mx-auto flex max-w-[1280px] items-center gap-4 px-4 py-3">
+        <div class="flex items-center gap-3">
+          <i class="octicon octicon-mark-github text-2xl"></i>
+          <div class="relative hidden md:block">
+            <input
+              class="w-[320px] rounded-md border border-[var(--input-border)] bg-[var(--input-bg)] px-3 py-1 text-sm text-[var(--text)] placeholder:text-[#6e7681] focus:outline-none"
+              type="text"
+              placeholder="Search or jump to..."
+            />
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 rounded border border-[var(--input-border)] px-1 text-xs text-[var(--muted)]">
+              /
+            </span>
           </div>
         </div>
-
-        <!-- Right column -->
-        <div class="lg:col-span-5">
-          <div class="rounded-3xl glass shadow-glow p-6 md:p-8">
-            <div class="flex items-center justify-between">
-              <h2 class="font-semibold flex items-center gap-2">
-                <i data-lucide="terminal" class="h-5 w-5 text-white/80"></i>
-                Quick Profile
-              </h2>
-              <span class="text-xs text-white/55">GitHub dark theme</span>
-            </div>
-
-            <div class="mt-4 space-y-3 text-sm">
-              <div class="flex items-start gap-3">
-                <div class="h-9 w-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center">
-                  <i data-lucide="map-pin" class="h-4 w-4 text-white/75"></i>
-                </div>
-                <div>
-                  <div class="text-white/85 font-medium">Kinniya, Trincomalee, Sri Lanka</div>
-                  <div class="text-white/55">Open to remote opportunities</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="h-9 w-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center">
-                  <i data-lucide="graduation-cap" class="h-4 w-4 text-white/75"></i>
-                </div>
-                <div>
-                  <div class="text-white/85 font-medium">BSc Computer Science (2020–2024)</div>
-                  <div class="text-white/55">Trincomalee Campus, EUSL</div>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <div class="h-9 w-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center">
-                  <i data-lucide="award" class="h-4 w-4 text-white/75"></i>
-                </div>
-                <div>
-                  <div class="text-white/85 font-medium">Certifications</div>
-                  <div class="text-white/55">Applied ChatGPT for Cybersecurity • Advanced Python Recon • Linux Admin</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-6 grid grid-cols-2 gap-3">
-              <a class="rounded-2xl glass p-4 hover:bg-white/5" href="https://linkedin.com/in/aathilducky" target="_blank" rel="noreferrer">
-                <div class="flex items-center gap-2">
-                  <i data-lucide="linkedin" class="h-4 w-4 text-white/80"></i>
-                  <span class="text-sm font-medium">LinkedIn</span>
-                </div>
-                <div class="mt-1 text-xs text-white/55">Professional profile</div>
-              </a>
-
-              <a class="rounded-2xl glass p-4 hover:bg-white/5" href="https://aathilducky.com/about" target="_blank" rel="noreferrer">
-                <div class="flex items-center gap-2">
-                  <i data-lucide="globe" class="h-4 w-4 text-white/80"></i>
-                  <span class="text-sm font-medium">Website</span>
-                </div>
-                <div class="mt-1 text-xs text-white/55">About page</div>
-              </a>
-            </div>
-
-            <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="text-xs text-white/60">Fast navigation</div>
-              <div class="mt-2 flex flex-wrap gap-2">
-                <a href="#/skills" class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs hover:bg-white/10">Skills</a>
-                <a href="#/projects" class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs hover:bg-white/10">Projects</a>
-                <a href="#/tools" class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs hover:bg-white/10">Online Tools</a>
-                <a href="#/contact" class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs hover:bg-white/10">Contact</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-6 rounded-3xl glass p-6">
-            <div class="flex items-center gap-2">
-              <i data-lucide="pen-line" class="h-5 w-5 text-white/80"></i>
-              <h2 class="font-semibold">Security writing</h2>
-            </div>
-            <p class="mt-2 text-sm text-white/70">
-              I publish cybersecurity & Python content on Medium.
-            </p>
-            <a class="mt-3 inline-flex items-center gap-2 text-sm text-[var(--gh-blue)] hover:underline"
-               href="https://medium.com/@aathilducky" target="_blank" rel="noreferrer">
-              Visit Medium <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-            </a>
-          </div>
+        <nav class="hidden items-center gap-4 text-sm md:flex">
+          <a class="text-[var(--text)] hover:text-[#f0f6fc]" href="#">Pull requests</a>
+          <a class="text-[var(--text)] hover:text-[#f0f6fc]" href="#">Issues</a>
+          <a class="text-[var(--text)] hover:text-[#f0f6fc]" href="#">Marketplace</a>
+          <a class="text-[var(--text)] hover:text-[#f0f6fc]" href="#">Explore</a>
+        </nav>
+        <div class="ml-auto flex items-center gap-3 text-sm">
+          <a class="text-[var(--text)] hover:text-[#f0f6fc]" href="#">Sign in</a>
+          <a
+            class="rounded-md border border-[var(--text)]/70 px-3 py-1 text-[var(--text)] hover:border-[#f0f6fc]"
+            href="#"
+            >Sign up</a
+          >
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- ABOUT -->
-    <section id="page-about" class="page">
-      <div class="rounded-3xl glass shadow-glow p-6 md:p-8">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">About</h2>
-        <p class="mt-3 text-white/75 leading-relaxed">
-          I’m <span class="text-white font-semibold">Aathil Ahamed</span>, a cybersecurity student passionate about learning
-          and applying cutting-edge security practices. My strengths include penetration testing, vulnerability assessment,
-          SOC monitoring, threat hunting, and cloud/endpoint security.
-        </p>
-
-        <div class="mt-6 grid md:grid-cols-3 gap-4">
-          <div class="rounded-2xl glass p-5">
-            <div class="flex items-center gap-2">
-              <i data-lucide="briefcase" class="h-4 w-4 text-white/80"></i>
-              <div class="font-semibold">Experience</div>
-            </div>
-            <p class="mt-2 text-sm text-white/70">
-              Web Developer (CBS Solution Pvt Ltd) — built secure websites with WordPress & Django, reduced vulnerabilities.
-            </p>
+    <main class="mx-auto max-w-[1280px] px-4 py-6">
+      <div class="border-b border-[var(--border)]">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 text-sm">
+            <i class="octicon octicon-person"></i>
+            <span class="font-semibold">AATHILDUCKY</span>
           </div>
-
-          <div class="rounded-2xl glass p-5">
-            <div class="flex items-center gap-2">
-              <i data-lucide="target" class="h-4 w-4 text-white/80"></i>
-              <div class="font-semibold">Focus</div>
-            </div>
-            <p class="mt-2 text-sm text-white/70">
-              Practical security: exploitation + detection + evidence. I love building tools that help real workflows.
-            </p>
-          </div>
-
-          <div class="rounded-2xl glass p-5">
-            <div class="flex items-center gap-2">
-              <i data-lucide="flame" class="h-4 w-4 text-white/80"></i>
-              <div class="font-semibold">Community</div>
-            </div>
-            <p class="mt-2 text-sm text-white/70">
-              Active in labs/CTFs, ranked top 10% on TryHackMe, and keep learning through books & practice.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="page-skills" class="page">
-      <div class="rounded-3xl glass shadow-glow p-6 md:p-8">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Skills</h2>
-            <p class="mt-2 text-sm text-white/70">A quick snapshot of my cybersecurity + programming toolkit.</p>
-          </div>
-          <div class="hidden md:flex items-center gap-2 text-xs text-white/60">
-            <i data-lucide="palette" class="h-4 w-4"></i> GitHub-dark UI
-          </div>
-        </div>
-
-        <div class="mt-6 grid lg:grid-cols-3 gap-4">
-          <div class="rounded-2xl glass p-6">
-            <div class="flex items-center gap-2">
-              <i data-lucide="shield-check" class="h-5 w-5 text-[var(--gh-green)]"></i>
-              <h3 class="font-semibold">Cybersecurity</h3>
-            </div>
-            <ul class="mt-3 space-y-2 text-sm text-white/75">
-              <li>Penetration Testing</li>
-              <li>Endpoint Security</li>
-              <li>Intrusion Detection & Monitoring</li>
-              <li>SOC Monitoring & Threat Hunting</li>
-              <li>Cloud Security</li>
-              <li>Risk Assessment & Forensics</li>
-              <li>Access Control</li>
-              <li>Firewall Management</li>
-            </ul>
-          </div>
-
-          <div class="rounded-2xl glass p-6">
-            <div class="flex items-center gap-2">
-              <i data-lucide="wrench" class="h-5 w-5 text-[var(--gh-blue)]"></i>
-              <h3 class="font-semibold">Tools</h3>
-            </div>
-            <div class="mt-3 flex flex-wrap gap-2 text-xs">
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Metasploit</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Burp Suite</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Nmap</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">OWASP ZAP</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">SQLmap</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">OpenVAS</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Nessus</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Wireshark</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Suricata</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Splunk</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">QRadar</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">MITRE ATT&CK</span>
-            </div>
-          </div>
-
-          <div class="rounded-2xl glass p-6">
-            <div class="flex items-center gap-2">
-              <i data-lucide="code-2" class="h-5 w-5 text-[var(--gh-purple)]"></i>
-              <h3 class="font-semibold">Programming</h3>
-            </div>
-            <ul class="mt-3 space-y-2 text-sm text-white/75">
-              <li>Python (automation scripts, tooling)</li>
-              <li>Django (secure web apps)</li>
-              <li>JavaScript (web apps)</li>
-              <li>WordPress (custom plugins)</li>
-              <li>SQLite (lightweight data storage)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="page-projects" class="page">
-      <div class="rounded-3xl glass shadow-glow p-6 md:p-8">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Projects</h2>
-            <p class="mt-2 text-sm text-white/70">Practical tools & apps I built for security research and workflows.</p>
-          </div>
-          <a href="#/tools" class="hidden md:inline-flex items-center gap-2 text-sm text-[var(--gh-blue)] hover:underline">
-            See Online Tools <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          <a
+            class="ml-auto rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-sm font-medium text-[var(--text)] hover:bg-[var(--button-hover)]"
+            href="https://github.com/AATHILDUCKY"
+            target="_blank"
+            rel="noopener"
+          >
+            Follow
           </a>
         </div>
-
-        <div class="mt-6 grid md:grid-cols-2 gap-4">
-          <article class="rounded-3xl glass p-6 hover:bg-white/5 transition">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold">Web-based Sensitive Information Finder</h3>
-              <span class="text-xs px-2 py-1 rounded-lg bg-[var(--gh-green)]/15 border border-[var(--gh-green)]/25 text-[var(--gh-green)]">
-                Python • SQLite
-              </span>
-            </div>
-            <p class="mt-3 text-sm text-white/70">
-              Detected sensitive information leaks in GitHub repositories and websites, improved accuracy and reduced false positives.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2 text-xs text-white/70">
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Leak Detection</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">GUI</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Scan History</span>
-            </div>
-          </article>
-
-          <article class="rounded-3xl glass p-6 hover:bg-white/5 transition">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold">Audio Secret Finder</h3>
-              <span class="text-xs px-2 py-1 rounded-lg bg-[var(--gh-blue)]/15 border border-[var(--gh-blue)]/25 text-[var(--gh-blue)]">
-                Python • Signal
-              </span>
-            </div>
-            <p class="mt-3 text-sm text-white/70">
-              Tool to detect hidden messages in audio using spectrogram analysis (PyQt5, numpy, scipy, matplotlib, librosa).
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2 text-xs text-white/70">
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Spectrogram</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Stego</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">GUI</span>
-            </div>
-          </article>
-
-          <article class="rounded-3xl glass p-6 hover:bg-white/5 transition">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold">Cybersecurity Cheat Sheet Webapp</h3>
-              <span class="text-xs px-2 py-1 rounded-lg bg-[var(--gh-purple)]/15 border border-[var(--gh-purple)]/25 text-[var(--gh-purple)]">
-                JS • Tailwind
-              </span>
-            </div>
-            <p class="mt-3 text-sm text-white/70">
-              Web app to store and filter cybersecurity notes with improved search performance and SOC-relevant logging.
-            </p>
-            <div class="mt-4 flex flex-wrap gap-2 text-xs text-white/70">
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Notes</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Search</span>
-              <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">Logging</span>
-            </div>
-          </article>
-
-          <article class="rounded-3xl glass p-6 hover:bg-white/5 transition">
-            <div class="flex items-center justify-between">
-              <h3 class="font-semibold">Security Content Writing</h3>
-              <span class="text-xs px-2 py-1 rounded-lg bg-[var(--gh-orange)]/15 border border-[var(--gh-orange)]/25 text-[var(--gh-orange)]">
-                Medium
-              </span>
-            </div>
-            <p class="mt-3 text-sm text-white/70">
-              Cybersecurity and Python posts (threat modeling, SIEM concepts, forensics) with consistent readership growth.
-            </p>
-            <a class="mt-4 inline-flex items-center gap-2 text-sm text-[var(--gh-blue)] hover:underline"
-               href="https://medium.com/@aathilducky" target="_blank" rel="noreferrer">
-              Read on Medium <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-            </a>
-          </article>
+        <div class="mt-4 flex gap-5 text-sm">
+          <a
+            id="tab-overview"
+            class="border-b-2 border-[var(--accent)] pb-3 font-semibold text-[var(--text)]"
+            href="#"
+            >Overview</a
+          >
+          <a
+            id="tab-repositories"
+            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            href="#"
+            >Repositories
+            <span
+              id="repo-count"
+              class="ml-1 rounded-full bg-[var(--badge)] px-2 text-[var(--text)]"
+              >0</span
+            ></a
+          >
+          <a
+            id="tab-projects"
+            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            href="#"
+            >Projects
+            <span
+              id="project-count"
+              class="ml-1 rounded-full bg-[var(--badge)] px-2 text-[var(--text)]"
+              >0</span
+            ></a
+          >
+          <a
+            id="tab-packages"
+            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            href="#"
+            >Packages
+            <span
+              id="package-count"
+              class="ml-1 rounded-full bg-[var(--badge)] px-2 text-[var(--text)]"
+              >0</span
+            ></a
+          >
+          <a
+            id="tab-stars"
+            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            href="#"
+            >Stars
+            <span
+              id="star-count"
+              class="ml-1 rounded-full bg-[var(--badge)] px-2 text-[var(--text)]"
+              >0</span
+            ></a
+          >
         </div>
       </div>
-    </section>
 
-    <!-- ONLINE TOOLS (separate "page" inside single HTML for fast loading) -->
-    <section id="page-tools" class="page">
-      <div class="rounded-3xl glass shadow-glow p-6 md:p-8">
-        <div class="flex items-start justify-between gap-4">
-          <div>
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Online Tools</h2>
-            <p class="mt-2 text-sm text-white/70">
-              This page lists my public tools/utilities. Add/replace links in the <code class="px-1.5 py-0.5 rounded bg-white/10">TOOLS</code> array in the script below.
-            </p>
+      <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[296px,1fr]">
+        <aside>
+          <div class="rounded-full border border-[var(--border)] bg-[var(--surface)] p-1">
+            <img
+              class="w-full rounded-full"
+              src="https://avatars.githubusercontent.com/u/84506416?v=4"
+              alt="AATHILDUCKY avatar"
+            />
           </div>
-
-          <div class="hidden md:flex items-center gap-2">
-            <input id="toolSearch" type="text" placeholder="Search tools..."
-              class="w-64 rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-sm text-white/80 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--gh-blue)]/40" />
+          <div class="mt-4">
+            <h1 class="text-2xl font-semibold">AATHILDUCKY</h1>
+            <p class="text-base text-[var(--muted)]">aathilducky</p>
           </div>
-        </div>
-
-        <div class="mt-6 flex md:hidden">
-          <input id="toolSearchMobile" type="text" placeholder="Search tools..."
-            class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-sm text-white/80 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--gh-blue)]/40" />
-        </div>
-
-        <div class="mt-5 grid lg:grid-cols-3 gap-4">
-          <div class="rounded-2xl glass p-5">
-            <div class="flex items-center gap-2">
-              <i data-lucide="layers" class="h-5 w-5 text-white/80"></i>
-              <h3 class="font-semibold">Categories</h3>
-            </div>
-            <div id="toolTags" class="mt-3 flex flex-wrap gap-2 text-xs"></div>
+          <a
+            class="mt-4 block w-full rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-center text-sm font-medium text-[var(--text)] hover:bg-[var(--button-hover)]"
+            href="https://github.com/AATHILDUCKY"
+            target="_blank"
+            rel="noopener"
+          >
+            Follow
+          </a>
+          <p class="mt-4 text-sm">
+            Cyber Security Enthusiast | Python Programmer | CS student @ TCEUSL | WordPress |
+            Solving Real-world Problems
+          </p>
+          <div class="mt-4 flex items-center gap-2 text-sm text-[var(--muted)]">
+            <span class="font-semibold text-[var(--text)]">12</span> followers
+            <span>·</span>
+            <span class="font-semibold text-[var(--text)]">0</span> following
           </div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              <i class="octicon octicon-location"></i>
+              Sri Lanka
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="octicon octicon-link"></i>
+              <a class="text-[var(--link)] hover:underline" href="https://www.aathilducky.com/">
+                www.aathilducky.com
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fab fa-youtube text-[#ff0000]"></i>
+              <a class="text-[var(--link)] hover:underline" href="https://www.youtube.com/@aathilducky">
+                @aathilducky
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fab fa-linkedin text-[#0a66c2]"></i>
+              <a
+                class="text-[var(--link)] hover:underline"
+                href="https://www.linkedin.com/in/aathil-ducky-95b12a218/"
+              >
+                in/aathil-ducky
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fab fa-x-twitter"></i>
+              <a class="text-[var(--link)] hover:underline" href="https://twitter.com/AathilDucky">
+                @AathilDucky
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fab fa-instagram text-[#d62976]"></i>
+              <a class="text-[var(--link)] hover:underline" href="https://instagram.com/aathilducky">
+                aathilducky
+              </a>
+            </li>
+          </ul>
+        </aside>
 
-          <div class="lg:col-span-2">
-            <div id="toolGrid" class="grid md:grid-cols-2 gap-4"></div>
-
-            <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
-              <div class="flex items-center gap-2">
-                <i data-lucide="zap" class="h-4 w-4"></i>
-                <span class="font-medium text-white/80">Fast loading note</span>
+        <section>
+          <div id="overview-pane">
+            <div class="rounded-md border border-[var(--border)] bg-[var(--surface)]">
+              <div class="border-b border-[var(--border)] px-4 py-3 text-sm font-semibold">
+                README.md
               </div>
-              <p class="mt-2">
-                This portfolio is a single-page app (SPA) using hash routes (<code class="px-1.5 py-0.5 rounded bg-white/10">#/tools</code>)
-                so pages feel separate but load instantly.
+              <div class="px-4 py-4">
+              <h2 class="text-xl font-semibold">Security Enthusiast · Offensive Mindset</h2>
+              <p class="mt-2 text-sm text-[var(--muted)]">
+                Passionate about ethical hacking, secure coding, and building tools that detect and
+                prevent real-world threats. Focused on Python automation, web security, and
+                practical defense.
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="page-contact" class="page">
-      <div class="rounded-3xl glass shadow-glow p-6 md:p-8">
-        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Contact</h2>
-        <p class="mt-3 text-white/75">
-          Want to collaborate on security research, tooling, or an internship opportunity?
-        </p>
-
-        <div class="mt-6 grid md:grid-cols-2 gap-4">
-          <a class="rounded-3xl glass p-6 hover:bg-white/5 transition" href="mailto:aathilducky@gmail.com">
-            <div class="flex items-center gap-2">
-              <i data-lucide="mail" class="h-5 w-5 text-[var(--gh-blue)]"></i>
-              <div class="font-semibold">Email</div>
-            </div>
-            <div class="mt-2 text-sm text-white/70">aathilducky@gmail.com</div>
-          </a>
-
-          <a class="rounded-3xl glass p-6 hover:bg-white/5 transition" href="tel:+940754545398">
-            <div class="flex items-center gap-2">
-              <i data-lucide="phone" class="h-5 w-5 text-[var(--gh-green)]"></i>
-              <div class="font-semibold">Phone</div>
-            </div>
-            <div class="mt-2 text-sm text-white/70">+94 075 454 5398</div>
-          </a>
-
-          <a class="rounded-3xl glass p-6 hover:bg-white/5 transition" href="https://linkedin.com/in/aathilducky" target="_blank" rel="noreferrer">
-            <div class="flex items-center gap-2">
-              <i data-lucide="linkedin" class="h-5 w-5 text-white/80"></i>
-              <div class="font-semibold">LinkedIn</div>
-            </div>
-            <div class="mt-2 text-sm text-white/70">linkedin.com/in/aathilducky</div>
-          </a>
-
-          <a class="rounded-3xl glass p-6 hover:bg-white/5 transition" href="https://github.com/AATHILDUCKY" target="_blank" rel="noreferrer">
-            <div class="flex items-center gap-2">
-              <i data-lucide="github" class="h-5 w-5 text-white/80"></i>
-              <div class="font-semibold">GitHub</div>
-            </div>
-            <div class="mt-2 text-sm text-white/70">github.com/AATHILDUCKY</div>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-white/10 bg-[#0d1117]/60">
-    <div class="mx-auto max-w-6xl px-4 py-6 flex flex-col md:flex-row gap-3 items-start md:items-center justify-between">
-      <div class="text-sm text-white/60">
-        © <span id="year"></span> Aathil Ahamed • Built with Tailwind CDN • GitHub-dark theme
-      </div>
-      <div class="text-xs text-white/45">
-        Single-file portfolio • Hash routing • Optimized for fast page transitions
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // ---------- UI / Icons ----------
-    lucide.createIcons();
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    // ---------- Theme toggle (kept dark by default, but supports light) ----------
-    const themeBtn = document.getElementById('themeBtn');
-    const root = document.documentElement;
-
-    function setTheme(mode) {
-      if (mode === 'light') root.classList.remove('dark');
-      else root.classList.add('dark');
-
-      localStorage.setItem('theme', mode);
-      // Update button text/icon
-      const label = themeBtn.querySelector('span');
-      const icon = themeBtn.querySelector('i');
-      if (mode === 'light') {
-        label && (label.textContent = 'Light');
-        icon && icon.setAttribute('data-lucide', 'sun');
-      } else {
-        label && (label.textContent = 'Dark');
-        icon && icon.setAttribute('data-lucide', 'moon');
-      }
-      lucide.createIcons();
-    }
-
-    const saved = localStorage.getItem('theme') || 'dark';
-    setTheme(saved);
-
-    themeBtn?.addEventListener('click', () => {
-      const current = root.classList.contains('dark') ? 'dark' : 'light';
-      setTheme(current === 'dark' ? 'light' : 'dark');
-    });
-
-    // ---------- Hash router (separate "pages" inside a single HTML) ----------
-    const routes = {
-      '/': 'page-home',
-      '/about': 'page-about',
-      '/skills': 'page-skills',
-      '/projects': 'page-projects',
-      '/tools': 'page-tools',
-      '/contact': 'page-contact',
-    };
-
-    function showPage(route) {
-      const pageId = routes[route] || routes['/'];
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      const el = document.getElementById(pageId);
-      if (el) el.classList.add('active');
-
-      // Close mobile menu on navigation
-      mobileMenu?.classList.add('hidden');
-
-      // Highlight nav links
-      document.querySelectorAll('.navlink').forEach(a => {
-        const href = a.getAttribute('href') || '';
-        a.classList.toggle('bg-white/5', href === `#${route}`);
-        a.classList.toggle('text-white', href === `#${route}`);
-        a.classList.toggle('text-white/75', href !== `#${route}`);
-      });
-
-      // Focus search on tools page
-      if (route === '/tools') {
-        setTimeout(() => {
-          document.getElementById('toolSearch')?.focus();
-          document.getElementById('toolSearchMobile')?.focus();
-        }, 150);
-      }
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function parseHash() {
-      const hash = location.hash.replace('#', '') || '/';
-      return hash.startsWith('/') ? hash : '/';
-    }
-
-    window.addEventListener('hashchange', () => showPage(parseHash()));
-    showPage(parseHash());
-
-    // ---------- Online Tools Data (Edit these) ----------
-    // Replace placeholders with your actual hosted tools / web apps / demo links.
-    const TOOLS = [
-      {
-        name: "Sensitive Info Finder (Web)",
-        desc: "Detect sensitive information leaks in GitHub repos and websites, with scan history.",
-        tags: ["Recon", "Leak Detection", "Web"],
-        href: "https://github.com/AATHILDUCKY",
-        icon: "search"
-      },
-      {
-        name: "Audio Secret Finder",
-        desc: "Detect hidden audio messages using spectrogram analysis (stego detection).",
-        tags: ["Forensics", "Stego", "Python"],
-        href: "https://github.com/AATHILDUCKY",
-        icon: "waveform"
-      },
-      {
-        name: "Cybersecurity Cheat Sheet Webapp",
-        desc: "Store & filter security notes with fast search and SOC-friendly logging.",
-        tags: ["Notes", "SOC", "Web"],
-        href: "https://aathilducky.com/about",
-        icon: "notebook-text"
-      },
-      {
-        name: "CTF / Labs Writeups",
-        desc: "Notes and learning artifacts from labs, CTFs, and practice environments.",
-        tags: ["CTF", "Learning"],
-        href: "https://medium.com/@aathilducky",
-        icon: "flag"
-      },
-    ];
-
-    const toolGrid = document.getElementById('toolGrid');
-    const toolTags = document.getElementById('toolTags');
-    const toolSearch = document.getElementById('toolSearch');
-    const toolSearchMobile = document.getElementById('toolSearchMobile');
-
-    function uniqueTags(items) {
-      const s = new Set();
-      items.forEach(t => (t.tags || []).forEach(x => s.add(x)));
-      return Array.from(s).sort((a,b) => a.localeCompare(b));
-    }
-
-    let activeTag = 'All';
-
-    function renderTags() {
-      const tags = ['All', ...uniqueTags(TOOLS)];
-      toolTags.innerHTML = tags.map(t => `
-        <button data-tag="${t}"
-          class="tagBtn px-3 py-1.5 rounded-xl border text-xs
-            ${t === activeTag ? 'bg-white/10 border-white/20 text-white' : 'bg-white/5 border-white/10 text-white/70 hover:bg-white/10'}">
-          ${t}
-        </button>
-      `).join('');
-
-      toolTags.querySelectorAll('.tagBtn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          activeTag = btn.dataset.tag;
-          renderTags();
-          renderTools();
-        });
-      });
-    }
-
-    function toolCard(t) {
-      const tagPills = (t.tags || []).map(x => `
-        <span class="px-2 py-1 rounded-lg bg-white/5 border border-white/10">${x}</span>
-      `).join('');
-
-      return `
-        <a href="${t.href}" target="_blank" rel="noreferrer"
-           class="group rounded-3xl glass p-6 hover:bg-white/5 transition shadow-glow">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="flex items-center gap-2">
-                <div class="h-9 w-9 rounded-xl bg-white/5 border border-white/10 grid place-items-center">
-                  <i data-lucide="${t.icon || 'box'}" class="h-4 w-4 text-white/80"></i>
+              <ul class="mt-4 text-sm text-[var(--text)]">
+                <li>Focus: web security, recon, and vuln research</li>
+                <li>Tooling: Python, JavaScript, OSINT workflows</li>
+                <li>Goal: build secure systems and teach best practices</li>
+              </ul>
+              <div class="mt-4 rounded-md border border-[var(--border)] bg-[var(--bg)] p-3">
+                <div class="flex items-center gap-2 text-xs text-[var(--muted)]">
+                  <span class="h-2 w-2 rounded-full bg-[#39d353]"></span>
+                  Security terminal (ASCII animation)
                 </div>
-                <h3 class="font-semibold group-hover:text-white">${t.name}</h3>
+                <pre
+                  id="ascii-gif"
+                  class="mt-2 text-xs leading-4 text-[#9cdcfe]"
+                ></pre>
               </div>
-              <p class="mt-3 text-sm text-white/70 leading-relaxed">${t.desc}</p>
             </div>
-            <i data-lucide="arrow-up-right" class="h-4 w-4 text-white/50 group-hover:text-white/80"></i>
           </div>
 
-          <div class="mt-4 flex flex-wrap gap-2 text-xs text-white/70">
-            ${tagPills}
+            <div class="mt-6">
+              <div class="mb-3 flex items-center justify-between">
+                <h3 class="text-base font-semibold">Popular repositories</h3>
+                <a class="text-sm text-[var(--link)] hover:underline" href="#">Customize your pins</a>
+              </div>
+              <div id="repo-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <p class="text-sm text-[var(--muted)]">Loading repositories...</p>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <div class="mb-3 flex items-center justify-between">
+                <h3 class="text-base font-semibold">Projects</h3>
+                <a id="view-projects" class="text-sm text-[var(--link)] hover:underline" href="#"
+                  >View all projects</a
+                >
+              </div>
+              <div id="projects-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <p class="text-sm text-[var(--muted)]">Loading projects...</p>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-md border border-[var(--border)] bg-[var(--surface)] p-4">
+              <div class="mb-3 flex items-center justify-between">
+                <h3 class="text-base font-semibold">Contributions</h3>
+                <span class="text-xs text-[var(--muted)]">Last 6 months</span>
+              </div>
+              <div class="overflow-x-auto">
+                <div id="contrib-grid" class="grid grid-rows-7 grid-flow-col gap-[3px]"></div>
+              </div>
+              <div class="mt-3 flex items-center gap-2 text-xs text-[var(--muted)]">
+                <span>Less</span>
+                <div class="flex items-center gap-1">
+                  <span class="h-3 w-3 rounded-sm bg-[#161b22]"></span>
+                  <span class="h-3 w-3 rounded-sm bg-[#0e4429]"></span>
+                  <span class="h-3 w-3 rounded-sm bg-[#006d32]"></span>
+                  <span class="h-3 w-3 rounded-sm bg-[#26a641]"></span>
+                  <span class="h-3 w-3 rounded-sm bg-[#39d353]"></span>
+                </div>
+                <span>More</span>
+              </div>
+            </div>
           </div>
-        </a>
-      `;
-    }
 
-    function renderTools() {
-      if (!toolGrid) return;
-      const q = (toolSearch?.value || toolSearchMobile?.value || '').trim().toLowerCase();
+          <div id="repos-pane" class="hidden">
+            <div class="flex flex-col gap-4 border-b border-[var(--border)] pb-4">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold">Repositories</h2>
+                <button
+                  class="rounded-md border border-[var(--border)] bg-[#238636] px-3 py-1 text-sm font-medium text-white hover:bg-[#2ea043]"
+                >
+                  New
+                </button>
+              </div>
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <input
+                  id="repo-search"
+                  class="w-full rounded-md border border-[var(--border)] bg-[var(--input-bg)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[#6e7681] focus:outline-none md:max-w-md"
+                  type="search"
+                  placeholder="Find a repository..."
+                />
+                <div class="flex flex-wrap items-center gap-2 text-sm">
+                  <button
+                    class="rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]"
+                  >
+                    Type
+                  </button>
+                  <button
+                    class="rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]"
+                  >
+                    Language
+                  </button>
+                  <button
+                    class="rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]"
+                  >
+                    Sort
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="repo-list" class="divide-y divide-[var(--border)]">
+              <p class="py-4 text-sm text-[var(--muted)]">Loading repositories...</p>
+            </div>
+          </div>
 
-      const filtered = TOOLS.filter(t => {
-        const matchTag = (activeTag === 'All') || (t.tags || []).includes(activeTag);
-        const blob = `${t.name} ${t.desc} ${(t.tags || []).join(' ')}`.toLowerCase();
-        const matchQ = !q || blob.includes(q);
-        return matchTag && matchQ;
+          <div id="projects-pane" class="hidden">
+            <div class="flex flex-col gap-4 border-b border-[var(--border)] pb-4">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold">Projects</h2>
+                <button
+                  class="rounded-md border border-[var(--border)] bg-[#238636] px-3 py-1 text-sm font-medium text-white hover:bg-[#2ea043]"
+                >
+                  New project
+                </button>
+              </div>
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <input
+                  id="project-search"
+                  class="w-full rounded-md border border-[var(--border)] bg-[var(--input-bg)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[#6e7681] focus:outline-none md:max-w-md"
+                  type="search"
+                  placeholder="Find a project..."
+                />
+              </div>
+            </div>
+            <div
+              id="project-list"
+              class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+            >
+              <p class="text-sm text-[var(--muted)]">Loading projects...</p>
+            </div>
+          </div>
+
+          <div id="packages-pane" class="hidden">
+            <div class="flex flex-col gap-4 border-b border-[var(--border)] pb-4">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold">Packages</h2>
+                <a
+                  class="rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-sm font-medium text-[var(--text)] hover:bg-[var(--button-hover)]"
+                  href="https://github.com/AATHILDUCKY/ducky-pwn-docs"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View repo
+                </a>
+              </div>
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <input
+                  id="package-search"
+                  class="w-full rounded-md border border-[var(--border)] bg-[var(--input-bg)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[#6e7681] focus:outline-none md:max-w-md"
+                  type="search"
+                  placeholder="Find a package..."
+                />
+              </div>
+            </div>
+            <div id="packages-list" class="divide-y divide-[var(--border)]">
+              <p class="py-4 text-sm text-[var(--muted)]">Loading packages...</p>
+            </div>
+          </div>
+
+          <div id="stars-pane" class="hidden">
+            <div class="flex flex-col gap-4 border-b border-[var(--border)] pb-4">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold">Stars</h2>
+                <a
+                  class="rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-sm font-medium text-[var(--text)] hover:bg-[var(--button-hover)]"
+                  href="https://github.com/stars"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View on GitHub
+                </a>
+              </div>
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <input
+                  id="star-search"
+                  class="w-full rounded-md border border-[var(--border)] bg-[var(--input-bg)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[#6e7681] focus:outline-none md:max-w-md"
+                  type="search"
+                  placeholder="Find a starred repository..."
+                />
+              </div>
+            </div>
+            <div id="stars-list" class="divide-y divide-[var(--border)]">
+              <p class="py-4 text-sm text-[var(--muted)]">Loading stars...</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="border-t border-[var(--border)] bg-[var(--surface)]">
+      <div class="mx-auto flex max-w-[1280px] flex-col items-center gap-3 px-4 py-6 text-xs text-[var(--muted)] md:flex-row md:justify-between">
+        <div class="flex items-center gap-2">
+          <i class="octicon octicon-mark-github"></i>
+          <span>© 2026 GitHub, Inc.</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <a class="hover:text-[#f0f6fc]" href="#">Terms</a>
+          <a class="hover:text-[#f0f6fc]" href="#">Privacy</a>
+          <a class="hover:text-[#f0f6fc]" href="#">Security</a>
+          <a class="hover:text-[#f0f6fc]" href="#">Status</a>
+          <a class="hover:text-[#f0f6fc]" href="#">Docs</a>
+          <a class="hover:text-[#f0f6fc]" href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const data = [
+        0, 0, 1, 2, 1, 0, 0, 1, 2, 3, 2, 1, 0, 0, 1, 2, 1, 0, 0, 1,
+        0, 1, 2, 3, 4, 2, 1, 0, 0, 1, 0, 0, 1, 2, 3, 2, 1, 0, 0, 1,
+        1, 2, 2, 3, 1, 0, 0, 1, 2, 4, 3, 2, 1, 0, 0, 1, 2, 2, 1, 0,
+        0, 1, 2, 3, 2, 1, 0, 0, 1, 2, 3, 4, 2, 1, 0, 1, 0, 1, 2, 3,
+        0, 1, 2, 3, 2, 1, 0, 0, 1, 2, 3, 2, 1, 0, 0, 1, 2, 3, 4, 2,
+        1, 0, 0, 1, 2, 1, 0, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2,
+        1, 0, 0, 1, 2, 2, 1, 0, 0, 1, 2, 3, 2, 1, 0, 0, 1, 2, 1, 0,
+      ];
+      const colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"];
+      const grid = document.getElementById("contrib-grid");
+      data.forEach((level) => {
+        const cell = document.createElement("div");
+        cell.className = "h-3 w-3 rounded-sm";
+        cell.style.backgroundColor = colors[level];
+        grid.appendChild(cell);
       });
 
-      toolGrid.innerHTML = filtered.map(toolCard).join('') || `
-        <div class="rounded-3xl glass p-6 text-sm text-white/70">
-          No tools found. Try clearing search or selecting a different category.
-        </div>
-      `;
-      lucide.createIcons();
-    }
+      const asciiFrames = [
+        `<span class=\"text-amber-400\">   __      </span><span class=\"text-sky-400\">__</span>\n<span class=\"text-amber-400\">  /o \\___</span><span class=\"text-sky-400\"> (__) \\\\</span>\n<span class=\"text-amber-400\">  \\\\__/ _/  </span><span class=\"text-sky-400\"> //  \\\\\\\\</span>\n<span class=\"text-amber-400\">   /_/     </span><span class=\"text-sky-400\">//____\\\\\\\\</span>\n<span class=\"text-amber-400\">  /_/\\\\</span><span class=\"text-sky-400\">  _  _   </span>\n<span class=\"text-amber-400\"> /_/  \\\\_/ </span><span class=\"text-sky-400\">(_)(_)  </span>\n<span class=\"text-amber-400 font-semibold\">  DUCKY </span><span class=\"text-sky-300 font-semibold\">SECURITY ENTHUSIAST</span>\n\n<span class=\"text-emerald-400\"> ETHICAL MODE</span>  [##--------]\n<span class=\"text-cyan-300\"> TARGET: DEFENSE</span> | <span class=\"text-emerald-300\">STATUS: SHARP</span>`,
+        `<span class=\"text-amber-400\">   __      </span><span class=\"text-sky-400\">__</span>\n<span class=\"text-amber-400\">  /o \\___</span><span class=\"text-sky-400\"> (__) \\\\</span>\n<span class=\"text-amber-400\">  \\\\__/ _/  </span><span class=\"text-sky-400\"> //  \\\\\\\\</span>\n<span class=\"text-amber-400\">   /_/     </span><span class=\"text-sky-400\">//____\\\\\\\\</span>\n<span class=\"text-amber-400\">  /_/\\\\</span><span class=\"text-sky-400\">  _  _   </span>\n<span class=\"text-amber-400\"> /_/  \\\\_/ </span><span class=\"text-sky-400\">(_)(_)  </span>\n<span class=\"text-amber-400 font-semibold\">  DUCKY </span><span class=\"text-sky-300 font-semibold\">SECURITY ENTHUSIAST</span>\n\n<span class=\"text-emerald-400\"> ETHICAL MODE</span>  [#####-----]\n<span class=\"text-cyan-300\"> TARGET: DEFENSE</span> | <span class=\"text-emerald-300\">STATUS: LOCKED</span>`,
+        `<span class=\"text-amber-400\">   __      </span><span class=\"text-sky-400\">__</span>\n<span class=\"text-amber-400\">  /o \\___</span><span class=\"text-sky-400\"> (__) \\\\</span>\n<span class=\"text-amber-400\">  \\\\__/ _/  </span><span class=\"text-sky-400\"> //  \\\\\\\\</span>\n<span class=\"text-amber-400\">   /_/     </span><span class=\"text-sky-400\">//____\\\\\\\\</span>\n<span class=\"text-amber-400\">  /_/\\\\</span><span class=\"text-sky-400\">  _  _   </span>\n<span class=\"text-amber-400\"> /_/  \\\\_/ </span><span class=\"text-sky-400\">(_)(_)  </span>\n<span class=\"text-amber-400 font-semibold\">  DUCKY </span><span class=\"text-sky-300 font-semibold\">SECURITY ENTHUSIAST</span>\n\n<span class=\"text-emerald-400\"> ETHICAL MODE</span>  [##########]\n<span class=\"text-cyan-300\"> TARGET: DEFENSE</span> | <span class=\"text-emerald-300\">STATUS: SECURED</span>`,
+      ];
+      const asciiEl = document.getElementById("ascii-gif");
+      if (asciiEl) {
+        let asciiIndex = 0;
+        asciiEl.innerHTML = asciiFrames[0];
+        setInterval(() => {
+          asciiIndex = (asciiIndex + 1) % asciiFrames.length;
+          asciiEl.innerHTML = asciiFrames[asciiIndex];
+        }, 700);
+      }
 
-    function syncSearchInputs() {
-      const v = (this.value || '');
-      if (this === toolSearch && toolSearchMobile) toolSearchMobile.value = v;
-      if (this === toolSearchMobile && toolSearch) toolSearch.value = v;
-      renderTools();
-    }
+      const repoGrid = document.getElementById("repo-grid");
+      const repoList = document.getElementById("repo-list");
+      const projectsGrid = document.getElementById("projects-grid");
+      const projectList = document.getElementById("project-list");
+      const repoCount = document.getElementById("repo-count");
+      const projectCount = document.getElementById("project-count");
+      const packageCount = document.getElementById("package-count");
+      const starCount = document.getElementById("star-count");
+      const tabOverview = document.getElementById("tab-overview");
+      const tabRepositories = document.getElementById("tab-repositories");
+      const tabProjects = document.getElementById("tab-projects");
+      const tabPackages = document.getElementById("tab-packages");
+      const tabStars = document.getElementById("tab-stars");
+      const overviewPane = document.getElementById("overview-pane");
+      const reposPane = document.getElementById("repos-pane");
+      const projectsPane = document.getElementById("projects-pane");
+      const packagesPane = document.getElementById("packages-pane");
+      const starsPane = document.getElementById("stars-pane");
+      const repoSearch = document.getElementById("repo-search");
+      const projectSearch = document.getElementById("project-search");
+      const viewProjects = document.getElementById("view-projects");
+      const packageSearch = document.getElementById("package-search");
+      const packagesList = document.getElementById("packages-list");
+      const starSearch = document.getElementById("star-search");
+      const starsList = document.getElementById("stars-list");
+      let repoData = [];
+      let projectData = [];
+      let packageData = [];
+      let starData = [];
+      let reposPromise;
+      let projectsPromise;
+      let packagesPromise;
+      let starsPromise;
 
-    toolSearch?.addEventListener('input', syncSearchInputs);
-    toolSearchMobile?.addEventListener('input', syncSearchInputs);
+      const el = (tag, className, text) => {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined && text !== null) node.textContent = text;
+        return node;
+      };
 
-    renderTags();
-    renderTools();
-  </script>
+      const renderRepos = (repos) => {
+        repoGrid.innerHTML = "";
 
-  <!-- CV reference used to populate content -->
-  :contentReference[oaicite:0]{index=0}
-</body>
+        if (!Array.isArray(repos) || repos.length === 0) {
+          repoGrid.appendChild(
+            el("p", "text-sm text-[var(--muted)]", "No repositories to show.")
+          );
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        repos.forEach((repo) => {
+          const article = el(
+            "article",
+            "rounded-md border border-[var(--border)] bg-[var(--surface)] p-4"
+          );
+
+          const header = el("div", "flex items-center gap-2");
+          header.appendChild(el("i", "octicon octicon-repo"));
+
+          const nameLink = el("a", "font-semibold text-[var(--link)] hover:underline", repo.name || "Untitled");
+          nameLink.href = repo.url || "#";
+          nameLink.target = "_blank";
+          nameLink.rel = "noopener";
+          header.appendChild(nameLink);
+
+          const badge = el(
+            "span",
+            "ml-auto rounded-full border border-[var(--border)] bg-[var(--badge)] px-2 text-xs text-[var(--text)]",
+            repo.visibility || "Public"
+          );
+          header.appendChild(badge);
+
+          const desc = el("p", "mt-2 text-sm text-[var(--muted)]", repo.description || "");
+
+          const meta = el("div", "mt-3 flex items-center gap-4 text-xs text-[var(--muted)]");
+          if (repo.language) {
+            const lang = el("span", "flex items-center gap-1");
+            const dot = el("span", "h-2 w-2 rounded-full");
+            dot.style.background = repo.languageColor || "#8b949e";
+            lang.appendChild(dot);
+            lang.appendChild(document.createTextNode(` ${repo.language}`));
+            meta.appendChild(lang);
+          }
+          if (repo.stars !== undefined && repo.stars !== null && repo.stars !== "") {
+            const stars = el("span", "flex items-center gap-1");
+            stars.appendChild(el("i", "octicon octicon-star"));
+            stars.appendChild(document.createTextNode(` ${repo.stars}`));
+            meta.appendChild(stars);
+          }
+
+          article.appendChild(header);
+          article.appendChild(desc);
+          article.appendChild(meta);
+          fragment.appendChild(article);
+        });
+
+        repoGrid.appendChild(fragment);
+      };
+
+      const renderRepoList = (repos) => {
+        repoList.innerHTML = "";
+
+        if (!Array.isArray(repos) || repos.length === 0) {
+          repoList.appendChild(
+            el("p", "py-4 text-sm text-[var(--muted)]", "No repositories to show.")
+          );
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        repos.forEach((repo) => {
+          const item = el("article", "py-4");
+
+          const titleRow = el("div", "flex flex-wrap items-center gap-2");
+          const nameLink = el("a", "text-base font-semibold text-[var(--link)] hover:underline", repo.name || "Untitled");
+          nameLink.href = repo.url || "#";
+          nameLink.target = "_blank";
+          nameLink.rel = "noopener";
+          titleRow.appendChild(nameLink);
+
+          const badge = el(
+            "span",
+            "rounded-full border border-[var(--border)] px-2 text-xs text-[var(--muted)]",
+            repo.visibility || "Public"
+          );
+          titleRow.appendChild(badge);
+
+          const desc = el("p", "mt-2 text-sm text-[var(--muted)]", repo.description || "");
+
+          const meta = el("div", "mt-3 flex flex-wrap items-center gap-4 text-xs text-[var(--muted)]");
+          if (repo.language) {
+            const lang = el("span", "flex items-center gap-1");
+            const dot = el("span", "h-2 w-2 rounded-full");
+            dot.style.background = repo.languageColor || "#8b949e";
+            lang.appendChild(dot);
+            lang.appendChild(document.createTextNode(` ${repo.language}`));
+            meta.appendChild(lang);
+          }
+          if (repo.stars !== undefined && repo.stars !== null && repo.stars !== "") {
+            const stars = el("span", "flex items-center gap-1");
+            stars.appendChild(el("i", "octicon octicon-star"));
+            stars.appendChild(document.createTextNode(` ${repo.stars}`));
+            meta.appendChild(stars);
+          }
+
+          item.appendChild(titleRow);
+          item.appendChild(desc);
+          item.appendChild(meta);
+          fragment.appendChild(item);
+        });
+
+        repoList.appendChild(fragment);
+      };
+
+      const renderPackagesList = (packages) => {
+        packagesList.innerHTML = "";
+
+        if (!Array.isArray(packages) || packages.length === 0) {
+          packagesList.appendChild(
+            el("p", "py-4 text-sm text-[var(--muted)]", "No packages to show.")
+          );
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        packages.forEach((pkg) => {
+          const item = el("article", "py-4");
+
+          const titleRow = el("div", "flex flex-wrap items-center gap-2");
+          const nameText = pkg.name ? `${pkg.name}` : "Untitled";
+          const nameLink = el(
+            "a",
+            "text-base font-semibold text-[var(--link)] hover:underline",
+            nameText
+          );
+          nameLink.href = pkg.repo || "#";
+          nameLink.target = "_blank";
+          nameLink.rel = "noopener";
+          titleRow.appendChild(nameLink);
+
+          const version = el(
+            "span",
+            "rounded-full border border-[var(--border)] px-2 text-xs text-[var(--muted)]",
+            pkg.version || "v0.0.0"
+          );
+          titleRow.appendChild(version);
+
+          const desc = el("p", "mt-2 text-sm text-[var(--muted)]", pkg.description || "");
+
+          const downloads = el("div", "mt-3 flex flex-wrap items-center gap-2 text-xs");
+          const mkLink = (label, href) => {
+            const link = el(
+              "a",
+              "rounded-md border border-[var(--border)] px-2 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]",
+              label
+            );
+            link.href = href;
+            link.target = "_blank";
+            link.rel = "noopener";
+            return link;
+          };
+
+          if (pkg.downloads?.deb) downloads.appendChild(mkLink(".deb", pkg.downloads.deb));
+          if (pkg.downloads?.snap) downloads.appendChild(mkLink(".snap", pkg.downloads.snap));
+          if (pkg.downloads?.appimage)
+            downloads.appendChild(mkLink("AppImage", pkg.downloads.appimage));
+          if (pkg.downloads?.exe) downloads.appendChild(mkLink(".exe", pkg.downloads.exe));
+
+          item.appendChild(titleRow);
+          item.appendChild(desc);
+          item.appendChild(downloads);
+          fragment.appendChild(item);
+        });
+
+        packagesList.appendChild(fragment);
+      };
+
+      const renderStarsList = (stars) => {
+        starsList.innerHTML = "";
+
+        if (!Array.isArray(stars) || stars.length === 0) {
+          starsList.appendChild(
+            el("p", "py-4 text-sm text-[var(--muted)]", "No starred repositories to show.")
+          );
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        stars.forEach((repo) => {
+          const item = el("article", "py-4");
+
+          const titleRow = el("div", "flex flex-wrap items-center gap-2");
+          const nameText = repo.owner ? `${repo.owner}/${repo.name}` : repo.name || "Untitled";
+          const nameLink = el(
+            "a",
+            "text-base font-semibold text-[var(--link)] hover:underline",
+            nameText
+          );
+          nameLink.href = repo.url || "#";
+          nameLink.target = "_blank";
+          nameLink.rel = "noopener";
+          titleRow.appendChild(nameLink);
+
+          const badge = el(
+            "span",
+            "rounded-full border border-[var(--border)] px-2 text-xs text-[var(--muted)]",
+            repo.visibility || "Public"
+          );
+          titleRow.appendChild(badge);
+
+          const desc = el("p", "mt-2 text-sm text-[var(--muted)]", repo.description || "");
+
+          const meta = el("div", "mt-3 flex flex-wrap items-center gap-4 text-xs text-[var(--muted)]");
+          if (repo.language) {
+            const lang = el("span", "flex items-center gap-1");
+            const dot = el("span", "h-2 w-2 rounded-full");
+            dot.style.background = repo.languageColor || "#8b949e";
+            lang.appendChild(dot);
+            lang.appendChild(document.createTextNode(` ${repo.language}`));
+            meta.appendChild(lang);
+          }
+          if (repo.stars !== undefined && repo.stars !== null && repo.stars !== "") {
+            const starsMeta = el("span", "flex items-center gap-1");
+            starsMeta.appendChild(el("i", "octicon octicon-star"));
+            starsMeta.appendChild(document.createTextNode(` ${repo.stars}`));
+            meta.appendChild(starsMeta);
+          }
+
+          item.appendChild(titleRow);
+          item.appendChild(desc);
+          item.appendChild(meta);
+          fragment.appendChild(item);
+        });
+
+        starsList.appendChild(fragment);
+      };
+
+      const renderProjectsGrid = (container, projects) => {
+        container.innerHTML = "";
+
+        if (!Array.isArray(projects) || projects.length === 0) {
+          container.appendChild(
+            el("p", "text-sm text-[var(--muted)]", "No projects to show.")
+          );
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        projects.forEach((project) => {
+          const article = el(
+            "article",
+            "flex h-full flex-col overflow-hidden rounded-md border border-[var(--border)] bg-[var(--surface)]"
+          );
+
+          const image = el("img", "h-40 w-full object-cover");
+          image.src = project.image || "https://placehold.co/800x500/0d1117/58a6ff?text=Project";
+          image.alt = `${project.name || "Project"} feature image`;
+
+          const body = el("div", "flex flex-1 flex-col p-4");
+          body.appendChild(el("h4", "text-base font-semibold", project.name || "Untitled project"));
+          body.appendChild(
+            el("p", "mt-2 text-sm text-[var(--muted)]", project.description || "")
+          );
+
+          const actions = el("div", "mt-auto flex flex-wrap gap-2 text-sm");
+          const live = el(
+            "a",
+            "rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]",
+            "Live demo"
+          );
+          live.href = project.link || "#";
+          live.target = "_blank";
+          live.rel = "noopener";
+
+          const github = el(
+            "a",
+            "rounded-md border border-[var(--border)] px-3 py-1 text-[var(--link)] hover:underline",
+            "View GitHub"
+          );
+          github.href = project.github || "#";
+          github.target = "_blank";
+          github.rel = "noopener";
+
+          actions.appendChild(live);
+          actions.appendChild(github);
+
+          body.appendChild(actions);
+          article.appendChild(image);
+          article.appendChild(body);
+          fragment.appendChild(article);
+        });
+
+        container.appendChild(fragment);
+      };
+
+      const loadRepos = async () => {
+        try {
+          const res = await fetch("repositories.json");
+          if (!res.ok) throw new Error("Failed to load repositories.json");
+          const repos = await res.json();
+          repoData = Array.isArray(repos) ? repos : [];
+          repoCount.textContent = repoData.length;
+        } catch (err) {
+          repoData = [];
+          repoCount.textContent = "0";
+        }
+      };
+
+      const loadProjects = async () => {
+        try {
+          const res = await fetch("projects.json");
+          if (!res.ok) throw new Error("Failed to load projects.json");
+          const projects = await res.json();
+          projectData = Array.isArray(projects) ? projects : [];
+          projectCount.textContent = projectData.length;
+        } catch (err) {
+          projectData = [];
+          projectCount.textContent = "0";
+        }
+      };
+
+      const loadPackages = async () => {
+        try {
+          const res = await fetch("packages.json");
+          if (!res.ok) throw new Error("Failed to load packages.json");
+          const packages = await res.json();
+          packageData = Array.isArray(packages) ? packages : [];
+          packageCount.textContent = packageData.length;
+        } catch (err) {
+          packageData = [];
+          packageCount.textContent = "0";
+        }
+      };
+
+      const loadStars = async () => {
+        try {
+          const res = await fetch("stars.json");
+          if (!res.ok) throw new Error("Failed to load stars.json");
+          const stars = await res.json();
+          starData = Array.isArray(stars) ? stars : [];
+          starCount.textContent = starData.length;
+        } catch (err) {
+          starData = [];
+          starCount.textContent = "0";
+        }
+      };
+
+      const ensureReposLoaded = () => {
+        if (!reposPromise) reposPromise = loadRepos();
+        return reposPromise;
+      };
+
+      const ensureProjectsLoaded = () => {
+        if (!projectsPromise) projectsPromise = loadProjects();
+        return projectsPromise;
+      };
+
+      const ensurePackagesLoaded = () => {
+        if (!packagesPromise) packagesPromise = loadPackages();
+        return packagesPromise;
+      };
+
+      const ensureStarsLoaded = () => {
+        if (!starsPromise) starsPromise = loadStars();
+        return starsPromise;
+      };
+
+      const setActiveTab = (tab, updateHash = true) => {
+        const active =
+          "border-b-2 border-[var(--accent)] pb-3 font-semibold text-[var(--text)]";
+        const inactive =
+          "border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]";
+
+        tabOverview.className = inactive;
+        tabRepositories.className = inactive;
+        tabProjects.className = inactive;
+        tabPackages.className = inactive;
+        tabStars.className = inactive;
+        overviewPane.classList.add("hidden");
+        reposPane.classList.add("hidden");
+        projectsPane.classList.add("hidden");
+        packagesPane.classList.add("hidden");
+        starsPane.classList.add("hidden");
+
+        if (tab === "overview") {
+          tabOverview.className = active;
+          overviewPane.classList.remove("hidden");
+          if (updateHash) window.location.hash = "overview";
+          ensureReposLoaded().then(() => {
+            if (!overviewPane.classList.contains("hidden")) {
+              renderRepos(repoData.slice(0, 6));
+            }
+          });
+          ensureProjectsLoaded().then(() => {
+            if (!overviewPane.classList.contains("hidden")) {
+              renderProjectsGrid(projectsGrid, projectData.slice(0, 6));
+            }
+          });
+          return;
+        }
+        if (tab === "repos") {
+          tabRepositories.className = active;
+          reposPane.classList.remove("hidden");
+          if (updateHash) window.location.hash = "repositories";
+          ensureReposLoaded().then(() => {
+            if (!reposPane.classList.contains("hidden")) {
+              renderRepoList(repoData);
+            }
+          });
+          return;
+        }
+        if (tab === "projects") {
+          tabProjects.className = active;
+          projectsPane.classList.remove("hidden");
+          if (updateHash) window.location.hash = "projects";
+          ensureProjectsLoaded().then(() => {
+            if (!projectsPane.classList.contains("hidden")) {
+              renderProjectsGrid(projectList, projectData);
+            }
+          });
+          return;
+        }
+        if (tab === "packages") {
+          tabPackages.className = active;
+          packagesPane.classList.remove("hidden");
+          if (updateHash) window.location.hash = "packages";
+          ensurePackagesLoaded().then(() => {
+            if (!packagesPane.classList.contains("hidden")) {
+              renderPackagesList(packageData);
+            }
+          });
+          return;
+        }
+        tabStars.className = active;
+        starsPane.classList.remove("hidden");
+        if (updateHash) window.location.hash = "stars";
+        ensureStarsLoaded().then(() => {
+          if (!starsPane.classList.contains("hidden")) {
+            renderStarsList(starData);
+          }
+        });
+      };
+
+      tabOverview.addEventListener("click", (event) => {
+        event.preventDefault();
+        setActiveTab("overview");
+      });
+
+      tabRepositories.addEventListener("click", (event) => {
+        event.preventDefault();
+        setActiveTab("repos");
+      });
+
+      tabProjects.addEventListener("click", (event) => {
+        event.preventDefault();
+        setActiveTab("projects");
+      });
+
+      tabPackages.addEventListener("click", (event) => {
+        event.preventDefault();
+        setActiveTab("packages");
+      });
+
+      tabStars.addEventListener("click", (event) => {
+        event.preventDefault();
+        setActiveTab("stars");
+      });
+
+      repoSearch.addEventListener("input", () => {
+        const term = repoSearch.value.trim().toLowerCase();
+        if (!term) {
+          renderRepoList(repoData);
+          return;
+        }
+        const filtered = repoData.filter((repo) => {
+          const name = (repo.name || "").toLowerCase();
+          const desc = (repo.description || "").toLowerCase();
+          return name.includes(term) || desc.includes(term);
+        });
+        renderRepoList(filtered);
+      });
+
+      projectSearch.addEventListener("input", () => {
+        const term = projectSearch.value.trim().toLowerCase();
+        if (!term) {
+          renderProjectsGrid(projectList, projectData);
+          return;
+        }
+        const filtered = projectData.filter((project) => {
+          const name = (project.name || "").toLowerCase();
+          const desc = (project.description || "").toLowerCase();
+          return name.includes(term) || desc.includes(term);
+        });
+        renderProjectsGrid(projectList, filtered);
+      });
+
+      packageSearch.addEventListener("input", () => {
+        const term = packageSearch.value.trim().toLowerCase();
+        if (!term) {
+          renderPackagesList(packageData);
+          return;
+        }
+        const filtered = packageData.filter((pkg) => {
+          const name = (pkg.name || "").toLowerCase();
+          const desc = (pkg.description || "").toLowerCase();
+          return name.includes(term) || desc.includes(term);
+        });
+        renderPackagesList(filtered);
+      });
+
+      starSearch.addEventListener("input", () => {
+        const term = starSearch.value.trim().toLowerCase();
+        if (!term) {
+          renderStarsList(starData);
+          return;
+        }
+        const filtered = starData.filter((repo) => {
+          const name = (repo.name || "").toLowerCase();
+          const owner = (repo.owner || "").toLowerCase();
+          const desc = (repo.description || "").toLowerCase();
+          return name.includes(term) || owner.includes(term) || desc.includes(term);
+        });
+        renderStarsList(filtered);
+      });
+
+      viewProjects.addEventListener("click", (event) => {
+        event.preventDefault();
+        ensureProjectsLoaded();
+        setActiveTab("projects");
+      });
+
+      const hash = window.location.hash.replace("#", "");
+      if (hash === "repositories") {
+        setActiveTab("repos", false);
+      } else if (hash === "projects") {
+        setActiveTab("projects", false);
+      } else if (hash === "packages") {
+        setActiveTab("packages", false);
+      } else if (hash === "stars") {
+        setActiveTab("stars", false);
+      } else {
+        setActiveTab("overview", false);
+      }
+
+      window.addEventListener("hashchange", () => {
+        const next = window.location.hash.replace("#", "");
+        if (next === "repositories") {
+          setActiveTab("repos", false);
+        } else if (next === "projects") {
+          setActiveTab("projects", false);
+        } else if (next === "packages") {
+          setActiveTab("packages", false);
+        } else if (next === "stars") {
+          setActiveTab("stars", false);
+        } else {
+          setActiveTab("overview", false);
+        }
+      });
+      Promise.all([
+        ensureReposLoaded(),
+        ensureProjectsLoaded(),
+        ensurePackagesLoaded(),
+        ensureStarsLoaded(),
+      ]);
+    </script>
+  </body>
 </html>

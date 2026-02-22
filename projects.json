@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Duck Leak Scanner",
+    "description": "Scan GitHub repositories and web apps for exposed secrets with a clean dashboard.",
+    "link": "https://github.com/AATHILDUCKY/duck-duck-leaks",
+    "github": "https://github.com/AATHILDUCKY/duck-duck-leaks",
+    "image": "https://placehold.co/800x500/0d1117/58a6ff?text=Duck+Leak+Scanner"
+  },
+  {
+    "name": "Subdomain Status Monitor",
+    "description": "Check and track subdomain status codes fast with a lightweight CLI.",
+    "link": "https://github.com/AATHILDUCKY/subdomain_url_status",
+    "github": "https://github.com/AATHILDUCKY/subdomain_url_status",
+    "image": "https://placehold.co/800x500/0d1117/f78166?text=Subdomain+Monitor"
+  },
+  {
+    "name": "XSS Payload Lab",
+    "description": "Curated XSS payloads and notes for testing and research.",
+    "link": "https://github.com/AATHILDUCKY/xss",
+    "github": "https://github.com/AATHILDUCKY/xss",
+    "image": "https://placehold.co/800x500/0d1117/39d353?text=XSS+Payload+Lab"
+  }
+]
