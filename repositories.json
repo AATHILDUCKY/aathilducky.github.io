@@ -153,6 +153,15 @@
     "url": "https://github.com/AATHILDUCKY/audio-secret-finder"
   },
   {
+    "name": "client-site-secret-finder",
+    "description": "Find exposed secrets and sensitive patterns from client-side websites.",
+    "language": "JavaScript",
+    "languageColor": "#f1e05a",
+    "stars": 0,
+    "visibility": "Public",
+    "url": "https://github.com/AATHILDUCKY/client-site-secret-finder"
+  },
+  {
     "name": "url-shortener-using-flask-and-mysql",
     "description": "URL shortener built with Flask and MySQL.",
     "language": "Python",

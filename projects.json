@@ -35,6 +35,13 @@
     "image": "https://placehold.co/800x500/0d1117/f78166?text=JWT+Analyzer"
   },
   {
+    "name": "Client Site Secret Finder",
+    "description": "Find exposed secrets and sensitive patterns in client-side websites.",
+    "link": "https://aathilducky.com/client-site-secret-finder/",
+    "github": "https://github.com/AATHILDUCKY/client-site-secret-finder",
+    "image": "https://placehold.co/800x500/0d1117/58a6ff?text=Client+Secret+Finder"
+  },
+  {
     "name": "Ducky Pwn Docs",
     "description": "Electron intelligence command center with local SQLite persistence.",
     "link": "https://github.com/AATHILDUCKY/ducky-pwn-docs",
