@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AATHILDUCKY · GitHub Profile (Clone)</title>
+    <title>AATHILDUCKY · Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -14,30 +14,165 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
       :root {
         color-scheme: dark;
-        --bg: #0d1117;
-        --surface: #161b22;
-        --border: #30363d;
-        --text: #c9d1d9;
-        --muted: #8b949e;
-        --link: #58a6ff;
-        --accent: #f78166;
-        --button: #21262d;
-        --button-hover: #30363d;
-        --badge: #21262d;
-        --header: #161b22;
-        --input-bg: #0d1117;
-        --input-border: #30363d;
+        --bg: #070b16;
+        --surface: #10182b;
+        --surface-strong: #18233a;
+        --border: #263753;
+        --text: #e5edf9;
+        --muted: #9eb0cc;
+        --link: #8bd5ff;
+        --accent: #4fd7b3;
+        --button: #1a2742;
+        --button-hover: #24345b;
+        --badge: #223255;
+        --header: rgba(7, 11, 22, 0.75);
+        --input-bg: #10182b;
+        --input-border: #33496f;
+      }
+      * {
+        box-sizing: border-box;
       }
       body {
-        font-family: "Mona Sans", "Hubot Sans", ui-sans-serif, system-ui, -apple-system,
-          "Segoe UI", Helvetica, Arial, sans-serif;
+        font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at 8% 15%, rgba(79, 215, 179, 0.2), transparent 34%),
+          radial-gradient(circle at 92% 5%, rgba(139, 213, 255, 0.2), transparent 38%),
+          radial-gradient(circle at 50% 120%, rgba(102, 132, 255, 0.24), transparent 42%),
+          var(--bg);
+        min-height: 100vh;
+      }
+      h1, h2, h3, h4 {
+        font-family: "Space Grotesk", "Manrope", ui-sans-serif, sans-serif;
+        letter-spacing: 0.015em;
+      }
+      a {
+        transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease,
+          transform 180ms ease;
+      }
+      .portfolio-shell {
+        position: relative;
+      }
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(126, 161, 218, 0.26);
+      }
+      .site-main {
+        padding-top: 1.75rem;
+        padding-bottom: 2.5rem;
+      }
+      .top-strip {
+        border-bottom: 1px solid rgba(126, 161, 218, 0.24);
+      }
+      .tabs-nav {
+        scrollbar-width: thin;
+      }
+      .tab-link {
+        border-bottom: 2px solid transparent;
+        color: var(--muted);
+        font-weight: 600;
+        padding-bottom: 0.85rem;
+      }
+      .tab-link:hover {
+        color: var(--text);
+      }
+      .tab-link.active {
+        border-color: var(--accent);
+        color: var(--text);
+      }
+      .content-layout {
+        align-items: start;
+      }
+      .profile-sidebar {
+        position: sticky;
+        top: 6.5rem;
+        border: 1px solid rgba(126, 161, 218, 0.26);
+        background: linear-gradient(180deg, rgba(24, 35, 58, 0.8), rgba(12, 19, 33, 0.72));
+        border-radius: 1.25rem;
+        padding: 1rem;
+        box-shadow: 0 16px 40px rgba(6, 10, 20, 0.45);
+      }
+      .content-panel {
+        border: 1px solid rgba(126, 161, 218, 0.22);
+        border-radius: 1.25rem;
+        background: linear-gradient(180deg, rgba(16, 24, 43, 0.78), rgba(10, 16, 30, 0.85));
+        padding: 1rem;
+        box-shadow: 0 18px 45px rgba(5, 8, 18, 0.4);
+      }
+      .panel-card {
+        border: 1px solid rgba(126, 161, 218, 0.24);
+        background: linear-gradient(145deg, rgba(26, 39, 66, 0.62), rgba(16, 24, 43, 0.8));
+        border-radius: 1rem;
+      }
+      .repo-card,
+      .project-card,
+      .list-row {
+        border: 1px solid rgba(126, 161, 218, 0.24);
+        border-radius: 1rem;
+        background: linear-gradient(145deg, rgba(26, 39, 66, 0.58), rgba(16, 24, 43, 0.84));
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      }
+      .repo-card:hover,
+      .project-card:hover,
+      .list-row:hover {
+        transform: translateY(-2px);
+        border-color: rgba(141, 222, 255, 0.5);
+        box-shadow: 0 10px 25px rgba(7, 13, 26, 0.55);
+      }
+      .repo-list,
+      .packages-list,
+      .stars-list {
+        display: grid;
+        gap: 1rem;
+        padding-top: 1rem;
+      }
+      .repo-list > * + *,
+      .packages-list > * + *,
+      .stars-list > * + * {
+        border: 0;
+      }
+      input[type="search"],
+      input[type="text"] {
+        border-radius: 0.75rem;
+      }
+      button,
+      .button-like {
+        border-radius: 0.75rem;
+      }
+      .site-footer {
+        border-top: 1px solid rgba(126, 161, 218, 0.24);
+        background: rgba(10, 16, 30, 0.7);
+        backdrop-filter: blur(10px);
+      }
+      @media (max-width: 1023px) {
+        .profile-sidebar {
+          position: static;
+        }
+      }
+      @media (max-width: 768px) {
+        .content-panel {
+          padding: 0.85rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
       }
     </style>
   </head>
-  <body class="bg-[var(--bg)] text-[var(--text)]">
-    <header class="border-b border-[var(--border)] bg-[var(--header)] text-[var(--text)]">
+  <body class="portfolio-shell bg-[var(--bg)] text-[var(--text)]">
+    <header class="site-header border-b border-[var(--border)] bg-[var(--header)] text-[var(--text)]">
       <div class="mx-auto flex max-w-[1280px] flex-wrap items-center gap-4 px-4 py-3 md:flex-nowrap">
         <div class="flex items-center gap-3">
           <i class="octicon octicon-mark-github text-2xl"></i>
@@ -69,8 +204,8 @@
       </div>
     </header>
 
-    <main class="mx-auto max-w-[1280px] px-4 py-6">
-      <div class="border-b border-[var(--border)]">
+    <main class="site-main mx-auto max-w-[1280px] px-4 py-6">
+      <div class="top-strip border-b border-[var(--border)]">
         <div class="flex items-center gap-4">
           <div class="flex items-center gap-2 text-sm">
             <i class="octicon octicon-person"></i>
@@ -85,16 +220,16 @@
             Follow
           </a>
         </div>
-        <div class="mt-4 flex gap-5 overflow-x-auto whitespace-nowrap text-sm md:overflow-visible">
+        <div class="tabs-nav mt-4 flex gap-5 overflow-x-auto whitespace-nowrap text-sm md:overflow-visible">
           <a
             id="tab-overview"
-            class="border-b-2 border-[var(--accent)] pb-3 font-semibold text-[var(--text)]"
+            class="tab-link active"
             href="#"
             >Overview</a
           >
           <a
             id="tab-repositories"
-            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            class="tab-link"
             href="#"
             >Repositories
             <span
@@ -105,7 +240,7 @@
           >
           <a
             id="tab-projects"
-            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            class="tab-link"
             href="#"
             >Projects
             <span
@@ -116,7 +251,7 @@
           >
           <a
             id="tab-packages"
-            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            class="tab-link"
             href="#"
             >Packages
             <span
@@ -127,7 +262,7 @@
           >
           <a
             id="tab-stars"
-            class="border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]"
+            class="tab-link"
             href="#"
             >Stars
             <span
@@ -139,8 +274,8 @@
         </div>
       </div>
 
-      <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[296px,1fr]">
-        <aside>
+      <div class="content-layout mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[296px,1fr]">
+        <aside class="profile-sidebar">
           <div class="rounded-full border border-[var(--border)] bg-[var(--surface)] p-1">
             <img
               class="w-full rounded-full"
@@ -212,9 +347,9 @@
           </ul>
         </aside>
 
-        <section>
+        <section class="content-panel">
           <div id="overview-pane">
-            <div class="rounded-md border border-[var(--border)] bg-[var(--surface)]">
+            <div class="panel-card rounded-md border border-[var(--border)] bg-[var(--surface)]">
               <div class="border-b border-[var(--border)] px-4 py-3 text-sm font-semibold">
                 README.md
               </div>
@@ -265,7 +400,7 @@
               </div>
             </div>
 
-            <div class="mt-8 rounded-md border border-[var(--border)] bg-[var(--surface)] p-4">
+            <div class="panel-card mt-8 rounded-md border border-[var(--border)] bg-[var(--surface)] p-4">
               <div class="mb-3 flex items-center justify-between">
                 <h3 class="text-base font-semibold">Contributions</h3>
                 <span class="text-xs text-[var(--muted)]">Last 6 months</span>
@@ -323,7 +458,7 @@
                 </div>
               </div>
             </div>
-            <div id="repo-list" class="divide-y divide-[var(--border)]">
+            <div id="repo-list" class="repo-list divide-y divide-[var(--border)]">
               <p class="py-4 text-sm text-[var(--muted)]">Loading repositories...</p>
             </div>
           </div>
@@ -377,7 +512,7 @@
                 />
               </div>
             </div>
-            <div id="packages-list" class="divide-y divide-[var(--border)]">
+            <div id="packages-list" class="packages-list divide-y divide-[var(--border)]">
               <p class="py-4 text-sm text-[var(--muted)]">Loading packages...</p>
             </div>
           </div>
@@ -404,7 +539,7 @@
                 />
               </div>
             </div>
-            <div id="stars-list" class="divide-y divide-[var(--border)]">
+            <div id="stars-list" class="stars-list divide-y divide-[var(--border)]">
               <p class="py-4 text-sm text-[var(--muted)]">Loading stars...</p>
             </div>
           </div>
@@ -412,7 +547,7 @@
       </div>
     </main>
 
-    <footer class="border-t border-[var(--border)] bg-[var(--surface)]">
+    <footer class="site-footer border-t border-[var(--border)] bg-[var(--surface)]">
       <div class="mx-auto flex max-w-[1280px] flex-col items-center gap-3 px-4 py-6 text-xs text-[var(--muted)] md:flex-row md:justify-between">
         <div class="flex items-center gap-2">
           <i class="octicon octicon-mark-github"></i>
@@ -516,10 +651,7 @@
 
         const fragment = document.createDocumentFragment();
         repos.forEach((repo) => {
-          const article = el(
-            "article",
-            "rounded-md border border-[var(--border)] bg-[var(--surface)] p-4"
-          );
+          const article = el("article", "repo-card p-4");
 
           const header = el("div", "flex items-center gap-2");
           header.appendChild(el("i", "octicon octicon-repo"));
@@ -577,6 +709,7 @@
         const fragment = document.createDocumentFragment();
         repos.forEach((repo) => {
           const item = el("article", "py-4");
+          item.className = "list-row p-4";
 
           const titleRow = el("div", "flex flex-wrap items-center gap-2");
           const nameLink = el("a", "text-base font-semibold text-[var(--link)] hover:underline", repo.name || "Untitled");
@@ -631,7 +764,7 @@
 
         const fragment = document.createDocumentFragment();
         packages.forEach((pkg) => {
-          const item = el("article", "py-4");
+          const item = el("article", "list-row p-4");
 
           const titleRow = el("div", "flex flex-wrap items-center gap-2");
           const nameText = pkg.name ? `${pkg.name}` : "Untitled";
@@ -694,7 +827,7 @@
 
         const fragment = document.createDocumentFragment();
         stars.forEach((repo) => {
-          const item = el("article", "py-4");
+          const item = el("article", "list-row p-4");
 
           const titleRow = el("div", "flex flex-wrap items-center gap-2");
           const nameText = repo.owner ? `${repo.owner}/${repo.name}` : repo.name || "Untitled";
@@ -754,10 +887,7 @@
 
         const fragment = document.createDocumentFragment();
         projects.forEach((project) => {
-          const article = el(
-            "article",
-            "flex h-full flex-col overflow-hidden rounded-md border border-[var(--border)] bg-[var(--surface)]"
-          );
+          const article = el("article", "project-card flex h-full flex-col overflow-hidden");
 
           const image = el("img", "h-40 w-full object-cover");
           image.src = project.image || "https://placehold.co/800x500/0d1117/58a6ff?text=Project";
@@ -875,16 +1005,9 @@
       };
 
       const setActiveTab = (tab, updateHash = true) => {
-        const active =
-          "border-b-2 border-[var(--accent)] pb-3 font-semibold text-[var(--text)]";
-        const inactive =
-          "border-b-2 border-transparent pb-3 text-[var(--muted)] hover:text-[#f0f6fc]";
+        const tabs = [tabOverview, tabRepositories, tabProjects, tabPackages, tabStars];
+        tabs.forEach((tabEl) => tabEl.classList.remove("active"));
 
-        tabOverview.className = inactive;
-        tabRepositories.className = inactive;
-        tabProjects.className = inactive;
-        tabPackages.className = inactive;
-        tabStars.className = inactive;
         overviewPane.classList.add("hidden");
         reposPane.classList.add("hidden");
         projectsPane.classList.add("hidden");
@@ -892,7 +1015,7 @@
         starsPane.classList.add("hidden");
 
         if (tab === "overview") {
-          tabOverview.className = active;
+          tabOverview.classList.add("active");
           overviewPane.classList.remove("hidden");
           if (updateHash) window.location.hash = "overview";
           ensureReposLoaded().then(() => {
@@ -908,7 +1031,7 @@
           return;
         }
         if (tab === "repos") {
-          tabRepositories.className = active;
+          tabRepositories.classList.add("active");
           reposPane.classList.remove("hidden");
           if (updateHash) window.location.hash = "repositories";
           ensureReposLoaded().then(() => {
@@ -919,7 +1042,7 @@
           return;
         }
         if (tab === "projects") {
-          tabProjects.className = active;
+          tabProjects.classList.add("active");
           projectsPane.classList.remove("hidden");
           if (updateHash) window.location.hash = "projects";
           ensureProjectsLoaded().then(() => {
@@ -930,7 +1053,7 @@
           return;
         }
         if (tab === "packages") {
-          tabPackages.className = active;
+          tabPackages.classList.add("active");
           packagesPane.classList.remove("hidden");
           if (updateHash) window.location.hash = "packages";
           ensurePackagesLoaded().then(() => {
@@ -940,7 +1063,7 @@
           });
           return;
         }
-        tabStars.className = active;
+        tabStars.classList.add("active");
         starsPane.classList.remove("hidden");
         if (updateHash) window.location.hash = "stars";
         ensureStarsLoaded().then(() => {
