@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AATHILDUCKY — Cyber Security Enthusiast, Python Programmer & CTF writeups contributor. Explore security tools, projects, and ethical hacking resources." />
     <title>AATHILDUCKY · Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -686,6 +687,27 @@
           padding: 0.8rem 0 0.5rem;
         }
       }
+      .cat-badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        padding: 0.26rem 0.62rem;
+        text-transform: uppercase;
+        flex-shrink: 0;
+      }
+      .cat-news { background: rgba(245,158,11,0.1); color: #b45309; border: 1px solid rgba(245,158,11,0.22); }
+      .cat-ctf { background: rgba(16,185,129,0.1); color: #047857; border: 1px solid rgba(16,185,129,0.22); }
+      .cat-tool { background: rgba(14,165,233,0.1); color: #0369a1; border: 1px solid rgba(14,165,233,0.22); }
+      .cat-tutorial { background: rgba(139,92,246,0.1); color: #5b21b6; border: 1px solid rgba(139,92,246,0.22); }
+      .cat-default { background: rgba(100,116,139,0.1); color: #475569; border: 1px solid rgba(100,116,139,0.22); }
+      .active-cat {
+        background: linear-gradient(135deg, var(--accent), #17a388) !important;
+        color: white !important;
+        border-color: transparent !important;
+      }
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
@@ -765,6 +787,17 @@
             >Stars
             <span
               id="star-count"
+              class="ml-1 rounded-full bg-[var(--badge)] px-2 text-[var(--text)]"
+              >0</span
+            ></a
+          >
+          <a
+            id="tab-writeups"
+            class="tab-link"
+            href="#"
+            >Writeups
+            <span
+              id="writeup-count"
               class="ml-1 rounded-full bg-[var(--badge)] px-2 text-[var(--text)]"
               >0</span
             ></a
@@ -853,6 +886,12 @@
                 aathilducky
               </a>
             </li>
+            <li class="flex items-center gap-3 rounded-2xl bg-[var(--surface-strong)] px-4 py-3">
+              <i class="fa-solid fa-flag text-[#e74c3c]"></i>
+              <a class="text-[var(--link)] hover:underline" href="https://ctflogs.com" target="_blank" rel="noopener">
+                CTF Writeups
+              </a>
+            </li>
           </ul>
         </aside>
 
@@ -866,9 +905,9 @@
                     Building secure experiences with a sharp, modern edge.
                   </h2>
                   <p class="hero-summary mt-5 text-base leading-8 text-[var(--muted)]">
-                    Passionate about ethical hacking, secure coding, and building tools that detect and
+                    Passionate about ethical hacking, secure coding, CTF challenges, and building tools that detect and
                     prevent real-world threats. Focused on Python automation, web security, and
-                    practical defense.
+                    practical defense with hands-on CTF writeups.
                   </p>
                   <div class="hero-actions mt-6">
                     <a
@@ -899,7 +938,7 @@
                     </div>
                     <div class="hero-point">
                       <div class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">Goal</div>
-                      <p class="mt-2 text-sm leading-6 text-[var(--text)]">Ship secure systems and share practical best practices.</p>
+                      <p class="mt-2 text-sm leading-6 text-[var(--text)]">Ship secure systems and share practical best practices through CTF writeups and security research.</p>
                     </div>
                   </div>
                 </div>
@@ -1106,6 +1145,21 @@
                 </div>
               </div>
             </div>
+
+            <div class="section-block">
+              <div class="section-frame">
+                <div class="mb-4 flex items-center justify-between">
+                  <div>
+                    <div class="section-kicker">Blog &amp; Writeups</div>
+                    <h3 class="section-heading mt-1">Latest writeups</h3>
+                  </div>
+                  <a id="view-writeups" class="text-sm font-semibold text-[var(--link)] hover:underline" href="#">View all writeups</a>
+                </div>
+                <div id="overview-writeups-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <p class="text-sm text-[var(--muted)]">Loading writeups...</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div id="repos-pane" class="hidden">
@@ -1229,6 +1283,40 @@
               <p class="py-4 text-sm text-[var(--muted)]">Loading stars...</p>
             </div>
           </div>
+
+          <div id="writeups-pane" class="hidden">
+            <div class="pane-header flex flex-col gap-4 border-b border-[var(--border)] pb-4">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold">Writeups</h2>
+                <a
+                  class="action-button rounded-md border border-[var(--border)] bg-[var(--button)] px-4 py-2 text-sm font-medium text-[var(--text)] hover:bg-[var(--button-hover)]"
+                  href="https://ctflogs.com"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  ctflogs.com
+                </a>
+              </div>
+              <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <input
+                  id="writeup-search"
+                  class="w-full rounded-md border border-[var(--border)] bg-[var(--input-bg)] px-3 py-2 text-sm text-[var(--text)] placeholder:text-[#6e7681] focus:outline-none md:max-w-md"
+                  type="search"
+                  placeholder="Search writeups by title, tag, or keyword..."
+                />
+                <div id="writeup-cat-btns" class="flex flex-wrap items-center gap-2 text-sm">
+                  <button class="writeup-cat-btn active-cat rounded-md border border-[var(--border)] px-3 py-1 font-medium" data-cat="all">All</button>
+                  <button class="writeup-cat-btn rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]" data-cat="News">News</button>
+                  <button class="writeup-cat-btn rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]" data-cat="CTF">CTF</button>
+                  <button class="writeup-cat-btn rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]" data-cat="Tool">Tool</button>
+                  <button class="writeup-cat-btn rounded-md border border-[var(--border)] bg-[var(--button)] px-3 py-1 text-[var(--text)] hover:bg-[var(--button-hover)]" data-cat="Tutorial">Tutorial</button>
+                </div>
+              </div>
+            </div>
+            <div id="writeups-list" class="stars-list divide-y divide-[var(--border)]">
+              <p class="py-4 text-sm text-[var(--muted)]">Loading writeups...</p>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -1245,6 +1333,8 @@
           <a class="hover:text-[var(--text)]" href="#projects">Projects</a>
           <a class="hover:text-[var(--text)]" href="#packages">Packages</a>
           <a class="hover:text-[var(--text)]" href="#stars">Stars</a>
+          <a class="hover:text-[var(--text)]" href="#writeups">Writeups</a>
+          <a class="hover:text-[var(--text)]" href="https://ctflogs.com" target="_blank" rel="noopener">ctflogs.com</a>
         </div>
       </div>
     </footer>
@@ -1308,14 +1398,24 @@
       const packagesList = document.getElementById("packages-list");
       const starSearch = document.getElementById("star-search");
       const starsList = document.getElementById("stars-list");
+      const tabWriteups = document.getElementById("tab-writeups");
+      const writeupsPane = document.getElementById("writeups-pane");
+      const writeupCount = document.getElementById("writeup-count");
+      const writeupSearch = document.getElementById("writeup-search");
+      const writeupsList = document.getElementById("writeups-list");
+      const overviewWriteupsGrid = document.getElementById("overview-writeups-grid");
+      const viewWriteups = document.getElementById("view-writeups");
       let repoData = [];
       let projectData = [];
       let packageData = [];
       let starData = [];
+      let writeupData = [];
+      let writeupActiveCategory = "all";
       let reposPromise;
       let projectsPromise;
       let packagesPromise;
       let starsPromise;
+      let writeupsPromise;
 
       const el = (tag, className, text) => {
         const node = document.createElement(tag);
@@ -1560,6 +1660,139 @@
         starsList.appendChild(fragment);
       };
 
+      const getCategoryClass = (cat) => {
+        const map = { News: "cat-news", CTF: "cat-ctf", Tool: "cat-tool", Tutorial: "cat-tutorial" };
+        return `cat-badge ${map[cat] || "cat-default"}`;
+      };
+
+      const fmtDate = (str) => {
+        if (!str) return "";
+        const d = new Date(str);
+        return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+      };
+
+      const getFilteredWriteups = () => {
+        const term = writeupSearch ? writeupSearch.value.trim().toLowerCase() : "";
+        return writeupData.filter((w) => {
+          const matchesCat = writeupActiveCategory === "all" || w.category === writeupActiveCategory;
+          const matchesTerm =
+            !term ||
+            (w.title || "").toLowerCase().includes(term) ||
+            (w.summary || "").toLowerCase().includes(term) ||
+            (w.tags || []).some((t) => t.toLowerCase().includes(term));
+          return matchesCat && matchesTerm;
+        });
+      };
+
+      const renderWriteupsOverview = (writeups) => {
+        if (!overviewWriteupsGrid) return;
+        overviewWriteupsGrid.innerHTML = "";
+        if (!Array.isArray(writeups) || writeups.length === 0) {
+          overviewWriteupsGrid.appendChild(el("p", "text-sm text-[var(--muted)]", "No writeups to show."));
+          return;
+        }
+        const fragment = document.createDocumentFragment();
+        writeups.forEach((w) => {
+          const article = el("article", "repo-card p-4 flex flex-col gap-2");
+
+          const meta = el("div", "flex items-center gap-2 flex-wrap");
+          meta.appendChild(el("span", getCategoryClass(w.category), w.category || "Other"));
+          meta.appendChild(el("span", "text-xs text-[var(--muted)]", fmtDate(w.date)));
+
+          const title = el("a", "font-semibold text-[var(--link)] hover:underline text-sm leading-5 line-clamp-2", w.title || "Untitled");
+          title.href = w.url || "#";
+          title.target = "_blank";
+          title.rel = "noopener";
+          title.style.display = "-webkit-box";
+          title.style.webkitLineClamp = "2";
+          title.style.webkitBoxOrient = "vertical";
+          title.style.overflow = "hidden";
+
+          const summary = el("p", "text-xs leading-5 text-[var(--muted)]");
+          summary.style.display = "-webkit-box";
+          summary.style.webkitLineClamp = "2";
+          summary.style.webkitBoxOrient = "vertical";
+          summary.style.overflow = "hidden";
+          summary.textContent = w.summary || "";
+
+          const footer = el("div", "mt-auto pt-2 flex items-center justify-between text-xs text-[var(--muted)]");
+          const views = el("span", "meta-pill");
+          views.appendChild(el("i", "octicon octicon-eye"));
+          views.appendChild(document.createTextNode(` ${w.views || 0}`));
+          const readLink = el("a", "font-semibold text-[var(--link)] hover:underline", "Read →");
+          readLink.href = w.url || "#";
+          readLink.target = "_blank";
+          readLink.rel = "noopener";
+          footer.appendChild(views);
+          footer.appendChild(readLink);
+
+          article.appendChild(meta);
+          article.appendChild(title);
+          article.appendChild(summary);
+          article.appendChild(footer);
+          fragment.appendChild(article);
+        });
+        overviewWriteupsGrid.appendChild(fragment);
+      };
+
+      const renderWriteupsList = (writeups) => {
+        writeupsList.innerHTML = "";
+        if (!Array.isArray(writeups) || writeups.length === 0) {
+          writeupsList.appendChild(el("p", "py-4 text-sm text-[var(--muted)]", "No writeups found."));
+          return;
+        }
+        const fragment = document.createDocumentFragment();
+        writeups.forEach((w) => {
+          const item = el("article", "list-row p-4");
+
+          const top = el("div", "flex flex-wrap items-start gap-2");
+          top.appendChild(el("span", getCategoryClass(w.category), w.category || "Other"));
+          const title = el("a", "font-semibold text-[var(--link)] hover:underline text-base leading-6", w.title || "Untitled");
+          title.href = w.url || "#";
+          title.target = "_blank";
+          title.rel = "noopener";
+          top.appendChild(title);
+
+          const summary = el("p", "mt-2 text-sm text-[var(--muted)]", w.summary || "");
+
+          const tags = el("div", "mt-3 flex flex-wrap gap-1");
+          (w.tags || []).slice(0, 5).forEach((tag) => {
+            tags.appendChild(
+              el("span", "soft-label rounded-full border border-[var(--border)] px-2 py-0.5 text-xs text-[var(--muted)]", tag)
+            );
+          });
+          if ((w.tags || []).length > 5) {
+            tags.appendChild(
+              el("span", "soft-label rounded-full border border-[var(--border)] px-2 py-0.5 text-xs text-[var(--muted)]", `+${w.tags.length - 5} more`)
+            );
+          }
+
+          const footer = el("div", "mt-3 flex flex-wrap items-center justify-between gap-2");
+          const left = el("div", "flex items-center gap-2 text-xs text-[var(--muted)]");
+          const datePill = el("span", "meta-pill", fmtDate(w.date));
+          const viewsPill = el("span", "meta-pill");
+          viewsPill.appendChild(el("i", "octicon octicon-eye"));
+          viewsPill.appendChild(document.createTextNode(` ${w.views || 0} views`));
+          left.appendChild(datePill);
+          left.appendChild(viewsPill);
+
+          const readLink = el("a", "action-button accent-button rounded-md border border-transparent px-3 py-1.5 text-white text-xs font-semibold", "Read writeup →");
+          readLink.href = w.url || "#";
+          readLink.target = "_blank";
+          readLink.rel = "noopener";
+
+          footer.appendChild(left);
+          footer.appendChild(readLink);
+
+          item.appendChild(top);
+          item.appendChild(summary);
+          item.appendChild(tags);
+          item.appendChild(footer);
+          fragment.appendChild(item);
+        });
+        writeupsList.appendChild(fragment);
+      };
+
       const renderProjectsGrid = (container, projects) => {
         container.innerHTML = "";
 
@@ -1689,8 +1922,26 @@
         return starsPromise;
       };
 
+      const loadWriteups = async () => {
+        try {
+          const res = await fetch("writeups.json");
+          if (!res.ok) throw new Error("Failed to load writeups.json");
+          const data = await res.json();
+          writeupData = Array.isArray(data) ? data : (Array.isArray(data.writeups) ? data.writeups : []);
+          writeupCount.textContent = writeupData.length;
+        } catch (err) {
+          writeupData = [];
+          writeupCount.textContent = "0";
+        }
+      };
+
+      const ensureWriteupsLoaded = () => {
+        if (!writeupsPromise) writeupsPromise = loadWriteups();
+        return writeupsPromise;
+      };
+
       const setActiveTab = (tab, updateHash = true) => {
-        const tabs = [tabOverview, tabRepositories, tabProjects, tabPackages, tabStars];
+        const tabs = [tabOverview, tabRepositories, tabProjects, tabPackages, tabStars, tabWriteups];
         tabs.forEach((tabEl) => tabEl.classList.remove("active"));
 
         overviewPane.classList.add("hidden");
@@ -1698,6 +1949,7 @@
         projectsPane.classList.add("hidden");
         packagesPane.classList.add("hidden");
         starsPane.classList.add("hidden");
+        writeupsPane.classList.add("hidden");
 
         if (tab === "overview") {
           tabOverview.classList.add("active");
@@ -1711,6 +1963,11 @@
           ensureProjectsLoaded().then(() => {
             if (!overviewPane.classList.contains("hidden")) {
               renderProjectsGrid(projectsGrid, projectData.slice(0, 6));
+            }
+          });
+          ensureWriteupsLoaded().then(() => {
+            if (!overviewPane.classList.contains("hidden")) {
+              renderWriteupsOverview(writeupData.slice(0, 4));
             }
           });
           return;
@@ -1748,12 +2005,23 @@
           });
           return;
         }
-        tabStars.classList.add("active");
-        starsPane.classList.remove("hidden");
-        if (updateHash) window.location.hash = "stars";
-        ensureStarsLoaded().then(() => {
-          if (!starsPane.classList.contains("hidden")) {
-            renderStarsList(starData);
+        if (tab === "stars") {
+          tabStars.classList.add("active");
+          starsPane.classList.remove("hidden");
+          if (updateHash) window.location.hash = "stars";
+          ensureStarsLoaded().then(() => {
+            if (!starsPane.classList.contains("hidden")) {
+              renderStarsList(starData);
+            }
+          });
+          return;
+        }
+        tabWriteups.classList.add("active");
+        writeupsPane.classList.remove("hidden");
+        if (updateHash) window.location.hash = "writeups";
+        ensureWriteupsLoaded().then(() => {
+          if (!writeupsPane.classList.contains("hidden")) {
+            renderWriteupsList(getFilteredWriteups());
           }
         });
       };
@@ -1781,6 +2049,36 @@
       tabStars.addEventListener("click", (event) => {
         event.preventDefault();
         setActiveTab("stars");
+      });
+
+      tabWriteups.addEventListener("click", (event) => {
+        event.preventDefault();
+        setActiveTab("writeups");
+      });
+
+      writeupSearch.addEventListener("input", () => {
+        if (!writeupsPane.classList.contains("hidden")) {
+          renderWriteupsList(getFilteredWriteups());
+        }
+      });
+
+      document.querySelectorAll(".writeup-cat-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".writeup-cat-btn").forEach((b) => {
+            b.classList.remove("active-cat");
+            b.classList.add("bg-[var(--button)]", "text-[var(--text)]");
+          });
+          btn.classList.add("active-cat");
+          btn.classList.remove("bg-[var(--button)]", "text-[var(--text)]");
+          writeupActiveCategory = btn.dataset.cat;
+          renderWriteupsList(getFilteredWriteups());
+        });
+      });
+
+      viewWriteups.addEventListener("click", (event) => {
+        event.preventDefault();
+        ensureWriteupsLoaded();
+        setActiveTab("writeups");
       });
 
       repoSearch.addEventListener("input", () => {
@@ -1846,38 +2144,28 @@
         setActiveTab("projects");
       });
 
+      const resolveHash = (h) => {
+        if (h === "repositories") return "repos";
+        if (h === "projects") return "projects";
+        if (h === "packages") return "packages";
+        if (h === "stars") return "stars";
+        if (h === "writeups") return "writeups";
+        return "overview";
+      };
+
       const hash = window.location.hash.replace("#", "");
-      if (hash === "repositories") {
-        setActiveTab("repos", false);
-      } else if (hash === "projects") {
-        setActiveTab("projects", false);
-      } else if (hash === "packages") {
-        setActiveTab("packages", false);
-      } else if (hash === "stars") {
-        setActiveTab("stars", false);
-      } else {
-        setActiveTab("overview", false);
-      }
+      setActiveTab(resolveHash(hash), false);
 
       window.addEventListener("hashchange", () => {
         const next = window.location.hash.replace("#", "");
-        if (next === "repositories") {
-          setActiveTab("repos", false);
-        } else if (next === "projects") {
-          setActiveTab("projects", false);
-        } else if (next === "packages") {
-          setActiveTab("packages", false);
-        } else if (next === "stars") {
-          setActiveTab("stars", false);
-        } else {
-          setActiveTab("overview", false);
-        }
+        setActiveTab(resolveHash(next), false);
       });
       Promise.all([
         ensureReposLoaded(),
         ensureProjectsLoaded(),
         ensurePackagesLoaded(),
         ensureStarsLoaded(),
+        ensureWriteupsLoaded(),
       ]);
     </script>
   </body>
