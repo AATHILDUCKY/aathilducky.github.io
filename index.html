@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="AATHILDUCKY — Cyber Security Enthusiast, Python Programmer & CTF writeups contributor. Explore security tools, projects, and ethical hacking resources." />
+    <meta name="description" content="AATHILDUCKY — Security Engineer at Welford Systems & full-stack developer. Web app pentesting, IAM/IAG hardening, Python automation, CTF writeups, and secure software development." />
     <title>AATHILDUCKY · Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -13,6 +13,10 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
@@ -719,10 +723,803 @@
         }
       }
     </style>
+    <style id="premium-upgrade">
+      /* ============================================================
+         PREMIUM UPGRADE LAYER — visual + motion only.
+         Content, structure, IDs and JS behaviour are unchanged.
+         Every entrance animation settles to a fully visible state,
+         so nothing can get stuck hidden when SPA tabs switch.
+         ============================================================ */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background:
+          radial-gradient(circle at 0% 8%, rgba(15, 155, 142, 0.16), transparent 32%),
+          radial-gradient(circle at 100% 0%, rgba(21, 94, 239, 0.16), transparent 36%),
+          radial-gradient(circle at 50% 110%, rgba(255, 122, 89, 0.14), transparent 38%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(240, 245, 252, 0.97)),
+          var(--bg);
+      }
+
+      /* ---- Animated aurora background ---- */
+      .aurora {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      .aurora span {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(72px);
+        opacity: 0.5;
+        mix-blend-mode: multiply;
+        will-change: transform;
+        animation: floatBlob 20s ease-in-out infinite;
+      }
+      .aurora .b1 {
+        width: 44vw;
+        height: 44vw;
+        top: -12%;
+        left: -8%;
+        background: radial-gradient(circle, rgba(15, 155, 142, 0.5), transparent 70%);
+      }
+      .aurora .b2 {
+        width: 42vw;
+        height: 42vw;
+        top: -8%;
+        right: -10%;
+        background: radial-gradient(circle, rgba(21, 94, 239, 0.45), transparent 70%);
+        animation-delay: -7s;
+      }
+      .aurora .b3 {
+        width: 40vw;
+        height: 40vw;
+        bottom: -16%;
+        left: 28%;
+        background: radial-gradient(circle, rgba(255, 122, 89, 0.4), transparent 70%);
+        animation-delay: -13s;
+      }
+      @keyframes floatBlob {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(7%, 9%) scale(1.12); }
+        66% { transform: translate(-6%, 5%) scale(0.94); }
+      }
+
+      /* faint dot-grid texture */
+      .grid-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(40, 60, 100, 0.08) 1px, transparent 1px);
+        background-size: 26px 26px;
+        mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%);
+        -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 75%);
+        opacity: 0.7;
+      }
+
+      /* ---- Scroll progress bar ---- */
+      #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        z-index: 80;
+        background: linear-gradient(90deg, var(--accent), var(--link), var(--accent-strong));
+        box-shadow: 0 0 14px rgba(21, 94, 239, 0.55);
+        transition: width 0.12s ease-out;
+      }
+
+      /* ---- Custom scrollbar ---- */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(21, 94, 239, 0.5) transparent;
+      }
+      ::-webkit-scrollbar {
+        width: 11px;
+        height: 11px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, var(--accent), var(--link));
+        border-radius: 999px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #117a65, #0f4fd6);
+        background-clip: content-box;
+      }
+
+      /* ---- Glass surfaces ---- */
+      .profile-sidebar {
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(244, 248, 255, 0.58));
+        backdrop-filter: blur(22px) saturate(140%);
+        -webkit-backdrop-filter: blur(22px) saturate(140%);
+        box-shadow: 0 28px 64px rgba(29, 41, 67, 0.14);
+      }
+      .panel-card {
+        backdrop-filter: blur(18px) saturate(140%);
+        -webkit-backdrop-filter: blur(18px) saturate(140%);
+      }
+
+      /* ---- Header chip + tabs ---- */
+      .hero-label {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      .tab-link {
+        transition: color 0.2s ease, transform 0.2s ease;
+      }
+      .tab-link:hover {
+        transform: translateY(-1px);
+      }
+      .tab-link.active::after {
+        animation: tabSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      @keyframes tabSlide {
+        from { transform: scaleX(0); opacity: 0; }
+        to { transform: scaleX(1); opacity: 1; }
+      }
+      .tab-link .rounded-full {
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .tab-link.active .rounded-full {
+        background: linear-gradient(135deg, var(--accent), var(--link));
+        color: #fff;
+      }
+
+      /* ---- Hero animated gradient title ---- */
+      .hero-copy .hero-title {
+        background: linear-gradient(110deg, var(--text) 25%, var(--link) 45%, var(--accent) 62%, var(--text) 82%);
+        background-size: 220% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent !important;
+        animation: textShine 9s linear infinite;
+      }
+      @keyframes textShine {
+        to { background-position: 220% center; }
+      }
+
+      /* hero spotlight follows pointer */
+      .hero-stage {
+        --mx: 50%;
+        --my: 40%;
+      }
+      .hero-stage::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: radial-gradient(260px circle at var(--mx) var(--my), rgba(21, 94, 239, 0.12), transparent 60%);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+      .hero-stage:hover::after {
+        opacity: 1;
+      }
+
+      /* ---- Profile photo glow ring ---- */
+      .profile-photo-wrap {
+        animation: photoGlow 4.5s ease-in-out infinite;
+      }
+      @keyframes photoGlow {
+        0%, 100% {
+          box-shadow: 0 18px 34px rgba(78, 88, 120, 0.16), 0 0 0 0 rgba(15, 155, 142, 0);
+        }
+        50% {
+          box-shadow: 0 20px 46px rgba(21, 94, 239, 0.26), 0 0 34px 4px rgba(15, 155, 142, 0.28);
+        }
+      }
+      .profile-photo-wrap img {
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .profile-photo-wrap:hover img {
+        transform: scale(1.04) rotate(0.5deg);
+      }
+
+      /* ---- Buttons: shimmer sweep + lift ---- */
+      .action-button {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.25s ease, background-color 0.18s ease;
+      }
+      .action-button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -130%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+        transform: skewX(-20deg);
+        transition: left 0.6s ease;
+        pointer-events: none;
+      }
+      .action-button:hover::after {
+        left: 150%;
+      }
+      .action-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 32px rgba(63, 76, 104, 0.16);
+      }
+      .accent-button:hover {
+        box-shadow: 0 18px 34px rgba(19, 138, 114, 0.34);
+      }
+
+      /* ---- Cards: entrance + animated glow border + tilt base ---- */
+      .repo-card,
+      .project-card,
+      .list-row {
+        transition: transform 0.18s ease, border-color 0.2s ease, box-shadow 0.25s ease;
+        transform-style: preserve-3d;
+        animation: cardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      @keyframes cardIn {
+        from { opacity: 0; transform: translateY(20px) scale(0.97); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .repo-card::after,
+      .project-card::after,
+      .list-row::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1.4px;
+        background: linear-gradient(135deg, var(--accent), var(--link), var(--accent-strong));
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+      }
+      .repo-card:hover::after,
+      .project-card:hover::after,
+      .list-row:hover::after {
+        opacity: 0.95;
+      }
+      /* staggered reveal */
+      .repo-card:nth-child(2), .project-card:nth-child(2), .list-row:nth-child(2) { animation-delay: 0.05s; }
+      .repo-card:nth-child(3), .project-card:nth-child(3), .list-row:nth-child(3) { animation-delay: 0.1s; }
+      .repo-card:nth-child(4), .project-card:nth-child(4), .list-row:nth-child(4) { animation-delay: 0.15s; }
+      .repo-card:nth-child(5), .project-card:nth-child(5), .list-row:nth-child(5) { animation-delay: 0.2s; }
+      .repo-card:nth-child(6), .project-card:nth-child(6), .list-row:nth-child(6) { animation-delay: 0.25s; }
+      .repo-card:nth-child(7), .project-card:nth-child(7), .list-row:nth-child(7) { animation-delay: 0.3s; }
+      .repo-card:nth-child(8), .project-card:nth-child(8), .list-row:nth-child(8) { animation-delay: 0.35s; }
+      .repo-card:nth-child(n + 9), .project-card:nth-child(n + 9), .list-row:nth-child(n + 9) { animation-delay: 0.4s; }
+      .project-card img {
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .project-card:hover img {
+        transform: scale(1.06);
+      }
+
+      /* container perspective for tilt */
+      #repo-grid,
+      #projects-grid,
+      #project-list,
+      #repo-list,
+      #packages-list,
+      #stars-list,
+      #writeups-list,
+      #overview-writeups-grid {
+        perspective: 1000px;
+      }
+
+      /* ---- Skill tags shimmer on hover ---- */
+      .skill-tag {
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.3s ease;
+      }
+      .skill-tag:hover {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(220, 236, 255, 0.96));
+        transform: translateY(-3px) scale(1.03);
+      }
+
+      /* ---- Timeline node pulse + item entrance ---- */
+      .experience-item {
+        animation: cardIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      .experience-item:nth-child(2) { animation-delay: 0.12s; }
+      .experience-item:nth-child(3) { animation-delay: 0.24s; }
+      .experience-item::before {
+        animation: nodePulse 3s ease-in-out infinite;
+      }
+      @keyframes nodePulse {
+        0%, 100% { box-shadow: 0 0 0 5px rgba(21, 94, 239, 0.08); }
+        50% { box-shadow: 0 0 0 8px rgba(15, 155, 142, 0.14); }
+      }
+
+      /* ---- Terminal subtle glow ---- */
+      .terminal-card {
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.32), 0 0 0 1px rgba(120, 220, 255, 0.06) inset;
+      }
+      #ascii-gif {
+        text-shadow: 0 0 6px rgba(120, 220, 255, 0.25);
+      }
+
+      /* ---- Pane transition (settles fully visible — SPA-safe) ---- */
+      #overview-pane:not(.hidden),
+      #repos-pane:not(.hidden),
+      #projects-pane:not(.hidden),
+      #packages-pane:not(.hidden),
+      #stars-pane:not(.hidden),
+      #writeups-pane:not(.hidden) {
+        animation: paneIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      @keyframes paneIn {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* category + writeup buttons lift */
+      .writeup-cat-btn,
+      .meta-pill {
+        transition: transform 0.18s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .writeup-cat-btn:hover {
+        transform: translateY(-1px);
+      }
+      .meta-pill:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(63, 76, 104, 0.12);
+      }
+
+      /* section kickers get a gradient accent */
+      .section-kicker {
+        background: linear-gradient(90deg, var(--accent), var(--link));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+
+      /* footer chip */
+      .site-footer {
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .aurora span,
+        .hero-copy .hero-title,
+        .profile-photo-wrap,
+        .experience-item::before {
+          animation: none !important;
+        }
+        .hero-copy .hero-title {
+          background: none;
+          -webkit-text-fill-color: var(--text);
+          color: var(--text) !important;
+        }
+      }
+    </style>
+    <style id="hacker-theme">
+      /* ============================================================
+         DARK · ETHICAL-HACKER THEME + REDESIGNED SIDE WIDGET
+         Re-themes the whole SPA to a terminal aesthetic.
+         Loaded last so it wins the cascade; content/IDs/JS untouched.
+         ============================================================ */
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+      :root {
+        color-scheme: dark;
+        --bg: #05080d;
+        --surface: rgba(13, 20, 30, 0.72);
+        --surface-strong: rgba(16, 24, 35, 0.92);
+        --surface-soft: rgba(12, 18, 27, 0.55);
+        --border: rgba(45, 212, 191, 0.18);
+        --text: #d6e4ea;
+        --muted: #7d8da3;
+        --link: #34d399;
+        --accent: #22e39a;
+        --accent-strong: #22d3ee;
+        --button: rgba(18, 28, 26, 0.82);
+        --button-hover: rgba(26, 40, 36, 0.95);
+        --badge: rgba(20, 34, 30, 0.9);
+        --header: rgba(7, 11, 17, 0.78);
+        --input-bg: rgba(8, 13, 19, 0.9);
+        --input-border: rgba(45, 212, 191, 0.2);
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+        --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      body {
+        color-scheme: dark;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 0% 0%, rgba(34, 227, 154, 0.1), transparent 30%),
+          radial-gradient(circle at 100% 0%, rgba(34, 211, 238, 0.08), transparent 34%),
+          radial-gradient(circle at 50% 120%, rgba(34, 227, 154, 0.07), transparent 42%),
+          linear-gradient(180deg, #070b11, #04070b 55%, #060a10),
+          var(--bg);
+      }
+
+      /* ---- Background fx re-tint (green / cyan) ---- */
+      .aurora span { mix-blend-mode: screen; opacity: 0.4; }
+      .aurora .b1 { background: radial-gradient(circle, rgba(34, 227, 154, 0.4), transparent 70%); }
+      .aurora .b2 { background: radial-gradient(circle, rgba(34, 211, 238, 0.34), transparent 70%); }
+      .aurora .b3 { background: radial-gradient(circle, rgba(16, 185, 129, 0.3), transparent 70%); }
+      .grid-overlay {
+        background-image: radial-gradient(rgba(34, 227, 154, 0.1) 1px, transparent 1px);
+        opacity: 0.5;
+      }
+      /* matrix rain canvas + scanlines */
+      #matrix {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.12;
+      }
+      .scanlines {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0,
+          rgba(0, 0, 0, 0) 2px,
+          rgba(0, 0, 0, 0.18) 3px,
+          rgba(0, 0, 0, 0) 4px
+        );
+        opacity: 0.4;
+        mix-blend-mode: multiply;
+      }
+      .portfolio-shell::before { background: rgba(34, 227, 154, 0.1); }
+      .portfolio-shell::after { background: rgba(34, 211, 238, 0.08); }
+
+      /* ---- Generic dark surfaces (override hardcoded whites) ---- */
+      .panel-card {
+        border: 1px solid var(--border);
+        background: linear-gradient(145deg, rgba(14, 21, 31, 0.72), rgba(9, 14, 21, 0.55));
+      }
+      .repo-card,
+      .project-card,
+      .list-row {
+        border: 1px solid rgba(45, 212, 191, 0.12);
+        background: linear-gradient(145deg, rgba(14, 21, 31, 0.94), rgba(9, 14, 21, 0.97));
+      }
+      .repo-card:hover,
+      .project-card:hover,
+      .list-row:hover {
+        border-color: rgba(34, 227, 154, 0.4);
+        box-shadow: 0 20px 38px rgba(0, 0, 0, 0.5), 0 0 26px rgba(34, 227, 154, 0.12);
+      }
+      .soft-label {
+        border: 1px solid var(--border);
+        background: rgba(20, 32, 29, 0.8);
+      }
+      .meta-pill { background: rgba(34, 227, 154, 0.07); }
+      .site-footer { background: rgba(7, 11, 17, 0.7); }
+      .skill-tag {
+        font-family: var(--mono);
+        border: 1px solid rgba(45, 212, 191, 0.2);
+        background: rgba(18, 30, 27, 0.8);
+        color: var(--text);
+        box-shadow: none;
+      }
+      .skill-tag:hover {
+        background: rgba(34, 227, 154, 0.12);
+        border-color: rgba(34, 227, 154, 0.5);
+        box-shadow: 0 0 18px rgba(34, 227, 154, 0.18);
+      }
+      .skill-tag::before { box-shadow: 0 0 0 4px rgba(34, 227, 154, 0.1); }
+
+      /* ---- Buttons: terminal / neon ghost ---- */
+      .action-button {
+        font-family: var(--mono);
+        background: linear-gradient(135deg, rgba(20, 30, 28, 0.92), rgba(12, 20, 18, 0.92));
+        border: 1px solid rgba(45, 212, 191, 0.22);
+        color: var(--text);
+        box-shadow: none;
+      }
+      .action-button:hover {
+        background: linear-gradient(135deg, rgba(28, 44, 40, 0.96), rgba(18, 30, 27, 0.96));
+        box-shadow: 0 0 22px rgba(34, 227, 154, 0.16);
+      }
+      .accent-button {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(34, 211, 238, 0.16));
+        color: #8ff7cf;
+        border: 1px solid rgba(34, 227, 154, 0.5);
+        box-shadow: 0 0 22px rgba(34, 227, 154, 0.18);
+      }
+      .accent-button:hover {
+        background: linear-gradient(135deg, rgba(34, 227, 154, 0.32), rgba(34, 211, 238, 0.24));
+        border-color: rgba(34, 227, 154, 0.8);
+        box-shadow: 0 0 30px rgba(34, 227, 154, 0.34);
+      }
+
+      /* ---- Header strip + terminal-style tabs ---- */
+      .hero-label {
+        font-family: var(--mono);
+        border: 1px solid rgba(34, 227, 154, 0.35);
+        background: rgba(34, 227, 154, 0.08);
+        text-shadow: 0 0 12px rgba(34, 227, 154, 0.4);
+      }
+      .tabs-nav {
+        border-top: 1px solid rgba(45, 212, 191, 0.14);
+        font-family: var(--mono);
+      }
+      .tab-link { color: var(--muted); }
+      .tab-link::before { content: ""; opacity: 0; transition: opacity 0.2s ease; }
+      .tab-link.active {
+        color: var(--accent);
+        text-shadow: 0 0 12px rgba(34, 227, 154, 0.45);
+      }
+      .tab-link.active::before { content: "> "; opacity: 1; }
+      .tab-link .rounded-full {
+        background: rgba(34, 227, 154, 0.12) !important;
+        color: var(--accent) !important;
+        border: 1px solid rgba(34, 227, 154, 0.25);
+      }
+
+      /* ---- Hero ---- */
+      .section-kicker { font-family: var(--mono); }
+      .hero-stage::before { background: radial-gradient(circle, rgba(34, 211, 238, 0.18), transparent 70%); }
+
+      /* ============================================================
+         REDESIGNED SIDE WIDGET — terminal "ID card"
+         ============================================================ */
+      .profile-sidebar {
+        position: sticky;
+        top: 1.5rem;
+        padding: 2.7rem 1.35rem 1.5rem;
+        border: 1px solid rgba(45, 212, 191, 0.28);
+        border-radius: 1.1rem;
+        background:
+          linear-gradient(180deg, rgba(11, 17, 25, 0.95), rgba(7, 11, 17, 0.92));
+        box-shadow:
+          0 0 0 1px rgba(34, 227, 154, 0.05),
+          0 30px 70px rgba(0, 0, 0, 0.6),
+          0 0 50px rgba(34, 227, 154, 0.06);
+        backdrop-filter: blur(16px);
+      }
+      /* terminal title bar */
+      .profile-sidebar::before {
+        content: "● ● ●   aathilducky@portfolio: ~";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-family: var(--mono);
+        font-size: 0.62rem;
+        letter-spacing: 0.06em;
+        color: rgba(34, 227, 154, 0.85);
+        background: rgba(34, 227, 154, 0.06);
+        border-bottom: 1px solid rgba(34, 227, 154, 0.16);
+        padding: 0.55rem 0.95rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      /* animated scan line across the widget */
+      .profile-sidebar::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 90px;
+        background: linear-gradient(180deg, rgba(34, 227, 154, 0.12), transparent);
+        pointer-events: none;
+        animation: scanSweep 5s linear infinite;
+      }
+      @keyframes scanSweep {
+        0% { transform: translateY(-120px); opacity: 0; }
+        12% { opacity: 1; }
+        100% { transform: translateY(560px); opacity: 0; }
+      }
+      .profile-sidebar > * { position: relative; z-index: 1; }
+
+      .profile-sidebar .section-kicker { color: var(--accent); }
+      .profile-sidebar .section-kicker + span,
+      .profile-sidebar .rounded-full.bg-\[var\(--badge\)\] {
+        font-family: var(--mono);
+        color: var(--accent) !important;
+        background: rgba(34, 227, 154, 0.1) !important;
+        border: 1px solid rgba(34, 227, 154, 0.3);
+        text-shadow: 0 0 10px rgba(34, 227, 154, 0.4);
+      }
+
+      .profile-photo-wrap {
+        background: linear-gradient(135deg, rgba(34, 227, 154, 0.4), rgba(34, 211, 238, 0.3));
+        border-radius: 1.2rem;
+      }
+      .profile-photo-wrap img {
+        border-radius: 0.95rem;
+        filter: grayscale(0.15) contrast(1.05);
+      }
+      @keyframes photoGlow {
+        0%, 100% { box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(34, 227, 154, 0); }
+        50% { box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 36px 3px rgba(34, 227, 154, 0.4); }
+      }
+
+      .profile-sidebar h1 {
+        font-family: var(--mono);
+        color: #eafff5;
+        letter-spacing: -0.01em;
+        text-shadow: 0 0 20px rgba(34, 227, 154, 0.35);
+      }
+      .profile-sidebar h1 + p {
+        font-family: var(--mono);
+        color: var(--accent);
+      }
+      .profile-sidebar h1 + p::before {
+        content: "$ ";
+        opacity: 0.75;
+      }
+
+      .profile-stat {
+        border: 1px solid rgba(45, 212, 191, 0.16);
+        background: rgba(12, 19, 28, 0.85);
+        border-radius: 0.7rem;
+      }
+      .profile-stat .text-2xl {
+        font-family: var(--mono);
+        color: var(--accent);
+        text-shadow: 0 0 14px rgba(34, 227, 154, 0.35);
+      }
+      .profile-stat .uppercase { font-family: var(--mono); }
+
+      /* social rows -> command list */
+      .profile-sidebar ul li {
+        font-family: var(--mono);
+        font-size: 0.82rem;
+        border: 1px solid rgba(45, 212, 191, 0.12);
+        background: rgba(34, 227, 154, 0.04) !important;
+        border-radius: 0.55rem;
+        transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      }
+      .profile-sidebar ul li:hover {
+        transform: translateX(5px);
+        border-color: rgba(34, 227, 154, 0.45);
+        background: rgba(34, 227, 154, 0.09) !important;
+        box-shadow: -3px 0 0 0 var(--accent), 0 0 18px rgba(34, 227, 154, 0.12);
+      }
+      .profile-sidebar ul li a { color: var(--accent); }
+      .profile-sidebar ul li a:hover { text-decoration: none; color: #7ef7c8; }
+
+      /* ---- Inputs ---- */
+      input[type="search"],
+      input[type="text"] {
+        font-family: var(--mono);
+        background: var(--input-bg);
+        border-color: var(--input-border);
+        color: var(--text);
+      }
+      input[type="search"]::placeholder,
+      input[type="text"]::placeholder { color: #5d6b84; }
+      input[type="search"]:focus,
+      input[type="text"]:focus {
+        border-color: rgba(34, 227, 154, 0.55);
+        box-shadow: 0 0 0 3px rgba(34, 227, 154, 0.12);
+      }
+
+      /* ---- Category badges: readable on dark ---- */
+      .cat-news { background: rgba(245, 158, 11, 0.14); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.32); }
+      .cat-ctf { background: rgba(16, 185, 129, 0.14); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.32); }
+      .cat-tool { background: rgba(14, 165, 233, 0.14); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.32); }
+      .cat-tutorial { background: rgba(139, 92, 246, 0.14); color: #c084fc; border: 1px solid rgba(139, 92, 246, 0.32); }
+      .cat-default { background: rgba(100, 116, 139, 0.14); color: #94a3b8; border: 1px solid rgba(100, 116, 139, 0.32); }
+      .writeup-cat-btn { font-family: var(--mono); }
+      .active-cat {
+        background: linear-gradient(135deg, rgba(34, 227, 154, 0.3), rgba(34, 211, 238, 0.22)) !important;
+        color: #aef7d6 !important;
+        border-color: rgba(34, 227, 154, 0.6) !important;
+        text-shadow: 0 0 10px rgba(34, 227, 154, 0.4);
+      }
+
+      /* section headings + experience copy slight glow */
+      .section-heading { color: #eafff5; }
+      .experience-period {
+        font-family: var(--mono);
+        background: rgba(34, 211, 238, 0.1);
+        color: var(--accent-strong);
+        border: 1px solid rgba(34, 211, 238, 0.25);
+      }
+      .experience-item::before {
+        background: radial-gradient(circle at 35% 35%, #eafff5 0 22%, var(--accent) 30%, var(--accent-strong) 100%);
+      }
+      @keyframes nodePulse {
+        0%, 100% { box-shadow: 0 0 0 5px rgba(34, 227, 154, 0.1); }
+        50% { box-shadow: 0 0 0 9px rgba(34, 211, 238, 0.16); }
+      }
+
+      /* ---- New CV sections: metrics, services, about, contact ---- */
+      .metric-num {
+        font-family: var(--mono);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--accent);
+        text-shadow: 0 0 18px rgba(34, 227, 154, 0.3);
+      }
+      .metric-label {
+        margin-top: 0.55rem;
+        font-size: 0.82rem;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+      .trait-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--accent);
+        border: 1px solid rgba(34, 227, 154, 0.3);
+        background: rgba(34, 227, 154, 0.07);
+        border-radius: 999px;
+        padding: 0.42rem 0.8rem;
+      }
+      .trait-chip::before { content: "›"; opacity: 0.7; }
+      .service-card .svc-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 0.7rem;
+        background: rgba(34, 227, 154, 0.1);
+        border: 1px solid rgba(34, 227, 154, 0.28);
+        color: var(--accent);
+        font-size: 1.05rem;
+      }
+      .about-card {
+        border: 1px solid var(--border);
+        border-radius: 1.1rem;
+        background: linear-gradient(145deg, rgba(14, 21, 31, 0.7), rgba(9, 14, 21, 0.5));
+        backdrop-filter: blur(14px);
+      }
+      .contact-cta {
+        border: 1px solid rgba(34, 227, 154, 0.3);
+        border-radius: 1.25rem;
+        background:
+          radial-gradient(circle at 0% 0%, rgba(34, 227, 154, 0.12), transparent 55%),
+          radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.1), transparent 55%),
+          linear-gradient(145deg, rgba(12, 19, 28, 0.92), rgba(8, 12, 18, 0.92));
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(34, 227, 154, 0.08);
+      }
+      .train-badge {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        color: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.32rem 0.7rem;
+      }
+
+      @media (max-width: 1023px) {
+        .profile-sidebar { position: static; }
+      }
+    </style>
   </head>
   <body class="portfolio-shell bg-[var(--bg)] text-[var(--text)]">
+    <div id="scroll-progress"></div>
+    <canvas id="matrix" aria-hidden="true"></canvas>
+    <div class="aurora" aria-hidden="true">
+      <span class="b1"></span>
+      <span class="b2"></span>
+      <span class="b3"></span>
+    </div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
     <main class="site-main mx-auto max-w-[1280px] px-4 py-6">
-      <div class="top-strip fade-in">
+      <div class="top-strip fade-in" data-aos="fade-down" data-aos-duration="700">
         <div class="flex flex-wrap items-center gap-4">
           <div class="flex items-center gap-3 text-sm">
             <span class="hero-label"><span class="h-2 w-2 rounded-full bg-[var(--accent)]"></span>Portfolio</span>
@@ -805,8 +1602,8 @@
         </div>
       </div>
 
-      <div class="content-layout mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[320px,1fr]">
-        <aside class="profile-sidebar fade-in">
+      <div class="content-layout mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[340px,1fr]">
+        <aside class="profile-sidebar fade-in" data-aos="fade-right" data-aos-duration="800">
           <div class="flex items-start justify-between gap-4">
             <span class="section-kicker">Profile</span>
             <span class="rounded-full bg-[var(--badge)] px-3 py-1 text-xs font-semibold text-[var(--muted)]">
@@ -835,17 +1632,17 @@
             Follow
           </a>
           <p class="mt-5 text-sm leading-7 text-[var(--text)]">
-            Cyber Security Enthusiast | Python Programmer | CS student @ TCEUSL | WordPress |
-            Solving Real-world Problems
+            Security Engineer @ Welford Systems · Full-Stack Developer. I break and build secure
+            systems — from IAM/IAG hardening to shipping production web apps.
           </p>
           <div class="profile-stat-grid mt-5">
             <div class="profile-stat">
               <div class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">Followers</div>
-              <div class="mt-2 text-2xl font-semibold text-[var(--text)]">12</div>
+              <div id="gh-followers" class="mt-2 text-2xl font-semibold text-[var(--text)]">15</div>
             </div>
             <div class="profile-stat">
               <div class="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">Following</div>
-              <div class="mt-2 text-2xl font-semibold text-[var(--text)]">0</div>
+              <div id="gh-following" class="mt-2 text-2xl font-semibold text-[var(--text)]">0</div>
             </div>
           </div>
           <ul class="mt-5 space-y-3 text-sm">
@@ -973,7 +1770,76 @@
             <div class="section-block">
               <div class="section-frame">
                 <div class="mb-6">
-                  <div class="section-kicker">Journey</div>
+                  <div class="section-kicker">// about</div>
+                  <h3 class="section-heading mt-1">From curious tinkerer to security engineer</h3>
+                </div>
+                <div class="about-card p-6">
+                  <p class="text-sm leading-8 text-[var(--text)]">
+                    My path into tech started the evening of my last A/L exam in 2020, when I decided to
+                    enter IT. What followed was years of relentless self-learning — web development, Python,
+                    data science, design, and AI — until I found the field that truly stuck: security.
+                  </p>
+                  <p class="mt-4 text-sm leading-8 text-[var(--muted)]">
+                    I'm a builder who got into breaking. I explored a lot of disciplines, and what once felt
+                    like a lack of focus turned into my biggest advantage: I understand systems from both the
+                    developer's and the attacker's side. Every detour eventually led me back to security — so
+                    I lean into being versatile while going deep where it matters most.
+                  </p>
+                  <p class="mt-4 text-sm leading-8 text-[var(--muted)]">
+                    Today I'm a Security Engineer at Welford Systems. I secure backend endpoints and still
+                    ship full-stack products and automation tools on the side.
+                  </p>
+                  <div class="mt-6 flex flex-wrap gap-2.5">
+                    <span class="trait-chip">Self-taught</span>
+                    <span class="trait-chip">Security-first</span>
+                    <span class="trait-chip">Full-stack</span>
+                    <span class="trait-chip">Versatile</span>
+                    <span class="trait-chip">Always learning</span>
+                    <span class="trait-chip">Problem solver</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <div class="section-frame">
+                <div class="mb-6">
+                  <div class="section-kicker">// highlights</div>
+                  <h3 class="section-heading mt-1">By the numbers</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+                  <article class="repo-card p-5">
+                    <div class="metric-num">50+</div>
+                    <div class="metric-label">Vulnerabilities found across company IAM/IAG systems</div>
+                  </article>
+                  <article class="repo-card p-5">
+                    <div class="metric-num">2 mo</div>
+                    <div class="metric-label">From intern to permanent Security Engineer at Welford Systems</div>
+                  </article>
+                  <article class="repo-card p-5">
+                    <div class="metric-num">Rank 41</div>
+                    <div class="metric-label">District rank, G.C.E. A/L (Physical Science stream)</div>
+                  </article>
+                  <article class="repo-card p-5">
+                    <div class="metric-num">Full</div>
+                    <div class="metric-label">Scholarship — BSc Computer Science, Eastern University</div>
+                  </article>
+                  <article class="repo-card p-5">
+                    <div class="metric-num">3K+</div>
+                    <div class="metric-label">YouTube subscribers across tech &amp; security content</div>
+                  </article>
+                  <article class="repo-card p-5">
+                    <div class="metric-num">5+ yrs</div>
+                    <div class="metric-label">Hands-on across development &amp; security since 2020</div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <div class="section-frame">
+                <div class="mb-6">
+                  <div class="section-kicker">// journey</div>
                   <h3 class="section-heading mt-1">Experience timeline</h3>
                   <p class="experience-copy mt-3 text-sm leading-7 text-[var(--muted)]">
                     A focused path across freelancing, full-stack product work, and cybersecurity operations.
@@ -1050,12 +1916,13 @@
                     </div>
                   </article>
                   <article class="experience-item">
-                    <span class="experience-period">Starting July 2026</span>
-                    <h4 class="mt-3 text-xl font-semibold text-[var(--text)]">Cyber Security Analyst</h4>
-                    <p class="experience-company mt-1">Welford System</p>
+                    <span class="experience-period">2026 - Present</span>
+                    <h4 class="mt-3 text-xl font-semibold text-[var(--text)]">Security Engineer</h4>
+                    <p class="experience-company mt-1">Welford Systems</p>
                     <p class="experience-copy mt-3 text-sm leading-7 text-[var(--muted)]">
-                      Transitioning into a dedicated security role focused on monitoring, analysis, and
-                      strengthening defensive posture across systems and applications.
+                      Joined as an intern and was promoted to a permanent role within two months. I focus on
+                      backend endpoint security, have identified 50+ vulnerabilities across our IAM/IAG
+                      systems, and deploy and manage the company website on Linux infrastructure.
                     </p>
                     <div class="experience-skills">
                       <span class="skill-tag">GRC</span>
@@ -1083,6 +1950,100 @@
                       <span class="skill-tag">Threat Analysis</span>
                       <span class="skill-tag">Reconnaissance</span>
                     </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <div class="section-frame">
+                <div class="mb-6">
+                  <div class="section-kicker">// education</div>
+                  <h3 class="section-heading mt-1">Education</h3>
+                  <p class="experience-copy mt-3 text-sm leading-7 text-[var(--muted)]">
+                    A scholarship-backed Computer Science degree, anchored by a security-focused final-year
+                    research project.
+                  </p>
+                </div>
+                <div class="experience-timeline">
+                  <article class="experience-item">
+                    <span class="experience-period">2021 - 2026</span>
+                    <h4 class="mt-3 text-xl font-semibold text-[var(--text)]">BSc (Hons) in Computer Science</h4>
+                    <p class="experience-company mt-1">Eastern University, Sri Lanka</p>
+                    <p class="experience-copy mt-3 text-sm leading-7 text-[var(--muted)]">
+                      Admitted on a full scholarship based on A/L results. Final-year research project:
+                      <span class="text-[var(--text)] font-semibold">"Sensitive Information Finder in Client-Side Code"</span>
+                      — a security tool that scans client-side code to detect exposed secrets, credentials,
+                      and sensitive data.
+                    </p>
+                    <div class="experience-skills">
+                      <span class="skill-tag">Computer Science</span>
+                      <span class="skill-tag">Application Security</span>
+                      <span class="skill-tag">Static Analysis</span>
+                      <span class="skill-tag">Research</span>
+                      <span class="skill-tag">Python</span>
+                    </div>
+                  </article>
+                  <article class="experience-item">
+                    <span class="experience-period">2018 - 2020</span>
+                    <h4 class="mt-3 text-xl font-semibold text-[var(--text)]">G.C.E. Advanced Level — Physical Science</h4>
+                    <p class="experience-copy mt-3 text-sm leading-7 text-[var(--muted)]">
+                      Combined Mathematics (B), Physics (B), Chemistry (B). The evening of my final A/L exam in
+                      2020 is when I committed to a career in IT — and never stopped learning since.
+                    </p>
+                    <div class="experience-skills">
+                      <span class="skill-tag">Mathematics</span>
+                      <span class="skill-tag">Physics</span>
+                      <span class="skill-tag">Chemistry</span>
+                      <span class="skill-tag">Problem Solving</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <div class="section-frame">
+                <div class="mb-6">
+                  <div class="section-kicker">// services</div>
+                  <h3 class="section-heading mt-1">What I can build for you</h3>
+                  <p class="experience-copy mt-3 text-sm leading-7 text-[var(--muted)]">
+                    Available for security engineering roles, freelance security assessments, and
+                    full-stack &amp; automation projects.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                  <article class="repo-card service-card p-5">
+                    <span class="svc-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <h4 class="mt-4 text-base font-semibold text-[var(--text)]">Security Assessments</h4>
+                    <p class="mt-2 text-sm leading-7 text-[var(--muted)]">
+                      Web application penetration testing, vulnerability assessments, IAM/IAG review, and
+                      secure code review with clear, prioritized remediation.
+                    </p>
+                  </article>
+                  <article class="repo-card service-card p-5">
+                    <span class="svc-icon"><i class="fa-solid fa-code"></i></span>
+                    <h4 class="mt-4 text-base font-semibold text-[var(--text)]">Full-Stack Web Apps</h4>
+                    <p class="mt-2 text-sm leading-7 text-[var(--muted)]">
+                      Production-ready apps with Django, FastAPI, Flask, Node.js, React/Next.js, and
+                      WordPress — built secure by default and responsive across devices.
+                    </p>
+                  </article>
+                  <article class="repo-card service-card p-5">
+                    <span class="svc-icon"><i class="fa-solid fa-cash-register"></i></span>
+                    <h4 class="mt-4 text-base font-semibold text-[var(--text)]">Business Systems</h4>
+                    <p class="mt-2 text-sm leading-7 text-[var(--muted)]">
+                      Booking systems, POS systems, job portals, and custom internal tools designed around
+                      real client workflows and day-to-day operations.
+                    </p>
+                  </article>
+                  <article class="repo-card service-card p-5">
+                    <span class="svc-icon"><i class="fa-solid fa-robot"></i></span>
+                    <h4 class="mt-4 text-base font-semibold text-[var(--text)]">Automation &amp; Tooling</h4>
+                    <p class="mt-2 text-sm leading-7 text-[var(--muted)]">
+                      Python scripts, OSINT workflows, Linux deployments, and AI-assisted tools tailored to
+                      your exact use case to remove repetitive manual work.
+                    </p>
                   </article>
                 </div>
               </div>
@@ -1135,11 +2096,11 @@
                 <div class="mt-3 flex items-center gap-2 text-xs text-[var(--muted)]">
                   <span>Less</span>
                   <div class="flex items-center gap-1">
-                    <span class="h-3 w-3 rounded-sm bg-[#ebedf0]"></span>
-                    <span class="h-3 w-3 rounded-sm bg-[#9be9a8]"></span>
-                    <span class="h-3 w-3 rounded-sm bg-[#40c463]"></span>
-                    <span class="h-3 w-3 rounded-sm bg-[#30a14e]"></span>
-                    <span class="h-3 w-3 rounded-sm bg-[#216e39]"></span>
+                    <span class="h-3 w-3 rounded-sm bg-[#0e1b16]"></span>
+                    <span class="h-3 w-3 rounded-sm bg-[#0e4429]"></span>
+                    <span class="h-3 w-3 rounded-sm bg-[#006d32]"></span>
+                    <span class="h-3 w-3 rounded-sm bg-[#26a641]"></span>
+                    <span class="h-3 w-3 rounded-sm bg-[#39d353]"></span>
                   </div>
                   <span>More</span>
                 </div>
@@ -1157,6 +2118,44 @@
                 </div>
                 <div id="overview-writeups-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <p class="text-sm text-[var(--muted)]">Loading writeups...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-block">
+              <div class="contact-cta p-7 md:p-9">
+                <div class="section-kicker">// contact</div>
+                <h3 class="hero-title mt-3 text-2xl font-semibold md:text-3xl">Let's build something secure.</h3>
+                <p class="mt-4 max-w-2xl text-sm leading-8 text-[var(--muted)]">
+                  Open to security engineering roles, freelance security assessments, and full-stack or
+                  automation projects. The fastest way to reach me is through the channels below.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                  <a class="action-button accent-button rounded-full px-5 py-3 text-sm font-semibold" href="https://github.com/AATHILDUCKY" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                  <a class="action-button rounded-full px-5 py-3 text-sm font-semibold text-[var(--text)]" href="https://www.linkedin.com/in/aathil-ducky-95b12a218/" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </a>
+                  <a class="action-button rounded-full px-5 py-3 text-sm font-semibold text-[var(--text)]" href="https://www.aathilducky.com/" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-globe"></i> Website
+                  </a>
+                  <a class="action-button rounded-full px-5 py-3 text-sm font-semibold text-[var(--text)]" href="https://ctflogs.com" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-flag"></i> CTF Writeups
+                  </a>
+                  <a class="action-button rounded-full px-5 py-3 text-sm font-semibold text-[var(--text)]" href="https://www.youtube.com/@aathilducky" target="_blank" rel="noopener">
+                    <i class="fab fa-youtube"></i> YouTube
+                  </a>
+                </div>
+                <div class="mt-7 border-t border-[var(--border)] pt-5">
+                  <div class="section-kicker">Where I train &amp; practice</div>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="train-badge">TryHackMe</span>
+                    <span class="train-badge">Hack The Box</span>
+                    <span class="train-badge">HackerOne</span>
+                    <span class="train-badge">LeetCode</span>
+                    <span class="train-badge">HackerRank</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1321,7 +2320,7 @@
       </div>
     </main>
 
-    <footer class="site-footer mt-12 border-t border-[var(--border)] bg-[var(--surface)]">
+    <footer class="site-footer mt-12 border-t border-[var(--border)] bg-[var(--surface)]" data-aos="fade-up" data-aos-duration="700">
       <div class="mx-auto flex max-w-[1280px] flex-col items-center gap-3 px-4 py-6 text-xs text-[var(--muted)] md:flex-row md:justify-between">
         <div class="flex items-center gap-2">
           <span class="hero-label">AATHILDUCKY</span>
@@ -1349,7 +2348,7 @@
         1, 0, 0, 1, 2, 1, 0, 0, 1, 2, 3, 2, 1, 0, 1, 2, 3, 4, 3, 2,
         1, 0, 0, 1, 2, 2, 1, 0, 0, 1, 2, 3, 2, 1, 0, 0, 1, 2, 1, 0,
       ];
-      const colors = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"];
+      const colors = ["#0e1b16", "#0e4429", "#006d32", "#26a641", "#39d353"];
       const grid = document.getElementById("contrib-grid");
       data.forEach((level) => {
         const cell = document.createElement("div");
@@ -2167,6 +3166,163 @@
         ensureStarsLoaded(),
         ensureWriteupsLoaded(),
       ]);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      /* ============================================================
+         Premium motion init — purely additive enhancements.
+         ============================================================ */
+      (function () {
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        // Scroll-reveal for always-visible elements (CDN: AOS)
+        if (window.AOS) {
+          AOS.init({
+            duration: 700,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 40,
+            disable: reduceMotion,
+          });
+        }
+
+        // Scroll progress bar
+        const progress = document.getElementById("scroll-progress");
+        if (progress) {
+          const updateProgress = () => {
+            const h = document.documentElement;
+            const max = h.scrollHeight - h.clientHeight;
+            const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+            progress.style.width = pct + "%";
+          };
+          window.addEventListener("scroll", updateProgress, { passive: true });
+          updateProgress();
+        }
+
+        if (reduceMotion) return;
+
+        // Hero pointer spotlight
+        const heroStage = document.querySelector(".hero-stage");
+        if (heroStage) {
+          heroStage.addEventListener("pointermove", (e) => {
+            const r = heroStage.getBoundingClientRect();
+            heroStage.style.setProperty("--mx", e.clientX - r.left + "px");
+            heroStage.style.setProperty("--my", e.clientY - r.top + "px");
+          });
+        }
+
+        // Animated count-up for profile stats
+        const counters = document.querySelectorAll(".profile-stat .text-2xl");
+        const runCount = (node) => {
+          const target = parseInt((node.textContent || "").replace(/\D/g, ""), 10);
+          if (!Number.isFinite(target) || target <= 0) return;
+          const start = performance.now();
+          const dur = 1100;
+          const tick = (now) => {
+            const t = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - t, 3);
+            node.textContent = Math.round(target * eased).toString();
+            if (t < 1) requestAnimationFrame(tick);
+            else node.textContent = target.toString();
+          };
+          requestAnimationFrame(tick);
+        };
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  runCount(entry.target);
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.6 }
+          );
+          counters.forEach((c) => io.observe(c));
+        }
+
+        // 3D tilt on cards (event delegation → works for dynamic cards)
+        const tiltSel = ".repo-card, .project-card, .list-row";
+        document.addEventListener("pointermove", (e) => {
+          if (e.pointerType === "touch") return;
+          const card = e.target.closest(tiltSel);
+          if (!card) return;
+          const r = card.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width - 0.5;
+          const py = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform =
+            "translateY(-6px) perspective(900px) rotateX(" +
+            (-py * 5).toFixed(2) +
+            "deg) rotateY(" +
+            (px * 6).toFixed(2) +
+            "deg)";
+        });
+        document.addEventListener("pointerout", (e) => {
+          const card = e.target.closest(tiltSel);
+          if (!card) return;
+          if (e.relatedTarget && card.contains(e.relatedTarget)) return;
+          card.style.transform = "";
+        });
+      })();
+    </script>
+    <script>
+      /* ---- Matrix rain background (hacker signature, low intensity) ---- */
+      (function () {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const canvas = document.getElementById("matrix");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const glyphs = "アカサタナハマヤラワ0123456789ABCDEFｱｶｻﾀ<>[]{}/$#%&*".split("");
+        let cols, drops, fontSize;
+
+        const resize = () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          fontSize = Math.max(12, Math.round(window.innerWidth / 90));
+          cols = Math.ceil(canvas.width / fontSize);
+          drops = new Array(cols).fill(0).map(() => Math.random() * -50);
+        };
+        resize();
+        window.addEventListener("resize", resize);
+
+        let last = 0;
+        const draw = (now) => {
+          requestAnimationFrame(draw);
+          if (now - last < 55) return; // throttle ~18fps
+          last = now;
+          ctx.fillStyle = "rgba(5, 8, 13, 0.12)";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.font = fontSize + "px 'JetBrains Mono', monospace";
+          for (let i = 0; i < cols; i++) {
+            const ch = glyphs[(Math.random() * glyphs.length) | 0];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+            ctx.fillStyle = Math.random() > 0.975 ? "#aef7d6" : "#22e39a";
+            ctx.fillText(ch, x, y);
+            if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            drops[i]++;
+          }
+        };
+        requestAnimationFrame(draw);
+      })();
+    </script>
+    <script>
+      /* ---- Live GitHub stats (keeps follower count fresh) ---- */
+      (function () {
+        fetch("https://api.github.com/users/AATHILDUCKY")
+          .then((r) => (r.ok ? r.json() : null))
+          .then((d) => {
+            if (!d) return;
+            const f = document.getElementById("gh-followers");
+            const g = document.getElementById("gh-following");
+            if (f && typeof d.followers === "number") f.textContent = d.followers;
+            if (g && typeof d.following === "number") g.textContent = d.following;
+          })
+          .catch(() => {});
+      })();
     </script>
   </body>
 </html>
