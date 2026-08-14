@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Welcome to My Security Blog",
+    "description": "Practical notes about cybersecurity, secure development, automation, and lessons learned while building.",
+    "date": "2026-08-14",
+    "updated": "2026-08-14",
+    "tags": [
+      "Security",
+      "Development",
+      "Research"
+    ],
+    "url": "/blogs/getting-started/",
+    "readingMinutes": 1
+  }
+]

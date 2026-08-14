@@ -1,0 +1,2 @@
+# Markdown blog rendering used by blogs.py.
+Markdown>=3.8,<4.0
