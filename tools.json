@@ -1,0 +1,45 @@
+[
+  {
+    "slug": "jwt-token-analyzer",
+    "name": "JWT Token Analyzer",
+    "description": "Inspect JWT headers, payloads, and signatures for authentication research.",
+    "category": "Identity security",
+    "tags": [
+      "JWT",
+      "Authentication",
+      "Token analysis"
+    ],
+    "icon": "key",
+    "url": "https://aathilducky.com/jwt-token-analyzer/",
+    "source": "https://github.com/AATHILDUCKY/jwt-token-analyzer"
+  },
+  {
+    "slug": "client-site-secret-finder",
+    "name": "Client Site Secret Finder",
+    "description": "Find exposed secrets and sensitive patterns in client-side website code.",
+    "category": "Application security",
+    "tags": [
+      "Secrets",
+      "Client-side code",
+      "Security testing"
+    ],
+    "icon": "search",
+    "url": "https://aathilducky.com/client-site-secret-finder/",
+    "source": "https://github.com/AATHILDUCKY/client-site-secret-finder"
+  },
+  {
+    "slug": "qr-stand-studio",
+    "name": "QR Stand Studio",
+    "description": "Create QR code stands with a 3D preview and export STL, 3MF, or editable CAD.",
+    "category": "3D design & printing",
+    "tags": [
+      "QR codes",
+      "3D printing",
+      "STL",
+      "3MF",
+      "CAD"
+    ],
+    "icon": "cube",
+    "url": "https://aathilducky.com/3d-stand/"
+  }
+]

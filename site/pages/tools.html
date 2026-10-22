@@ -1,0 +1,13 @@
+{{pageIntro}}
+<section id="online-tools" class="container page-content tools-directory" aria-labelledby="page-heading">
+  <div class="tools-directory-heading"><div><h2>Find your next tool.</h2><p>Focused utilities for security research and 3D design.</p></div><span class="tools-total">{{toolCount}} tools</span></div>
+  <div id="tool-controls" class="tool-controls" hidden>
+    <label class="search-box tool-search"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><input id="tool-search" type="search" placeholder="Search by tool, task, or keyword…" aria-label="Search tools" aria-controls="tool-results" /></label>
+    <div class="tool-filter-row"><div class="project-filters tool-filters" role="group" aria-label="Filter tools by category">{{toolFilters}}</div><p id="tool-count" class="project-count" role="status" aria-live="polite" aria-atomic="true">{{toolCount}} tools</p></div>
+  </div>
+  <div id="tool-results" class="tool-grid">{{toolCards}}</div>
+  <div id="tool-empty" class="tool-empty" hidden><span class="expertise-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></span><h2>No matching tools.</h2><p>Try another keyword or choose a different category.</p></div>
+  <button id="tool-reset" class="button project-more" type="button" hidden>Clear search &amp; filters</button>
+  <div class="page-note"><span class="expertise-icon"><svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg></span><div><h2>Built to be explored.</h2><p>Explore the source behind these tools and discover more of my security and development projects.</p><a class="text-link" href="/projects/">View all projects <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a></div></div>
+</section>
+{{nextStep}}

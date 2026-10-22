@@ -1,0 +1,12 @@
+{{pageIntro}}
+<section id="projects" class="container page-content" aria-labelledby="page-heading">
+  <div id="project-controls" class="project-controls" hidden>
+    <label class="search-box"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><input id="project-search" type="search" placeholder="Search projects…" aria-label="Search projects" /></label>
+    <div class="project-filters" role="group" aria-label="Filter projects"><button type="button" data-filter="all" aria-pressed="true">All projects</button><button type="button" data-filter="security" aria-pressed="false">Security &amp; research</button><button type="button" data-filter="development" aria-pressed="false">Development</button></div>
+    <span id="project-count" class="project-count" aria-live="polite">{{projectCount}} projects</span>
+  </div>
+  <div class="project-list">{{projectRows}}</div>
+  <p id="project-empty" class="empty-state" hidden>No projects match your search. Try a different term or category.</p>
+  <button id="project-reset" class="button project-more" type="button" hidden>Clear filters</button>
+</section>
+{{nextStep}}

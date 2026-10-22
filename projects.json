@@ -1,79 +1,82 @@
 [
   {
-    "name": "Duck Leak Scanner",
-    "description": "Scan GitHub repositories and web apps for exposed secrets with a clean dashboard.",
-    "link": "https://github.com/AATHILDUCKY/duck-duck-leaks",
-    "github": "https://github.com/AATHILDUCKY/duck-duck-leaks",
-    "image": "https://placehold.co/800x500/0d1117/58a6ff?text=Duck+Leak+Scanner"
-  },
-  {
-    "name": "Subdomain Status Monitor",
-    "description": "Check and track subdomain status codes fast with a lightweight CLI.",
-    "link": "https://github.com/AATHILDUCKY/subdomain_url_status",
-    "github": "https://github.com/AATHILDUCKY/subdomain_url_status",
-    "image": "https://placehold.co/800x500/0d1117/f78166?text=Subdomain+Monitor"
-  },
-  {
-    "name": "XSS Payload Lab",
-    "description": "Curated XSS payloads and notes for testing and research.",
-    "link": "https://github.com/AATHILDUCKY/xss",
-    "github": "https://github.com/AATHILDUCKY/xss",
-    "image": "https://placehold.co/800x500/0d1117/39d353?text=XSS+Payload+Lab"
-  },
-  {
-    "name": "Aathilducky GitHub Pages",
-    "description": "Personal GitHub Pages portfolio and profile site.",
-    "link": "https://github.com/AATHILDUCKY/aathilducky.github.io",
-    "github": "https://github.com/AATHILDUCKY/aathilducky.github.io",
-    "image": "https://placehold.co/800x500/0d1117/58a6ff?text=GitHub+Pages"
-  },
-  {
     "name": "JWT Token Analyzer",
     "description": "JWT inspection and analysis with a live demo.",
     "link": "https://aathilducky.com/jwt-token-analyzer/",
     "github": "https://github.com/AATHILDUCKY/jwt-token-analyzer",
-    "image": "https://placehold.co/800x500/0d1117/f78166?text=JWT+Analyzer"
+    "category": "security",
+    "tag": "Identity security"
   },
   {
     "name": "Client Site Secret Finder",
     "description": "Find exposed secrets and sensitive patterns in client-side websites.",
     "link": "https://aathilducky.com/client-site-secret-finder/",
     "github": "https://github.com/AATHILDUCKY/client-site-secret-finder",
-    "image": "https://placehold.co/800x500/0d1117/58a6ff?text=Client+Secret+Finder"
+    "category": "security",
+    "tag": "Secret scanning"
+  },
+  {
+    "name": "Duck Leak Scanner",
+    "description": "Scan GitHub repositories and web apps for exposed secrets with a clean dashboard.",
+    "link": "https://github.com/AATHILDUCKY/duck-duck-leaks",
+    "github": "https://github.com/AATHILDUCKY/duck-duck-leaks",
+    "category": "security",
+    "tag": "Security research"
+  },
+  {
+    "name": "Subdomain Status Monitor",
+    "description": "Check and track subdomain status codes fast with a lightweight CLI.",
+    "link": "https://github.com/AATHILDUCKY/subdomain_url_status",
+    "github": "https://github.com/AATHILDUCKY/subdomain_url_status",
+    "category": "security",
+    "tag": "Reconnaissance"
+  },
+  {
+    "name": "XSS Payload Lab",
+    "description": "Curated XSS payloads and notes for testing and research.",
+    "link": "https://github.com/AATHILDUCKY/xss",
+    "github": "https://github.com/AATHILDUCKY/xss",
+    "category": "security",
+    "tag": "Web security"
   },
   {
     "name": "Ducky Pwn Docs",
     "description": "Electron intelligence command center with local SQLite persistence.",
     "link": "https://github.com/AATHILDUCKY/ducky-pwn-docs",
     "github": "https://github.com/AATHILDUCKY/ducky-pwn-docs",
-    "image": "https://placehold.co/800x500/0d1117/26a641?text=Ducky+Pwn+Docs"
+    "category": "security",
+    "tag": "Research tooling"
   },
   {
-    "name": "Pwntrends Blog",
-    "description": "Security-focused blog and content hub.",
-    "link": "https://github.com/AATHILDUCKY/pwntrends-blog",
-    "github": "https://github.com/AATHILDUCKY/pwntrends-blog",
-    "image": "https://placehold.co/800x500/0d1117/8b949e?text=Pwntrends+Blog"
+    "name": "Aathilducky GitHub Pages",
+    "description": "Personal GitHub Pages portfolio and profile site.",
+    "link": "https://github.com/AATHILDUCKY/aathilducky.github.io",
+    "github": "https://github.com/AATHILDUCKY/aathilducky.github.io",
+    "category": "development",
+    "tag": "Web development"
   },
   {
     "name": "Love Day Counter",
     "description": "Simple day counter web app.",
     "link": "https://github.com/AATHILDUCKY/love-day-counter",
     "github": "https://github.com/AATHILDUCKY/love-day-counter",
-    "image": "https://placehold.co/800x500/0d1117/58a6ff?text=Love+Day+Counter"
+    "category": "development",
+    "tag": "Web application"
   },
   {
     "name": "URL Shortener (Flask + MySQL)",
     "description": "URL shortener built with Flask and MySQL.",
     "link": "https://github.com/AATHILDUCKY/url-shortener-using-flask-and-mysql",
     "github": "https://github.com/AATHILDUCKY/url-shortener-using-flask-and-mysql",
-    "image": "https://placehold.co/800x500/0d1117/f1e05a?text=URL+Shortener"
+    "category": "development",
+    "tag": "Backend development"
   },
   {
     "name": "Image to WebP (Flask)",
     "description": "Flask app to convert images to WebP format.",
     "link": "https://github.com/AATHILDUCKY/image-to-webp-format-flask-application",
     "github": "https://github.com/AATHILDUCKY/image-to-webp-format-flask-application",
-    "image": "https://placehold.co/800x500/0d1117/3572a5?text=Image+to+WebP"
+    "category": "development",
+    "tag": "Utility"
   }
 ]
